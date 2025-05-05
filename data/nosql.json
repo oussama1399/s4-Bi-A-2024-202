@@ -549,5 +549,480 @@
             ],
             "answer": "Assurer que les lectures successives montrent des valeurs non dégradées",
             "explanation": "La cohérence d'écriture monotone garantit que si vous envoyez plusieurs mises à jour, elles seront exécutées dans l’ordre où vous les avez envoyées."
-        }
-    ]
+        },
+        [
+    {
+        "question": "Quelle est la triade fondamentale de la sécurité informatique ?",
+        "options": ["Confidentialité, Intégrité, Accessibilité", "Confidentialité, Intégrité, Disponibilité", "Contrôle, Intégrité, Anonymat", "Confidentialité, Identité, Accès"],
+        "answer": "Confidentialité, Intégrité, Disponibilité",
+        "explanation": "La triade CIA représente les trois objectifs fondamentaux de la sécurité : Confidentialité, Intégrité et Disponibilité."
+    },
+    {
+        "question": "Quel modèle Microsoft classe les menaces en six catégories ?",
+        "options": ["STRIDE", "DREAD", "MITRE ATT&CK", "Bell-LaPadula"],
+        "answer": "STRIDE",
+        "explanation": "Le modèle STRIDE de Microsoft classe les menaces en six catégories : Spoofing, Tampering, Repudiation, Information Disclosure, Denial of Service et Elevation of Privilege."
+    },
+    {
+        "question": "Quel service de sécurité empêche l'accès non autorisé aux informations sensibles ?",
+        "options": ["Intégrité", "Authentification", "Confidentialité", "Disponibilité"],
+        "answer": "Confidentialité",
+        "explanation": "La confidentialité empêche l'accès non autorisé aux informations sensibles."
+    },
+    {
+        "question": "Quel service garantit que les données ne sont pas modifiées sans autorisation ?",
+        "options": ["Confidentialité", "Intégrité", "Authentification", "Non-répudiation"],
+        "answer": "Intégrité",
+        "explanation": "L'intégrité assure que les données ne sont pas modifiées sans autorisation."
+    },
+    {
+        "question": "Quel service permet de prouver qu’un message a été envoyé par son expéditeur ?",
+        "options": ["Confidentialité", "Authentification", "Non-répudiation", "Contrôle d’accès"],
+        "answer": "Non-répudiation",
+        "explanation": "Le non-répudiation empêche l'expéditeur de nier avoir envoyé un message."
+    },
+    {
+        "question": "Quelle méthode cryptographique utilise une même clé pour chiffrer et déchiffrer ?",
+        "options": ["Cryptographie asymétrique", "Cryptographie symétrique", "Cryptographie quantique", "Cryptographie post-quantique"],
+        "answer": "Cryptographie symétrique",
+        "explanation": "En cryptographie symétrique, la même clé est utilisée pour le chiffrement et le déchiffrement."
+    },
+    {
+        "question": "Quel algorithme de hachage est considéré comme vulnérable aujourd’hui ?",
+        "options": ["SHA-256", "MD5", "SHA-3", "SHA-2"],
+        "answer": "MD5",
+        "explanation": "MD5 est vulnérable aux collisions et n’est plus considéré comme sûr."
+    },
+    {
+        "question": "Quel mécanisme de sécurité permet de vérifier l'identité d'une entité dans un système informatique ?",
+        "options": ["Contrôle d’accès", "Authentification", "Auditabilité", "Confidentialité"],
+        "answer": "Authentification",
+        "explanation": "L'authentification permet de confirmer l'identité d'un utilisateur ou d'un système."
+    },
+    {
+        "question": "Quel type de contrôle d'accès attribue des permissions selon les rôles des utilisateurs ?",
+        "options": ["RBAC", "MAC", "DAC", "ACL"],
+        "answer": "RBAC",
+        "explanation": "Le contrôle d'accès basé sur les rôles (RBAC) attribue des droits selon les rôles des utilisateurs."
+    },
+    {
+        "question": "Quel concept désigne l’ensemble des composants critiques pour la sécurité d’un système informatique ?",
+        "options": ["TCB", "ACL", "PP", "ST"],
+        "answer": "TCB",
+        "explanation": "La Trusted Computing Base (TCB) est l’ensemble des composants matériels et logiciels essentiels pour la sécurité du système."
+    },
+    {
+        "question": "Quel standard définit les critères d'évaluation de la sécurité des systèmes informatiques ?",
+        "options": ["ISO/IEC 27001", "Common Criteria", "NIST SP 800-53", "COBIT"],
+        "answer": "Common Criteria",
+        "explanation": "Les Common Criteria définissent les exigences d’évaluation de la sécurité d’un système informatique."
+    },
+    {
+        "question": "Quel niveau de sécurité est généralement adopté par les systèmes d’exploitation courants selon les Common Criteria ?",
+        "options": ["EAL 1", "EAL 4", "EAL 7", "EAL 0"],
+        "answer": "EAL 4",
+        "explanation": "La plupart des systèmes d’exploitation modernes sont certifiés au niveau EAL 4 ou supérieur."
+    },
+    {
+        "question": "Quel principe stipule que seul ce qui est explicitement autorisé doit être permis ?",
+        "options": ["Principe de moindre privilège", "Principe de besoin de savoir", "Politique du tout est interdit", "Politique du tout est permis"],
+        "answer": "Politique du tout est interdit",
+        "explanation": "Le principe 'Tout ce qui n’est pas permis est interdit' est une règle fondamentale de contrôle d’accès."
+    },
+    {
+        "question": "Quel terme désigne une faiblesse pouvant être exploitée par une menace ?",
+        "options": ["Menace", "Risque", "Vulnérabilité", "Impact"],
+        "answer": "Vulnérabilité",
+        "explanation": "Une vulnérabilité est une faiblesse qui peut être exploitée par une menace."
+    },
+    {
+        "question": "Quel risque est calculé comme Impact × Probabilité ?",
+        "options": ["Risque global", "Risque résiduel", "Risque initial", "Risque acceptable"],
+        "answer": "Risque global",
+        "explanation": "Le risque global est souvent estimé comme le produit de l’impact par la probabilité d’occurrence."
+    },
+    {
+        "question": "Quel type d’attaque vise à rendre un service indisponible en submergeant le système de requêtes ?",
+        "options": ["Phishing", "Man-in-the-middle", "Déni de service", "Injection SQL"],
+        "answer": "Déni de service",
+        "explanation": "Une attaque par déni de service (DoS) vise à rendre un service inaccessible en saturant ses ressources."
+    },
+    {
+        "question": "Quel outil est utilisé pour stocker des journaux d’événements liés à la sécurité ?",
+        "options": ["Firewall", "IDS", "Log", "Antivirus"],
+        "answer": "Log",
+        "explanation": "Les fichiers logs sont utilisés pour enregistrer les événements de sécurité dans un système."
+    },
+    {
+        "question": "Quel mécanisme limite l’exécution d’un programme suspect dans un environnement isolé ?",
+        "options": ["Chiffrement", "Sandboxing", "Hachage", "Signature numérique"],
+        "answer": "Sandboxing",
+        "explanation": "Le sandboxing isole un programme pour limiter les accès à certaines ressources du système."
+    },
+    {
+        "question": "Quel type de fonction cryptographique retourne une empreinte de taille fixe ?",
+        "options": ["Fonction de chiffrement", "Fonction de hachage", "Fonction de signature", "Fonction de compression"],
+        "answer": "Fonction de hachage",
+        "explanation": "Une fonction de hachage prend un message de longueur variable et génère une empreinte de taille fixe."
+    },
+    {
+        "question": "Quel protocole permet l’authentification mutuelle entre deux parties dans un réseau ?",
+        "options": ["SSL/TLS", "IPsec", "EAP", "SSH"],
+        "answer": "EAP",
+        "explanation": "Le protocole EAP permet l’authentification mutuelle dans les réseaux sans fil ou câblés."
+    },
+    {
+        "question": "Quel type de politique de sécurité spécifie les actions autorisées sur un objet ?",
+        "options": ["Politique discrétionnaire", "Politique mandataire", "Politique basée sur les rôles", "Politique de liste de contrôle"],
+        "answer": "Politique basée sur les rôles",
+        "explanation": "La politique RBAC attribue des autorisations en fonction des rôles des utilisateurs."
+    },
+    {
+        "question": "Quel type de mot de passe est généré automatiquement et n’est utilisable qu’une seule fois ?",
+        "options": ["Mot de passe statique", "Mot de passe à usage unique", "Mot de passe fort", "Mot de passe partagé"],
+        "answer": "Mot de passe à usage unique",
+        "explanation": "Un mot de passe à usage unique (OTP) est valide pour une seule session ou connexion."
+    },
+    {
+        "question": "Quel modèle de contrôle d’accès se base sur les niveaux de classification des objets et des sujets ?",
+        "options": ["RBAC", "MAC", "DAC", "ABAC"],
+        "answer": "MAC",
+        "explanation": "Le contrôle d’accès mandataire (MAC) repose sur des étiquettes de sécurité associées aux objets et aux sujets."
+    },
+    {
+        "question": "Quel mécanisme augmente le facteur de travail nécessaire pour exploiter une vulnérabilité ?",
+        "options": ["Cryptage", "Bourrage de trafic", "Changement de mot de passe", "Détection d'intrusion"],
+        "answer": "Bourrage de trafic",
+        "explanation": "Le bourrage de trafic rend plus difficile l’analyse du trafic légitime en ajoutant des données aléatoires."
+    },
+    {
+        "question": "Quel type de signature numérique utilise une paire de clés asymétriques ?",
+        "options": ["Signature MAC", "Signature à clé publique", "Signature par mot de passe", "Signature par hashage"],
+        "answer": "Signature à clé publique",
+        "explanation": "La signature numérique utilise une paire de clés asymétriques (privée/publique) pour assurer l’intégrité et le non-répudiation."
+    },
+    {
+        "question": "Quel type de menace implique un acteur malveillant interne à l’organisation ?",
+        "options": ["Menace externe", "Menace accidentelle", "Menace interne", "Menace environnementale"],
+        "answer": "Menace interne",
+        "explanation": "Les menaces internes proviennent d'utilisateurs autorisés mais agissant malicieusement ou par erreur."
+    },
+    {
+        "question": "Quel terme désigne une attaque visant à deviner un mot de passe par toutes les combinaisons possibles ?",
+        "options": ["Attaque par dictionnaire", "Attaque par force brute", "Attaque par phishing", "Attaque par interception"],
+        "answer": "Attaque par force brute",
+        "explanation": "L’attaque par force brute teste toutes les combinaisons possibles pour trouver le mot de passe."
+    },
+    {
+        "question": "Quel service de sécurité garantit que les systèmes soient accessibles lorsque nécessaire ?",
+        "options": ["Confidentialité", "Intégrité", "Disponibilité", "Authentification"],
+        "answer": "Disponibilité",
+        "explanation": "La disponibilité garantit que les services restent accessibles aux utilisateurs autorisés."
+    },
+    {
+        "question": "Quel type de risque reste après l’application des mesures de sécurité ?",
+        "options": ["Risque résiduel", "Risque acceptable", "Risque initial", "Risque évité"],
+        "answer": "Risque résiduel",
+        "explanation": "Le risque résiduel est le risque qui subsiste après mise en place des contre-mesures."
+    },
+    {
+        "question": "Quel type de fonctionnalité permet de retracer les actions effectuées par les utilisateurs dans un système ?",
+        "options": ["Journalisation", "Cryptage", "Compression", "Indexation"],
+        "answer": "Journalisation",
+        "explanation": "La journalisation (logging) permet de retracer les actions effectuées dans un système."
+    },
+    {
+        "question": "Quel terme désigne une technique pour dissimuler des données dans un média numérique ?",
+        "options": ["Stéganographie", "Watermarking", "Cryptographie", "Compression"],
+        "answer": "Watermarking",
+        "explanation": "Le watermarking consiste à insérer un message secondaire dans un média primaire pour protéger les droits d’auteur."
+    },
+    {
+        "question": "Quel type de mécanisme de sécurité protège contre l’usurpation d’identité ?",
+        "options": ["Contrôle d’accès", "Authentification", "Intégrité", "Confidentialité"],
+        "answer": "Authentification",
+        "explanation": "L’authentification protège contre l’usurpation d’identité en validant l’identité d’un utilisateur ou d’un système."
+    },
+    {
+        "question": "Quel type de modèle de sécurité décrit les propriétés de sécurité indépendamment de l’implémentation ?",
+        "options": ["Protection Profile (PP)", "Security Target (ST)", "TCB", "ACL"],
+        "answer": "Protection Profile (PP)",
+        "explanation": "Un Protection Profile (PP) identifie les exigences de sécurité pour une communauté d’utilisateurs."
+    },
+    {
+        "question": "Quel document décrit les caractéristiques de sécurité d’un produit spécifique ?",
+        "options": ["PP", "ST", "TCB", "CEM"],
+        "answer": "ST",
+        "explanation": "Le Security Target (ST) décrit les caractéristiques de sécurité d’un produit évalué."
+    },
+    {
+        "question": "Quel principe de sécurité limite les privilèges accordés à un processus ou un utilisateur ?",
+        "options": ["Principe de moindre privilège", "Principe de séparation des tâches", "Principe de confiance zéro", "Principe de verrouillage"],
+        "answer": "Principe de moindre privilège",
+        "explanation": "Le principe de moindre privilège limite les droits accordés à un minimum nécessaire."
+    },
+    {
+        "question": "Quel mécanisme protège contre la modification d’un message pendant sa transmission ?",
+        "options": ["Chiffrement", "Signature numérique", "Hachage", "Compression"],
+        "answer": "Signature numérique",
+        "explanation": "La signature numérique protège contre la modification d’un message grâce à l’intégrité."
+    },
+    {
+        "question": "Quel type de mot de passe est renforcé par l’ajout d’une donnée aléatoire avant le hachage ?",
+        "options": ["Mot de passe salé", "Mot de passe crypté", "Mot de passe à usage unique", "Mot de passe complexe"],
+        "answer": "Mot de passe salé",
+        "explanation": "Un mot de passe salé inclut une valeur aléatoire (le sel) avant le hachage pour améliorer la sécurité."
+    },
+    {
+        "question": "Quel type de modèle de sécurité est utilisé pour évaluer la gravité des menaces ?",
+        "options": ["STRIDE", "DREAD", "MITRE ATT&CK", "Bell-LaPadula"],
+        "answer": "DREAD",
+        "explanation": "Le modèle DREAD évalue les menaces selon cinq critères : Damage, Reproducibility, Exploitability, Affected Users, Discoverability."
+    },
+    {
+        "question": "Quel type de mécanisme de sécurité protège contre l’analyse du trafic réseau ?",
+        "options": ["Chiffrement", "Bourrage de trafic", "Signature numérique", "Hachage"],
+        "answer": "Bourrage de trafic",
+        "explanation": "Le bourrage de trafic masque les motifs de communication en générant des données aléatoires."
+    },
+    {
+        "question": "Quel type de contrôle d’accès est basé sur les listes de permissions attachées aux objets ?",
+        "options": ["ACL", "RBAC", "MAC", "DAC"],
+        "answer": "ACL",
+        "explanation": "Les listes de contrôle d’accès (ACL) définissent les permissions attachées à chaque objet."
+    },
+    {
+        "question": "Quel type de mécanisme de sécurité protège contre la lecture non autorisée des communications ?",
+        "options": ["Intégrité", "Confidentialité", "Authentification", "Disponibilité"],
+        "answer": "Confidentialité",
+        "explanation": "La confidentialité protège contre la lecture non autorisée via le chiffrement."
+    },
+    {
+        "question": "Quel type de mécanisme de sécurité protège contre l’altération des données ?",
+        "options": ["Chiffrement", "Hachage", "Signature numérique", "Compression"],
+        "answer": "Signature numérique",
+        "explanation": "La signature numérique protège contre l’altération des données grâce à l’intégrité."
+    },
+    {
+        "question": "Quel type de mécanisme de sécurité protège contre la suppression ou la modification d’un document numérique ?",
+        "options": ["Watermarking", "Chiffrement", "Signature numérique", "Compression"],
+        "answer": "Watermarking",
+        "explanation": "Le watermarking protège contre la modification d’un document en intégrant un marquage invisible."
+    },
+    {
+        "question": "Quel type de mécanisme de sécurité protège contre l’interception des mots de passe ?",
+        "options": ["OTP", "Chiffrement", "Hachage", "Compression"],
+        "answer": "OTP",
+        "explanation": "Les mots de passe à usage unique (OTP) protègent contre l’interception car ils ne sont valables qu’une fois."
+    },
+    {
+        "question": "Quel type de mécanisme de sécurité protège contre la perte de données lors d’une panne ?",
+        "options": ["Sauvegarde", "Redondance", "Journalisation", "Compression"],
+        "answer": "Redondance",
+        "explanation": "La redondance protège contre la perte de données en dupliquant les informations sur plusieurs supports."
+    },
+    {
+        "question": "Quel type de menace est lié à une attaque par déni de service (DoS) ?",
+        "options": ["Menace externe", "Menace interne", "Menace accidentelle", "Menace environnementale"],
+        "answer": "Menace externe",
+        "explanation": "Une attaque DoS est généralement initiée par un acteur externe."
+    },
+    {
+        "question": "Quel type de mécanisme de sécurité protège contre les attaques de type ‘phishing’ ?",
+        "options": ["Authentification forte", "Chiffrement", "Hachage", "Signature numérique"],
+        "answer": "Authentification forte",
+        "explanation": "L'authentification forte (comme OTP) protège contre les attaques de type phishing."
+    },
+    {
+        "question": "Quel type de mécanisme de sécurité permet de limiter l'accès aux ressources du système ?",
+        "options": ["Contrôle d'accès", "Authentification", "Intégrité", "Confidentialité"],
+        "answer": "Contrôle d'accès",
+        "explanation": "Le contrôle d'accès limite l'accès aux ressources du système."
+    },
+    {
+        "question": "Quel type de mécanisme de sécurité est utilisé pour détecter les intrusions ?",
+        "options": ["IDS", "Firewall", "Antivirus", "Chiffrement"],
+        "answer": "IDS",
+        "explanation": "Un IDS (Intrusion Detection System) est utilisé pour détecter les intrusions."
+    },
+    {
+        "question": "Quel type de mécanisme de sécurité protège contre les attaques de type ‘man-in-the-middle’ ?",
+        "options": ["Chiffrement", "Hachage", "Signature numérique", "Authentification"],
+        "answer": "Chiffrement",
+        "explanation": "Le chiffrement protège contre les attaques de type 'man-in-the-middle'."
+    },
+    {
+        "question": "Quel type de mécanisme de sécurité protège contre les attaques de type ‘SQL injection’ ?",
+        "options": ["Validation des entrées", "Chiffrement", "Hachage", "Signature numérique"],
+        "answer": "Validation des entrées",
+        "explanation": "La validation des entrées empêche les attaques de type SQL injection."
+    },
+    {
+        "question": "Quel type de mécanisme de sécurité protège contre les attaques de type ‘cross-site scripting’ (XSS) ?",
+        "options": ["Sanitisation des entrées", "Chiffrement", "Hachage", "Signature numérique"],
+        "answer": "Sanitisation des entrées",
+        "explanation": "La sanitisation des entrées empêche les attaques de type XSS."
+    },
+    {
+        "question": "Quel type de mécanisme de sécurité protège contre les attaques de type ‘buffer overflow’ ?",
+        "options": ["Gestion de la mémoire", "Chiffrement", "Hachage", "Signature numérique"],
+        "answer": "Gestion de la mémoire",
+        "explanation": "Une bonne gestion de la mémoire protège contre les attaques de type buffer overflow."
+    },
+    {
+        "question": "Quel type de mécanisme de sécurité protège contre les attaques de type ‘brute force’ ?",
+        "options": ["Limite de tentatives de connexion", "Chiffrement", "Hachage", "Signature numérique"],
+        "answer": "Limite de tentatives de connexion",
+        "explanation": "Imposer une limite de tentatives de connexion protège contre les attaques de type brute force."
+    },
+    {
+        "question": "Quel type de mécanisme de sécurité protège contre les attaques de type ‘dictionary attack’ ?",
+        "options": ["Mot de passe complexe", "Chiffrement", "Hachage", "Signature numérique"],
+        "answer": "Mot de passe complexe",
+        "explanation": "Un mot de passe complexe réduit le risque d’attaques par dictionnaire."
+    },
+    {
+        "question": "Quel type de mécanisme de sécurité protège contre les attaques de type ‘rainbow table’ ?",
+        "options": ["Salage", "Chiffrement", "Hachage", "Signature numérique"],
+        "answer": "Salage",
+        "explanation": "Le salage rend les attaques par rainbow tables inefficaces."
+    },
+    {
+        "question": "Quel type de mécanisme de sécurité protège contre les attaques de type ‘social engineering’ ?",
+        "options": ["Sensibilisation", "Chiffrement", "Hachage", "Signature numérique"],
+        "answer": "Sensibilisation",
+        "explanation": "La sensibilisation des utilisateurs protège contre les attaques de type social engineering."
+    },
+    {
+        "question": "Quel type de mécanisme de sécurité protège contre les attaques de type ‘zero-day’ ?",
+        "options": ["Patches réguliers", "Chiffrement", "Hachage", "Signature numérique"],
+        "answer": "Patches réguliers",
+        "explanation": "Appliquer régulièrement les correctifs protège contre les vulnérabilités zero-day."
+    },
+    {
+        "question": "Quel type de mécanisme de sécurité protège contre les attaques de type ‘malware’ ?",
+        "options": ["Antivirus", "Chiffrement", "Hachage", "Signature numérique"],
+        "answer": "Antivirus",
+        "explanation": "Un antivirus protège contre les logiciels malveillants."
+    },
+    {
+        "question": "Quel type de mécanisme de sécurité protège contre les attaques de type ‘ransomware’ ?",
+        "options": ["Sauvegardes régulières", "Chiffrement", "Hachage", "Signature numérique"],
+        "answer": "Sauvegardes régulières",
+        "explanation": "Les sauvegardes régulières protègent contre les attaques de type ransomware."
+    },
+    {
+        "question": "Quel type de mécanisme de sécurité protège contre les attaques de type ‘DDoS’ ?",
+        "options": ["Firewall", "Chiffrement", "Hachage", "Signature numérique"],
+        "answer": "Firewall",
+        "explanation": "Un firewall peut aider à atténuer les attaques DDoS."
+    },
+    {
+        "question": "Quel type de mécanisme de sécurité protège contre les attaques de type ‘botnet’ ?",
+        "options": ["Sécurité réseau", "Chiffrement", "Hachage", "Signature numérique"],
+        "answer": "Sécurité réseau",
+        "explanation": "Une bonne sécurité réseau protège contre les attaques de type botnet."
+    },
+    {
+        "question": "Quel type de mécanisme de sécurité protège contre les attaques de type ‘phishing’ ?",
+        "options": ["Authentification forte", "Chiffrement", "Hachage", "Signature numérique"],
+        "answer": "Authentification forte",
+        "explanation": "L'authentification forte protège contre les attaques de type phishing."
+    },
+    {
+        "question": "Quel type de mécanisme de sécurité protège contre les attaques de type ‘spoofing’ ?",
+        "options": ["Authentification", "Chiffrement", "Hachage", "Signature numérique"],
+        "answer": "Authentification",
+        "explanation": "L'authentification protège contre les attaques de type spoofing."
+    },
+    {
+        "question": "Quel type de mécanisme de sécurité protège contre les attaques de type ‘replay’ ?",
+        "options": ["Nonce", "Chiffrement", "Hachage", "Signature numérique"],
+        "answer": "Nonce",
+        "explanation": "Un nonce protège contre les attaques de type replay."
+    },
+    {
+        "question": "Quel type de mécanisme de sécurité protège contre les attaques de type ‘session hijacking’ ?",
+        "options": ["HTTPS", "Chiffrement", "Hachage", "Signature numérique"],
+        "answer": "HTTPS",
+        "explanation": "HTTPS protège contre les attaques de type session hijacking."
+    },
+    {
+        "question": "Quel type de mécanisme de sécurité protège contre les attaques de type ‘man-in-the-middle’ ?",
+        "options": ["Chiffrement", "Hachage", "Signature numérique", "Authentification"],
+        "answer": "Chiffrement",
+        "explanation": "Le chiffrement protège contre les attaques de type man-in-the-middle."
+    },
+    {
+        "question": "Quel type de mécanisme de sécurité protège contre les attaques de type ‘SQL injection’ ?",
+        "options": ["Validation des entrées", "Chiffrement", "Hachage", "Signature numérique"],
+        "answer": "Validation des entrées",
+        "explanation": "La validation des entrées empêche les attaques de type SQL injection."
+    },
+    {
+        "question": "Quel type de mécanisme de sécurité protège contre les attaques de type ‘cross-site scripting’ (XSS) ?",
+        "options": ["Sanitisation des entrées", "Chiffrement", "Hachage", "Signature numérique"],
+        "answer": "Sanitisation des entrées",
+        "explanation": "La sanitisation des entrées empêche les attaques de type XSS."
+    },
+    {
+        "question": "Quel type de mécanisme de sécurité protège contre les attaques de type ‘buffer overflow’ ?",
+        "options": ["Gestion de la mémoire", "Chiffrement", "Hachage", "Signature numérique"],
+        "answer": "Gestion de la mémoire",
+        "explanation": "Une bonne gestion de la mémoire protège contre les attaques de type buffer overflow."
+    },
+    {
+        "question": "Quel type de mécanisme de sécurité protège contre les attaques de type ‘brute force’ ?",
+        "options": ["Limite de tentatives de connexion", "Chiffrement", "Hachage", "Signature numérique"],
+        "answer": "Limite de tentatives de connexion",
+        "explanation": "Imposer une limite de tentatives de connexion protège contre les attaques de type brute force."
+    },
+    {
+        "question": "Quel type de mécanisme de sécurité protège contre les attaques de type ‘dictionary attack’ ?",
+        "options": ["Mot de passe complexe", "Chiffrement", "Hachage", "Signature numérique"],
+        "answer": "Mot de passe complexe",
+        "explanation": "Un mot de passe complexe réduit le risque d’attaques par dictionnaire."
+    },
+    {
+        "question": "Quel type de mécanisme de sécurité protège contre les attaques de type ‘rainbow table’ ?",
+        "options": ["Salage", "Chiffrement", "Hachage", "Signature numérique"],
+        "answer": "Salage",
+        "explanation": "Le salage rend les attaques par rainbow tables inefficaces."
+    },
+    {
+        "question": "Quel type de mécanisme de sécurité protège contre les attaques de type ‘social engineering’ ?",
+        "options": ["Sensibilisation", "Chiffrement", "Hachage", "Signature numérique"],
+        "answer": "Sensibilisation",
+        "explanation": "La sensibilisation des utilisateurs protège contre les attaques de type social engineering."
+    },
+    {
+        "question": "Quel type de mécanisme de sécurité protège contre les attaques de type ‘zero-day’ ?",
+        "options": ["Patches réguliers", "Chiffrement", "Hachage", "Signature numérique"],
+        "answer": "Patches réguliers",
+        "explanation": "Appliquer régulièrement les correctifs protège contre les vulnérabilités zero-day."
+    },
+    {
+        "question": "Quel type de mécanisme de sécurité protège contre les attaques de type ‘malware’ ?",
+        "options": ["Antivirus", "Chiffrement", "Hachage", "Signature numérique"],
+        "answer": "Antivirus",
+        "explanation": "Un antivirus protège contre les logiciels malveillants."
+    },
+    {
+        "question": "Quel type de mécanisme de sécurité protège contre les attaques de type ‘ransomware’ ?",
+        "options": ["Sauvegardes régulières", "Chiffrement", "Hachage", "Signature numérique"],
+        "answer": "Sauvegardes régulières",
+        "explanation": "Les sauvegardes régulières protègent contre les attaques de type ransomware."
+    },
+    {
+        "question": "Quel type de mécanisme de sécurité protège contre les attaques de type ‘DDoS’ ?",
+        "options": ["Firewall", "Chiffrement", "Hachage", "Signature numérique"],
+        "answer": "Firewall",
+        "explanation": "Un firewall peut aider à atténuer les attaques DDoS."
+    },
+    {
+        "question": "Quel type de mécanisme de sécurité protège contre les attaques de type ‘botnet’ ?",
+        "options": ["Sécurité réseau", "Chiffrement", "Hachage", "Signature numérique"],
+        "answer": "Sécurité réseau",
+        "explanation": "Une bonne sécurité réseau protège contre les attaques de type botnet."
+    }
+]
