@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Résumé</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <style>
+        :root {
+            --primary-color: #00d8ff;
+            --primary-hover: #00a6cc;
+            --dark-bg: #1e1e2f;
+            --card-bg: #2a2a40;
+            --text-light: #ffffff;
+            --text-secondary: #b0b0b0;
+            --footer-bg: #1a1a2e;
+            --header-bg: #1f1f3a;
+            --code-bg: #24243c;
+            --blockquote-bg: #343450;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--dark-bg);
+            color: var(--text-light);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        header {
+            background-color: var(--header-bg);
+            color: var(--primary-color);
+            padding: 2rem 0;
+            text-align: center;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+            position: relative;
+            overflow: hidden;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.5rem;
+            position: relative;
+            z-index: 1;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            background: linear-gradient(90deg, var(--primary-color), #4cddff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-shadow: 0 0 20px rgba(0, 216, 255, 0.2);
+        }
+
+        .resume-container {
+            max-width: 900px;
+            margin: 2rem auto;
+            padding: 2rem;
+            background: var(--card-bg);
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+            line-height: 1.7;
+            border: 2px solid var(--primary-color);
+        }
+
+        .markdown-body {
+            color: var(--text-light);
+        }
+
+        .markdown-body h1 {
+            color: var(--primary-color);
+            font-size: 2.5rem;
+            margin-top: 0;
+            border-bottom: 2px solid var(--primary-color);
+            padding-bottom: 0.5rem;
+        }
+
+        .markdown-body h2 {
+            color: var(--primary-color);
+            font-size: 1.8rem;
+            margin-top: 2rem;
+            border-bottom: 1px solid var(--primary-hover);
+            padding-bottom: 0.3rem;
+        }
+
+        .markdown-body h3 {
+            color: #4cddff;
+            font-size: 1.5rem;
+            margin-top: 1.5rem;
+        }
+
+        .markdown-body h4 {
+            color: #4cddff;
+            font-size: 1.3rem;
+        }
+
+        .markdown-body ul, .markdown-body ol {
+            padding-left: 2rem;
+        }
+
+        .markdown-body li {
+            margin-bottom: 0.5rem;
+        }
+
+        .markdown-body code {
+            background-color: var(--code-bg);
+            padding: 0.2rem 0.4rem;
+            border-radius: 4px;
+            font-family: 'Courier New', monospace;
+            font-size: 0.9rem;
+        }
+
+        .markdown-body pre {
+            background-color: var(--code-bg);
+            padding: 1rem;
+            border-radius: 8px;
+            overflow-x: auto;
+            margin: 1.5rem 0;
+            border-left: 4px solid var(--primary-color);
+        }
+
+        .markdown-body pre code {
+            background-color: transparent;
+            padding: 0;
+        }
+
+        .markdown-body blockquote {
+            background-color: var(--blockquote-bg);
+            border-left: 4px solid var(--primary-color);
+            padding: 0.5rem 1rem;
+            margin: 1.5rem 0;
+            font-style: italic;
+        }
+
+        .markdown-body table {
+            border-collapse: collapse;
+            width: 100%;
+            margin: 1.5rem 0;
+        }
+
+        .markdown-body table th,
+        .markdown-body table td {
+            padding: 0.75rem;
+            text-align: left;
+            border: 1px solid var(--primary-hover);
+        }
+
+        .markdown-body table th {
+            background-color: var(--code-bg);
+            color: var(--primary-color);
+        }
+
+        .markdown-body table tr:nth-child(even) {
+            background-color: var(--code-bg);
+        }
+
+        .markdown-body p {
+            margin: 1rem 0;
+        }
+
+        .markdown-body a {
+            color: var(--primary-color);
+            text-decoration: none;
+            border-bottom: 1px dashed var(--primary-color);
+            transition: all 0.2s ease;
+        }
+
+        .markdown-body a:hover {
+            color: #4cddff;
+            border-bottom: 1px solid #4cddff;
+        }
+
+        .markdown-body hr {
+            border: 0;
+            height: 1px;
+            background: linear-gradient(to right, transparent, var(--primary-color), transparent);
+            margin: 2rem 0;
+        }
+
+        .markdown-body strong {
+            color: #4cddff;
+            font-weight: bold;
+        }
+
+        .loading {
+            text-align: center;
+            padding: 2rem;
+            font-size: 1.5rem;
+            color: var(--primary-color);
+        }
+
+        .error {
+            text-align: center;
+            padding: 2rem;
+            font-size: 1.5rem;
+            color: #ff4c4c;
+            background-color: rgba(255, 76, 76, 0.1);
+            border-radius: 8px;
+            margin: 2rem;
+        }
+
+        .controls {
+            display: flex;
+            justify-content: space-between;
+            margin: 2rem auto;
+            max-width: 900px;
+            padding: 0 2rem;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 0.8rem 1.5rem;
+            background-color: var(--primary-color);
+            color: #000;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            border: none;
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            background-color: var(--primary-hover);
+            box-shadow: 0 8px 20px rgba(0, 216, 255, 0.4);
+            transform: translateY(-3px);
+        }
+
+        .btn i {
+            margin-right: 8px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 2rem;
+            margin-top: auto;
+            background-color: var(--footer-bg);
+            color: var(--text-secondary);
+            font-size: 1rem;
+            box-shadow: 0 -4px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        @media (max-width: 768px) {
+            .resume-container {
+                padding: 1.5rem;
+                margin: 1rem;
+            }
+
+            header h1 {
+                font-size: 2rem;
+            }
+
+            .markdown-body h1 {
+                font-size: 2rem;
+            }
+            
+            .markdown-body h2 {
+                font-size: 1.6rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1 id="pageTitle">Résumé</h1>
+    </header>
+
+    <div class="controls">
+        <a href="index.html" class="btn">
+            <i class="fas fa-home"></i> Accueil
+        </a>
+        <a href="#" id="backButton" class="btn">
+            <i class="fas fa-arrow-left"></i> Retour
+        </a>
+    </div>
+
+    <div class="resume-container">
+        <div id="content" class="markdown-body">
+            <div class="loading">
+                <i class="fas fa-spinner fa-spin"></i> Chargement du résumé...
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>© 2025 QCM d'Apprentissage | Développé par Kaddouri Oussama</p>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Get the file path from the URL parameters
+            const urlParams = new URLSearchParams(window.location.search);
+            const filePath = urlParams.get('file');
+            const subject = urlParams.get('subject');
+            
+            // Update page title if subject is provided
+            if (subject) {
+                document.getElementById('pageTitle').textContent = `Résumé : ${subject}`;
+                document.title = `Résumé - ${subject}`;
+            }
+            
+            // Set back button to return to QCM page if a subject is specified
+            const backButton = document.getElementById('backButton');
+            if (subject) {
+                backButton.href = `${subject.toLowerCase().replace(/\s+/g, '')}.html`;
+            } else {
+                backButton.href = 'index.html';
+            }
+            
+            if (!filePath) {
+                document.getElementById('content').innerHTML = '<div class="error"><i class="fas fa-exclamation-triangle"></i> Erreur : Aucun fichier spécifié.</div>';
+                return;
+            }
+            
+            // Fetch the markdown file
+            fetch(filePath)
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error('Résumé non trouvé');
+                    }
+                    return response.text();
+                })
+                .then(markdown => {
+                    // Convert Markdown to HTML using the marked library
+                    const html = marked.parse(markdown);
+                    document.getElementById('content').innerHTML = html;
+                })
+                .catch(error => {
+                    document.getElementById('content').innerHTML = `
+                        <div class="error">
+                            <i class="fas fa-exclamation-triangle"></i> Erreur : ${error.message}
+                        </div>
+                    `;
+                });
+        });
+    </script>
+</body>
+</html>

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>QCM - Sécurité des Systèmes</title>
+    <title>QCM - data analytics </title>
     <style>
         :root {
             --primary-color: #00d8ff;
@@ -89,10 +89,10 @@
         
         label {
             display: block;
-            margin-bottom: 1.5rem;
-            padding: 1.2rem;
+            margin-bottom: 1rem;
+            padding: 1rem;
             background-color: rgba(255, 255, 255, 0.05);
-            border-radius: 10px;
+            border-radius: 8px;
             cursor: pointer;
             transition: all 0.2s ease;
             position: relative;
@@ -200,6 +200,10 @@
             z-index: 2;
         }
         
+        .back-home {
+            display: none; /* Remplacé par le nouveau bouton */
+        }
+
         .home-btn {
             display: inline-block;
             width: 100%;
@@ -227,10 +231,6 @@
             color: #000;
             box-shadow: 0 5px 15px rgba(0, 216, 255, 0.5);
             transform: translateY(-2px);
-        }
-
-        .back-home {
-            display: none; /* Remplacé par le nouveau bouton */
         }
         
         footer {
@@ -264,7 +264,7 @@
 </head>
 <body>
     <header>
-        <h1>QCM - Sécurité des Systèmes</h1>
+        <h1>QCM - data analyticsL</h1>
     </header>
 
     <div class="card">
@@ -293,14 +293,14 @@
             <a href="index.html" class="home-btn">
                 <i class="fas fa-home"></i> Retour à l'accueil
             </a>
-            <a href="resume-viewer.html?file=resume/securite.md&subject=Sécurité des Systèmes" class="home-btn" style="margin-top: 10px;">
+            <a href="resume-viewer.html?file=resume/dataAnalytics.md&subject=Data Analytics" class="home-btn" style="margin-top: 10px;">
                 <i class="fas fa-book"></i> Voir le résumé
             </a>
         </div>
     </div>
 
     <footer>
-        <p>© 2025 QCM d'Apprentissage | Développé par Kaddouri Oussama</p>
+        <p>© 2025 QCM d'Apprentissage | Développé par Kaddouri oussama </p>
     </footer>
 
     <script>
@@ -308,7 +308,7 @@
         let currentQuestionIndex = 0;
 
         // Charger les questions depuis le fichier JSON
-        fetch('qcm/securite.json')
+        fetch('qcm/dataanalytics.json')
             .then(response => response.json())
             .then(data => {
                 quizData = data;

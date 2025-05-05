@@ -7,13 +7,15 @@
     <style>
         :root {
             --primary-color: #00d8ff;
-            --primary-hover: #00b3cc;
+            --primary-hover: #00a6cc;
             --dark-bg: #1e1e2f;
             --card-bg: #2a2a40;
             --text-light: #ffffff;
-            --text-secondary: #cccccc;
+            --text-secondary: #b0b0b0;
+            --footer-bg: #1a1a2e;
+            --header-bg: #1f1f3a;
         }
-        
+
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             margin: 0;
@@ -21,97 +23,101 @@
             background-color: var(--dark-bg);
             color: var(--text-light);
             min-height: 100vh;
+            display: flex;
+            flex-direction: column;
         }
-        
+
         header {
-            background-color: var(--card-bg);
+            background-color: var(--header-bg);
             color: var(--primary-color);
-            padding: 1.5rem;
+            padding: 2rem 0;
             text-align: center;
-            box-shadow: 0 4px 15px rgba(0, 216, 255, 0.3);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
             position: relative;
             overflow: hidden;
         }
-        
+
         header h1 {
             margin: 0;
-            font-size: 2.5rem;
+            font-size: 2.8rem;
             position: relative;
             z-index: 1;
             text-transform: uppercase;
             letter-spacing: 2px;
+            background: linear-gradient(90deg, var(--primary-color), #4cddff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-shadow: 0 0 20px rgba(0, 216, 255, 0.2);
         }
-        
-        header::before {
-            content: "";
-            position: absolute;
-            top: -50%;
-            left: -50%;
-            width: 200%;
-            height: 200%;
-            background: linear-gradient(135deg, transparent 0%, rgba(0, 216, 255, 0.1) 50%, transparent 100%);
+
+        .courses-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+            gap: 5rem;
+            width: 100%;
+            max-width: 1400px;
+            margin: 3rem auto;
+            padding: 0 2.5rem;
         }
-        
-        .container {
-            max-width: 1200px;
-            margin: 2rem auto;
-            padding: 0 2rem;
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 2rem;
-        }
-        
+    
         .card {
-            background: var(--card-bg);
-            border-radius: 12px;
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
-            width: 300px;
+            background: linear-gradient(145deg, var(--card-bg), #3a3a55);
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+            width: 100%;
             text-align: center;
             overflow: hidden;
             color: var(--text-light);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            transition: transform 0.4s ease, box-shadow 0.4s ease;
             position: relative;
             display: flex;
             flex-direction: column;
+            padding: 2rem;
             border: 2px solid transparent;
+            height: 400px;
         }
-        
+    
         .card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 15px 30px rgba(0, 216, 255, 0.4);
+            transform: translateY(-15px);
+            box-shadow: 0 20px 40px rgba(0, 216, 255, 0.3);
             border-color: var(--primary-color);
         }
-        
+    
         .card-icon {
-            font-size: 4rem;
+            font-size: 4.5rem;
             color: var(--primary-color);
-            margin: 2rem 0 1rem;
+            margin: 1.5rem 0;
+            transition: transform 0.3s ease;
         }
-        
+
+        .card:hover .card-icon {
+            transform: scale(1.15);
+        }
+    
         .card h3 {
-            margin: 0.5rem 0;
-            font-size: 1.8rem;
+            margin: 1rem 0;
+            font-size: 2rem;
             color: var(--primary-color);
             padding: 0 1rem;
         }
-        
+    
         .card p {
-            padding: 0 1.5rem;
+            padding: 0 1rem;
             color: var(--text-secondary);
-            font-size: 1rem;
+            font-size: 1.1rem;
             line-height: 1.6;
             flex-grow: 1;
+            margin-bottom: 1.5rem;
         }
-        
+    
         .card-action {
-            margin: 1.5rem 0;
-            padding: 0 1.5rem;
+            margin-top: auto;
+            padding: 1.5rem 0 0.5rem;
         }
-        
+    
         .btn {
             display: inline-block;
-            padding: 0.8rem 1.5rem;
+            padding: 1rem 1.8rem;
             background-color: var(--primary-color);
             color: #000;
             text-decoration: none;
@@ -122,32 +128,57 @@
             letter-spacing: 1px;
             width: 100%;
             box-sizing: border-box;
+            position: relative;
+            overflow: hidden;
+            z-index: 1;
+            margin-bottom: 0.8rem;
         }
         
+        .btn-outline {
+            background-color: transparent;
+            border: 2px solid var(--primary-color);
+            color: var(--primary-color);
+        }
+        
+        .btn-outline:hover {
+            background-color: var(--primary-color);
+            color: #000;
+        }
+    
         .btn:hover {
             background-color: var(--primary-hover);
-            box-shadow: 0 5px 15px rgba(0, 216, 255, 0.5);
-            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(0, 216, 255, 0.4);
+            transform: translateY(-5px);
+            color: #000;
         }
-        
-        .courses-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-            gap: 2rem;
-            width: 100%;
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 2rem;
-        }
-        
+
         footer {
             text-align: center;
             padding: 2rem;
-            margin-top: 3rem;
-            background-color: var(--card-bg);
+            margin-top: auto;
+            background-color: var(--footer-bg);
             color: var(--text-secondary);
+            font-size: 1rem;
+            box-shadow: 0 -4px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        @media (max-width: 768px) {
+            .courses-grid {
+                grid-template-columns: 1fr;
+                padding: 0 1.5rem;
+            }
+            
+            header h1 {
+                font-size: 2.2rem;
+            }
+            
+            .card {
+                height: auto;
+                min-height: 350px;
+            }
         }
     </style>
+    
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
@@ -164,6 +195,7 @@
             <p>Évaluez vos connaissances sur les concepts fondamentaux de la sécurité informatique, la triade CIA, et les modèles de menaces.</p>
             <div class="card-action">
                 <a href="securite.html" class="btn">Démarrer le QCM</a>
+                <a href="resume-viewer.html?file=resume/securite.md&subject=Sécurité des Systèmes" class="btn btn-outline">Voir le Résumé</a>
             </div>
         </div>
         
@@ -175,6 +207,7 @@
             <p>Testez vos connaissances sur les différents types de bases de données NoSQL, leurs caractéristiques et cas d'usage.</p>
             <div class="card-action">
                 <a href="nosql.html" class="btn">Démarrer le QCM</a>
+                <a href="resume-viewer.html?file=resume/nosql.md&subject=Bases NoSQL" class="btn btn-outline">Voir le Résumé</a>
             </div>
         </div>
         
@@ -186,12 +219,25 @@
             <p>Évaluez votre compréhension des méthodes d'interprétabilité pour les modèles d'intelligence artificielle.</p>
             <div class="card-action">
                 <a href="interpretabilite.html" class="btn">Démarrer le QCM</a>
+                <a href="resume-viewer.html?file=resume/interpretabilite.md&subject=Interprétabilité IA" class="btn btn-outline">Voir le Résumé</a>
+            </div>
+        </div>
+        
+        <div class="card">
+            <div class="card-icon">
+                <i class="fas fa-chart-line"></i>
+            </div>
+            <h3>Data Analytics</h3>
+            <p>Testez vos connaissances sur l'analyse de données, les techniques statistiques et les outils de visualisation.</p>
+            <div class="card-action">
+                <a href="dataAnalytics.html" class="btn">Démarrer le QCM</a>
+                <a href="resume-viewer.html?file=resume/dataAnalytics.md&subject=Data Analytics" class="btn btn-outline">Voir le Résumé</a>
             </div>
         </div>
     </div>
     
     <footer>
-        <p>© 2025 QCM d'Apprentissage | Développé par Kaddouri Oussama  </p>
+        <p>© 2025 QCM d'Apprentissage | Développé par Kaddouri Oussama</p>
     </footer>
 </body>
 </html>

@@ -89,10 +89,10 @@
         
         label {
             display: block;
-            margin-bottom: 1rem;
-            padding: 1rem;
+            margin-bottom: 1.5rem;
+            padding: 1.2rem;
             background-color: rgba(255, 255, 255, 0.05);
-            border-radius: 8px;
+            border-radius: 10px;
             cursor: pointer;
             transition: all 0.2s ease;
             position: relative;
@@ -293,11 +293,14 @@
             <a href="index.html" class="home-btn">
                 <i class="fas fa-home"></i> Retour à l'accueil
             </a>
+            <a href="resume-viewer.html?file=resume/nosql.md&subject=Bases NoSQL" class="home-btn" style="margin-top: 10px;">
+                <i class="fas fa-book"></i> Voir le résumé
+            </a>
         </div>
     </div>
 
     <footer>
-        <p>© 2025 QCM d'Apprentissage | Développé par NajibLab</p>
+        <p>© 2025 QCM d'Apprentissage | Développé par Kaddouri Oussama</p>
     </footer>
 
     <script>
@@ -305,7 +308,7 @@
         let currentQuestionIndex = 0;
 
         // Charger les questions depuis le fichier JSON
-        fetch('data/nosql.json')
+        fetch('qcm/nosql.json')
             .then(response => response.json())
             .then(data => {
                 quizData = data;

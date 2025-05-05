@@ -1,0 +1,851 @@
+[
+    {
+        "question": "Quelle est la triade fondamentale de la sécurité informatique (CIA) ?",
+        "options": ["Confidentialité, Intégrité, Accessibilité", "Confidentialité, Intégrité, Disponibilité", "Contrôle, Intégrité, Anonymat", "Confidentialité, Identité, Accès"],
+        "answer": "Confidentialité, Intégrité, Disponibilité",
+        "explanation": "La triade CIA représente les trois objectifs fondamentaux de la sécurité : Confidentialité, Intégrité et Disponibilité."
+    },
+    {
+        "question": "Quel modèle Microsoft classe les menaces en six catégories ?",
+        "options": ["STRIDE", "DREAD", "MITRE ATT&CK", "Bell-LaPadula"],
+        "answer": "STRIDE",
+        "explanation": "Le modèle STRIDE de Microsoft classe les menaces en six catégories : Spoofing, Tampering, Repudiation, Information Disclosure, Denial of Service et Elevation of Privilege."
+    },
+    {
+        "question": "Quel service de sécurité empêche l'accès non autorisé aux informations sensibles ?",
+        "options": ["Intégrité", "Authentification", "Confidentialité", "Disponibilité"],
+        "answer": "Confidentialité",
+        "explanation": "La confidentialité empêche l'accès non autorisé aux informations sensibles."
+    },
+    {
+        "question": "Quel service garantit qu'une information n'est pas modifiée sans autorisation ?",
+        "options": ["Confidentialité", "Intégrité", "Authentification", "Non-répudiation"],
+        "answer": "Intégrité",
+        "explanation": "L'intégrité assure que les données ne sont pas modifiées sans autorisation."
+    },
+    {
+        "question": "Quel service permet de prouver qu’un message a été envoyé par son expéditeur ?",
+        "options": ["Confidentialité", "Authentification", "Non-répudiation", "Contrôle d’accès"],
+        "answer": "Non-répudiation",
+        "explanation": "Le non-répudiation empêche l'expéditeur de nier avoir envoyé un message."
+    },
+    {
+        "question": "Quelle méthode cryptographique utilise une même clé pour chiffrer et déchiffrer ?",
+        "options": ["Cryptographie asymétrique", "Cryptographie symétrique", "Cryptographie quantique", "Cryptographie post-quantique"],
+        "answer": "Cryptographie symétrique",
+        "explanation": "En cryptographie symétrique, la même clé est utilisée pour le chiffrement et le déchiffrement."
+    },
+    {
+        "question": "Quel algorithme de hachage est considéré comme vulnérable aujourd’hui ?",
+        "options": ["SHA-256", "MD5", "SHA-3", "SHA-2"],
+        "answer": "MD5",
+        "explanation": "MD5 est vulnérable aux collisions et n’est plus considéré comme sûr."
+    },
+    {
+        "question": "Quel mécanisme permet de vérifier l'identité d'une entité dans un système informatique ?",
+        "options": ["Contrôle d’accès", "Authentification", "Auditabilité", "Confidentialité"],
+        "answer": "Authentification",
+        "explanation": "L'authentification permet de confirmer l'identité d'un utilisateur ou d'un système."
+    },
+    {
+        "question": "Quel type de contrôle d'accès attribue des permissions selon les rôles des utilisateurs ?",
+        "options": ["RBAC", "MAC", "DAC", "ACL"],
+        "answer": "RBAC",
+        "explanation": "Le contrôle d'accès basé sur les rôles (RBAC) attribue des droits selon les rôles des utilisateurs."
+    },
+    {
+        "question": "Quel concept désigne l’ensemble des composants critiques pour la sécurité d’un système informatique ?",
+        "options": ["TCB", "ACL", "PP", "ST"],
+        "answer": "TCB",
+        "explanation": "La Trusted Computing Base (TCB) est l’ensemble des composants matériels et logiciels essentiels pour la sécurité du système."
+    },
+    {
+        "question": "Quel standard définit les critères d'évaluation de la sécurité des systèmes informatiques ?",
+        "options": ["ISO/IEC 27001", "Common Criteria", "NIST SP 800-53", "COBIT"],
+        "answer": "Common Criteria",
+        "explanation": "Les Common Criteria définissent les exigences d’évaluation de la sécurité d’un système informatique."
+    },
+    {
+        "question": "Quel niveau de sécurité est généralement adopté par les systèmes d’exploitation courants selon les Common Criteria ?",
+        "options": ["EAL 1", "EAL 4", "EAL 7", "EAL 0"],
+        "answer": "EAL 4",
+        "explanation": "La plupart des systèmes d’exploitation modernes sont certifiés au niveau EAL 4 ou supérieur."
+    },
+    {
+        "question": "Quel principe stipule que seul ce qui est explicitement autorisé doit être permis ?",
+        "options": ["Principe de moindre privilège", "Principe de besoin de savoir", "Politique du tout est interdit", "Politique du tout est permis"],
+        "answer": "Politique du tout est interdit",
+        "explanation": "Le principe 'Tout ce qui n’est pas permis est interdit' est une règle fondamentale de contrôle d’accès."
+    },
+    {
+        "question": "Quel terme désigne une faiblesse pouvant être exploitée par une menace ?",
+        "options": ["Menace", "Risque", "Vulnérabilité", "Impact"],
+        "answer": "Vulnérabilité",
+        "explanation": "Une vulnérabilité est une faiblesse qui peut être exploitée par une menace."
+    },
+    {
+        "question": "Quel risque est calculé comme Impact × Probabilité ?",
+        "options": ["Risque global", "Risque résiduel", "Risque initial", "Risque acceptable"],
+        "answer": "Risque global",
+        "explanation": "Le risque global est souvent estimé comme le produit de l’impact par la probabilité d’occurrence."
+    },
+    {
+        "question": "Quel type d’attaque vise à rendre un service indisponible en submergeant le système de requêtes ?",
+        "options": ["Phishing", "Man-in-the-middle", "Déni de service", "Injection SQL"],
+        "answer": "Déni de service",
+        "explanation": "Une attaque par déni de service (DoS) vise à rendre un service inaccessible en saturant ses ressources."
+    },
+    {
+        "question": "Quel outil est utilisé pour stocker des journaux d’événements liés à la sécurité ?",
+        "options": ["Firewall", "IDS", "Log", "Antivirus"],
+        "answer": "Log",
+        "explanation": "Les fichiers logs sont utilisés pour enregistrer les événements de sécurité dans un système."
+    },
+    {
+        "question": "Quel mécanisme limite l’exécution d’un programme suspect dans un environnement isolé ?",
+        "options": ["Chiffrement", "Sandboxing", "Hachage", "Signature numérique"],
+        "answer": "Sandboxing",
+        "explanation": "Le sandboxing isole un programme pour limiter les accès à certaines ressources du système."
+    },
+    {
+        "question": "Quel type de fonction cryptographique retourne une empreinte de taille fixe ?",
+        "options": ["Fonction de chiffrement", "Fonction de hachage", "Fonction de signature", "Fonction de compression"],
+        "answer": "Fonction de hachage",
+        "explanation": "Une fonction de hachage prend un message de longueur variable et génère une empreinte de taille fixe."
+    },
+    {
+        "question": "Quel protocole permet l’authentification mutuelle entre deux parties dans un réseau ?",
+        "options": ["SSL/TLS", "IPsec", "EAP", "SSH"],
+        "answer": "EAP",
+        "explanation": "Le protocole EAP permet l’authentification mutuelle dans les réseaux sans fil ou câblés."
+    },
+    {
+        "question": "Quel type de politique de sécurité spécifie les actions autorisées sur un objet ?",
+        "options": ["Politique discrétionnaire", "Politique mandataire", "Politique basée sur les rôles", "Politique de liste de contrôle"],
+        "answer": "Politique basée sur les rôles",
+        "explanation": "La politique RBAC attribue des autorisations en fonction des rôles des utilisateurs."
+    },
+    {
+        "question": "Quel type de mot de passe est généré automatiquement et n’est utilisable qu’une seule fois ?",
+        "options": ["Mot de passe statique", "Mot de passe à usage unique", "Mot de passe fort", "Mot de passe partagé"],
+        "answer": "Mot de passe à usage unique",
+        "explanation": "Un mot de passe à usage unique (OTP) est valide pour une seule session ou connexion."
+    },
+    {
+        "question": "Quel modèle de contrôle d’accès se base sur les niveaux de classification des objets et des sujets ?",
+        "options": ["RBAC", "MAC", "DAC", "ABAC"],
+        "answer": "MAC",
+        "explanation": "Le contrôle d’accès mandataire (MAC) repose sur des étiquettes de sécurité associées aux objets et aux sujets."
+    },
+    {
+        "question": "Quel mécanisme augmente le facteur de travail nécessaire pour exploiter une vulnérabilité ?",
+        "options": ["Cryptage", "Bourrage de trafic", "Changement de mot de passe", "Détection d'intrusion"],
+        "answer": "Bourrage de trafic",
+        "explanation": "Le bourrage de trafic rend plus difficile l’analyse du trafic légitime en ajoutant des données aléatoires."
+    },
+    {
+        "question": "Quel type de signature numérique utilise une paire de clés asymétriques ?",
+        "options": ["Signature MAC", "Signature à clé publique", "Signature par mot de passe", "Signature par hashage"],
+        "answer": "Signature à clé publique",
+        "explanation": "La signature numérique utilise une paire de clés asymétriques (privée/publique) pour assurer l’intégrité et le non-répudiation."
+    },
+    {
+        "question": "Quel type de menace implique un acteur malveillant interne à l’organisation ?",
+        "options": ["Menace externe", "Menace accidentelle", "Menace interne", "Menace environnementale"],
+        "answer": "Menace interne",
+        "explanation": "Les menaces internes proviennent d'utilisateurs autorisés mais agissant malicieusement ou par erreur."
+    },
+    {
+        "question": "Quel terme désigne une attaque visant à deviner un mot de passe par toutes les combinaisons possibles ?",
+        "options": ["Attaque par dictionnaire", "Attaque par force brute", "Attaque par phishing", "Attaque par interception"],
+        "answer": "Attaque par force brute",
+        "explanation": "L’attaque par force brute teste toutes les combinaisons possibles pour trouver le mot de passe."
+    },
+    {
+        "question": "Quel service de sécurité garantit que les systèmes soient accessibles lorsque nécessaire ?",
+        "options": ["Confidentialité", "Intégrité", "Disponibilité", "Authentification"],
+        "answer": "Disponibilité",
+        "explanation": "La disponibilité garantit que les services restent accessibles aux utilisateurs autorisés."
+    },
+    {
+        "question": "Quel type de risque reste après l’application des mesures de sécurité ?",
+        "options": ["Risque résiduel", "Risque acceptable", "Risque initial", "Risque évité"],
+        "answer": "Risque résiduel",
+        "explanation": "Le risque résiduel est le risque qui subsiste après mise en place des contre-mesures."
+    },
+    {
+        "question": "Quel type de fonctionnalité permet de retracer les actions effectuées par les utilisateurs dans un système ?",
+        "options": ["Journalisation", "Cryptage", "Compression", "Indexation"],
+        "answer": "Journalisation",
+        "explanation": "La journalisation (logging) permet de retracer les actions effectuées dans un système."
+    },
+    {
+        "question": "Quel terme désigne une technique pour dissimuler des données dans un média numérique ?",
+        "options": ["Stéganographie", "Watermarking", "Cryptographie", "Compression"],
+        "answer": "Watermarking",
+        "explanation": "Le watermarking consiste à insérer un message secondaire dans un média primaire pour protéger les droits d’auteur."
+    },
+    {
+        "question": "Quel type de mécanisme de sécurité protège contre l’usurpation d’identité ?",
+        "options": ["Contrôle d’accès", "Authentification", "Intégrité", "Confidentialité"],
+        "answer": "Authentification",
+        "explanation": "L’authentification protège contre l’usurpation d’identité en validant l’identité d’un utilisateur ou d’un système."
+    },
+    {
+        "question": "Quel type de modèle de sécurité décrit les propriétés de sécurité indépendamment de l’implémentation ?",
+        "options": ["Protection Profile (PP)", "Security Target (ST)", "TCB", "ACL"],
+        "answer": "Protection Profile (PP)",
+        "explanation": "Un Protection Profile (PP) identifie les exigences de sécurité pour une communauté d’utilisateurs."
+    },
+    {
+        "question": "Quel document décrit les caractéristiques de sécurité d’un produit spécifique ?",
+        "options": ["PP", "ST", "TCB", "CEM"],
+        "answer": "ST",
+        "explanation": "Le Security Target (ST) décrit les caractéristiques de sécurité d’un produit évalué."
+    },
+    {
+        "question": "Quel principe de sécurité limite les privilèges accordés à un processus ou un utilisateur ?",
+        "options": ["Principe de moindre privilège", "Principe de séparation des tâches", "Principe de confiance zéro", "Principe de verrouillage"],
+        "answer": "Principe de moindre privilège",
+        "explanation": "Le principe de moindre privilège limite les droits accordés à un minimum nécessaire."
+    },
+    {
+        "question": "Quel mécanisme protège contre la modification d’un message pendant sa transmission ?",
+        "options": ["Chiffrement", "Signature numérique", "Hachage", "Compression"],
+        "answer": "Signature numérique",
+        "explanation": "La signature numérique protège contre la modification d’un message grâce à l’intégrité."
+    },
+    {
+        "question": "Quel type de mot de passe est renforcé par l’ajout d’une donnée aléatoire avant le hachage ?",
+        "options": ["Mot de passe salé", "Mot de passe crypté", "Mot de passe à usage unique", "Mot de passe complexe"],
+        "answer": "Mot de passe salé",
+        "explanation": "Un mot de passe salé inclut une valeur aléatoire (le sel) avant le hachage pour améliorer la sécurité."
+    },
+    {
+        "question": "Quel type de modèle de sécurité est utilisé pour évaluer la gravité des menaces ?",
+        "options": ["STRIDE", "DREAD", "MITRE ATT&CK", "Bell-LaPadula"],
+        "answer": "DREAD",
+        "explanation": "Le modèle DREAD évalue les menaces selon cinq critères : Damage, Reproducibility, Exploitability, Affected Users, Discoverability."
+    },
+    {
+        "question": "Quel type de mécanisme de sécurité protège contre l’analyse du trafic réseau ?",
+        "options": ["Chiffrement", "Bourrage de trafic", "Signature numérique", "Hachage"],
+        "answer": "Bourrage de trafic",
+        "explanation": "Le bourrage de trafic masque les motifs de communication en générant des données aléatoires."
+    },
+    {
+        "question": "Quel type de contrôle d’accès est basé sur les listes de permissions attachées aux objets ?",
+        "options": ["ACL", "RBAC", "MAC", "DAC"],
+        "answer": "ACL",
+        "explanation": "Les listes de contrôle d’accès (ACL) définissent les permissions attachées à chaque objet."
+    },
+    {
+        "question": "Quel type de mécanisme de sécurité protège contre la lecture non autorisée des communications ?",
+        "options": ["Intégrité", "Confidentialité", "Authentification", "Disponibilité"],
+        "answer": "Confidentialité",
+        "explanation": "La confidentialité protège contre la lecture non autorisée via le chiffrement."
+    },
+    {
+        "question": "Quel type de mécanisme de sécurité protège contre l’altération des données ?",
+        "options": ["Chiffrement", "Hachage", "Signature numérique", "Compression"],
+        "answer": "Signature numérique",
+        "explanation": "La signature numérique protège contre l’altération des données grâce à l’intégrité."
+    },
+    {
+        "question": "Quel type de mécanisme de sécurité protège contre la suppression ou la modification d’un document numérique ?",
+        "options": ["Watermarking", "Chiffrement", "Signature numérique", "Compression"],
+        "answer": "Watermarking",
+        "explanation": "Le watermarking protège contre la modification d’un document en intégrant un marquage invisible."
+    },
+    {
+        "question": "Quel type de mécanisme de sécurité protège contre l’interception des mots de passe ?",
+        "options": ["OTP", "Chiffrement", "Hachage", "Compression"],
+        "answer": "OTP",
+        "explanation": "Les mots de passe à usage unique (OTP) protègent contre l’interception car ils ne sont valables qu’une fois."
+    },
+    {
+        "question": "Quel type de mécanisme de sécurité protège contre la perte de données lors d'une panne ?",
+        "options": ["Sauvegarde", "Redondance", "Journalisation", "Compression"],
+        "answer": "Redondance",
+        "explanation": "La redondance protège contre la perte de données en dupliquant les informations sur plusieurs supports."
+    },
+    {
+        "question": "Quel type de menace est lié à une attaque par déni de service (DoS) ?",
+        "options": ["Menace externe", "Menace interne", "Menace accidentelle", "Menace environnementale"],
+        "answer": "Menace externe",
+        "explanation": "Une attaque DoS est généralement initiée par un acteur externe."
+    },
+    
+    {
+        "question": "Qu'est-ce que le principe de défense en profondeur en cybersécurité ?",
+        "options": [
+            "Une méthode de chiffrement avancée",
+            "L'utilisation de plusieurs couches de sécurité pour protéger un système",
+            "La sécurisation uniquement des données les plus sensibles",
+            "Une technique d'authentification multi-facteurs"
+        ],
+        "answer": "L'utilisation de plusieurs couches de sécurité pour protéger un système",
+        "explanation": "La défense en profondeur est une approche qui utilise plusieurs mécanismes de sécurité superposés pour protéger un système, de sorte que si une couche échoue, une autre continue d'assurer la protection."
+    },
+    {
+        "question": "Qu'est-ce qu'une attaque d'injection SQL ?",
+        "options": [
+            "Une tentative d'accès physique aux serveurs",
+            "L'insertion de code SQL malveillant dans une requête pour manipuler une base de données",
+            "Le vol d'identifiants par phishing",
+            "Une attaque visant à saturer la bande passante d'un service"
+        ],
+        "answer": "L'insertion de code SQL malveillant dans une requête pour manipuler une base de données",
+        "explanation": "Une attaque d'injection SQL consiste à insérer du code SQL malveillant dans les entrées d'une application pour manipuler la base de données sous-jacente et potentiellement accéder, modifier ou supprimer des données."
+    },
+    {
+        "question": "Qu'est-ce que le principe de Zero Trust en cybersécurité ?",
+        "options": [
+            "Ne jamais faire confiance à un système informatique",
+            "Vérifier systématiquement chaque accès, qu'il provienne de l'intérieur ou de l'extérieur du réseau",
+            "Utiliser uniquement des logiciels open source",
+            "Ne pas permettre l'accès à distance aux systèmes"
+        ],
+        "answer": "Vérifier systématiquement chaque accès, qu'il provienne de l'intérieur ou de l'extérieur du réseau",
+        "explanation": "Le principe de Zero Trust stipule qu'aucune entité (utilisateur ou appareil) ne doit être considérée comme fiable par défaut, même si elle se trouve à l'intérieur du périmètre du réseau. Chaque accès doit être vérifié."
+    },
+    {
+        "question": "Qu'est-ce qu'une attaque par ransomware ?",
+        "options": [
+            "Une attaque ciblant les systèmes de paiement en ligne",
+            "Un logiciel malveillant qui chiffre les données et exige une rançon pour les déchiffrer",
+            "Une attaque visant à voler des informations d'identification",
+            "Un virus qui ralentit les performances système"
+        ],
+        "answer": "Un logiciel malveillant qui chiffre les données et exige une rançon pour les déchiffrer",
+        "explanation": "Un ransomware est un type de logiciel malveillant qui chiffre les données de la victime, rendant les fichiers et systèmes inaccessibles, puis exige le paiement d'une rançon pour fournir la clé de déchiffrement."
+    },
+    {
+        "question": "Qu'est-ce que le GDPR (RGPD) ?",
+        "options": [
+            "Un protocole de chiffrement",
+            "Un règlement sur la protection des données personnelles dans l'UE",
+            "Un framework de sécurité pour les applications web",
+            "Une certification en sécurité informatique"
+        ],
+        "answer": "Un règlement sur la protection des données personnelles dans l'UE",
+        "explanation": "Le Règlement Général sur la Protection des Données (RGPD ou GDPR) est une législation européenne qui régit la collecte, le stockage et le traitement des données personnelles des résidents de l'UE."
+    },
+    {
+        "question": "Qu'est-ce qu'une attaque par hameçonnage (phishing) ?",
+        "options": [
+            "Une attaque visant à saturer un serveur de requêtes",
+            "Une tentative de tromper l'utilisateur pour qu'il révèle des informations sensibles",
+            "Une attaque ciblant les systèmes de pêche commerciale",
+            "Une méthode pour intercepter des communications sans fil"
+        ],
+        "answer": "Une tentative de tromper l'utilisateur pour qu'il révèle des informations sensibles",
+        "explanation": "Le phishing est une technique d'ingénierie sociale où l'attaquant se fait passer pour une entité de confiance pour inciter la victime à révéler des informations sensibles comme des mots de passe ou des données bancaires."
+    },
+    {
+        "question": "Qu'est-ce qu'un VPN (Virtual Private Network) ?",
+        "options": [
+            "Un virus qui se propage via les réseaux sociaux",
+            "Un réseau local sans fil sécurisé",
+            "Un tunnel chiffré pour sécuriser les communications sur des réseaux non sécurisés",
+            "Un système de détection d'intrusions"
+        ],
+        "answer": "Un tunnel chiffré pour sécuriser les communications sur des réseaux non sécurisés",
+        "explanation": "Un VPN crée un tunnel chiffré entre l'appareil de l'utilisateur et un serveur distant, permettant de sécuriser les communications sur des réseaux non fiables comme le Wi-Fi public."
+    },
+    {
+        "question": "Qu'est-ce qu'une attaque par canal latéral (side-channel attack) ?",
+        "options": [
+            "Une attaque exploitant l'information obtenue par l'observation physique d'un système cryptographique",
+            "Une attaque visant les canaux de communication secondaires d'une entreprise",
+            "Une attaque contre les serveurs de sauvegarde",
+            "Une tentative d'intrusion par des ports réseau non standards"
+        ],
+        "answer": "Une attaque exploitant l'information obtenue par l'observation physique d'un système cryptographique",
+        "explanation": "Une attaque par canal latéral exploite des informations obtenues par l'observation de l'implémentation physique d'un système (temps d'exécution, consommation électrique, émissions électromagnétiques) plutôt que ses faiblesses théoriques."
+    },
+    {
+        "question": "Qu'est-ce que l'authentification multi-facteurs (MFA) ?",
+        "options": [
+            "L'utilisation de plusieurs mots de passe différents",
+            "L'authentification nécessitant au moins deux types de preuves d'identité indépendants",
+            "L'authentification via plusieurs appareils simultanément",
+            "Un système de vérification par questions de sécurité multiples"
+        ],
+        "answer": "L'authentification nécessitant au moins deux types de preuves d'identité indépendants",
+        "explanation": "L'authentification multi-facteurs requiert au moins deux types de preuves d'identité parmi : quelque chose que vous savez (mot de passe), quelque chose que vous possédez (téléphone), ou quelque chose que vous êtes (empreinte digitale)."
+    },
+    {
+        "question": "Qu'est-ce qu'un IDS (Intrusion Detection System) ?",
+        "options": [
+            "Un logiciel antivirus avancé",
+            "Un système qui surveille le réseau ou les systèmes pour détecter des activités malveillantes",
+            "Un pare-feu de nouvelle génération",
+            "Un protocole d'authentification sécurisé"
+        ],
+        "answer": "Un système qui surveille le réseau ou les systèmes pour détecter des activités malveillantes",
+        "explanation": "Un IDS surveille le trafic réseau ou l'activité système pour identifier les comportements suspects ou les violations de politiques de sécurité, et génère des alertes en cas de détection."
+    },
+    {
+        "question": "Quelle est la différence entre un IDS et un IPS ?",
+        "options": [
+            "L'IDS détecte les intrusions, l'IPS les prévient activement",
+            "L'IDS est matériel, l'IPS est logiciel",
+            "L'IDS fonctionne sur le réseau, l'IPS sur les hôtes uniquement",
+            "L'IDS est une technologie obsolète remplacée par l'IPS"
+        ],
+        "answer": "L'IDS détecte les intrusions, l'IPS les prévient activement",
+        "explanation": "La principale différence est que l'IDS (Intrusion Detection System) se contente de détecter et d'alerter, tandis que l'IPS (Intrusion Prevention System) peut activement bloquer ou empêcher les activités malveillantes détectées."
+    },
+    {
+        "question": "Qu'est-ce qu'une attaque XSS (Cross-Site Scripting) ?",
+        "options": [
+            "Une attaque exploitant les faiblesses d'un serveur de base de données",
+            "L'injection de scripts malveillants dans des sites web consultés par d'autres utilisateurs",
+            "Une attaque ciblant les connexions croisées entre serveurs",
+            "Une technique pour contourner les pare-feu réseau"
+        ],
+        "answer": "L'injection de scripts malveillants dans des sites web consultés par d'autres utilisateurs",
+        "explanation": "Une attaque XSS consiste à injecter des scripts malveillants (généralement JavaScript) dans des pages web légitimes, qui s'exécutent ensuite dans le navigateur des visiteurs, permettant de voler des cookies, des sessions ou d'autres données sensibles."
+    },
+    {
+        "question": "Qu'est-ce que le HTTPS ?",
+        "options": [
+            "Une version avancée du protocole HTTP",
+            "Un protocole de transfert hypertexte sécurisé utilisant TLS/SSL",
+            "Un standard de cryptage pour les emails",
+            "Un framework de développement web sécurisé"
+        ],
+        "answer": "Un protocole de transfert hypertexte sécurisé utilisant TLS/SSL",
+        "explanation": "HTTPS (HTTP Secure) est la version sécurisée du protocole HTTP, qui utilise TLS/SSL pour chiffrer les communications entre le navigateur et le serveur web, protégeant ainsi contre les écoutes et les attaques."
+    },
+    {
+        "question": "Qu'est-ce que la stéganographie ?",
+        "options": [
+            "Une technique de chiffrement moderne",
+            "L'art de dissimuler des informations dans d'autres médias non suspects",
+            "Un protocole de communication sécurisé",
+            "Une méthode d'authentification biométrique"
+        ],
+        "answer": "L'art de dissimuler des informations dans d'autres médias non suspects",
+        "explanation": "La stéganographie est la pratique qui consiste à cacher des messages ou des informations à l'intérieur d'autres médias non suspects comme des images, des fichiers audio ou vidéo, de manière à ce que personne ne soupçonne leur existence."
+    },
+    {
+        "question": "Qu'est-ce qu'une attaque MITM (Man In The Middle) ?",
+        "options": [
+            "Une attaque ciblant spécifiquement les utilisateurs masculins",
+            "Une interception où l'attaquant s'insère dans la communication entre deux parties",
+            "Une attaque visant les systèmes de niveau intermédiaire dans un réseau",
+            "Une technique de phishing avancée"
+        ],
+        "answer": "Une interception où l'attaquant s'insère dans la communication entre deux parties",
+        "explanation": "Dans une attaque Man In The Middle, l'attaquant s'interpose secrètement dans la communication entre deux parties, relayant et potentiellement altérant les messages échangés, faisant croire aux deux parties qu'elles communiquent directement entre elles."
+    },
+    {
+        "question": "Qu'est-ce que le chiffrement de bout en bout (end-to-end encryption) ?",
+        "options": [
+            "Un chiffrement qui ne s'applique qu'aux extrémités d'un fichier",
+            "Un système où seuls l'expéditeur et le destinataire peuvent lire les messages",
+            "Un chiffrement qui protège uniquement les terminaux",
+            "Une méthode pour sécuriser les bases de données"
+        ],
+        "answer": "Un système où seuls l'expéditeur et le destinataire peuvent lire les messages",
+        "explanation": "Le chiffrement de bout en bout garantit que seuls l'expéditeur et le destinataire prévu peuvent lire les messages échangés. Même les intermédiaires (comme les serveurs de messagerie) ne peuvent pas déchiffrer le contenu."
+    },
+    {
+        "question": "Qu'est-ce qu'une attaque par force brute ?",
+        "options": [
+            "Une tentative de pénétration physique dans une salle serveur",
+            "Une technique consistant à essayer toutes les combinaisons possibles pour trouver un mot de passe",
+            "Une attaque visant à épuiser les ressources système",
+            "Une forme d'ingénierie sociale agressive"
+        ],
+        "answer": "Une technique consistant à essayer toutes les combinaisons possibles pour trouver un mot de passe",
+        "explanation": "Une attaque par force brute tente de découvrir un mot de passe ou une clé en essayant systématiquement toutes les combinaisons possibles jusqu'à trouver la bonne."
+    },
+    {
+        "question": "Qu'est-ce que CVE (Common Vulnerabilities and Exposures) ?",
+        "options": [
+            "Un système de firewalling avancé",
+            "Une base de données publique répertoriant les vulnérabilités de sécurité connues",
+            "Un protocole de communication sécurisé",
+            "Un logiciel antivirus collaboratif"
+        ],
+        "answer": "Une base de données publique répertoriant les vulnérabilités de sécurité connues",
+        "explanation": "CVE est un système qui fournit des identifiants uniques pour les vulnérabilités de sécurité publiquement connues, facilitant le partage d'informations sur ces failles entre les différents outils, bases de données et services de sécurité."
+    },
+    {
+        "question": "Qu'est-ce que le principe de séparation des privilèges ?",
+        "options": [
+            "L'attribution de privilèges différents selon la nationalité",
+            "La division des responsabilités critiques entre plusieurs personnes",
+            "L'isolation des utilisateurs privilégiés dans un réseau distinct",
+            "La hiérarchisation des accès système selon l'ancienneté"
+        ],
+        "answer": "La division des responsabilités critiques entre plusieurs personnes",
+        "explanation": "Le principe de séparation des privilèges consiste à diviser les responsabilités critiques entre plusieurs personnes, de sorte qu'aucune ne puisse abuser du système sans la coopération des autres, réduisant ainsi les risques d'actions malveillantes."
+    },
+    {
+        "question": "Qu'est-ce que le chiffrement symétrique ?",
+        "options": [
+            "Un chiffrement qui utilise deux clés différentes pour chiffrer et déchiffrer",
+            "Un chiffrement qui utilise la même clé pour chiffrer et déchiffrer",
+            "Un chiffrement qui fonctionne uniquement sur des données symétriques",
+            "Un chiffrement qui nécessite au moins deux personnes pour être activé"
+        ],
+        "answer": "Un chiffrement qui utilise la même clé pour chiffrer et déchiffrer",
+        "explanation": "Le chiffrement symétrique utilise une seule clé pour à la fois chiffrer et déchiffrer les données, ce qui le rend rapide mais nécessite un échange sécurisé de la clé entre les parties."
+    },
+    {
+        "question": "Qu'est-ce que le chiffrement asymétrique ?",
+        "options": [
+            "Un chiffrement qui utilise des clés de longueurs différentes",
+            "Un chiffrement qui utilise deux clés différentes : une publique pour chiffrer et une privée pour déchiffrer",
+            "Un chiffrement qui n'est pas uniforme sur toutes les données",
+            "Un chiffrement qui change d'algorithme pendant son exécution"
+        ],
+        "answer": "Un chiffrement qui utilise deux clés différentes : une publique pour chiffrer et une privée pour déchiffrer",
+        "explanation": "Le chiffrement asymétrique utilise une paire de clés : une clé publique qui peut être partagée et utilisée pour chiffrer les données, et une clé privée gardée secrète pour déchiffrer ces données."
+    },
+    {
+        "question": "Qu'est-ce qu'une infrastructure à clés publiques (PKI) ?",
+        "options": [
+            "Un ensemble de matériel et logiciel pour gérer les certificats numériques et les clés publiques",
+            "Un système de classification des infrastructures selon leur niveau d'accessibilité",
+            "Un type de réseau public accessible à tous",
+            "Un protocole de communication entre différents systèmes d'exploitation"
+        ],
+        "answer": "Un ensemble de matériel et logiciel pour gérer les certificats numériques et les clés publiques",
+        "explanation": "Une PKI est un ensemble de rôles, politiques, matériel et logiciel pour créer, gérer, distribuer, utiliser, stocker et révoquer les certificats numériques et gérer le chiffrement à clé publique."
+    },
+    {
+        "question": "Qu'est-ce qu'un certificat SSL/TLS ?",
+        "options": [
+            "Une licence permettant d'utiliser des algorithmes de chiffrement",
+            "Un fichier numérique qui lie cryptographiquement une clé publique à une identité vérifiée",
+            "Une certification professionnelle en sécurité informatique",
+            "Un protocole de sécurité pour les transactions en ligne"
+        ],
+        "answer": "Un fichier numérique qui lie cryptographiquement une clé publique à une identité vérifiée",
+        "explanation": "Un certificat SSL/TLS est un document numérique qui authentifie l'identité d'un site web et permet une connexion chiffrée. Il contient la clé publique du serveur et est signé par une autorité de certification de confiance."
+    },
+    {
+        "question": "Qu'est-ce que le principe de défaillance sécurisée (fail-secure) ?",
+        "options": [
+            "Un système qui devient plus sécurisé après une attaque",
+            "Un principe stipulant qu'en cas de défaillance, un système doit rester dans un état sécurisé",
+            "Une méthode de récupération après une brèche de sécurité",
+            "Un système de sauvegarde automatique des données sensibles"
+        ],
+        "answer": "Un principe stipulant qu'en cas de défaillance, un système doit rester dans un état sécurisé",
+        "explanation": "Le principe de défaillance sécurisée exige qu'en cas de panne ou d'erreur, un système se retrouve dans un état qui ne compromet pas la sécurité, généralement en bloquant les accès plutôt qu'en les ouvrant."
+    },
+    {
+        "question": "Qu'est-ce qu'un SIEM (Security Information and Event Management) ?",
+        "options": [
+            "Un protocole de sécurité pour la messagerie instantanée",
+            "Une solution combinant la gestion d'informations et la gestion d'événements de sécurité",
+            "Un standard de sécurité pour l'IoT",
+            "Un système d'exploitation sécurisé"
+        ],
+        "answer": "Une solution combinant la gestion d'informations et la gestion d'événements de sécurité",
+        "explanation": "Un SIEM est une solution qui combine la gestion des informations de sécurité (collecte de logs) et la gestion des événements (analyse en temps réel) pour fournir une surveillance, des alertes et des rapports sur les incidents de sécurité."
+    },
+    {
+        "question": "Qu'est-ce que le SOC (Security Operations Center) ?",
+        "options": [
+            "Un certificat de sécurité opérationnelle",
+            "Une unité centralisée qui gère les incidents de sécurité",
+            "Un protocole standardisé pour les opérations de sécurité",
+            "Un langage de programmation sécurisé"
+        ],
+        "answer": "Une unité centralisée qui gère les incidents de sécurité",
+        "explanation": "Un SOC est une équipe centralisée qui surveille, analyse et répond aux incidents de sécurité informatique 24/7, utilisant des technologies comme les SIEM pour protéger l'infrastructure informatique d'une organisation."
+    },
+    {
+        "question": "Qu'est-ce que le principe de moindre connaissance (Need-to-Know) ?",
+        "options": [
+            "Un principe stipulant que les utilisateurs doivent avoir le minimum de connaissances techniques",
+            "Un principe limitant l'accès aux informations uniquement à ce qui est nécessaire pour effectuer une tâche",
+            "Une approche minimaliste de la documentation de sécurité",
+            "Une stratégie de formation minimale des utilisateurs"
+        ],
+        "answer": "Un principe limitant l'accès aux informations uniquement à ce qui est nécessaire pour effectuer une tâche",
+        "explanation": "Le principe de moindre connaissance stipule que les individus ne devraient avoir accès qu'aux informations absolument nécessaires pour accomplir leurs tâches spécifiques, limitant ainsi les risques de fuites ou d'abus."
+    },
+    {
+        "question": "Qu'est-ce qu'un honeypot en sécurité informatique ?",
+        "options": [
+            "Un système de récompense pour les découvreurs de vulnérabilités",
+            "Un leurre conçu pour détecter ou détourner les tentatives d'accès non autorisés",
+            "Un outil pour extraire des données confidentielles",
+            "Une vulnérabilité particulièrement attrayante pour les attaquants"
+        ],
+        "answer": "Un leurre conçu pour détecter ou détourner les tentatives d'accès non autorisés",
+        "explanation": "Un honeypot est un système ou composant de sécurité qui semble contenir des informations ou ressources de valeur, mais est isolé et surveillé. Il sert à détecter, dévier ou étudier les tentatives d'accès non autorisés."
+    },
+    {
+        "question": "Qu'est-ce que le DevSecOps ?",
+        "options": [
+            "Un langage de programmation sécurisé",
+            "Une approche intégrant la sécurité dans le cycle de développement logiciel dès le début",
+            "Un outil de déploiement sécurisé",
+            "Une équipe spécialisée dans la sécurité des applications"
+        ],
+        "answer": "Une approche intégrant la sécurité dans le cycle de développement logiciel dès le début",
+        "explanation": "DevSecOps est une extension de DevOps qui intègre la sécurité comme composante essentielle tout au long du cycle de développement et de déploiement logiciel, plutôt que de l'ajouter à la fin comme une couche supplémentaire."
+    },
+    {
+        "question": "Qu'est-ce que l'OWASP (Open Web Application Security Project) ?",
+        "options": [
+            "Un protocole de sécurité pour applications web",
+            "Une organisation à but non lucratif qui produit des ressources gratuites sur la sécurité des applications",
+            "Un framework de développement web sécurisé",
+            "Une certification en sécurité web"
+        ],
+        "answer": "Une organisation à but non lucratif qui produit des ressources gratuites sur la sécurité des applications",
+        "explanation": "OWASP est une communauté en ligne et une organisation à but non lucratif qui produit des articles, méthodologies, documentation et outils sur la sécurité des applications web, dont le fameux OWASP Top 10 des risques de sécurité web."
+    },
+    {
+        "question": "Qu'est-ce que l'hameçonnage ciblé (spear phishing) ?",
+        "options": [
+            "Une technique de pêche utilisant des technologies avancées",
+            "Une attaque de phishing personnalisée visant des individus ou organisations spécifiques",
+            "Un logiciel malveillant qui cible des applications spécifiques",
+            "Une méthode d'ingénierie sociale utilisant des appels téléphoniques"
+        ],
+        "answer": "Une attaque de phishing personnalisée visant des individus ou organisations spécifiques",
+        "explanation": "Le spear phishing est une forme ciblée de phishing où l'attaquant personnalise ses communications en fonction de caractéristiques spécifiques de la victime (nom, poste, intérêts) pour augmenter les chances de succès de l'attaque."
+    },
+    {
+        "question": "Qu'est-ce que le CSRF (Cross-Site Request Forgery) ?",
+        "options": [
+            "Un type de malware qui modifie les requêtes web",
+            "Une attaque forçant un utilisateur à exécuter des actions non désirées sur une application web où il est authentifié",
+            "Un protocole de sécurité pour les formulaires web",
+            "Une technique de chiffrement des requêtes HTTP"
+        ],
+        "answer": "Une attaque forçant un utilisateur à exécuter des actions non désirées sur une application web où il est authentifié",
+        "explanation": "Le CSRF est une attaque qui force un utilisateur final à exécuter des actions non désirées sur une application web dans laquelle il est actuellement authentifié, en exploitant la confiance que le site a envers cet utilisateur."
+    },
+    {
+        "question": "Qu'est-ce que le principe de sécurité par conception (Security by Design) ?",
+        "options": [
+            "L'esthétique des systèmes de sécurité",
+            "L'intégration de la sécurité dès les premières étapes de conception d'un système",
+            "La conception de systèmes uniquement par des experts en sécurité",
+            "L'utilisation exclusive de composants sécurisés certifiés"
+        ],
+        "answer": "L'intégration de la sécurité dès les premières étapes de conception d'un système",
+        "explanation": "La sécurité par conception est une approche qui intègre les considérations de sécurité dès le début du processus de conception d'un système, plutôt que de les ajouter après coup, ce qui permet d'obtenir des systèmes intrinsèquement plus sécurisés."
+    },
+    {
+        "question": "Qu'est-ce que le CSIRT (Computer Security Incident Response Team) ?",
+        "options": [
+            "Un logiciel de réponse aux incidents",
+            "Une équipe dédiée à la gestion des incidents de sécurité informatique",
+            "Un protocole standardisé de réponse aux attaques",
+            "Un organisme de certification en sécurité"
+        ],
+        "answer": "Une équipe dédiée à la gestion des incidents de sécurité informatique",
+        "explanation": "Un CSIRT est une équipe d'experts responsable de recevoir, analyser et répondre aux incidents de sécurité informatique. Elle coordonne la gestion des incidents et aide à minimiser les dommages, à récupérer et à tirer des leçons pour prévenir de futurs incidents."
+    },
+    {
+        "question": "Qu'est-ce que l'analyse de vulnérabilité ?",
+        "options": [
+            "L'étude psychologique des victimes de cyberattaques",
+            "Le processus d'identification et de quantification des vulnérabilités dans un système",
+            "L'analyse financière des coûts liés aux brèches de sécurité",
+            "La recherche de failles dans les logiciels concurrents"
+        ],
+        "answer": "Le processus d'identification et de quantification des vulnérabilités dans un système",
+        "explanation": "L'analyse de vulnérabilité est le processus systématique d'identification, de classification et de priorisation des faiblesses de sécurité dans les systèmes, applications ou réseaux, afin de permettre leur correction avant qu'elles ne soient exploitées."
+    },
+    {
+        "question": "Qu'est-ce que l'ingénierie sociale en cybersécurité ?",
+        "options": [
+            "La conception ergonomique des interfaces de sécurité",
+            "Une technique d'attaque manipulant psychologiquement les individus pour qu'ils divulguent des informations confidentielles",
+            "L'organisation sociale des équipes de développement sécurisé",
+            "Un processus de sensibilisation à la sécurité informatique"
+        ],
+        "answer": "Une technique d'attaque manipulant psychologiquement les individus pour qu'ils divulguent des informations confidentielles",
+        "explanation": "L'ingénierie sociale est une méthode d'attaque qui exploite les faiblesses humaines plutôt que techniques, en manipulant psychologiquement les personnes pour qu'elles enfreignent les procédures de sécurité normales et révèlent des informations sensibles."
+    },
+    {
+        "question": "Qu'est-ce qu'une attaque par déni de service distribué (DDoS) ?",
+        "options": [
+            "Une attaque venant de plusieurs sources pour surcharger un système et le rendre indisponible",
+            "Une attaque ciblant plusieurs systèmes simultanément",
+            "Un virus qui se propage à travers un réseau distribué",
+            "Une attaque qui distribue des logiciels malveillants à plusieurs victimes"
+        ],
+        "answer": "Une attaque venant de plusieurs sources pour surcharger un système et le rendre indisponible",
+        "explanation": "Une attaque DDoS utilise de multiples systèmes compromis (souvent des botnets) pour inonder la cible de trafic illégitime depuis diverses sources, saturant ses ressources et rendant le service indisponible pour les utilisateurs légitimes."
+    },
+    {
+        "question": "Qu'est-ce que le principe de segmentation réseau ?",
+        "options": [
+            "La division d'un réseau en segments pour limiter la propagation des risques",
+            "L'utilisation de plusieurs réseaux pour la redondance",
+            "L'attribution de segments d'adresses IP spécifiques aux différents départements",
+            "La limitation du nombre d'appareils par segment de réseau"
+        ],
+        "answer": "La division d'un réseau en segments pour limiter la propagation des risques",
+        "explanation": "La segmentation réseau divise un réseau en sous-réseaux isolés ou zones de sécurité, limitant l'accès entre ces segments et réduisant la surface d'attaque. Ainsi, si une partie est compromise, la menace ne se propage pas facilement à l'ensemble du réseau."
+    },
+    {
+        "question": "Qu'est-ce que le BYOD (Bring Your Own Device) ?",
+        "options": [
+            "Une politique autorisant les employés à utiliser leurs appareils personnels pour le travail",
+            "Un protocole de sécurisation des appareils mobiles",
+            "Une technique de camouflage d'appareils espions",
+            "Un standard de développement d'applications mobiles sécurisées"
+        ],
+        "answer": "Une politique autorisant les employés à utiliser leurs appareils personnels pour le travail",
+        "explanation": "BYOD est une politique d'entreprise permettant aux employés d'utiliser leurs appareils personnels (smartphones, laptops) pour accéder aux ressources et applications professionnelles, ce qui pose des défis spécifiques en matière de sécurité."
+    },
+    {
+        "question": "Qu'est-ce que le principe de sécurité par l'obscurité ?",
+        "options": [
+            "L'utilisation du chiffrement pour obscurcir les données",
+            "La croyance que cacher les détails d'implémentation apporte une sécurité supplémentaire",
+            "L'utilisation de communications secrètes pour les informations sensibles",
+            "La pratique consistant à opérer dans des réseaux non publics"
+        ],
+        "answer": "La croyance que cacher les détails d'implémentation apporte une sécurité supplémentaire",
+        "explanation": "La sécurité par l'obscurité est le principe selon lequel la sécurité d'un système peut être renforcée en gardant secrets ses mécanismes de fonctionnement. Ce principe est généralement considéré comme inadéquat s'il est utilisé comme seule mesure de protection."
+    },
+    {
+        "question": "Qu'est-ce que la gestion des identités et des accès (IAM) ?",
+        "options": [
+            "Un système de surveillance des activités des utilisateurs",
+            "Un cadre pour gérer les identités numériques et contrôler leur accès aux ressources",
+            "Une base de données d'identifiants d'utilisateurs",
+            "Un protocole d'authentification spécifique aux applications web"
+        ],
+        "answer": "Un cadre pour gérer les identités numériques et contrôler leur accès aux ressources",
+        "explanation": "L'IAM est un framework de politiques, processus et technologies qui facilite la gestion des identités numériques et régit l'accès des utilisateurs aux ressources de l'organisation en fonction de leur rôle et de leurs besoins."
+    },
+    {
+        "question": "Qu'est-ce que le test d'intrusion (pentest) ?",
+        "options": [
+            "Un test pour vérifier la résistance physique des équipements",
+            "Une simulation d'attaque autorisée pour évaluer la sécurité d'un système",
+            "Un test automatisé de la performance réseau",
+            "Une vérification de la conformité réglementaire"
+        ],
+        "answer": "Une simulation d'attaque autorisée pour évaluer la sécurité d'un système",
+        "explanation": "Un test d'intrusion est une méthode d'évaluation de la sécurité qui simule une attaque réelle contre un système informatique pour identifier les vulnérabilités exploitables et vérifier l'efficacité des mesures de défense en place."
+    },
+    {
+        "question": "Qu'est-ce que l'audit de sécurité ?",
+        "options": [
+            "L'évaluation systématique de la sécurité d'un système selon des critères établis",
+            "La vérification des identités des utilisateurs",
+            "La journalisation des activités de sécurité",
+            "Le contrôle financier des dépenses en sécurité informatique"
+        ],
+        "answer": "L'évaluation systématique de la sécurité d'un système selon des critères établis",
+        "explanation": "Un audit de sécurité est un processus systématique d'évaluation de la sécurité d'un système informatique en le mesurant par rapport à un ensemble de critères, de normes ou de bonnes pratiques pour identifier les non-conformités et les faiblesses."
+    },
+    {
+        "question": "Qu'est-ce que le bug bounty ?",
+        "options": [
+            "Un programme offrant des récompenses pour la découverte de vulnérabilités",
+            "Un logiciel qui détecte automatiquement les bugs",
+            "Une base de données de vulnérabilités connues",
+            "Une technique pour écrire du code sans bugs"
+        ],
+        "answer": "Un programme offrant des récompenses pour la découverte de vulnérabilités",
+        "explanation": "Un programme de bug bounty propose des récompenses (souvent financières) aux individus qui découvrent et signalent des bugs ou des vulnérabilités dans les logiciels ou systèmes d'une organisation, encourageant ainsi la recherche responsable en sécurité."
+    },
+    {
+        "question": "Qu'est-ce que le concept de surface d'attaque ?",
+        "options": [
+            "La taille physique des équipements vulnérables",
+            "L'ensemble des points d'entrée potentiels qu'un attaquant pourrait exploiter",
+            "La portée géographique d'une cyberattaque",
+            "La zone d'impact d'une attaque DDoS"
+        ],
+        "answer": "L'ensemble des points d'entrée potentiels qu'un attaquant pourrait exploiter",
+        "explanation": "La surface d'attaque représente l'ensemble des vecteurs ou points d'entrée potentiels par lesquels un système pourrait être attaqué, incluant les interfaces réseau, les API, les formulaires web, les applications, les ports et services exposés, etc."
+    },
+    {
+        "question": "Qu'est-ce que HTTPS Strict Transport Security (HSTS) ?",
+        "options": [
+            "Un protocole de chiffrement plus puissant que TLS",
+            "Un mécanisme forçant les connexions à un site à utiliser HTTPS plutôt que HTTP",
+            "Un certificat SSL spécial pour les sites à haute sécurité",
+            "Un mode de navigation privée dans les navigateurs web"
+        ],
+        "answer": "Un mécanisme forçant les connexions à un site à utiliser HTTPS plutôt que HTTP",
+        "explanation": "HSTS est un mécanisme de politique de sécurité web qui contraint les navigateurs à utiliser uniquement des connexions sécurisées HTTPS lors de l'interaction avec le serveur, réduisant les risques d'attaques par downgrade ou man-in-the-middle."
+    },
+    {
+        "question": "Qu'est-ce que le Red Team vs Blue Team en cybersécurité ?",
+        "options": [
+            "Deux virus concurrents créés par des hackers rivaux",
+            "Une division des tâches dans un SOC",
+            "Une approche où une équipe simule des attaques (Red) pendant qu'une autre défend (Blue)",
+            "Deux méthodologies concurrentes d'analyse de malware"
+        ],
+        "answer": "Une approche où une équipe simule des attaques (Red) pendant qu'une autre défend (Blue)",
+        "explanation": "Dans un exercice Red Team vs Blue Team, la Red Team joue le rôle d'attaquants en simulant des cyberattaques réalistes, tandis que la Blue Team est responsable de la défense et de la détection de ces attaques, permettant ainsi d'évaluer et d'améliorer les capacités de défense."
+    },
+    {
+        "question": "Qu'est-ce que l'ATT&CK Framework du MITRE ?",
+        "options": [
+            "Un logiciel d'attaque éthique",
+            "Une base de connaissances des tactiques et techniques utilisées par les attaquants",
+            "Un protocole d'échange sécurisé",
+            "Un langage de programmation spécialisé pour la sécurité"
+        ],
+        "answer": "Une base de connaissances des tactiques et techniques utilisées par les attaquants",
+        "explanation": "MITRE ATT&CK est une base de connaissances accessible au public qui documente et catégorise les tactiques, techniques et procédures (TTP) utilisées par les attaquants, servant de référence pour le développement de défenses et l'analyse des menaces."
+    },
+    {
+        "question": "Qu'est-ce que le Zero-Day Exploit ?",
+        "options": [
+            "Une attaque qui disparaît sans laisser de traces",
+            "Une vulnérabilité exploitée avant qu'un correctif ne soit disponible",
+            "Un malware qui s'autodétruit après son exécution",
+            "Une technique pour éviter la détection pendant les premières 24 heures"
+        ],
+        "answer": "Une vulnérabilité exploitée avant qu'un correctif ne soit disponible",
+        "explanation": "Un Zero-Day (ou 0-day) exploit est une attaque qui cible une vulnérabilité inconnue du public et du développeur du logiciel, pour laquelle aucun correctif ou patch n'est encore disponible, rendant la défense particulièrement difficile."
+    },
+    {
+        "question": "Qu'est-ce que la sécurité des API ?",
+        "options": [
+            "La protection physique des serveurs d'API",
+            "Les mesures pour sécuriser les interfaces de programmation d'applications contre les abus et attaques",
+            "Un protocole standardisé pour les communications entre applications",
+            "L'authentification des développeurs d'API"
+        ],
+        "answer": "Les mesures pour sécuriser les interfaces de programmation d'applications contre les abus et attaques",
+        "explanation": "La sécurité des API englobe les stratégies, outils et pratiques visant à protéger les interfaces de programmation d'applications contre les utilisations abusives, les accès non autorisés et autres menaces, incluant l'authentification, l'autorisation, le chiffrement et la limitation de débit."
+    },
+    {
+        "question": "Qu'est-ce que le SOAR (Security Orchestration, Automation and Response) ?",
+        "options": [
+            "Un protocole de communication entre systèmes de sécurité",
+            "Une solution qui combine l'orchestration, l'automatisation et la réponse aux incidents de sécurité",
+            "Un framework de développement d'applications sécurisées",
+            "Un standard pour la classification des attaques"
+        ],
+        "answer": "Une solution qui combine l'orchestration, l'automatisation et la réponse aux incidents de sécurité",
+        "explanation": "SOAR est une catégorie de solutions qui combine l'orchestration des flux de travail de sécurité, l'automatisation des tâches répétitives et la réponse coordonnée aux incidents, permettant aux équipes de sécurité de gérer les alertes plus efficacement et de répondre plus rapidement aux menaces."
+    },
+    {
+        "question": "Qu'est-ce que le principe de moindre fonctionnalité (least functionality) ?",
+        "options": [
+            "Utiliser le minimum de code possible pour une application",
+            "Configurer un système pour n'offrir que les fonctionnalités essentielles à son rôle",
+            "Limiter les fonctionnalités offertes aux utilisateurs novices",
+            "Réduire la complexité des interfaces utilisateur"
+        ],
+        "answer": "Configurer un système pour n'offrir que les fonctionnalités essentielles à son rôle",
+        "explanation": "Le principe de moindre fonctionnalité consiste à configurer les systèmes pour qu'ils n'offrent que les services, protocoles, ports et fonctionnalités essentiels à leur rôle, réduisant ainsi la surface d'attaque et les risques potentiels."
+    }
+]
