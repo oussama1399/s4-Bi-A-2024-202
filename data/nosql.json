@@ -1,50 +1,94 @@
 [
     {
-        "question": "Quel est l'objectif principal des bases de données NoSQL ?",
+        "question": "Que signifie l'acronyme NoSQL?",
         "options": [
-            "Remplacer complètement les bases de données relationnelles",
-            "Proposer une alternative aux bases de données relationnelles pour certains cas d'utilisation",
-            "Améliorer les performances des disques durs",
-            "Faciliter la gestion des fichiers plats"
+            "No SQL",
+            "Not Only SQL",
+            "New Object SQL",
+            "Non Sequential Query Language"
         ],
-        "answer": "Proposer une alternative aux bases de données relationnelles pour certains cas d'utilisation",
-        "explanation": "Les bases de données NoSQL ne remplacent pas les BDR mais sont utilisées dans des contextes où la scalabilité horizontale, la flexibilité de schéma ou la performance sont prioritaires."
+        "answer": "Not Only SQL",
+        "explanation": "NoSQL signifie 'Not Only SQL', indiquant que ces bases de données vont au-delà des modèles relationnels traditionnels SQL."
     },
     {
-        "question": "Quel modèle mathématique a servi de base aux bases de données relationnelles ?",
+        "question": "Quelle propriété n'est PAS généralement associée aux bases de données NoSQL?",
         "options": [
-            "La logique floue",
-            "L'algèbre linéaire",
-            "L'algèbre relationnelle",
-            "La géométrie euclidienne"
+            "Schéma flexible",
+            "Forte cohérence ACID",
+            "Scalabilité horizontale",
+            "Gestion des données non structurées"
         ],
-        "answer": "L'algèbre relationnelle",
-        "explanation": "Les bases de données relationnelles reposent sur un modèle mathématique formel basé sur l'algèbre relationnelle, introduit par E.F. Codd."
+        "answer": "Forte cohérence ACID",
+        "explanation": "Les bases NoSQL favorisent généralement le modèle BASE (Basic Availability, Soft state, Eventual consistency) plutôt que les propriétés ACID strictes des bases relationnelles."
     },
     {
-        "question": "Quelle triade représente les objectifs fondamentaux de la sécurité informatique ?",
+        "question": "Quel type de scalabilité est principalement associé aux bases de données NoSQL?",
         "options": [
-            "Confidentialité, Intégrité, Accessibilité",
-            "Contrôle, Identité, Disponibilité",
-            "Confidentialité, Intégrité, Disponibilité",
-            "Authenticité, Traçabilité, Auditabilité"
+            "Scalabilité verticale",
+            "Scalabilité horizontale",
+            "Scalabilité diagonale",
+            "Scalabilité hybride"
         ],
-        "answer": "Confidentialité, Intégrité, Disponibilité",
-        "explanation": "CIA signifie Confidentialité, Intégrité, Disponibilité, qui sont les trois piliers principaux de la sécurité informatique."
+        "answer": "Scalabilité horizontale",
+        "explanation": "Les bases NoSQL sont conçues pour la scalabilité horizontale (ajout de nouveaux serveurs) plutôt que verticale (augmentation de la puissance d'un seul serveur)."
     },
     {
-        "question": "Quel type de base de données est MongoDB ?",
+        "question": "Parmi ces systèmes, lequel n'est PAS une base de données NoSQL?",
         "options": [
-            "Base de données relationnelle",
-            "Base de données orientée document",
-            "Base de données clé-valeur",
-            "Base de données orientée graphe"
+            "MongoDB",
+            "Neo4j",
+            "Redis",
+            "PostgreSQL"
         ],
-        "answer": "Base de données orientée document",
-        "explanation": "MongoDB est une base de données NoSQL orientée documents, stockant les données sous forme de documents BSON."
+        "answer": "PostgreSQL",
+        "explanation": "PostgreSQL est un système de gestion de base de données relationnelle (SQL), tandis que MongoDB, Neo4j et Redis sont des systèmes NoSQL."
     },
     {
-        "question": "Quel format de données utilise MongoDB pour stocker les documents ?",
+        "question": "Quel type de base NoSQL est le mieux adapté pour stocker des sessions utilisateur temporaires?",
+        "options": [
+            "Base orientée documents",
+            "Base orientée colonnes",
+            "Base clé-valeur",
+            "Base orientée graphes"
+        ],
+        "answer": "Base clé-valeur",
+        "explanation": "Les bases clé-valeur comme Redis sont idéales pour le stockage temporaire comme les sessions utilisateurs grâce à leur simplicité et rapidité."
+    },
+    {
+        "question": "Quelle propriété du théorème CAP est souvent sacrifiée dans les bases de données distribuées en cas de partition réseau?",
+        "options": [
+            "Consistency (Cohérence)",
+            "Availability (Disponibilité)",
+            "Partition Tolerance (Tolérance au partitionnement)",
+            "Durability (Durabilité)"
+        ],
+        "answer": "Consistency (Cohérence)",
+        "explanation": "Selon le théorème CAP, en cas de partition réseau, on doit choisir entre cohérence et disponibilité; la plupart des systèmes NoSQL sacrifient la cohérence immédiate pour la disponibilité."
+    },
+    {
+        "question": "Quelle base de données est spécialisée dans la gestion des relations complexes entre entités?",
+        "options": [
+            "Redis",
+            "MongoDB",
+            "Cassandra",
+            "Neo4j"
+        ],
+        "answer": "Neo4j",
+        "explanation": "Neo4j est une base de données orientée graphes spécialement conçue pour gérer efficacement les relations complexes entre entités."
+    },
+    {
+        "question": "Dans une base de données MongoDB, comment appelle-t-on l'équivalent d'une table SQL?",
+        "options": [
+            "Document",
+            "Collection",
+            "Ensemble",
+            "Groupe"
+        ],
+        "answer": "Collection",
+        "explanation": "Dans MongoDB, une collection est l'équivalent d'une table SQL et contient des documents (équivalents aux enregistrements)."
+    },
+    {
+        "question": "Quel format est utilisé par MongoDB pour stocker les données?",
         "options": [
             "XML",
             "CSV",
@@ -52,1265 +96,1348 @@
             "YAML"
         ],
         "answer": "BSON",
-        "explanation": "MongoDB stocke les documents dans un format binaire appelé BSON (Binary JSON), optimisé pour les performances et la taille."
+        "explanation": "MongoDB utilise le format BSON (Binary JSON), une extension binaire de JSON qui supporte des types supplémentaires comme les dates."
     },
     {
-        "question": "Quel est l'équivalent d'une table dans MongoDB ?",
+        "question": "Quelle base de données NoSQL utilise le langage de requête Cypher?",
         "options": [
-            "Un document",
-            "Une collection",
-            "Un champ",
-            "Un index"
+            "MongoDB",
+            "Cassandra",
+            "Neo4j",
+            "Redis"
         ],
-        "answer": "Une collection",
-        "explanation": "Dans MongoDB, une collection correspond à une table dans une base de données relationnelle."
+        "answer": "Neo4j",
+        "explanation": "Cypher est le langage de requête principal utilisé dans Neo4j pour manipuler et interroger les données en graphes."
     },
     {
-        "question": "Quelle commande permet d'insérer un document dans une collection MongoDB ?",
+        "question": "Dans le modèle BASE, que signifie le 'E'?",
         "options": [
-            "db.collection.save()",
-            "db.collection.insert()",
-            "db.collection.update()",
-            "db.collection.find()"
+            "Effective",
+            "Eventual",
+            "Extreme",
+            "External"
         ],
-        "answer": "db.collection.insert()",
-        "explanation": "La méthode `insert()` est utilisée pour ajouter un ou plusieurs documents dans une collection."
+        "answer": "Eventual",
+        "explanation": "Dans le modèle BASE (Basic Availability, Soft state, Eventual consistency), le 'E' signifie 'Eventual consistency' (cohérence éventuelle)."
     },
     {
-        "question": "Quelle fonction permet de récupérer un seul document dans MongoDB ?",
+        "question": "Quelle est la méthode MongoDB pour insérer un document?",
         "options": [
-            "find()",
-            "findOne()",
-            "fetchOne()",
-            "selectOne()"
+            "db.collection.add()",
+            "db.collection.insertOne()",
+            "db.collection.create()",
+            "db.collection.push()"
         ],
-        "answer": "findOne()",
-        "explanation": "La méthode `findOne()` retourne un seul document correspondant à la requête spécifiée."
+        "answer": "db.collection.insertOne()",
+        "explanation": "db.collection.insertOne() est la méthode MongoDB pour insérer un seul document dans une collection."
     },
     {
-        "question": "Quel est le rôle du champ `_id` dans un document MongoDB ?",
+        "question": "Qu'est-ce que le sharding dans MongoDB?",
         "options": [
-            "Il contient la date de création du document",
-            "Il sert de clé primaire unique",
-            "Il indique le nombre de champs dans le document",
-            "Il stocke la version du document"
+            "Une technique de compression des données",
+            "Une méthode de répartition des données sur plusieurs serveurs",
+            "Un algorithme d'indexation",
+            "Une stratégie de sauvegarde"
         ],
-        "answer": "Il sert de clé primaire unique",
-        "explanation": "Le champ `_id` est obligatoire et unique pour chaque document d'une collection, servant de clé primaire."
+        "answer": "Une méthode de répartition des données sur plusieurs serveurs",
+        "explanation": "Le sharding dans MongoDB est une technique qui permet de répartir les données d'une collection sur plusieurs serveurs pour améliorer la scalabilité horizontale."
     },
     {
-        "question": "Quel opérateur permet de réaliser un 'OR' logique dans une requête MongoDB ?",
+        "question": "Quels éléments composent le modèle de données de Neo4j?",
         "options": [
-            "$and",
-            "$or",
-            "$not",
-            "$nor"
+            "Tables et colonnes",
+            "Documents et champs",
+            "Nœuds et relations",
+            "Clés et valeurs"
         ],
-        "answer": "$or",
-        "explanation": "L'opérateur `$or` est utilisé pour effectuer une sélection avec une condition logique OU entre différentes clauses."
+        "answer": "Nœuds et relations",
+        "explanation": "Neo4j utilise un modèle de données composé de nœuds (entités) et de relations (connexions entre entités) pour représenter les données en graphe."
     },
     {
-        "question": "Quel type de partitionnement utilise un hash pour distribuer les données ?",
+        "question": "Quelle commande Cypher permet de trouver des données dans Neo4j?",
         "options": [
-            "Partitionnement basé sur le rang",
-            "Partitionnement basé sur le tag",
-            "Partitionnement basé sur le hash",
-            "Partitionnement aléatoire"
+            "FIND",
+            "SEARCH",
+            "MATCH",
+            "GET"
         ],
-        "answer": "Partitionnement basé sur le hash",
-        "explanation": "Le partitionnement basé sur le hash répartit les données de manière plus uniforme en utilisant une fonction de hachage sur la clé de shard."
+        "answer": "MATCH",
+        "explanation": "MATCH est la commande principale dans le langage Cypher de Neo4j pour rechercher des motifs dans le graphe."
     },
     {
-        "question": "Quel composant gère les requêtes clientes dans une architecture MongoDB sharding ?",
+        "question": "Quel système NoSQL est le plus adapté pour l'analyse massive de données (Big Data)?",
         "options": [
-            "Shard",
+            "MongoDB",
+            "Redis",
+            "Neo4j",
+            "Apache Cassandra"
+        ],
+        "answer": "Apache Cassandra",
+        "explanation": "Apache Cassandra, une base orientée colonnes, est spécialement conçue pour gérer de très grands volumes de données distribuées."
+    },
+    {
+        "question": "Dans MongoDB, comment appelle-t-on le processus qui route les requêtes vers les bons shards?",
+        "options": [
             "Config Server",
-            "Query Router",
-            "Replica Set"
+            "Query Router (mongos)",
+            "Sharding Manager",
+            "Route Balancer"
         ],
-        "answer": "Query Router",
-        "explanation": "Le Query Router (`mongos`) interagit avec les clients et redirige les requêtes vers les shards appropriés."
+        "answer": "Query Router (mongos)",
+        "explanation": "Dans l'architecture de sharding MongoDB, le Query Router (mongos) est responsable d'acheminer les requêtes vers les shards appropriés."
     },
     {
-        "question": "Quel est le principal inconvénient des bases de données relationnelles face aux applications web modernes ?",
+        "question": "Quelle est la principale différence entre une base de données orientée colonnes et une base relationnelle?",
         "options": [
-            "Elles ne supportent pas SQL",
-            "Elles manquent de scalabilité horizontale",
-            "Elles ne peuvent pas être distribuées",
-            "Elles n'ont pas de transactions"
+            "La base orientée colonnes ne supporte pas les requêtes SQL",
+            "La base orientée colonnes stocke les données par colonnes plutôt que par lignes",
+            "La base orientée colonnes n'a pas de schéma",
+            "La base orientée colonnes ne permet pas l'indexation"
         ],
-        "answer": "Elles manquent de scalabilité horizontale",
-        "explanation": "Les SGBDR ont été conçues pour des architectures centralisées et manquent de mécanismes natifs pour s'étendre facilement sur plusieurs serveurs."
+        "answer": "La base orientée colonnes stocke les données par colonnes plutôt que par lignes",
+        "explanation": "Les bases orientées colonnes organisent et stockent les données par colonnes plutôt que par lignes, ce qui optimise certains types d'analyses et de lectures séquentielles."
     },
     {
-        "question": "Quel concept est associé à la cohérence éventuelle dans les systèmes NoSQL ?",
+        "question": "Quelle est la principale limitation des bases de données clé-valeur?",
         "options": [
-            "BASE",
-            "ACID",
-            "CAP",
-            "CRUD"
+            "Elles ne sont pas évolutives",
+            "Elles sont trop lentes pour les applications web",
+            "Elles ne supportent pas les requêtes complexes sur les valeurs",
+            "Elles ne peuvent pas stocker de grands volumes de données"
         ],
-        "answer": "BASE",
-        "explanation": "BASE (Basically Available, Soft state, Eventually consistent) est un ensemble de propriétés souvent associé aux bases de données NoSQL, opposé à ACID."
+        "answer": "Elles ne supportent pas les requêtes complexes sur les valeurs",
+        "explanation": "Les bases de données clé-valeur sont limitées dans les opérations de recherche complexe, car elles ne permettent généralement que la recherche par clé, pas par le contenu des valeurs."
     },
     {
-        "question": "Quel théorème affirme qu’un système distribué ne peut garantir simultanément la cohérence, la disponibilité et la tolérance au partitionnement ?",
+        "question": "Quel est l'équivalent d'un enregistrement SQL dans MongoDB?",
         "options": [
-            "Théorème de Turing",
-            "Théorème de CAP",
-            "Théorème de Bayes",
-            "Théorème de Gödel"
+            "Collection",
+            "Field",
+            "Document",
+            "Database"
         ],
-        "answer": "Théorème de CAP",
-        "explanation": "Le théorème de CAP stipule qu’un système distribué ne peut assurer simultanément Cohérence, Disponibilité et Tolérance au Partitionnement."
+        "answer": "Document",
+        "explanation": "Dans MongoDB, un document est l'équivalent d'un enregistrement (ligne) dans une base de données SQL."
     },
     {
-        "question": "Quel type de base de données est Neo4j ?",
+        "question": "Quelle technique MongoDB permet d'assurer la disponibilité en cas de panne d'un serveur?",
         "options": [
-            "Orientée document",
+            "Sharding",
+            "Indexing",
+            "Replica Sets",
+            "Load balancing"
+        ],
+        "answer": "Replica Sets",
+        "explanation": "Les replica sets de MongoDB fournissent une redondance et une haute disponibilité en maintenant des copies identiques des données sur différents serveurs."
+    },
+    {
+        "question": "Dans Neo4j, comment appelle-t-on un attribut associé à un nœud ou une relation?",
+        "options": [
+            "Tag",
+            "Label",
+            "Property",
+            "Metadata"
+        ],
+        "answer": "Property",
+        "explanation": "Dans Neo4j, les propriétés (properties) sont des attributs clé/valeur associés aux nœuds ou aux relations."
+    },
+    {
+        "question": "Quelle instruction Cypher permet de créer un nœud dans Neo4j?",
+        "options": [
+            "NEW",
+            "INSERT",
+            "CREATE",
+            "ADD"
+        ],
+        "answer": "CREATE",
+        "explanation": "L'instruction CREATE est utilisée dans le langage Cypher pour créer de nouveaux nœuds et relations dans Neo4j."
+    },
+    {
+        "question": "Dans le contexte des bases de données NoSQL, qu'est-ce que le MapReduce?",
+        "options": [
+            "Un algorithme de compression de données",
+            "Un paradigme de programmation pour traiter de grands ensembles de données",
+            "Une technique de chiffrement",
+            "Une méthode d'indexation"
+        ],
+        "answer": "Un paradigme de programmation pour traiter de grands ensembles de données",
+        "explanation": "MapReduce est un modèle de programmation pour traiter et générer de grands ensembles de données, où la phase Map effectue le filtrage et le tri, et la phase Reduce l'agrégation des résultats."
+    },
+    {
+        "question": "Quel type de base de données serait le plus approprié pour un système de recommandation de produits?",
+        "options": [
+            "Clé-valeur",
             "Orientée colonnes",
-            "Orientée graphe",
-            "Clé-valeur"
+            "Orientée documents",
+            "Orientée graphes"
         ],
-        "answer": "Orientée graphe",
-        "explanation": "Neo4j est une base de données NoSQL orientée graphe, permettant de modéliser les données sous forme de nœuds, relations et propriétés."
+        "answer": "Orientée graphes",
+        "explanation": "Les bases de données orientées graphes comme Neo4j sont idéales pour les systèmes de recommandation car elles modélisent naturellement les relations entre utilisateurs et produits."
     },
     {
-        "question": "Quel langage de requête utilise Neo4j ?",
+        "question": "Qu'est-ce qui caractérise une base de données 'schemaless'?",
         "options": [
-            "SQL",
-            "Cypher",
-            "Gremlin",
-            "SPARQL"
+            "Elle n'a pas de structure de données définie",
+            "Elle permet à chaque enregistrement d'avoir une structure différente",
+            "Elle ne supporte pas les index",
+            "Elle ne peut pas être interrogée par SQL"
         ],
-        "answer": "Cypher",
-        "explanation": "Cypher est le langage de requête déclaratif utilisé par Neo4j pour interroger et manipuler les données graphiques."
+        "answer": "Elle permet à chaque enregistrement d'avoir une structure différente",
+        "explanation": "Une base 'schemaless' permet une flexibilité où chaque enregistrement (document/nœud) peut avoir sa propre structure, sans conformité obligatoire à un schéma prédéfini."
     },
     {
-        "question": "Quel est le rôle d'un 'Arbitre' dans un Replica Set MongoDB ?",
+        "question": "Quelle propriété MongoDB permet d'optimiser les performances des requêtes?",
         "options": [
-            "Stocker une copie des données",
-            "Permettre la lecture des données sans écriture",
-            "Participer aux élections en votant pour un nouveau primaire",
-            "Effectuer des sauvegardes régulières"
+            "Sharding",
+            "Replica sets",
+            "Indexation",
+            "Compression"
         ],
-        "answer": "Participer aux élections en votant pour un nouveau primaire",
-        "explanation": "Un arbitre n'a pas de copie des données mais participe aux élections pour élire un nouveau primaire en cas de panne."
+        "answer": "Indexation",
+        "explanation": "L'indexation dans MongoDB, comme dans d'autres bases de données, améliore significativement les performances des requêtes en créant des structures permettant un accès rapide aux données."
     },
     {
-        "question": "Quel type de cohérence est garanti si W + R > N dans un système distribué ?",
+        "question": "Quelle commande permet de supprimer un nœud et toutes ses relations dans Neo4j?",
         "options": [
-            "Cohérence faible",
-            "Cohérence éventuelle",
-            "Cohérence forte",
-            "Aucune cohérence"
+            "DELETE",
+            "REMOVE",
+            "DETACH DELETE",
+            "DROP"
         ],
-        "answer": "Cohérence forte",
-        "explanation": "Si W + R > N, il y a toujours un chevauchement entre les nœuds de lecture et d’écriture, ce qui garantit une cohérence forte."
+        "answer": "DETACH DELETE",
+        "explanation": "La commande DETACH DELETE supprime un nœud et toutes ses relations attachées dans Neo4j."
     },
     {
-        "question": "Quel outil de MongoDB permet d'importer des données depuis un fichier JSON ou CSV ?",
+        "question": "Quelle est la principale différence entre les modèles ACID et BASE?",
         "options": [
-            "mongoexport",
-            "mongostat",
-            "mongoimport",
-            "mongodump"
+            "ACID garantit la disponibilité tandis que BASE garantit la cohérence",
+            "ACID favorise la cohérence stricte tandis que BASE privilégie la disponibilité",
+            "ACID est utilisé pour les petites données tandis que BASE est pour les big data",
+            "ACID est plus récent que BASE"
         ],
-        "answer": "mongoimport",
-        "explanation": "Mongoimport est utilisé pour importer des données depuis des fichiers JSON, CSV ou TSV dans une base MongoDB."
+        "answer": "ACID favorise la cohérence stricte tandis que BASE privilégie la disponibilité",
+        "explanation": "ACID (Atomicité, Cohérence, Isolation, Durabilité) privilégie la cohérence stricte des données, tandis que BASE (Basic Availability, Soft State, Eventual Consistency) favorise la disponibilité et la performance au détriment de la cohérence immédiate."
     },
     {
-        "question": "Quel est l'avantage principal des bases de données orientées document ?",
+        "question": "Quelles sont les trois propriétés mentionnées dans le théorème CAP?",
         "options": [
-            "Support des transactions ACID",
-            "Structure rigide des données",
-            "Flexibilité de schéma et imbrication des données",
-            "Meilleure performance pour les jointures complexes"
+            "Confidentialité, Authenticité, Performance",
+            "Cohérence, Atomicité, Persistance",
+            "Cohérence, Disponibilité, Tolérance au partitionnement",
+            "Capacité, Adaptabilité, Portabilité"
         ],
-        "answer": "Flexibilité de schéma et imbrication des données",
-        "explanation": "Les bases orientées document permettent de stocker des structures imbriquées et offrent une grande flexibilité de schéma."
+        "answer": "Cohérence, Disponibilité, Tolérance au partitionnement",
+        "explanation": "Le théorème CAP affirme qu'un système distribué ne peut garantir simultanément la Cohérence (Consistency), la Disponibilité (Availability) et la Tolérance au partitionnement (Partition tolerance)."
     },
     {
-        "question": "Quel type de base de données convient le mieux aux relations complexes entre entités ?",
+        "question": "Quel concept MongoDB permet de faire des références entre documents de différentes collections?",
         "options": [
-            "Orientée document",
-            "Orientée colonnes",
-            "Orientée graphe",
-            "Clé-valeur"
+            "Foreign key",
+            "Document embedding",
+            "Document reference",
+            "Collection join"
         ],
-        "answer": "Orientée graphe",
-        "explanation": "Les bases orientées graphe comme Neo4j sont particulièrement adaptées pour représenter et interroger des relations complexes."
+        "answer": "Document reference",
+        "explanation": "MongoDB utilise le concept de références de documents pour créer des liens entre documents dans différentes collections, similaire aux clés étrangères dans les bases de données relationnelles."
     },
     {
-        "question": "Quel est le rôle de l'oplog dans MongoDB ?",
+        "question": "Quelle base de données serait la plus adaptée pour une application IoT collectant des données de capteurs en continu?",
         "options": [
-            "Stocker les logs du serveur",
-            "Journaliser toutes les opérations d'écriture",
-            "Indexer les collections",
-            "Exporter les données"
+            "MongoDB",
+            "Neo4j",
+            "Redis",
+            "Cassandra"
         ],
-        "answer": "Journaliser toutes les opérations d'écriture",
-        "explanation": "L'oplog (opération log) est utilisé pour la réplication, enregistrant toutes les modifications apportées aux données du nœud primaire."
+        "answer": "Cassandra",
+        "explanation": "Cassandra, une base de données orientée colonnes, est particulièrement adaptée aux flux continus de données comme ceux générés par les capteurs IoT, grâce à sa haute disponibilité et ses performances d'écriture."
     },
     {
-        "question": "Quel type de base de données est Cassandra ?",
+        "question": "Quelle est la fonction principale du 'Config Server' dans l'architecture de sharding MongoDB?",
         "options": [
-            "Orientée document",
-            "Orientée colonnes",
-            "Orientée graphe",
-            "Clé-valeur"
+            "Stocker les configurations utilisateur",
+            "Équilibrer la charge entre les différents serveurs",
+            "Stocker les métadonnées sur la localisation des données",
+            "Gérer l'authentification et les autorisations"
         ],
-        "answer": "Orientée colonnes",
-        "explanation": "Apache Cassandra est une base de données NoSQL orientée colonnes, optimisée pour les écritures rapides et les gros volumes de données."
+        "answer": "Stocker les métadonnées sur la localisation des données",
+        "explanation": "Le Config Server dans l'architecture de sharding MongoDB stocke les métadonnées indiquant sur quel shard se trouve chaque fragment de données, permettant au Query Router de diriger correctement les requêtes."
     },
     {
-        "question": "Quel type de cohérence est souvent utilisé dans les systèmes NoSQL ?",
+        "question": "Quelle technique est généralement utilisée dans les bases NoSQL pour garantir la cohérence des données distribuées?",
         "options": [
-            "Cohérence stricte",
-            "Cohérence transactionnelle",
-            "Cohérence éventuelle",
-            "Cohérence immédiate"
+            "2-Phase Commit",
+            "Cohérence éventuelle (Eventual Consistency)",
+            "Verrouillage global (Global Locking)",
+            "Séquences distribuées"
         ],
-        "answer": "Cohérence éventuelle",
-        "explanation": "De nombreux systèmes NoSQL adoptent la cohérence éventuelle pour favoriser la disponibilité et la scalabilité."
-    },
-    [
-        {
-            "question": "Quel type de cohérence garantit que toutes les copies des données sont synchronisées en permanence ?",
-            "options": [
-                "Cohérence éventuelle",
-                "Cohérence forte",
-                "Cohérence occasionnelle",
-                "Cohérence de session"
-            ],
-            "answer": "Cohérence forte",
-            "explanation": "La cohérence forte garantit que chaque lecture renvoie la dernière écriture effectuée, sans délai ni incohérence."
-        },
-        {
-            "question": "Quelle propriété du théorème de CAP signifie que tous les nœuds voient les mêmes données au même moment ?",
-            "options": [
-                "Disponibilité",
-                "Tolérance au partitionnement",
-                "Cohérence",
-                "Atomicité"
-            ],
-            "answer": "Cohérence",
-            "explanation": "Dans le théorème de CAP, la cohérence signifie que tous les nœuds d’un système distribué voient les mêmes données au même moment."
-        },
-        {
-            "question": "Quel est l’objectif principal du partitionnement basé sur le hash dans MongoDB ?",
-            "options": [
-                "Répartir les données de manière uniforme",
-                "Faciliter la recherche par intervalle",
-                "Améliorer les performances des jointures",
-                "Simplifier la gestion des index"
-            ],
-            "answer": "Répartir les données de manière uniforme",
-            "explanation": "Le partitionnement basé sur le hash vise à distribuer les données de manière plus équilibrée entre les shards, réduisant les risques de surcharge sur un seul serveur."
-        },
-        {
-            "question": "Quelle commande permet de compter le nombre de documents dans une collection MongoDB ?",
-            "options": [
-                "db.collection.count()",
-                "db.collection.size()",
-                "db.collection.length()",
-                "db.collection.stats()"
-            ],
-            "answer": "db.collection.count()",
-            "explanation": "La méthode `count()` retourne le nombre total de documents dans une collection ou correspondant à une requête spécifique."
-        },
-        {
-            "question": "Quel composant de MongoDB gère les opérations de migration de chunks lors du sharding ?",
-            "options": [
-                "Query Router (mongos)",
-                "Config Server",
-                "Balancer",
-                "Replica Set"
-            ],
-            "answer": "Balancer",
-            "explanation": "Le balancer est un processus en arrière-plan qui gère la redistribution des chunks entre les shards pour assurer une charge équilibrée."
-        },
-        {
-            "question": "Quel outil MongoDB est utilisé pour afficher les statistiques d'une instance en temps réel ?",
-            "options": [
-                "mongoimport",
-                "mongostat",
-                "mongodump",
-                "mongorestore"
-            ],
-            "answer": "mongostat",
-            "explanation": "L'outil `mongostat` fournit une vue en temps réel des performances de l'instance MongoDB, y compris les lectures, écritures, connexions actives, etc."
-        },
-        {
-            "question": "Quelle fonctionnalité MongoDB permet de regrouper des données et d’effectuer des calculs statistiques ?",
-            "options": [
-                "find()",
-                "aggregate()",
-                "distinct()",
-                "mapReduce()"
-            ],
-            "answer": "aggregate()",
-            "explanation": "L'agrégation (`aggregate`) permet de manipuler les données via une série d'étapes comme `$group`, `$match`, `$sort`, etc., pour produire des résultats calculés."
-        },
-        {
-            "question": "Quel est le rôle du Config Server dans une architecture MongoDB sharding ?",
-            "options": [
-                "Exécuter les requêtes clientes",
-                "Stocker les données utilisateurs",
-                "Gérer les méta-données du cluster",
-                "Effectuer des sauvegardes régulières"
-            ],
-            "answer": "Gérer les méta-données du cluster",
-            "explanation": "Le Config Server stocke les informations critiques sur la localisation des données dans le cluster, les mappings entre chunks et shards."
-        },
-        {
-            "question": "Quelle propriété garantit qu’une transaction validée ne sera jamais perdue, même en cas de panne ?",
-            "options": [
-                "Atomicité",
-                "Cohérence",
-                "Isolation",
-                "Durabilité"
-            ],
-            "answer": "Durabilité",
-            "explanation": "La durabilité est la propriété ACID qui garantit que les modifications apportées par une transaction validée persistent, même en cas de défaillance système."
-        },
-        {
-            "question": "Quel type de base de données utilise le modèle BASE plutôt que ACID ?",
-            "options": [
-                "Bases relationnelles",
-                "Bases orientées document",
-                "Bases orientées graphe",
-                "Bases clé-valeur"
-            ],
-            "answer": "Bases orientées document",
-            "explanation": "Les bases NoSQL comme MongoDB adoptent souvent le modèle BASE (Basically Available, Soft state, Eventually consistent) pour favoriser la disponibilité et la scalabilité."
-        },
-        {
-            "question": "Quelle commande permet de supprimer une collection entière dans MongoDB ?",
-            "options": [
-                "db.collection.deleteAll()",
-                "db.collection.remove({})",
-                "db.collection.drop()",
-                "db.collection.clear()"
-            ],
-            "answer": "db.collection.drop()",
-            "explanation": "La méthode `drop()` supprime une collection ainsi que tous ses index. Elle est irréversible."
-        },
-        {
-            "question": "Quel type de cohérence est garanti si W + R > N dans un système distribué ?",
-            "options": [
-                "Cohérence éventuelle",
-                "Cohérence faible",
-                "Cohérence forte",
-                "Aucune cohérence"
-            ],
-            "answer": "Cohérence forte",
-            "explanation": "Si W + R > N, il y a toujours un chevauchement entre les nœuds de lecture et d’écriture, ce qui garantit une cohérence forte."
-        },
-        {
-            "question": "Quelle commande MongoDB permet de modifier un ou plusieurs champs d’un document ?",
-            "options": [
-                "db.collection.update()",
-                "db.collection.replace()",
-                "db.collection.set()",
-                "db.collection.modify()"
-            ],
-            "answer": "db.collection.update()",
-            "explanation": "La méthode `update()` modifie un ou plusieurs documents correspondants à une condition, généralement avec des opérateurs comme `$set`."
-        },
-        {
-            "question": "Quel est le rôle de l'opérateur $inc dans MongoDB ?",
-            "options": [
-                "Ajouter un champ à un document",
-                "Incrémenter la valeur d’un champ",
-                "Supprimer un champ",
-                "Filtrer les documents"
-            ],
-            "answer": "Incrémenter la valeur d’un champ",
-            "explanation": "L'opérateur `$inc` est utilisé pour incrémenter la valeur d’un champ numérique dans un document."
-        },
-        {
-            "question": "Quel outil MongoDB est utilisé pour effectuer des sauvegardes complètes d’une base de données ?",
-            "options": [
-                "mongoexport",
-                "mongodump",
-                "mongorestore",
-                "mongostat"
-            ],
-            "answer": "mongodump",
-            "explanation": "L'outil `mongodump` permet de créer une copie binaire complète d’une base MongoDB pour la sauvegarde ou la migration."
-        },
-        {
-            "question": "Quel type de base de données convient le mieux aux applications nécessitant des requêtes complexes avec beaucoup de jointures ?",
-            "options": [
-                "Orientée document",
-                "Orientée graphe",
-                "Relationnelle",
-                "Clé-valeur"
-            ],
-            "answer": "Relationnelle",
-            "explanation": "Les bases de données relationnelles sont optimisées pour les requêtes complexes impliquant de nombreuses jointures entre tables."
-        },
-        {
-            "question": "Quel est le principal inconvénient des bases de données orientées colonnes ?",
-            "options": [
-                "Mauvaise performance en écriture",
-                "Difficile à mettre à l’échelle",
-                "Peu adaptées aux relations complexes entre données",
-                "Consommation élevée de CPU"
-            ],
-            "answer": "Peu adaptées aux relations complexes entre données",
-            "explanation": "Les bases orientées colonnes sont excellentes pour l'analyse de grands volumes de données semi-structurées, mais pas pour représenter des relations complexes entre objets."
-        },
-        {
-            "question": "Quel langage de requête est utilisé par Neo4j ?",
-            "options": [
-                "SQL",
-                "Cypher",
-                "Gremlin",
-                "SPARQL"
-            ],
-            "answer": "Cypher",
-            "explanation": "Cypher est le langage de requête déclaratif conçu spécialement pour interagir avec les bases de données graphes comme Neo4j."
-        },
-        {
-            "question": "Quel type de base de données est Cassandra ?",
-            "options": [
-                "Orientée document",
-                "Orientée graphe",
-                "Orientée colonnes",
-                "Clé-valeur"
-            ],
-            "answer": "Orientée colonnes",
-            "explanation": "Apache Cassandra est une base de données NoSQL orientée colonnes, optimisée pour les écritures rapides et les gros volumes de données."
-        },
-        {
-            "question": "Quel est l’avantage principal des bases de données NoSQL par rapport aux bases relationnelles ?",
-            "options": [
-                "Meilleure sécurité",
-                "Transactions ACID",
-                "Flexibilité de schéma et scalabilité horizontale",
-                "Support SQL intégré"
-            ],
-            "answer": "Flexibilité de schéma et scalabilité horizontale",
-            "explanation": "Les bases NoSQL offrent une grande flexibilité de schéma et sont conçues pour s’étendre facilement sur plusieurs serveurs, contrairement aux SGBDR traditionnels."
-        },
-        {
-            "question": "Quel type de cohérence signifie que les données peuvent être incohérentes pendant une courte période ?",
-            "options": [
-                "Cohérence forte",
-                "Cohérence éventuelle",
-                "Cohérence de session",
-                "Cohérence monotone"
-            ],
-            "answer": "Cohérence éventuelle",
-            "explanation": "La cohérence éventuelle permet des états temporaires incohérents, mais garantit que toutes les copies finiront par converger vers la même valeur."
-        },
-        {
-            "question": "Quel est le rôle de l'oplog dans MongoDB ?",
-            "options": [
-                "Journaliser les requêtes clients",
-                "Stockage des logs du serveur",
-                "Journaliser toutes les opérations d’écriture",
-                "Exporter les données"
-            ],
-            "answer": "Journaliser toutes les opérations d’écriture",
-            "explanation": "L'oplog (opération log) est utilisé pour la réplication, enregistrant toutes les modifications apportées aux données du nœud primaire."
-        },
-        {
-            "question": "Quel type de base de données convient le mieux pour le stockage de fichiers volumineux ?",
-            "options": [
-                "MongoDB avec GridFS",
-                "PostgreSQL",
-                "Neo4j",
-                "Redis"
-            ],
-            "answer": "MongoDB avec GridFS",
-            "explanation": "GridFS est un mécanisme de MongoDB permettant de stocker et de récupérer des fichiers volumineux en les découpant en blocs de taille fixe."
-        },
-        {
-            "question": "Quel type de base de données est Redis ?",
-            "options": [
-                "Orientée document",
-                "Orientée graphe",
-                "Clé-valeur",
-                "Orientée colonnes"
-            ],
-            "answer": "Clé-valeur",
-            "explanation": "Redis est une base de données NoSQL de type clé-valeur, très rapide et souvent utilisée comme cache ou pour les sessions."
-        },
-    {
-        "question": "Quel est le principal objectif des bases de données NoSQL ?",
-        "options": ["Remplacer les bases relationnelles", "Offrir une alternative pour des cas d'utilisation spécifiques", "Améliorer la sécurité", "Réduire le coût des serveurs"],
-        "answer": "Offrir une alternative pour des cas d'utilisation spécifiques",
-        "explanation": "Les bases NoSQL ne remplacent pas les BDR mais sont utilisées dans des contextes où la scalabilité, la flexibilité ou la performance sont prioritaires."
-    },
-    {
-        "question": "Quel modèle mathématique sous-tend les bases de données relationnelles ?",
-        "options": ["Algèbre booléenne", "Algèbre relationnelle", "Calcul tensoriel", "Théorie des graphes"],
-        "answer": "Algèbre relationnelle",
-        "explanation": "Les bases de données relationnelles reposent sur un modèle formel basé sur l'algèbre relationnelle."
-    },
-    {
-        "question": "Quelle triade représente les trois piliers de la sécurité informatique ?",
-        "options": ["Confidentialité, Intégrité, Accessibilité", "Confidentialité, Intégrité, Disponibilité", "Contrôle, Identité, Accès", "Confidentialité, Identité, Authentification"],
-        "answer": "Confidentialité, Intégrité, Disponibilité",
-        "explanation": "La triade CIA (Confidentialité, Intégrité, Disponibilité) est le fondement de la sécurité informatique."
-    },
-    {
-        "question": "Quel type de base de données est MongoDB ?",
-        "options": ["Base de données orientée document", "Base de données clé-valeur", "Base de données relationnelle", "Base de données orientée graphe"],
-        "answer": "Base de données orientée document",
-        "explanation": "MongoDB est une base de données NoSQL orientée documents, stockant les données sous forme de documents BSON."
-    },
-    {
-        "question": "Quel format de données utilise MongoDB pour stocker les documents ?",
-        "options": ["XML", "CSV", "BSON", "YAML"],
-        "answer": "BSON",
-        "explanation": "MongoDB utilise le format binaire BSON (Binary JSON) pour stocker les documents."
-    },
-    {
-        "question": "Quel est l'équivalent d'une table dans MongoDB ?",
-        "options": ["Document", "Collection", "Index", "BSON"],
-        "answer": "Collection",
-        "explanation": "Dans MongoDB, une collection correspond à une table dans une base relationnelle."
-    },
-    {
-        "question": "Quelle commande permet d'insérer un document dans une collection MongoDB ?",
-        "options": ["db.collection.save()", "db.collection.insert()", "db.collection.update()", "db.collection.find()"],
-        "answer": "db.collection.insert()",
-        "explanation": "La méthode `insert()` est utilisée pour ajouter un ou plusieurs documents dans une collection."
-    },
-    {
-        "question": "Quelle commande permet de récupérer un seul document dans MongoDB ?",
-        "options": ["find()", "findOne()", "fetchOne()", "selectOne()"],
-        "answer": "findOne()",
-        "explanation": "La méthode `findOne()` retourne un seul document correspondant à la requête spécifiée."
-    },
-    {
-        "question": "Quel opérateur permet de réaliser un 'OR' logique dans une requête MongoDB ?",
-        "options": ["$and", "$or", "$not", "$nor"],
-        "answer": "$or",
-        "explanation": "L'opérateur `$or` est utilisé pour effectuer une sélection avec une condition logique OU entre différentes clauses."
-    },
-    {
-        "question": "Quel type de partitionnement utilise un hash pour distribuer les données ?",
-        "options": ["Partitionnement basé sur le rang", "Partitionnement basé sur le tag", "Partitionnement basé sur le hash", "Partitionnement aléatoire"],
-        "answer": "Partitionnement basé sur le hash",
-        "explanation": "Le partitionnement basé sur le hash répartit les données de manière plus uniforme en utilisant une fonction de hachage sur la clé de shard."
-    },
-    {
-        "question": "Quel composant gère les requêtes clientes dans une architecture MongoDB sharding ?",
-        "options": ["Shard", "Config Server", "Query Router", "Replica Set"],
-        "answer": "Query Router",
-        "explanation": "Le Query Router (`mongos`) interagit avec les clients et redirige les requêtes vers les shards appropriés."
-    },
-    {
-        "question": "Quel type de base de données est Neo4j ?",
-        "options": ["Orientée document", "Orientée graphe", "Clé-valeur", "Orientée colonnes"],
-        "answer": "Orientée graphe",
-        "explanation": "Neo4j est une base de données NoSQL orientée graphe, permettant de modéliser les données sous forme de nœuds et relations."
-    },
-    {
-        "question": "Quel langage de requête utilise Neo4j ?",
-        "options": ["SQL", "Cypher", "Gremlin", "SPARQL"],
-        "answer": "Cypher",
-        "explanation": "Cypher est le langage de requête déclaratif utilisé par Neo4j pour interroger et manipuler les données graphiques."
-    },
-    {
-        "question": "Quel est le rôle d'un 'Arbitre' dans un Replica Set MongoDB ?",
-        "options": ["Stocker une copie des données", "Permettre la lecture des données sans écriture", "Participer aux élections en votant pour un nouveau primaire", "Effectuer des sauvegardes régulières"],
-        "answer": "Participer aux élections en votant pour un nouveau primaire",
-        "explanation": "Un arbitre n'a pas de copie des données mais participe aux élections pour élire un nouveau primaire en cas de panne."
-    },
-    {
-        "question": "Quel type de cohérence est garanti si W + R > N dans un système distribué ?",
-        "options": ["Cohérence faible", "Cohérence éventuelle", "Cohérence forte", "Aucune cohérence"],
-        "answer": "Cohérence forte",
-        "explanation": "Si W + R > N, il y a toujours un chevauchement entre les nœuds de lecture et d’écriture, ce qui garantit une cohérence forte."
-    },
-    {
-        "question": "Quel outil de MongoDB permet d'importer des données depuis un fichier JSON ou CSV ?",
-        "options": ["mongoexport", "mongostat", "mongoimport", "mongodump"],
-        "answer": "mongoimport",
-        "explanation": "Mongoimport est utilisé pour importer des données depuis des fichiers JSON, CSV ou TSV dans une base MongoDB."
-    },
-    {
-        "question": "Quel est l'avantage principal des bases de données orientées document ?",
-        "options": ["Support des transactions ACID", "Structure rigide des données", "Flexibilité de schéma et imbrication des données", "Meilleure performance pour les jointures complexes"],
-        "answer": "Flexibilité de schéma et imbrication des données",
-        "explanation": "Les bases orientées document permettent de stocker des structures imbriquées et offrent une grande flexibilité de schéma."
-    },
-    {
-        "question": "Quel type de base de données convient le mieux aux relations complexes entre entités ?",
-        "options": ["Orientée document", "Orientée colonnes", "Orientée graphe", "Clé-valeur"],
-        "answer": "Orientée graphe",
-        "explanation": "Les bases orientées graphe comme Neo4j sont particulièrement adaptées pour représenter et interroger des relations complexes."
-    },
-    {
-        "question": "Quel est le rôle de l'oplog dans MongoDB ?",
-        "options": ["Stocker les logs du serveur", "Journaliser toutes les opérations d'écriture", "Indexer les collections", "Exporter les données"],
-        "answer": "Journaliser toutes les opérations d'écriture",
-        "explanation": "L'oplog (opération log) est utilisé pour la réplication, enregistrant toutes les modifications apportées aux données du nœud primaire."
-    },
-    {
-        "question": "Quel type de base de données est Cassandra ?",
-        "options": ["Orientée document", "Orientée colonnes", "Orientée graphe", "Clé-valeur"],
-        "answer": "Orientée colonnes",
-        "explanation": "Apache Cassandra est une base de données NoSQL orientée colonnes, optimisée pour les écritures rapides et les gros volumes de données."
-    },
-    {
-        "question": "Quel type de cohérence est souvent utilisé dans les systèmes NoSQL ?",
-        "options": ["Cohérence stricte", "Cohérence transactionnelle", "Cohérence éventuelle", "Cohérence immédiate"],
-        "answer": "Cohérence éventuelle",
-        "explanation": "De nombreux systèmes NoSQL adoptent la cohérence éventuelle pour favoriser la disponibilité et la scalabilité."
-    },
-    {
-        "question": "Quel type de base de données convient le mieux pour le stockage de fichiers volumineux ?",
-        "options": ["MongoDB avec GridFS", "PostgreSQL", "Neo4j", "Redis"],
-        "answer": "MongoDB avec GridFS",
-        "explanation": "GridFS est un mécanisme de MongoDB permettant de stocker et de récupérer des fichiers volumineux en les découpant en blocs de taille fixe."
-    },
-    {
-        "question": "Quel type de base de données est Redis ?",
-        "options": ["Orientée document", "Orientée graphe", "Clé-valeur", "Orientée colonnes"],
-        "answer": "Clé-valeur",
-        "explanation": "Redis est une base de données NoSQL de type clé-valeur, très rapide et souvent utilisée comme cache ou pour les sessions."
-    },
-    {
-        "question": "Quel est l'avantage de la cohérence de lecture/écriture monotone ?",
-        "options": ["Garantir que toutes les écritures soient visibles immédiatement", "Assurer que les lectures successives montrent des valeurs non dégradées", "Permettre la modification simultanée de plusieurs documents", "Augmenter la vitesse d’accès aux données"],
-        "answer": "Assurer que les lectures successives montrent des valeurs non dégradées",
-        "explanation": "La cohérence d'écriture monotone garantit que si vous envoyez plusieurs mises à jour, elles seront exécutées dans l’ordre où vous les avez envoyées."
-    },
-    {
-        "question": "Quel est l’équivalent d’une table dans MongoDB ?",
-        "options": ["Document", "Collection", "BSON", "Index"],
-        "answer": "Collection",
-        "explanation": "Dans MongoDB, une collection équivaut à une table dans une base relationnelle."
-    },
-    {
-        "question": "Quel format binaire utilise MongoDB pour stocker les documents ?",
-        "options": ["JSON", "XML", "BSON", "YAML"],
-        "answer": "BSON",
-        "explanation": "MongoDB stocke les données sous forme de BSON (Binary JSON), un format binaire optimisé."
-    },
-    {
-        "question": "Quel champ est obligatoire dans chaque document MongoDB ?",
-        "options": ["_id", "name", "key", "index"],
-        "answer": "_id",
-        "explanation": "Le champ `_id` est requis et doit être unique dans une collection."
-    },
-    {
-        "question": "Quelle commande insère un document dans une collection ?",
-        "options": ["db.collection.insert()", "db.collection.add()", "db.collection.save()", "db.collection.create()"],
-        "answer": "db.collection.insert()",
-        "explanation": "La méthode `insert()` est utilisée pour ajouter un ou plusieurs documents à une collection."
-    },
-    {
-        "question": "Quelle commande permet de lire un seul document dans MongoDB ?",
-        "options": ["find()", "findOne()", "readOne()", "selectOne()"],
-        "answer": "findOne()",
-        "explanation": "La méthode `findOne()` renvoie un seul document correspondant à la requête spécifiée."
-    },
-    {
-        "question": "Quel opérateur est utilisé pour effectuer une condition 'ou' dans MongoDB ?",
-        "options": ["$and", "$or", "$not", "$nor"],
-        "answer": "$or",
-        "explanation": "L’opérateur `$or` est utilisé pour combiner plusieurs conditions avec un OU logique."
-    },
-    {
-        "question": "Quel type de partitionnement utilise une fonction de hachage pour distribuer les données ?",
-        "options": ["Basé sur le rang", "Basé sur le tag", "Basé sur le hash", "Aléatoire"],
-        "answer": "Basé sur le hash",
-        "explanation": "Le partitionnement basé sur le hash répartit les données de manière uniforme en utilisant une fonction de hachage."
-    },
-    {
-        "question": "Quel composant gère les requêtes clientes dans une architecture MongoDB sharding ?",
-        "options": ["Shard", "Config Server", "Query Router", "Replica Set"],
-        "answer": "Query Router",
-        "explanation": "Le Query Router (`mongos`) reçoit les requêtes des clients et les redirige vers les shards appropriés."
-    },
-    {
-        "question": "Quel type de base de données est Neo4j ?",
-        "options": ["Orientée document", "Orientée graphe", "Clé-valeur", "Orientée colonnes"],
-        "answer": "Orientée graphe",
-        "explanation": "Neo4j est une base de données NoSQL orientée graphe, représentant les données sous forme de nœuds et relations."
-    },
-    {
-        "question": "Quel langage de requête utilise Neo4j ?",
-        "options": ["SQL", "Gremlin", "Cypher", "SPARQL"],
-        "answer": "Cypher",
-        "explanation": "Cypher est le langage de requête déclaratif utilisé par Neo4j pour interagir avec les bases de données graphes."
-    },
-    {
-        "question": "Quel type de cohérence signifie que toutes les copies finiront par converger vers la même valeur ?",
-        "options": ["Cohérence forte", "Cohérence faible", "Cohérence éventuelle", "Aucune cohérence"],
-        "answer": "Cohérence éventuelle",
-        "explanation": "La cohérence éventuelle garantit que toutes les copies finissent par avoir la même valeur après un certain temps."
-    },
-    {
-        "question": "Quel outil permet d'importer des données depuis un fichier CSV dans MongoDB ?",
-        "options": ["mongoexport", "mongostat", "mongoimport", "mongodump"],
-        "answer": "mongoimport",
-        "explanation": "Mongoimport est utilisé pour importer des données depuis des fichiers CSV, TSV ou JSON dans MongoDB."
-    },
-    {
-        "question": "Quel type de base de données convient le mieux aux applications nécessitant beaucoup de jointures complexes ?",
-        "options": ["Relationnelle", "Orientée document", "Orientée graphe", "Clé-valeur"],
-        "answer": "Relationnelle",
-        "explanation": "Les bases relationnelles sont optimisées pour les requêtes impliquant de nombreuses jointures entre tables."
-    },
-    {
-        "question": "Quel type de base de données est Cassandra ?",
-        "options": ["Orientée document", "Orientée graphe", "Orientée colonnes", "Clé-valeur"],
-        "answer": "Orientée colonnes",
-        "explanation": "Apache Cassandra est une base de données NoSQL orientée colonnes, conçue pour les écritures rapides à grande échelle."
-    },
-    {
-        "question": "Quel type de cohérence garantit qu’une lecture retourne toujours la dernière version écrite ?",
-        "options": ["Cohérence éventuelle", "Cohérence faible", "Cohérence forte", "Aucune cohérence"],
-        "answer": "Cohérence forte",
-        "explanation": "La cohérence forte garantit que chaque lecture retourne la dernière écriture effectuée, sans délai ni incohérence."
-    },
-    {
-        "question": "Quel type de base de données convient le mieux pour représenter des relations complexes entre entités ?",
-        "options": ["Orientée document", "Orientée graphe", "Orientée colonnes", "Clé-valeur"],
-        "answer": "Orientée graphe",
-        "explanation": "Les bases orientées graphe comme Neo4j sont particulièrement adaptées pour modéliser des relations complexes."
-    },
-    {
-        "question": "Quel outil MongoDB est utilisé pour afficher les statistiques d'une instance en temps réel ?",
-        "options": ["mongoimport", "mongostat", "mongodump", "mongorestore"],
-        "answer": "mongostat",
-        "explanation": "Mongostat fournit une vue en temps réel des performances de l'instance MongoDB."
-    },
-    {
-        "question": "Quelle propriété du théorème de CAP signifie que tous les nœuds voient les mêmes données au même moment ?",
-        "options": ["Disponibilité", "Tolérance au partitionnement", "Cohérence", "Durabilité"],
-        "answer": "Cohérence",
-        "explanation": "Dans le théorème de CAP, la cohérence signifie que tous les nœuds voient les mêmes données au même moment."
-    },
-    {
-        "question": "Quel type de base de données est Redis ?",
-        "options": ["Orientée document", "Orientée graphe", "Clé-valeur", "Orientée colonnes"],
-        "answer": "Clé-valeur",
-        "explanation": "Redis est une base de données NoSQL de type clé-valeur, souvent utilisée comme cache ou pour les sessions."
-    },
-    {
-        "question": "Quel type de base de données convient le mieux pour le stockage de fichiers volumineux ?",
-        "options": ["PostgreSQL", "MongoDB avec GridFS", "Neo4j", "Redis"],
-        "answer": "MongoDB avec GridFS",
-        "explanation": "GridFS est un mécanisme de MongoDB permettant de stocker et récupérer des fichiers volumineux."
-    },
-    {
-        "question": "Quel outil MongoDB est utilisé pour effectuer des sauvegardes complètes d’une base de données ?",
-        "options": ["mongoimport", "mongostat", "mongodump", "mongorestore"],
-        "answer": "mongodump",
-        "explanation": "L'outil `mongodump` permet de créer une copie binaire complète d’une base MongoDB pour la sauvegarde ou la migration."
-    },
-    {
-        "question": "Quel type de base de données convient le mieux pour les applications nécessitant des lectures rapides ?",
-        "options": ["Relationnelle", "Orientée document", "Orientée graphe", "Clé-valeur"],
-        "answer": "Clé-valeur",
-        "explanation": "Les bases de données clé-valeur comme Redis sont optimisées pour des lectures rapides."
-    },
-    {
-        "question": "Quel type de base de données est le plus adapté pour gérer des relations 1-n ?",
-        "options": ["Orientée document", "Orientée colonnes", "Relationnelle", "Orientée graphe"],
-        "answer": "Relationnelle",
-        "explanation": "Les bases relationnelles sont optimisées pour gérer des relations 1-n via des jointures."
-    },
-    {
-        "question": "Quel type de base de données est le plus adapté pour les données semi-structurées ?",
-        "options": ["Relationnelle", "Orientée document", "Orientée colonnes", "Clé-valeur"],
-        "answer": "Orientée document",
-        "explanation": "Les bases orientées documents comme MongoDB sont adaptées pour stocker des données semi-structurées."
-    },
-    {
-        "question": "Quel type de base de données est le plus adapté pour des données très hiérarchiques ?",
-        "options": ["Orientée document", "Orientée colonnes", "Orientée graphe", "Clé-valeur"],
-        "answer": "Orientée document",
-        "explanation": "Les bases orientées documents peuvent gérer facilement des structures imbriquées et hiérarchiques."
-    },
-    {
-        "question": "Quel type de base de données est le plus adapté pour des données spatiales ou géographiques ?",
-        "options": ["Orientée document", "Orientée colonnes", "Orientée graphe", "Clé-valeur"],
-        "answer": "Orientée graphe",
-        "explanation": "Les bases orientées graphe comme Neo4j sont adaptées pour gérer des données géospatiales et des relations complexes."
-    },
-    {
-        "question": "Quel type de base de données est le plus adapté pour des requêtes analytiques ?",
-        "options": ["Orientée document", "Orientée colonnes", "Orientée graphe", "Clé-valeur"],
-        "answer": "Orientée colonnes",
-        "explanation": "Les bases orientées colonnes comme Cassandra ou HBase sont optimisées pour les requêtes analytiques."
-    },
-    {
-        "question": "Quel type de base de données est le plus adapté pour des données très liées ?",
-        "options": ["Orientée document", "Orientée colonnes", "Orientée graphe", "Clé-valeur"],
-        "answer": "Orientée graphe",
-        "explanation": "Les bases orientées graphe comme Neo4j sont idéales pour des données fortement liées."
-    },
-    {
-        "question": "Quel type de base de données est le plus adapté pour des données dynamiques et changeantes ?",
-        "options": ["Relationnelle", "Orientée document", "Orientée colonnes", "Clé-valeur"],
-        "answer": "Orientée document",
-        "explanation": "Les bases orientées documents comme MongoDB permettent une structure flexible et évolutive."
-    },
-    {
-        "question": "Quel type de base de données est le plus adapté pour des données à haute disponibilité ?",
-        "options": ["Relationnelle", "Orientée document", "Orientée colonnes", "Clé-valeur"],
-        "answer": "Orientée document",
-        "explanation": "MongoDB offre une haute disponibilité grâce à la réplication et au sharding."
-    },
-    {
-        "question": "Quel type de base de données est le plus adapté pour des données avec des relations multiples ?",
-        "options": ["Orientée document", "Orientée colonnes", "Orientée graphe", "Clé-valeur"],
-        "answer": "Orientée graphe",
-        "explanation": "Les bases orientées graphe comme Neo4j sont optimisées pour les relations multiples."
-    },
-    {
-        "question": "Quel type de base de données est le plus adapté pour des données avec des relations n-n ?",
-        "options": ["Orientée document", "Orientée colonnes", "Orientée graphe", "Clé-valeur"],
-        "answer": "Orientée graphe",
-        "explanation": "Les bases orientées graphe permettent de modéliser des relations n-n efficacement."
-    },
-    {
-        "question": "Quel type de base de données est le plus adapté pour des données non structurées ?",
-        "options": ["Relationnelle", "Orientée document", "Orientée colonnes", "Clé-valeur"],
-        "answer": "Orientée document",
-        "explanation": "Les bases orientées documents comme MongoDB sont idéales pour stocker des données non structurées."
-    },
-    {
-        "question": "Quel type de base de données est le plus adapté pour des données avec des structures variables ?",
-        "options": ["Relationnelle", "Orientée document", "Orientée colonnes", "Clé-valeur"],
-        "answer": "Orientée document",
-        "explanation": "MongoDB permet des structures de documents variées sans schéma fixe."
-    },
-    {
-        "question": "Quel type de base de données est le plus adapté pour des données avec des contraintes ACID ?",
-        "options": ["NoSQL", "Relationnelle", "Orientée colonnes", "Clé-valeur"],
-        "answer": "Relationnelle",
-        "explanation": "Les bases relationnelles garantissent les propriétés ACID (Atomicité, Cohérence, Isolation, Durabilité)."
-    },
-    {
-        "question": "Quel type de base de données est le plus adapté pour des données avec des accès fréquents ?",
-        "options": ["Orientée document", "Orientée colonnes", "Orientée graphe", "Clé-valeur"],
-        "answer": "Clé-valeur",
-        "explanation": "Les bases clé-valeur comme Redis sont optimisées pour des accès rapides."
-    },
-    {
-        "question": "Quel type de base de données est le plus adapté pour des données avec des accès séquentiels ?",
-        "options": ["Orientée document", "Orientée colonnes", "Orientée graphe", "Clé-valeur"],
-        "answer": "Orientée colonnes",
-        "explanation": "Les bases orientées colonnes sont efficaces pour des accès séquentiels."
-    },
-    {
-        "question": "Quel type de base de données est le plus adapté pour des données avec des accès aléatoires ?",
-        "options": ["Orientée document", "Orientée colonnes", "Orientée graphe", "Clé-valeur"],
-        "answer": "Clé-valeur",
-        "explanation": "Les bases clé-valeur comme Redis sont optimisées pour des accès aléatoires."
-    },
-    {
-        "question": "Quel type de base de données est le plus adapté pour des données avec des accès en lecture seule ?",
-        "options": ["Orientée document", "Orientée colonnes", "Orientée graphe", "Clé-valeur"],
-        "answer": "Clé-valeur",
-        "explanation": "Les bases clé-valeur comme Redis sont souvent utilisées pour des accès en lecture seule."
-    },
-    {
-        "question": "Quel type de base de données est le plus adapté pour des données avec des mises à jour fréquentes ?",
-        "options": ["Orientée document", "Orientée colonnes", "Orientée graphe", "Clé-valeur"],
-        "answer": "Orientée colonnes",
-        "explanation": "Les bases orientées colonnes comme Cassandra sont optimisées pour les mises à jour fréquentes."
-    },
-    {
-        "question": "Quel type de base de données est le plus adapté pour des données avec des mises à jour rares ?",
-        "options": ["Orientée document", "Orientée colonnes", "Orientée graphe", "Clé-valeur"],
-        "answer": "Orientée document",
-        "explanation": "Les bases orientées documents comme MongoDB sont adaptées pour des mises à jour rares."
-    },
-    {
-        "question": "Quel type de base de données est le plus adapté pour des données avec des relations simples ?",
-        "options": ["Orientée document", "Orientée colonnes", "Orientée graphe", "Clé-valeur"],
-        "answer": "Clé-valeur",
-        "explanation": "Les bases clé-valeur comme Redis sont adaptées pour des relations simples."
-    },
-    {
-        "question": "Quel type de base de données est le plus adapté pour des données avec des relations complexes ?",
-        "options": ["Orientée document", "Orientée colonnes", "Orientée graphe", "Clé-valeur"],
-        "answer": "Orientée graphe",
-        "explanation": "Les bases orientées graphe comme Neo4j sont optimisées pour les relations complexes."
-    },
-    {
-        "question": "Quel type de base de données est le plus adapté pour des données avec des relations hiérarchiques ?",
-        "options": ["Orientée document", "Orientée colonnes", "Orientée graphe", "Clé-valeur"],
-        "answer": "Orientée document",
-        "explanation": "Les bases orientées documents comme MongoDB peuvent gérer des structures hiérarchiques."
-    },
-    {
-        "question": "Quel type de base de données est le plus adapté pour des données avec des relations arborescentes ?",
-        "options": ["Orientée document", "Orientée colonnes", "Orientée graphe", "Clé-valeur"],
-        "answer": "Orientée document",
-        "explanation": "Les bases orientées documents comme MongoDB sont adaptées pour des structures arborescentes."
-    },
-    {
-        "question": "Quel type de base de données est le plus adapté pour des données avec des relations multiples ?",
-        "options": ["Orientée document", "Orientée colonnes", "Orientée graphe", "Clé-valeur"],
-        "answer": "Orientée graphe",
-        "explanation": "Les bases orientées graphe comme Neo4j sont adaptées pour des relations multiples."
-    },
-    {
-        "question": "Quel type de base de données est le plus adapté pour des données avec des relations dynamiques ?",
-        "options": ["Orientée document", "Orientée colonnes", "Orientée graphe", "Clé-valeur"],
-        "answer": "Orientée graphe",
-        "explanation": "Les bases orientées graphe comme Neo4j sont adaptées pour des relations dynamiques."
-    },
-    {
-        "question": "Quel type de base de données est le plus adapté pour des données avec des relations statiques ?",
-        "options": ["Orientée document", "Orientée colonnes", "Orientée graphe", "Clé-valeur"],
-        "answer": "Orientée document",
-        "explanation": "Les bases orientées documents comme MongoDB sont adaptées pour des relations statiques."
-    },
-    {
-        "question": "Quel type de base de données est le plus adapté pour des données avec des relations multi-directionnelles ?",
-        "options": ["Orientée document", "Orientée colonnes", "Orientée graphe", "Clé-valeur"],
-        "answer": "Orientée graphe",
-        "explanation": "Les bases orientées graphe comme Neo4j sont adaptées pour des relations multi-directionnelles."
-    },
-    {
-        "question": "Quel type de base de données est le plus adapté pour des données avec des relations linéaires ?",
-        "options": ["Orientée document", "Orientée colonnes", "Orientée graphe", "Clé-valeur"],
-        "answer": "Orientée document",
-        "explanation": "Les bases orientées documents comme MongoDB sont adaptées pour des relations linéaires."
-    },
-    {
-        "question": "Quel type de base de données est le plus adapté pour des données avec des relations circulaires ?",
-        "options": ["Orientée document", "Orientée colonnes", "Orientée graphe", "Clé-valeur"],
-        "answer": "Orientée graphe",
-        "explanation": "Les bases orientées graphe comme Neo4j sont adaptées pour des relations circulaires."
-    },
-    {
-        "question": "Quel type de base de données est le plus adapté pour des données avec des relations étendues ?",
-        "options": ["Orientée document", "Orientée colonnes", "Orientée graphe", "Clé-valeur"],
-        "answer": "Orientée graphe",
-        "explanation": "Les bases orientées graphe comme Neo4j sont adaptées pour des relations étendues."
-    },
-    {
-        "question": "Quel type de base de données est le plus adapté pour des données avec des relations hiérarchiques ?",
-        "options": ["Orientée document", "Orientée colonnes", "Orientée graphe", "Clé-valeur"],
-        "answer": "Orientée document",
-        "explanation": "Les bases orientées documents comme MongoDB sont adaptées pour des relations hiérarchiques."
-    },
-    {
-        "question": "Quel type de base de données est le plus adapté pour des données avec des relations en réseau ?",
-        "options": ["Orientée document", "Orientée colonnes", "Orientée graphe", "Clé-valeur"],
-        "answer": "Orientée graphe",
-        "explanation": "Les bases orientées graphe comme Neo4j sont adaptées pour des relations en réseau."
-    },
-    {
-        "question": "Quel type de base de données est le plus adapté pour des données avec des relations en arbre ?",
-        "options": ["Orientée document", "Orientée colonnes", "Orientée graphe", "Clé-valeur"],
-        "answer": "Orientée document",
-        "explanation": "Les bases orientées documents comme MongoDB sont adaptées pour des relations en arbre."
-    },
-    {
-        "question": "Quel type de base de données est le plus adapté pour des données avec des relations en chaîne ?",
-        "options": ["Orientée document", "Orientée colonnes", "Orientée graphe", "Clé-valeur"],
-        "answer": "Orientée document",
-        "explanation": "Les bases orientées documents comme MongoDB sont adaptées pour des relations en chaîne."
-    },
-    {
-        "question": "Quel type de base de données est le plus adapté pour des données avec des relations en matrice ?",
-        "options": ["Orientée document", "Orientée colonnes", "Orientée graphe", "Clé-valeur"],
-        "answer": "Orientée colonnes",
-        "explanation": "Les bases orientées colonnes comme Cassandra sont adaptées pour des relations en matrice."
-    },
-    {
-        "question": "Quel type de base de données est le plus adapté pour des données avec des relations en tableau ?",
-        "options": ["Orientée document", "Orientée colonnes", "Orientée graphe", "Clé-valeur"],
-        "answer": "Orientée colonnes",
-        "explanation": "Les bases orientées colonnes comme Cassandra sont adaptées pour des relations en tableau."
-    },
-    {
-        "question": "Quel type de base de données est le plus adapté pour des données avec des relations en liste ?",
-        "options": ["Orientée document", "Orientée colonnes", "Orientée graphe", "Clé-valeur"],
-        "answer": "Orientée document",
-        "explanation": "Les bases orientées documents comme MongoDB sont adaptées pour des relations en liste."
-    },
-    {
-        "question": "Quel type de base de données est le plus adapté pour des données avec des relations en ensemble ?",
-        "options": ["Orientée document", "Orientée colonnes", "Orientée graphe", "Clé-valeur"],
-        "answer": "Orientée colonnes",
-        "explanation": "Les bases orientées colonnes comme Cassandra sont adaptées pour des relations en ensemble."
-    },
-    {
-        "question": "Quel type de base de données est le plus adapté pour des données avec des relations en paire ?",
-        "options": ["Orientée document", "Orientée colonnes", "Orientée graphe", "Clé-valeur"],
-        "answer": "Clé-valeur",
-        "explanation": "Les bases clé-valeur comme Redis sont adaptées pour des relations en paire."
-    },
-    {
-        "question": "Quel type de base de données est le plus adapté pour des données avec des relations en triplet ?",
-        "options": ["Orientée document", "Orientée colonnes", "Orientée graphe", "Clé-valeur"],
-        "answer": "Orientée graphe",
-        "explanation": "Les bases orientées graphe comme Neo4j sont adaptées pour des relations en triplet."
-    },
-    {
-        "question": "Quel type de base de données est le plus adapté pour des données avec des relations en triplet ?",
-        "options": ["Orientée document", "Orientée colonnes", "Orientée graphe", "Clé-valeur"],
-        "answer": "Orientée graphe",
-        "explanation": "Les bases orientées graphe comme Neo4j sont adaptées pour des relations en triplet."
-    },
-    {
-        "question": "Quel type de base de données est le plus adapté pour des données avec des relations en arbre ?",
-        "options": ["Orientée document", "Orientée colonnes", "Orientée graphe", "Clé-valeur"],
-        "answer": "Orientée document",
-        "explanation": "Les bases orientées documents comme MongoDB sont adaptées pour des relations en arbre."
-    },
-    {
-        "question": "Quel type de base de données est le plus adapté pour des données avec des relations en cycle ?",
-        "options": ["Orientée document", "Orientée colonnes", "Orientée graphe", "Clé-valeur"],
-        "answer": "Orientée graphe",
-        "explanation": "Les bases orientées graphe comme Neo4j sont adaptées pour des relations en cycle."
-    },
-    {
-        "question": "Quel type de base de données est le plus adapté pour des données avec des relations en arbre inversé ?",
-        "options": ["Orientée document", "Orientée colonnes", "Orientée graphe", "Clé-valeur"],
-        "answer": "Orientée document",
-        "explanation": "Les bases orientées documents comme MongoDB sont adaptées pour des relations en arbre inversé."
-    },
-    {
-        "question": "Quel type de base de données est le plus adapté pour des données avec des relations en arbre multiple ?",
-        "options": ["Orientée document", "Orientée colonnes", "Orientée graphe", "Clé-valeur"],
-        "answer": "Orientée document",
-        "explanation": "Les bases orientées documents comme MongoDB sont adaptées pour des relations en arbre multiple."
-    },
-    {
-        "question": "Quel type de base de données est le plus adapté pour des données avec des relations en arbre binaire ?",
-        "options": ["Orientée document", "Orientée colonnes", "Orientée graphe", "Clé-valeur"],
-        "answer": "Orientée document",
-        "explanation": "Les bases orientées documents comme MongoDB sont adaptées pour des relations en arbre binaire."
-    },
-    {
-        "question": "Quel type de base de données est le plus adapté pour des données avec des relations en arbre ternaire ?",
-        "options": ["Orientée document", "Orientée colonnes", "Orientée graphe", "Clé-valeur"],
-        "answer": "Orientée document",
-        "explanation": "Les bases orientées documents comme MongoDB sont adaptées pour des relations en arbre ternaire."
-    },
-    {
-        "question": "Quel type de base de données est le plus adapté pour des données avec des relations en arbre général ?",
-        "options": ["Orientée document", "Orientée colonnes", "Orientée graphe", "Clé-valeur"],
-        "answer": "Orientée document",
-        "explanation": "Les bases orientées documents comme MongoDB sont adaptées pour des relations en arbre général."
-    },
-    {
-        "question": "Quel type de base de données est le plus adapté pour des données avec des relations en arbre complexe ?",
-        "options": ["Orientée document", "Orientée colonnes", "Orientée graphe", "Clé-valeur"],
-        "answer": "Orientée document",
-        "explanation": "Les bases orientées documents comme MongoDB sont adaptées pour des relations en arbre complexe."
-    },
-    {
-        "question": "Quel type de base de données est le plus adapté pour des données avec des relations en arbre profond ?",
-        "options": ["Orientée document", "Orientée colonnes", "Orientée graphe", "Clé-valeur"],
-        "answer": "Orientée document",
-        "explanation": "Les bases orientées documents comme MongoDB sont adaptées pour des relations en arbre profond."
-    },
-    {
-        "question": "Quel type de base de données est le plus adapté pour des données avec des relations en arbre étendu ?",
-        "options": ["Orientée document", "Orientée colonnes", "Orientée graphe", "Clé-valeur"],
-        "answer": "Orientée document",
-        "explanation": "Les bases orientées documents comme MongoDB sont adaptées pour des relations en arbre étendu."
-    },
-    {
-        "question": "Quel type de base de données est le plus adapté pour des données avec des relations en arbre hiérarchique ?",
-        "options": ["Orientée document", "Orientée colonnes", "Orientée graphe", "Clé-valeur"],
-        "answer": "Orientée document",
-        "explanation": "Les bases orientées documents comme MongoDB sont adaptées pour des relations en arbre hiérarchique."
-    },
-    {
-        "question": "Quel type de base de données est le plus adapté pour des données avec des relations en arbre simple ?",
-        "options": ["Orientée document", "Orientée colonnes", "Orientée graphe", "Clé-valeur"],
-        "answer": "Orientée document",
-        "explanation": "Les bases orientées documents comme MongoDB sont adaptées pour des relations en arbre simple."
-    },
-    {
-        "question": "Quel type de base de données est le plus adapté pour des données avec des relations en arbre linéaire ?",
-        "options": ["Orientée document", "Orientée colonnes", "Orientée graphe", "Clé-valeur"],
-        "answer": "Orientée document",
-        "explanation": "Les bases orientées documents comme MongoDB sont adaptées pour des relations en arbre linéaire."
-    },
-    {
-        "question": "Quel type de base de données est le plus adapté pour des données avec des relations en arbre circulaire ?",
-        "options": ["Orientée document", "Orientée colonnes", "Orientée graphe", "Clé-valeur"],
-        "answer": "Orientée graphe",
-        "explanation": "Les bases orientées graphe comme Neo4j sont adaptées pour des relations en arbre circulaire."
-    },
-    {
-        "question": "Quel type de base de données est le plus adapté pour des données avec des relations en arbre arborescent ?",
-        "options": ["Orientée document", "Orientée colonnes", "Orientée graphe", "Clé-valeur"],
-        "answer": "Orientée document",
-        "explanation": "Les bases orientées documents comme MongoDB sont adaptées pour des relations en arbre arborescent."
-    },
-    {
-        "question": "Quel type de base de données est le plus adapté pour des données avec des relations en arbre infini ?",
-        "options": ["Orientée document", "Orientée colonnes", "Orientée graphe", "Clé-valeur"],
-        "answer": "Orientée document",
-        "explanation": "Les bases orientées documents comme MongoDB sont adaptées pour des relations en arbre infini."
-    },
-    {
-        "question": "Quel type de base de données est le plus adapté pour des données avec des relations en arbre limité ?",
-        "options": ["Orientée document", "Orientée colonnes", "Orientée graphe", "Clé-valeur"],
-        "answer": "Orientée document",
-        "explanation": "Les bases orientées documents comme MongoDB sont adaptées pour des relations en arbre limité."
-    },
-    {
-        "question": "Quel type de base de données est le plus adapté pour des données avec des relations en arbre dynamique ?",
-        "options": ["Orientée document", "Orientée colonnes", "Orientée graphe", "Clé-valeur"],
-        "answer": "Orientée document",
-        "explanation": "Les bases orientées documents comme MongoDB sont adaptées pour des relations en arbre dynamique."
-    },
-    {
-        "question": "Quel type de base de données est le plus adapté pour des données avec des relations en arbre statique ?",
-        "options": ["Orientée document", "Orientée colonnes", "Orientée graphe", "Clé-valeur"],
-        "answer": "Orientée document",
-        "explanation": "Les bases orientées documents comme MongoDB sont adaptées pour des relations en arbre statique."
-    },
-    {
-        "question": "Quel type de base de données est le plus adapté pour des données avec des relations en arbre évolutif ?",
-        "options": ["Orientée document", "Orientée colonnes", "Orientée graphe", "Clé-valeur"],
-        "answer": "Orientée document",
-        "explanation": "Les bases orientées documents comme MongoDB sont adaptées pour des relations en arbre évolutif."
-    },
-    {
-        "question": "Quel type de base de données est le plus adapté pour des données avec des relations en arbre équilibré ?",
-        "options": ["Orientée document", "Orientée colonnes", "Orientée graphe", "Clé-valeur"],
-        "answer": "Orientée document",
-        "explanation": "Les bases orientées documents comme MongoDB sont adaptées pour des relations en arbre équilibré."
-    },
-    {
-        "question": "Quel type de base de données est le plus adapté pour des données avec des relations en arbre déséquilibré ?",
-        "options": ["Orientée document", "Orientée colonnes", "Orientée graphe", "Clé-valeur"],
-        "answer": "Orientée document",
-        "explanation": "Les bases orientées documents comme MongoDB sont adaptées pour des relations en arbre déséquilibré."
-    },
-    {
-        "question": "Quel type de base de données est le plus adapté pour des données avec des relations en arbre dense ?",
-        "options": ["Orientée document", "Orientée colonnes", "Orientée graphe", "Clé-valeur"],
-        "answer": "Orientée document",
-        "explanation": "Les bases orientées documents comme MongoDB sont adaptées pour des relations en arbre dense."
-    },
-    {
-        "question": "Quel type de base de données est le plus adapté pour des données avec des relations en arbre sparse ?",
-        "options": ["Orientée document", "Orientée colonnes", "Orientée graphe", "Clé-valeur"],
-        "answer": "Orientée document",
-        "explanation": "Les bases orientées documents comme MongoDB sont adaptées pour des relations en arbre sparse."
-    },
-    {
-        "question": "Quel type de base de données est le plus adapté pour des données avec des relations en arbre étroit ?",
-        "options": ["Orientée document", "Orientée colonnes", "Orientée graphe", "Clé-valeur"],
-        "answer": "Orientée document",
-        "explanation": "Les bases orientées documents comme MongoDB sont adaptées pour des relations en arbre étroit."
-    },
-    {
-        "question": "Quel type de base de données est le plus adapté pour des données avec des relations en arbre large ?",
-        "options": ["Orientée document", "Orientée colonnes", "Orientée graphe", "Clé-valeur"],
-        "answer": "Orientée document",
-        "explanation": "Les bases orientées documents comme MongoDB sont adaptées pour des relations en arbre large."
-    },
-    {
-        "question": "Quel type de base de données est le plus adapté pour des données avec des relations en arbre compact ?",
-        "options": ["Orientée document", "Orientée colonnes", "Orientée graphe", "Clé-valeur"],
-        "answer": "Orientée document",
-        "explanation": "Les bases orientées documents comme MongoDB sont adaptées pour des relations en arbre compact."
-    },
-    {
-        "question": "Quel type de base de données est le plus adapté pour des données avec des relations en arbre expansif ?",
-        "options": ["Orientée document", "Orientée colonnes", "Orientée graphe", "Clé-valeur"],
-        "answer": "Orientée document",
-        "explanation": "Les bases orientées documents comme MongoDB sont adaptées pour des relations en arbre expansif."
-    },
-    {
-        "question": "Quel type de base de données est le plus adapté pour des données avec des relations en arbre réduit ?",
-        "options": ["Orientée document", "Orientée colonnes", "Orientée graphe", "Clé-valeur"],
-        "answer": "Orientée document",
-        "explanation": "Les bases orientées documents comme MongoDB sont adaptées pour des relations en arbre réduit."
-    },
-    {
-        "question": "Quel type de base de données est le plus adapté pour des données avec des relations en arbre compressé ?",
-        "options": ["Orientée document", "Orientée colonnes", "Orientée graphe", "Clé-valeur"],
-        "answer": "Orientée document",
-        "explanation": "Les bases orientées documents comme MongoDB sont adaptées pour des relations en arbre compressé."
-    },
-    {
-        "question": "Quel type de base de données est le plus adapté pour des données avec des relations en arbre décomposé ?",
-        "options": ["Orientée document", "Orientée colonnes", "Orientée graphe", "Clé-valeur"],
-        "answer": "Orientée document",
-        "explanation": "Les bases orientées documents comme MongoDB sont adaptées pour des relations en arbre décomposé."
-    },
-    {
-        "question": "Quel type de base de données est le plus adapté pour des données avec des relations en arbre fragmenté ?",
-        "options": ["Orientée document", "Orientée colonnes", "Orientée graphe", "Clé-valeur"],
-        "answer": "Orientée document",
-        "explanation": "Les bases orientées documents comme MongoDB sont adaptées pour des relations en arbre fragmenté."
-    },
-    {
-        "question": "Quel type de base de données est le plus adapté pour des données avec des relations en arbre fractal ?",
-        "options": ["Orientée document", "Orientée colonnes", "Orientée graphe", "Clé-valeur"],
-        "answer": "Orientée document",
-        "explanation": "Les bases orientées documents comme MongoDB sont adaptées pour des relations en arbre fractal."
-    },
-    {
-        "question": "Quel type de base de données est le plus adapté pour des données avec des relations en arbre fractale ?",
-        "options": ["Orientée document", "Orientée colonnes", "Orientée graphe", "Clé-valeur"],
-        "answer": "Orientée document",
-        "explanation": "Les bases orientées documents comme MongoDB sont adaptées pour des relations en arbre fractale."
-    },
-    {
-        "question": "Quel type de base de données est le plus adapté pour des données avec des relations en arbre récursif ?",
-        "options": ["Orientée document", "Orientée colonnes", "Orientée graphe", "Clé-valeur"],
-        "answer": "Orientée document",
-        "explanation": "Les bases orientées documents comme MongoDB sont adaptées pour des relations en arbre récursif."
-    },
-    {
-        "question": "Quel type de base de données est le plus adapté pour des données avec des relations en arbre itératif ?",
-        "options": ["Orientée document", "Orientée colonnes", "Orientée graphe", "Clé-valeur"],
-        "answer": "Orientée document",
-        "explanation": "Les bases orientées documents comme MongoDB sont adaptées pour des relations en arbre itératif."
-    },
-    {
-        "question": "Quel type de base de données est le plus adapté pour des données avec des relations en arbre récursif ?",
-        "options": ["Orientée document", "Orientée colonnes", "Orientée graphe", "Clé-valeur"],
-        "answer": "Orientée document",
-        "explanation": "Les bases orientées documents comme MongoDB sont adaptées pour des relations en arbre récursif."
-    },
-    {
-        "question": "Quel type de base de données est le plus adapté pour des données avec des relations en arbre itératif ?",
-        "options": ["Orientée document", "Orientée colonnes", "Orientée graphe", "Clé-valeur"],
-        "answer": "Orientée document",
-        "explanation": "Les bases orientées documents comme MongoDB sont adaptées pour des relations en arbre itératif."
-    },
-    {
-        "question": "Quel type de base de données est le plus adapté pour des données avec des relations en arbre récursif ?",
-        "options": ["Orientée document", "Orientée colonnes", "Orientée graphe", "Clé-valeur"],
-        "answer": "Orientée document",
-        "explanation": "Les bases orientées documents comme MongoDB sont adaptées pour des relations en arbre récursif."
-    },
-    {
-        "question": "Quel type de base de données est le plus adapté pour des données avec des relations en arbre itératif ?",
-        "options": ["Orientée document", "Orientée colonnes", "Orientée graphe", "Clé-valeur"],
-        "answer": "Orientée document",
-        "explanation": "Les bases orientées documents comme MongoDB sont adaptées pour des relations en arbre itératif."
-    },
-    {
-        "question": "Quel type de base de données est le plus adapté pour des données avec des relations en arbre récursif ?",
-        "options": ["Orientée document", "Orientée colonnes", "Orientée graphe", "Clé-valeur"],
-        "answer": "Orientée document",
-        "explanation": "Les bases orientées documents comme MongoDB sont adaptées pour des relations en arbre récursif."
-    },
-    {
-        "question": "Quel type de base de données est le plus adapté pour des données avec des relations en arbre itératif ?",
-        "options": ["Orientée document", "Orientée colonnes", "Orientée graphe", "Clé-valeur"],
-        "answer": "Orientée document",
-        "explanation": "Les bases orientées documents comme MongoDB sont adaptées pour des relations en arbre itératif."
+        "answer": "Cohérence éventuelle (Eventual Consistency)",
+        "explanation": "La cohérence éventuelle (Eventual Consistency) est un modèle utilisé dans les systèmes distribués NoSQL où le système garantit que, sans nouvelles mises à jour, toutes les lectures retourneront éventuellement la dernière valeur écrite."
+    },
+    {
+        "question": "Dans Neo4j, comment appelle-t-on un attribut associé à un nœud pour définir son type?",
+        "options": [
+            "Type",
+            "Category",
+            "Label",
+            "Class"
+        ],
+        "answer": "Label",
+        "explanation": "Dans Neo4j, un label est utilisé pour définir le type ou la catégorie d'un nœud, permettant de regrouper des nœuds similaires pour l'indexation et les requêtes."
+    },
+    {
+        "question": "Quelle caractéristique n'est généralement PAS associée aux bases de données orientées colonnes?",
+        "options": [
+            "Stockage optimisé pour les lectures séquentielles",
+            "Haute performance pour l'analyse de données",
+            "Modélisation naturelle des relations complexes",
+            "Compression efficace des données"
+        ],
+        "answer": "Modélisation naturelle des relations complexes",
+        "explanation": "La modélisation naturelle des relations complexes est une caractéristique des bases de données orientées graphes, pas des bases orientées colonnes qui sont plutôt optimisées pour l'analyse séquentielle de grandes quantités de données."
+    },
+    {
+        "question": "Dans le 'scaling', quelle est la différence fondamentale entre 'scaling up' et 'scaling out'?",
+        "options": [
+            "'Scaling up' ajoute plus de serveurs, 'scaling out' ajoute plus de mémoire",
+            "'Scaling up' ajoute plus de puissance à un serveur existant, 'scaling out' ajoute plus de serveurs",
+            "'Scaling up' concerne les données, 'scaling out' concerne les processus",
+            "'Scaling up' est horizontal, 'scaling out' est vertical"
+        ],
+        "answer": "'Scaling up' ajoute plus de puissance à un serveur existant, 'scaling out' ajoute plus de serveurs",
+        "explanation": "Le 'scaling up' (scalabilité verticale) consiste à ajouter plus de ressources (CPU, RAM) à un serveur existant, tandis que le 'scaling out' (scalabilité horizontale) consiste à ajouter plus de serveurs au système."
+    },
+    {
+        "question": "Quel est l'avantage principal des bases de données en mémoire comme Redis?",
+        "options": [
+            "Meilleure gestion des relations",
+            "Plus grande capacité de stockage",
+            "Vitesse d'accès très élevée",
+            "Meilleure tolérance aux pannes"
+        ],
+        "answer": "Vitesse d'accès très élevée",
+        "explanation": "Les bases de données en mémoire comme Redis offrent des temps d'accès extrêmement rapides car les données sont stockées en RAM plutôt que sur disque."
+    },
+    {
+        "question": "Quel mécanisme MongoDB utilise-t-il pour éviter la duplication d'éléments?",
+        "options": [
+            "Primary key",
+            "Unique ID",
+            "Object ID",
+            "Hash key"
+        ],
+        "answer": "Object ID",
+        "explanation": "MongoDB génère automatiquement un identifiant unique appelé ObjectId pour chaque document si un _id n'est pas spécifié, garantissant ainsi l'unicité des documents dans une collection."
+    },
+    {
+        "question": "Quand utiliserait-on un index composé dans MongoDB?",
+        "options": [
+            "Pour indexer des champs de type tableau",
+            "Pour accélérer les requêtes portant sur plusieurs champs simultanément",
+            "Pour stocker des données géospatiales",
+            "Pour la recherche full-text"
+        ],
+        "answer": "Pour accélérer les requêtes portant sur plusieurs champs simultanément",
+        "explanation": "Un index composé dans MongoDB indexe plusieurs champs ensemble, optimisant les requêtes qui filtrent ou trient sur ces champs simultanément."
+    },
+    {
+        "question": "Quelle fonction MongoDB permet d'analyser si une requête utilise efficacement les index?",
+        "options": [
+            "analyze()",
+            "debug()",
+            "explain()",
+            "review()"
+        ],
+        "answer": "explain()",
+        "explanation": "La fonction explain() dans MongoDB permet d'analyser comment une requête est exécutée, incluant l'utilisation des index, ce qui aide à optimiser les performances."
+    },
+    {
+        "question": "Dans Neo4j, que permet de faire l'opérateur '->'?",
+        "options": [
+            "Créer un nouveau nœud",
+            "Définir une relation dirigée",
+            "Supprimer une relation",
+            "Comparer deux valeurs"
+        ],
+        "answer": "Définir une relation dirigée",
+        "explanation": "Dans Neo4j, l'opérateur '->' est utilisé pour définir une relation dirigée entre deux nœuds dans le langage Cypher."
+    },
+    {
+        "question": "Quelle approche est recommandée pour modéliser des données hiérarchiques dans MongoDB?",
+        "options": [
+            "Utiliser plusieurs collections avec des références",
+            "Stocker la hiérarchie complète dans un seul document",
+            "Utiliser le modèle de chemins matérialisés",
+            "Toutes ces réponses sont correctes selon le contexte"
+        ],
+        "answer": "Toutes ces réponses sont correctes selon le contexte",
+        "explanation": "MongoDB offre plusieurs approches pour modéliser des données hiérarchiques: documents imbriqués, références, modèle de chemins matérialisés ou modèle d'ensemble d'ancêtres. Le choix dépend des besoins spécifiques de l'application."
+    },
+    {
+        "question": "Quelle propriété MongoDB permet de limiter le nombre de résultats retournés par une requête?",
+        "options": [
+            "max()",
+            "limit()",
+            "size()",
+            "restrict()"
+        ],
+        "answer": "limit()",
+        "explanation": "La méthode limit() dans MongoDB permet de spécifier le nombre maximum de documents que la requête doit retourner."
+    },
+    {
+        "question": "Dans Neo4j, comment supprimer uniquement une relation sans supprimer les nœuds?",
+        "options": [
+            "DELETE relation",
+            "REMOVE relation",
+            "DROP relation",
+            "DETACH relation"
+        ],
+        "answer": "DELETE relation",
+        "explanation": "Dans Neo4j, l'instruction DELETE permet de supprimer uniquement une relation spécifique sans affecter les nœuds connectés."
+    },
+    {
+        "question": "Quelle technique est couramment utilisée pour implémenter la recherche par proximité géographique dans MongoDB?",
+        "options": [
+            "Index textuel",
+            "Index géospatial",
+            "Hashing de localisation",
+            "Index composé"
+        ],
+        "answer": "Index géospatial",
+        "explanation": "MongoDB utilise des index géospatiaux (2dsphere, 2d) pour optimiser les requêtes basées sur la proximité géographique."
+    },
+    {
+        "question": "Dans le contexte NoSQL, qu'est-ce qu'un 'eventual read'?",
+        "options": [
+            "Une lecture qui n'est jamais garantie",
+            "Une lecture qui peut initialement retourner une valeur périmée mais finira par refléter la dernière écriture",
+            "Une lecture retardée pour optimiser les performances",
+            "Une lecture effectuée uniquement après un certain délai"
+        ],
+        "answer": "Une lecture qui peut initialement retourner une valeur périmée mais finira par refléter la dernière écriture",
+        "explanation": "Dans un système à cohérence éventuelle (eventual consistency), un 'eventual read' peut initialement retourner une ancienne valeur, mais après un certain temps, toutes les lectures refléteront la dernière valeur écrite."
+    },
+    {
+        "question": "Laquelle des affirmations suivantes concernant les transactions dans MongoDB est correcte?",
+        "options": [
+            "MongoDB ne supporte pas les transactions",
+            "MongoDB supporte les transactions uniquement au niveau document",
+            "MongoDB supporte les transactions multi-documents depuis la version 4.0",
+            "Les transactions MongoDB sont identiques aux transactions SQL"
+        ],
+        "answer": "MongoDB supporte les transactions multi-documents depuis la version 4.0",
+        "explanation": "Depuis la version 4.0, MongoDB prend en charge les transactions multi-documents, permettant des opérations atomiques sur plusieurs documents et collections."
+    },
+    {
+        "question": "Quel type de jointure peut être simulé dans MongoDB?",
+        "options": [
+            "Left Join uniquement",
+            "Inner Join uniquement",
+            "Les deux, via l'opérateur $lookup",
+            "Aucune jointure n'est possible dans MongoDB"
+        ],
+        "answer": "Les deux, via l'opérateur $lookup",
+        "explanation": "L'opérateur $lookup dans MongoDB permet d'effectuer des opérations similaires aux jointures SQL, pouvant simuler à la fois les Inner Join et Left Join."
+    },
+    {
+        "question": "Comment MongoDB gère-t-il les données qui dépassent la taille maximale d'un document (16 Mo)?",
+        "options": [
+            "Il rejette automatiquement ces données",
+            "Il les compresse pour les faire tenir",
+            "Il utilise GridFS pour diviser les données en chunks",
+            "Il convertit les données en format binaire"
+        ],
+        "answer": "Il utilise GridFS pour diviser les données en chunks",
+        "explanation": "MongoDB utilise GridFS pour stocker des fichiers dépassant la limite de 16 Mo d'un document en les divisant en chunks plus petits."
+    },
+    {
+        "question": "Quelle est la différence principale entre un index simple et un index composé dans MongoDB?",
+        "options": [
+            "Un index simple est plus rapide qu'un index composé",
+            "Un index simple porte sur un seul champ tandis qu'un index composé porte sur plusieurs champs",
+            "Un index simple supporte les requêtes de plage, pas l'index composé",
+            "Un index simple est automatiquement créé, un index composé doit être défini manuellement"
+        ],
+        "answer": "Un index simple porte sur un seul champ tandis qu'un index composé porte sur plusieurs champs",
+        "explanation": "Un index simple dans MongoDB indexe un seul champ, tandis qu'un index composé indexe une combinaison de plusieurs champs, permettant d'optimiser des requêtes complexes."
+    },
+    {
+        "question": "Dans Neo4j, quel est l'intérêt d'ajouter des propriétés aux relations?",
+        "options": [
+            "Uniquement pour faciliter le débogage",
+            "Pour stocker des métadonnées sur la relation comme sa force, son type ou sa date de création",
+            "Pour accélérer les requêtes",
+            "Pour établir des relations entre les relations"
+        ],
+        "answer": "Pour stocker des métadonnées sur la relation comme sa force, son type ou sa date de création",
+        "explanation": "Dans Neo4j, les propriétés sur les relations permettent de stocker des informations supplémentaires sur la nature de la connexion, comme son poids, sa date de création ou d'autres attributs caractérisant la relation."
+    },
+    {
+        "question": "Quelle est la principale raison d'utiliser un TTL (Time-To-Live) index dans MongoDB?",
+        "options": [
+            "Pour accélérer les requêtes temporelles",
+            "Pour automatiser la suppression de documents après un certain délai",
+            "Pour limiter la durée des connexions à la base de données",
+            "Pour définir la durée de validité d'un index"
+        ],
+        "answer": "Pour automatiser la suppression de documents après un certain délai",
+        "explanation": "Un index TTL dans MongoDB permet d'automatiser la suppression des documents après une période spécifiée, utile pour les données temporaires comme les sessions ou les logs."
+    },
+    {
+        "question": "Dans le modèle BASE, que signifie le 'S'?",
+        "options": [
+            "Simple",
+            "Secure",
+            "Soft state",
+            "Synchronous"
+        ],
+        "answer": "Soft state",
+        "explanation": "Dans le modèle BASE (Basic Availability, Soft state, Eventual consistency), le 'S' représente 'Soft state', indiquant que l'état du système peut changer sans input utilisateur en raison des mécanismes de cohérence éventuelle."
+    },
+    {
+        "question": "Quelle phase du processus MapReduce est responsable de l'agrégation des résultats intermédiaires?",
+        "options": [
+            "Map",
+            "Reduce",
+            "Shuffle",
+            "Sort"
+        ],
+        "answer": "Reduce",
+        "explanation": "Dans le paradigme MapReduce, la phase Reduce est responsable de l'agrégation des résultats intermédiaires produits par la phase Map pour générer le résultat final."
+    },
+    {
+        "question": "Quel paramètre MongoDB est utilisé pour trier les résultats d'une requête?",
+        "options": [
+            "order()",
+            "sort()",
+            "arrange()",
+            "sequence()"
+        ],
+        "answer": "sort()",
+        "explanation": "La méthode sort() dans MongoDB permet de spécifier l'ordre dans lequel les résultats d'une requête doivent être retournés."
+    },
+    {
+        "question": "Dans Neo4j, comment créer une relation entre deux nœuds existants?",
+        "options": [
+            "CONNECT (a)-[:RELATION]->(b)",
+            "JOIN (a) TO (b) AS RELATION",
+            "MATCH (a), (b) CREATE (a)-[:RELATION]->(b)",
+            "LINK (a) WITH (b) AS RELATION"
+        ],
+        "answer": "MATCH (a), (b) CREATE (a)-[:RELATION]->(b)",
+        "explanation": "Dans Neo4j, pour créer une relation entre deux nœuds existants, on utilise d'abord MATCH pour trouver les nœuds, puis CREATE pour établir la relation entre eux."
+    },
+    {
+        "question": "Quelle est la principale différence entre MongoDB et Redis?",
+        "options": [
+            "MongoDB est open source, Redis est propriétaire",
+            "MongoDB est orienté documents, Redis est de type clé-valeur",
+            "MongoDB ne supporte pas les transactions, Redis oui",
+            "MongoDB est plus récent que Redis"
+        ],
+        "answer": "MongoDB est orienté documents, Redis est de type clé-valeur",
+        "explanation": "La principale différence architecturale est que MongoDB est une base de données orientée documents (stockant des documents JSON/BSON) tandis que Redis est une base de données de type clé-valeur en mémoire."
+    },
+    {
+        "question": "Quelle est la stratégie recommandée pour choisir une clé de sharding dans MongoDB?",
+        "options": [
+            "Toujours utiliser le champ _id",
+            "Utiliser un champ avec une forte cardinalité pour assurer une bonne distribution",
+            "Utiliser un champ qui change fréquemment",
+            "Utiliser un champ avec peu de valeurs distinctes"
+        ],
+        "answer": "Utiliser un champ avec une forte cardinalité pour assurer une bonne distribution",
+        "explanation": "Pour un sharding efficace dans MongoDB, il est recommandé de choisir une clé de sharding avec une forte cardinalité (nombreuses valeurs uniques) pour assurer une distribution uniforme des données entre les shards."
+    },
+    {
+        "question": "Quelle fonctionnalité permet à Cassandra d'être particulièrement efficace pour les écritures intensives?",
+        "options": [
+            "Son modèle de données en colonnes",
+            "Sa structure d'écriture log-structurée (LSM Tree)",
+            "Ses transactions ACID",
+            "Son système de réplication maître-esclave"
+        ],
+        "answer": "Sa structure d'écriture log-structurée (LSM Tree)",
+        "explanation": "Cassandra utilise une structure de type Log-Structured Merge Tree (LSM Tree) qui optimise les opérations d'écriture en les rendant séquentielles, ce qui est particulièrement efficace pour les workloads à écritures intensives."
+    },
+    {
+        "question": "Dans Neo4j, quelle clause est utilisée pour filtrer les résultats?",
+        "options": [
+            "FILTER",
+            "WHERE",
+            "HAVING",
+            "CONDITION"
+        ],
+        "answer": "WHERE",
+        "explanation": "Dans le langage Cypher de Neo4j, la clause WHERE est utilisée pour filtrer les résultats en fonction de conditions spécifiques."
+    },
+    {
+        "question": "Quelle option de MongoDB est spécifiquement conçue pour la recherche dans le texte?",
+        "options": [
+            "regex search",
+            "wildcard search",
+            "text index",
+            "string matching"
+        ],
+        "answer": "text index",
+        "explanation": "MongoDB offre un type d'index spécial appelé 'text index' qui permet d'effectuer des recherches efficaces sur du contenu textuel, y compris la recherche de mots et de phrases."
+    },
+    {
+        "question": "Quel est l'avantage principal des opérations atomiques dans MongoDB?",
+        "options": [
+            "Elles augmentent la vitesse des requêtes",
+            "Elles garantissent qu'une opération se termine complètement ou pas du tout",
+            "Elles permettent de minimiser l'utilisation de la mémoire",
+            "Elles réduisent la taille des données stockées"
+        ],
+        "answer": "Elles garantissent qu'une opération se termine complètement ou pas du tout",
+        "explanation": "Les opérations atomiques dans MongoDB garantissent qu'une opération est soit complètement exécutée, soit pas du tout, ce qui empêche les états intermédiaires incohérents."
+    },
+    {
+        "question": "Quelle option MongoDB permet de rechercher des documents où un champ est absent?",
+        "options": [
+            "$missing: true",
+            "$exists: false",
+            "$absent: true",
+            "$null: true"
+        ],
+        "answer": "$exists: false",
+        "explanation": "L'opérateur $exists: false dans MongoDB permet de rechercher des documents où un champ spécifique n'existe pas."
+    },
+    {
+        "question": "Dans Neo4j, comment peut-on trouver le chemin le plus court entre deux nœuds?",
+        "options": [
+            "En utilisant la fonction SHORTEST_PATH()",
+            "En utilisant l'algorithme A*",
+            "En utilisant une recherche en largeur (BFS)",
+            "En utilisant la fonction PATH()"
+        ],
+        "answer": "En utilisant la fonction SHORTEST_PATH()",
+        "explanation": "Neo4j offre la fonction SHORTEST_PATH() qui permet de trouver efficacement le chemin le plus court entre deux nœuds dans un graphe."
+    },
+    {
+        "question": "Quel est le principal avantage du schéma dynamique dans une base NoSQL orientée documents?",
+        "options": [
+            "Il réduit la consommation de stockage",
+            "Il permet une évolution plus facile de l'application sans migrations complexes",
+            "Il améliore les performances des requêtes",
+            "Il facilite l'intégration avec les bases SQL"
+        ],
+        "answer": "Il permet une évolution plus facile de l'application sans migrations complexes",
+        "explanation": "Le schéma dynamique des bases NoSQL orientées documents permet d'adapter facilement la structure des données aux évolutions de l'application sans nécessiter de migrations de schéma complexes comme dans les bases relationnelles."
+    },
+    {
+        "question": "Quelle est la meilleure option pour stocker des fichiers volumineux dans MongoDB?",
+        "options": [
+            "Les stocker directement comme des documents BSON",
+            "Utiliser GridFS",
+            "Les convertir en base64 et les stocker comme chaînes",
+            "Les diviser manuellement en petits morceaux"
+        ],
+        "answer": "Utiliser GridFS",
+        "explanation": "GridFS est le système de MongoDB conçu pour stocker et récupérer des fichiers qui dépassent la limite de taille d'un document (16 Mo) en les divisant automatiquement en chunks."
+    },
+    {
+        "question": "Dans un environnement distribué Neo4j, qu'est-ce qu'un 'causal cluster'?",
+        "options": [
+            "Un groupe de nœuds qui partagent les mêmes labels",
+            "Une architecture multi-datacenters pour la résilience",
+            "Un groupe de serveurs Neo4j configurés pour la haute disponibilité et la tolérance aux pannes",
+            "Un ensemble de relations causales dans le modèle de données"
+        ],
+        "answer": "Un groupe de serveurs Neo4j configurés pour la haute disponibilité et la tolérance aux pannes",
+        "explanation": "Dans Neo4j, un 'causal cluster' est une architecture où plusieurs instances Neo4j sont configurées ensemble pour fournir haute disponibilité, tolérance aux pannes et scalabilité."
+    },
+    {
+        "question": "Quelle technique permet de maintenir les performances dans Neo4j lorsque la taille du graphe augmente?",
+        "options": [
+            "Ajouter plus de RAM aux serveurs",
+            "Utiliser l'indexation sur les propriétés fréquemment recherchées",
+            "Limiter le nombre de types de relations",
+            "Toutes ces réponses sont correctes"
+        ],
+        "answer": "Toutes ces réponses sont correctes",
+        "explanation": "Plusieurs techniques permettent de maintenir les performances de Neo4j avec de grands graphes: l'ajout de RAM, l'indexation appropriée, et une modélisation efficace limitant la complexité des relations."
+    },
+    {
+        "question": "Qu'est-ce que le 'Projection Operator' ($project) dans l'aggregation framework de MongoDB?",
+        "options": [
+            "Un opérateur pour projeter des coordonnées géographiques",
+            "Un opérateur qui permet de sélectionner, renommer ou transformer les champs d'un document",
+            "Un opérateur qui permet de projeter les documents dans une autre collection",
+            "Un opérateur qui projette les données d'une dimension à une autre"
+        ],
+        "answer": "Un opérateur qui permet de sélectionner, renommer ou transformer les champs d'un document",
+        "explanation": "L'opérateur $project dans le framework d'agrégation de MongoDB permet de sélectionner quels champs inclure, exclure, renommer ou transformer dans les documents résultants."
+    },
+    {
+        "question": "Dans quelle situation une base de données orientée colonnes serait-elle préférable à une base orientée documents?",
+        "options": [
+            "Pour des applications avec beaucoup de relations entre entités",
+            "Pour des systèmes nécessitant des lectures rapides de grandes quantités d'une même colonne",
+            "Pour des applications avec des schémas changeant fréquemment",
+            "Pour des systèmes avec beaucoup d'opérations de recherche textuelle"
+        ],
+        "answer": "Pour des systèmes nécessitant des lectures rapides de grandes quantités d'une même colonne",
+        "explanation": "Les bases orientées colonnes comme Cassandra sont optimisées pour les lectures rapides de grandes quantités de données d'une même colonne, comme dans l'analyse de données et le Big Data."
+    },
+    {
+        "question": "Quelle est la différence entre '$push' et '$addToSet' dans MongoDB?",
+        "options": [
+            "Ils font la même chose, ce sont des synonymes",
+            "'$push' ajoute un élément même s'il existe déjà, '$addToSet' n'ajoute que s'il n'existe pas déjà",
+            "'$push' ne fonctionne qu'avec les tableaux d'objets, '$addToSet' avec tous les types de tableaux",
+            "'$push' est plus récent et plus performant que '$addToSet'"
+        ],
+        "answer": "'$push' ajoute un élément même s'il existe déjà, '$addToSet' n'ajoute que s'il n'existe pas déjà",
+        "explanation": "Dans MongoDB, l'opérateur $push ajoute un élément à un tableau même s'il est déjà présent, tandis que $addToSet n'ajoute l'élément que s'il n'existe pas déjà dans le tableau."
+    },
+    {
+        "question": "Quelle est la principale différence entre un 'MATCH' et un 'OPTIONAL MATCH' dans Neo4j?",
+        "options": [
+            "'MATCH' recherche exactement le motif spécifié, 'OPTIONAL MATCH' retourne NULL si le motif n'est pas trouvé",
+            "'MATCH' est plus rapide, 'OPTIONAL MATCH' est plus précis",
+            "'MATCH' ne fonctionne que sur les nœuds, 'OPTIONAL MATCH' fonctionne sur les relations",
+            "'MATCH' est obsolète, 'OPTIONAL MATCH' est la nouvelle syntaxe recommandée"
+        ],
+        "answer": "'MATCH' recherche exactement le motif spécifié, 'OPTIONAL MATCH' retourne NULL si le motif n'est pas trouvé",
+        "explanation": "Dans Neo4j, MATCH exige que le motif de graphe spécifié existe, sinon la ligne entière est exclue des résultats. OPTIONAL MATCH est similaire à une jointure externe (LEFT JOIN) en SQL, retournant NULL pour les parties du motif qui ne sont pas trouvées."
+    },
+    {
+        "question": "Quel est l'avantage principal d'utiliser une base de données NoSQL pour les applications web à grande échelle?",
+        "options": [
+            "Interface utilisateur plus simple",
+            "Support direct du JavaScript",
+            "Scalabilité horizontale facilitée",
+            "Temps de développement réduit"
+        ],
+        "answer": "Scalabilité horizontale facilitée",
+        "explanation": "L'un des principaux avantages des bases de données NoSQL pour les applications web à grande échelle est leur capacité à se scaler horizontalement (ajout de nouveaux serveurs) facilement, ce qui est crucial pour gérer la croissance du trafic."
+    },
+    {
+        "question": "Dans MongoDB, qu'est-ce qu'un 'upsert'?",
+        "options": [
+            "Une opération qui combine update et insert",
+            "Un type spécial d'index",
+            "Une méthode de compression de données",
+            "Une fonctionnalité de sauvegarde automatique"
+        ],
+        "answer": "Une opération qui combine update et insert",
+        "explanation": "Dans MongoDB, un 'upsert' est une opération qui combine update et insert : si le document recherché existe, il est mis à jour; s'il n'existe pas, un nouveau document est créé."
+    },
+    {
+        "question": "Quelle propriété Neo4j permet de suivre les performances des requêtes?",
+        "options": [
+            "Cypher statistics",
+            "Query profiling",
+            "Graph metrics",
+            "Node monitoring"
+        ],
+        "answer": "Query profiling",
+        "explanation": "Neo4j offre des fonctionnalités de 'Query profiling' qui permettent d'analyser et d'optimiser les performances des requêtes Cypher en fournissant des détails sur leur exécution."
+    },
+    {
+        "question": "Quelle technique est utilisée dans les bases NoSQL pour améliorer la disponibilité des données?",
+        "options": [
+            "Duplication (mirroring)",
+            "Clustering",
+            "Réplication",
+            "Virtualisation"
+        ],
+        "answer": "Réplication",
+        "explanation": "La réplication est une technique clé dans les bases NoSQL où les données sont copiées sur plusieurs serveurs pour améliorer la disponibilité et la tolérance aux pannes."
+    },
+    {
+        "question": "Quelle affirmation concernant les bases de données orientées graphes est correcte?",
+        "options": [
+            "Elles sont uniquement utilisées pour la visualisation de données",
+            "Elles sont moins performantes que les bases relationnelles pour les requêtes impliquant des relations",
+            "Elles excèlent dans la modélisation et l'interrogation de données fortement connectées",
+            "Elles ne supportent pas les transactions ACID"
+        ],
+        "answer": "Elles excèlent dans la modélisation et l'interrogation de données fortement connectées",
+        "explanation": "Les bases de données orientées graphes comme Neo4j sont spécialement conçues pour exceller dans la modélisation et l'interrogation de données fortement connectées, où les relations entre entités sont aussi importantes que les entités elles-mêmes."
+    },
+    {
+        "question": "Quel est le principal inconvénient des bases de données NoSQL par rapport aux bases SQL?",
+        "options": [
+            "Manque de standardisation des langages de requête",
+            "Capacité de stockage limitée",
+            "Incompatibilité avec les applications modernes",
+            "Performances inférieures"
+        ],
+        "answer": "Manque de standardisation des langages de requête",
+        "explanation": "Un des inconvénients majeurs des bases NoSQL est le manque de standardisation des langages de requête (chaque système ayant sa propre syntaxe), contrairement au SQL qui est relativement standardisé."
+    },
+    {
+        "question": "Quelle est la principale limitation du modèle clé-valeur pour les données complexes?",
+        "options": [
+            "Il ne permet pas le stockage de grandes quantités de données",
+            "Il ne supporte pas l'indexation",
+            "Il offre des capacités limitées pour interroger et analyser la structure interne des valeurs",
+            "Il est trop lent pour les applications web"
+        ],
+        "answer": "Il offre des capacités limitées pour interroger et analyser la structure interne des valeurs",
+        "explanation": "Les bases de données clé-valeur sont limitées dans leur capacité à interroger et analyser la structure interne des valeurs stockées, car elles traitent généralement les valeurs comme des objets opaques accessibles uniquement par leur clé."
+    },
+    {
+        "question": "Quel modèle de cohérence est généralement implémenté dans les bases NoSQL distribuées?",
+        "options": [
+            "Cohérence forte (Strong consistency)",
+            "Cohérence éventuelle (Eventual consistency)",
+            "Cohérence sérialisable (Serializable consistency)",
+            "Cohérence linéaire (Linearizable consistency)"
+        ],
+        "answer": "Cohérence éventuelle (Eventual consistency)",
+        "explanation": "La cohérence éventuelle est le modèle le plus couramment implémenté dans les bases NoSQL distribuées, où le système garantit que toutes les répliques convergeront éventuellement vers le même état sans nécessairement être immédiatement synchronisées."
+    },
+    {
+        "question": "Dans MongoDB, quelle est la différence entre les méthodes 'find()' et 'findOne()'?",
+        "options": [
+            "'find()' retourne un curseur, 'findOne()' retourne directement un document",
+            "'find()' est synchrone, 'findOne()' est asynchrone",
+            "'find()' est obsolète, 'findOne()' est recommandé",
+            "'find()' peut utiliser des index, 'findOne()' non"
+        ],
+        "answer": "'find()' retourne un curseur, 'findOne()' retourne directement un document",
+        "explanation": "Dans MongoDB, find() retourne un curseur que l'on peut parcourir pour accéder aux documents, tandis que findOne() retourne directement un seul document (le premier correspondant aux critères)."
+    },
+    {
+        "question": "Quelle base de données NoSQL serait la plus adaptée pour une application nécessitant d'analyser les relations entre utilisateurs, produits et préférences?",
+        "options": [
+            "Redis",
+            "MongoDB",
+            "Cassandra",
+            "Neo4j"
+        ],
+        "answer": "Neo4j",
+        "explanation": "Neo4j, une base de données orientée graphes, est idéale pour analyser les relations complexes entre différentes entités comme les utilisateurs, les produits et leurs préférences."
+    },
+    {
+        "question": "Dans Neo4j, quelle est la différence entre un 'Node' et un 'Vertex'?",
+        "options": [
+            "Un 'Node' est utilisé pour les entités, un 'Vertex' pour les points géographiques",
+            "Un 'Node' peut avoir des propriétés, un 'Vertex' non",
+            "Ce sont deux termes synonymes désignant le même concept",
+            "Un 'Node' est interne à une base de données, un 'Vertex' fait partie d'une requête distribuée"
+        ],
+        "answer": "Ce sont deux termes synonymes désignant le même concept",
+        "explanation": "'Node' et 'Vertex' sont deux termes synonymes dans le contexte des bases de données de graphes, désignant les points ou entités dans un graphe. Neo4j utilise principalement le terme 'Node'."
+    },
+    {
+        "question": "Quelle fonctionnalité MongoDB permet d'effectuer des agrégations avancées comme le groupement et le calcul?",
+        "options": [
+            "MapReduce",
+            "Aggregation Framework",
+            "Advanced Query Processor",
+            "Statistical Analysis Module"
+        ],
+        "answer": "Aggregation Framework",
+        "explanation": "Le framework d'agrégation de MongoDB fournit un ensemble d'opérateurs et d'étapes pour effectuer des opérations avancées comme le groupement, le filtrage et le calcul sur les données."
+    },
+    {
+        "question": "Dans le contexte des bases de données NoSQL, qu'est-ce que le 'Sharding'?",
+        "options": [
+            "Une technique de compression des données",
+            "Une méthode pour sauvegarder les données",
+            "Une technique de partitionnement de données distribuant les données sur plusieurs serveurs",
+            "Une stratégie d'indexation multi-niveau"
+        ],
+        "answer": "Une technique de partitionnement de données distribuant les données sur plusieurs serveurs",
+        "explanation": "Le sharding est une technique de partitionnement horizontal qui distribue les données d'une base sur plusieurs serveurs (shards) pour améliorer la scalabilité et les performances."
+    },
+    {
+        "question": "Quelle est la meilleure façon de modéliser une relation many-to-many dans MongoDB?",
+        "options": [
+            "Utiliser uniquement des références entre documents",
+            "Intégrer toutes les données dans un seul document",
+            "Utiliser une combinaison de références et d'embedding selon les besoins d'accès",
+            "Créer une collection séparée pour chaque relation"
+        ],
+        "answer": "Utiliser une combinaison de références et d'embedding selon les besoins d'accès",
+        "explanation": "Dans MongoDB, la meilleure approche pour modéliser des relations many-to-many dépend des patterns d'accès; généralement, une combinaison de références (pour les grands ensembles) et d'embedding (pour les petits ensembles fréquemment accédés ensemble) est recommandée."
+    },
+    {
+        "question": "Quelle propriété du théorème CAP MongoDB privilégie-t-il généralement?",
+        "options": [
+            "Consistency (Cohérence)",
+            "Availability (Disponibilité)",
+            "Partition Tolerance (Tolérance au partitionnement)",
+            "Durability (Durabilité)"
+        ],
+        "answer": "Consistency (Cohérence)",
+        "explanation": "Par défaut, MongoDB privilégie la cohérence (consistency) et la tolérance au partitionnement (partition tolerance) au détriment de la disponibilité totale, bien que ses paramètres soient configurables."
+    },
+    {
+        "question": "Quelle fonctionnalité de Neo4j est particulièrement utile pour l'analyse de réseaux sociaux?",
+        "options": [
+            "Pattern matching",
+            "Path finding",
+            "Clustering coefficient calculation",
+            "Toutes ces réponses sont correctes"
+        ],
+        "answer": "Toutes ces réponses sont correctes",
+        "explanation": "Neo4j offre plusieurs fonctionnalités utiles pour l'analyse de réseaux sociaux: le pattern matching pour identifier des structures, le path finding pour trouver des connexions, et des algorithmes pour calculer des métriques comme le coefficient de clustering."
+    },
+    {
+        "question": "Quelle affirmation sur les relations dans les bases de données orientées graphes est correcte?",
+        "options": [
+            "Les relations sont uniquement unidirectionnelles",
+            "Les relations ne peuvent pas avoir de propriétés",
+            "Les relations peuvent avoir un type et des propriétés",
+            "Un nœud ne peut être connecté qu'à un nombre limité d'autres nœuds"
+        ],
+        "answer": "Les relations peuvent avoir un type et des propriétés",
+        "explanation": "Dans les bases de données orientées graphes comme Neo4j, les relations peuvent avoir un type (comme 'AMI', 'TRAVAILLE_AVEC') et des propriétés (comme 'depuis', 'confiance')."
+    },
+    {
+        "question": "Quelle méthode MongoDB est utilisée pour mettre à jour plusieurs documents simultanément?",
+        "options": [
+            "updateAll()",
+            "updateMany()",
+            "modifyMultiple()",
+            "batchUpdate()"
+        ],
+        "answer": "updateMany()",
+        "explanation": "La méthode updateMany() de MongoDB permet de mettre à jour tous les documents qui correspondent à un critère de filtre spécifié."
+    },
+    {
+        "question": "Dans quel cas une base de données clé-valeur serait-elle préférable à une base orientée documents?",
+        "options": [
+            "Pour stocker des structures de données complexes et imbriquées",
+            "Pour des opérations simples de lecture/écriture nécessitant des performances très élevées",
+            "Pour des données nécessitant des requêtes complexes",
+            "Pour modéliser des relations entre entités"
+        ],
+        "answer": "Pour des opérations simples de lecture/écriture nécessitant des performances très élevées",
+        "explanation": "Les bases de données clé-valeur comme Redis sont optimisées pour des opérations simples de lecture/écriture extrêmement rapides, idéales pour le caching ou les sessions, mais moins adaptées aux données complexes ou aux requêtes élaborées."
+    },
+    {
+        "question": "Quelle fonction MongoDB permet de compter le nombre de documents dans une collection?",
+        "options": [
+            "db.collection.size()",
+            "db.collection.count()",
+            "db.collection.length()",
+            "db.collection.countDocuments()"
+        ],
+        "answer": "db.collection.countDocuments()",
+        "explanation": "MongoDB utilise la méthode countDocuments() pour compter précisément le nombre de documents dans une collection qui correspondent à un critère donné. La méthode count() existe aussi mais est considérée comme moins précise et est désormais dépréciée."
+    },
+    {
+        "question": "Dans Neo4j, comment appelle-t-on une requête qui commence à un nœud et explore son voisinage?",
+        "options": [
+            "Range query",
+            "Depth query",
+            "Traversal query",
+            "Neighbor search"
+        ],
+        "answer": "Traversal query",
+        "explanation": "Dans Neo4j, une traversal query (requête de traversée) commence à un ou plusieurs nœuds et explore le graphe en suivant les relations pour atteindre d'autres nœuds."
+    },
+    {
+        "question": "Quelle caractéristique est commune à toutes les bases de données NoSQL?",
+        "options": [
+            "Absence de schéma fixe",
+            "Stockage en mémoire uniquement",
+            "Support des requêtes SQL",
+            "Architecture orientée objets"
+        ],
+        "answer": "Absence de schéma fixe",
+        "explanation": "Bien que les bases NoSQL varient considérablement dans leur mise en œuvre, une caractéristique commune à la plupart d'entre elles est l'absence d'un schéma fixe et rigide comme dans les bases SQL relationnelles."
+    },
+    {
+        "question": "Quelle technique est utilisée pour maintenir les données cohérentes entre plusieurs serveurs dans un système NoSQL distribué?",
+        "options": [
+            "Two-Phase Commit",
+            "Vector Clocks",
+            "Paxos/Raft Consensus",
+            "Toutes ces réponses peuvent être correctes selon le système"
+        ],
+        "answer": "Toutes ces réponses peuvent être correctes selon le système",
+        "explanation": "Les systèmes NoSQL distribués utilisent différentes techniques pour maintenir la cohérence: Two-Phase Commit, Vector Clocks pour la détection de conflits, ou des algorithmes de consensus comme Paxos ou Raft, selon leur conception et leurs objectifs."
+    },
+    {
+        "question": "Quelle est la principale différence entre une relation dans Neo4j et une relation dans une base de données relationnelle?",
+        "options": [
+            "Les relations Neo4j peuvent contenir des données, pas les relations SQL",
+            "Les relations Neo4j sont unidirectionnelles, les relations SQL sont bidirectionnelles",
+            "Les relations Neo4j sont physiquement stockées comme des liens directs entre nœuds, les relations SQL sont des associations logiques basées sur des clés",
+            "Les relations Neo4j sont limitées à un type par paire de nœuds"
+        ],
+        "answer": "Les relations Neo4j sont physiquement stockées comme des liens directs entre nœuds, les relations SQL sont des associations logiques basées sur des clés",
+        "explanation": "Dans Neo4j, les relations sont des entités physiques du modèle de données qui connectent directement les nœuds, tandis que dans les bases SQL, les relations sont des associations logiques établies via des clés étrangères et des jointures."
+    },
+    {
+        "question": "Quelle stratégie MongoDB utilise-t-il pour assurer la durabilité des données?",
+        "options": [
+            "Journalisation (Write Ahead Logging)",
+            "Instantanés (Snapshots)",
+            "Mirroring",
+            "Checksums"
+        ],
+        "answer": "Journalisation (Write Ahead Logging)",
+        "explanation": "MongoDB utilise un système de journalisation (Write Ahead Logging) où les opérations sont d'abord écrites dans un journal avant d'être appliquées aux données, permettant de récupérer un état cohérent en cas de crash."
+    },
+    {
+        "question": "Quelle est la principale différence entre le mode 'standalone' et 'replica set' dans MongoDB?",
+        "options": [
+            "'Standalone' permet le sharding, 'replica set' non",
+            "'Standalone' est une instance unique, 'replica set' est un groupe d'instances avec réplication automatique",
+            "'Standalone' est plus rapide, 'replica set' plus fiable",
+            "'Standalone' supporte uniquement les lectures, 'replica set' les lectures et les écritures"
+        ],
+        "answer": "'Standalone' est une instance unique, 'replica set' est un groupe d'instances avec réplication automatique",
+        "explanation": "Dans MongoDB, le mode 'standalone' désigne une instance unique sans redondance, tandis qu'un 'replica set' est un groupe d'instances MongoDB qui maintiennent les mêmes données avec réplication automatique pour assurer la haute disponibilité."
+    },
+    {
+        "question": "Quel type de bases de données NoSQL utilise le modèle clé-valeur pour stocker des données?",
+        "options": [
+            "MongoDB",
+            "Neo4j",
+            "Redis",
+            "Cassandra"
+        ],
+        "answer": "Redis",
+        "explanation": "Redis est un exemple de base de données NoSQL qui utilise le modèle clé-valeur, où chaque donnée est stockée sous forme d'une paire clé-valeur, permettant un accès très rapide par la clé."
+    },
+    {
+        "question": "Quelle fonctionnalité Neo4j est particulièrement utile pour détecter les fraudes bancaires?",
+        "options": [
+            "La détection de cycle",
+            "L'analyse des chemins",
+            "La détection de communautés",
+            "Toutes ces réponses sont correctes"
+        ],
+        "answer": "Toutes ces réponses sont correctes",
+        "explanation": "Neo4j est particulièrement efficace pour la détection de fraudes bancaires grâce à diverses fonctionnalités: détection de cycle pour identifier les transferts circulaires, analyse des chemins pour suivre les flux d'argent, et détection de communautés pour identifier les groupes d'acteurs liés."
+    },
+    {
+        "question": "Dans MongoDB, quelle méthode est utilisée pour créer un index?",
+        "options": [
+            "db.collection.newIndex()",
+            "db.collection.addIndex()",
+            "db.collection.createIndex()",
+            "db.collection.index()"
+        ],
+        "answer": "db.collection.createIndex()",
+        "explanation": "Dans MongoDB, la méthode db.collection.createIndex() est utilisée pour créer un nouvel index sur une collection spécifique, améliorant ainsi les performances des requêtes sur les champs indexés."
+    },
+    {
+        "question": "Quelle propriété distingue principalement les bases de données orientées colonnes des bases de données relationnelles?",
+        "options": [
+            "Le stockage par colonnes plutôt que par lignes",
+            "L'absence de jointures",
+            "Le support natif de JSON",
+            "L'intégration avec le cloud"
+        ],
+        "answer": "Le stockage par colonnes plutôt que par lignes",
+        "explanation": "La principale caractéristique distinctive des bases de données orientées colonnes est qu'elles stockent les données par colonnes plutôt que par lignes, ce qui optimise certains types d'analyses et de lectures séquentielles."
+    },
+    {
+        "question": "Dans le contexte des bases NoSQL, qu'est-ce qu'un 'hotspot'?",
+        "options": [
+            "Un nœud qui traite une quantité disproportionnée de trafic",
+            "Une zone du réseau avec une latence élevée",
+            "Un serveur qui tombe fréquemment en panne",
+            "Un point d'accès pour les connexions externes"
+        ],
+        "answer": "Un nœud qui traite une quantité disproportionnée de trafic",
+        "explanation": "Dans les systèmes NoSQL distribués, un 'hotspot' désigne un nœud qui reçoit une quantité disproportionnée de requêtes ou de données, créant un goulot d'étranglement qui peut compromettre les performances globales du système."
+    },
+    {
+        "question": "Quelle est la principale limitation des bases de données orientées graphes par rapport aux autres types de bases NoSQL?",
+        "options": [
+            "Moins performantes pour les opérations CRUD simples",
+            "Plus difficiles à scaler horizontalement",
+            "Requêtes plus complexes à écrire",
+            "Moins de support pour le stockage de données structurées"
+        ],
+        "answer": "Plus difficiles à scaler horizontalement",
+        "explanation": "Les bases de données orientées graphes comme Neo4j sont généralement plus difficiles à scaler horizontalement que d'autres types de bases NoSQL, car le partitionnement d'un graphe tout en maintenant les performances des requêtes traversant les partitions est complexe."
+    },
+    {
+        "question": "Quelle technique MongoDB utilise-t-il pour optimiser les requêtes sur des champs géospatiaux?",
+        "options": [
+            "Index géospatial",
+            "GeoJSON format",
+            "Coordinate system conversion",
+            "Toutes ces réponses sont correctes"
+        ],
+        "answer": "Toutes ces réponses sont correctes",
+        "explanation": "MongoDB utilise plusieurs techniques pour optimiser les requêtes géospatiales: des index géospatiaux (2dsphere, 2d), le support du format GeoJSON, et la conversion de coordonnées pour assurer des calculs précis."
+    },
+    {
+        "question": "Quelle est la principale différence entre l'opération 'update' et l'opération 'findAndModify' dans MongoDB?",
+        "options": [
+            "'update' modifie plusieurs documents, 'findAndModify' un seul",
+            "'update' ne retourne pas le document modifié, 'findAndModify' le retourne",
+            "'update' est plus récent que 'findAndModify'",
+            "'update' est atomique, 'findAndModify' ne l'est pas"
+        ],
+        "answer": "'update' ne retourne pas le document modifié, 'findAndModify' le retourne",
+        "explanation": "La principale différence est que 'findAndModify' retourne le document avant ou après modification (selon les options), tandis que les opérations 'update' standard ne retournent que des statistiques sur l'opération."
+    },
+    {
+        "question": "Dans Neo4j, quelle technique permet d'accélérer les requêtes fréquemment utilisées?",
+        "options": [
+            "La mise en cache des requêtes",
+            "L'indexation des propriétés",
+            "La compilation des requêtes",
+            "Toutes ces réponses sont correctes"
+        ],
+        "answer": "Toutes ces réponses sont correctes",
+        "explanation": "Neo4j utilise plusieurs techniques pour optimiser les performances des requêtes: la mise en cache des requêtes fréquentes, l'indexation des propriétés souvent utilisées dans les filtres, et la compilation des requêtes Cypher pour une exécution plus rapide."
+    },
+    {
+        "question": "Quel opérateur MongoDB permet de filtrer les documents basés sur une expression régulière?",
+        "options": [
+            "$regex",
+            "$regexp",
+            "$pattern",
+            "$match"
+        ],
+        "answer": "$regex",
+        "explanation": "L'opérateur $regex de MongoDB permet d'utiliser des expressions régulières pour rechercher des valeurs qui correspondent à un modèle spécifié dans les champs textuels."
+    },
+    {
+        "question": "Quelle fonctionnalité NoSQL permet de maintenir la disponibilité même si certains serveurs sont en panne?",
+        "options": [
+            "Sharding",
+            "Réplication",
+            "Load balancing",
+            "Caching"
+        ],
+        "answer": "Réplication",
+        "explanation": "La réplication est la fonctionnalité qui permet de maintenir des copies identiques des données sur plusieurs serveurs, assurant ainsi la disponibilité même si certains serveurs sont en panne."
+    },
+    {
+        "question": "Dans MongoDB, comment peut-on s'assurer qu'un champ a une valeur unique dans toute la collection?",
+        "options": [
+            "En créant un index unique sur ce champ",
+            "En utilisant la validation de schéma",
+            "En implémentant un trigger personnalisé",
+            "En utilisant une contrainte d'intégrité"
+        ],
+        "answer": "En créant un index unique sur ce champ",
+        "explanation": "Dans MongoDB, créer un index unique sur un champ garantit que chaque valeur de ce champ est unique dans toute la collection, ce qui empêche l'insertion de documents dupliqués pour ce champ."
+    },
+    {
+        "question": "Quelle base de données NoSQL est la plus adaptée pour une application nécessitant une mise en cache rapide et une expiration automatique des données?",
+        "options": [
+            "MongoDB",
+            "Cassandra",
+            "Neo4j",
+            "Redis"
+        ],
+        "answer": "Redis",
+        "explanation": "Redis, en tant que base de données clé-valeur en mémoire, est particulièrement adaptée pour la mise en cache rapide avec des fonctionnalités intégrées d'expiration automatique des données."
+    },
+    {
+        "question": "Dans le contexte du sharding MongoDB, qu'est-ce qu'un 'chunk'?",
+        "options": [
+            "Un fragment de base de données stocké sur un shard spécifique",
+            "Une partie du serveur config",
+            "Un type spécial d'index",
+            "Un paquet de données en transit entre shards"
+        ],
+        "answer": "Un fragment de base de données stocké sur un shard spécifique",
+        "explanation": "Dans l'architecture de sharding MongoDB, un 'chunk' est un sous-ensemble de données d'une collection shardée qui est stocké sur un shard spécifique, représentant une plage de valeurs de la clé de sharding."
+    },
+    {
+        "question": "Quelle affirmation concernant les requêtes Cypher de Neo4j est correcte?",
+        "options": [
+            "Elles sont toujours plus rapides que les requêtes SQL équivalentes",
+            "Elles sont déclaratives et décrivent ce qu'on cherche plutôt que comment le trouver",
+            "Elles ne peuvent traverser qu'un niveau de relation à la fois",
+            "Elles nécessitent une connaissance complète de la structure du graphe"
+        ],
+        "answer": "Elles sont déclaratives et décrivent ce qu'on cherche plutôt que comment le trouver",
+        "explanation": "Cypher est un langage de requête déclaratif pour Neo4j, où l'on décrit le motif de graphe que l'on souhaite trouver, plutôt que de spécifier comment parcourir le graphe pour le trouver."
+    },
+    {
+        "question": "Quelle technique est utilisée par les bases de données NoSQL pour gérer les défaillances de serveurs dans un cluster?",
+        "options": [
+            "Élection automatique d'un nouveau nœud principal",
+            "Réplication synchrone des données",
+            "Restauration à partir de sauvegardes",
+            "Toutes ces réponses peuvent être correctes selon le système"
+        ],
+        "answer": "Toutes ces réponses peuvent être correctes selon le système",
+        "explanation": "Les bases de données NoSQL utilisent diverses techniques pour gérer les défaillances selon leur conception: certaines utilisent l'élection automatique d'un nouveau leader, d'autres la réplication synchrone ou des mécanismes de restauration avancés."
+    },
+    {
+        "question": "Quelle fonctionnalité MongoDB permet de définir des règles de validation pour les documents insérés ou mis à jour?",
+        "options": [
+            "Schema Validation",
+            "Document Constraints",
+            "Validation Rules",
+            "Data Integrity Checks"
+        ],
+        "answer": "Schema Validation",
+        "explanation": "MongoDB offre la fonctionnalité de Schema Validation qui permet de définir des règles de validation pour les documents lors de leur insertion ou mise à jour, même si la base reste fondamentalement schemaless."
+    },
+    {
+        "question": "Quelle est la différence entre une base de données multi-modèle et une base de données NoSQL traditionnelle?",
+        "options": [
+            "Une base multi-modèle peut stocker plusieurs copies des mêmes données",
+            "Une base multi-modèle supporte plusieurs langages de requête",
+            "Une base multi-modèle combine plusieurs modèles de données dans un seul système",
+            "Une base multi-modèle n'existe que dans le cloud"
+        ],
+        "answer": "Une base multi-modèle combine plusieurs modèles de données dans un seul système",
+        "explanation": "Une base de données multi-modèle peut prendre en charge plusieurs modèles de données (documents, graphes, clé-valeur, etc.) dans un seul système intégré, offrant plus de flexibilité qu'une base NoSQL spécialisée dans un seul modèle."
+    },
+    {
+        "question": "Quelle technique est utilisée dans Neo4j pour représenter efficacement les relations temporelles?",
+        "options": [
+            "Time-indexed nodes",
+            "Temporal properties on relationships",
+            "Time-series data model",
+            "Temporal graph model"
+        ],
+        "answer": "Temporal properties on relationships",
+        "explanation": "Dans Neo4j, les relations temporelles sont souvent modélisées en ajoutant des propriétés temporelles (comme 'date_début', 'date_fin') aux relations, permettant d'exprimer quand et pendant combien de temps une relation était/est active."
+    },
+    {
+        "question": "Quelle est la principale différence entre une base de données NewSQL et NoSQL?",
+        "options": [
+            "NewSQL offre des garanties ACID avec une scalabilité horizontale",
+            "NewSQL ne supporte que les données structurées",
+            "NewSQL est uniquement pour le cloud",
+            "NewSQL est plus ancien que NoSQL"
+        ],
+        "answer": "NewSQL offre des garanties ACID avec une scalabilité horizontale",
+        "explanation": "Les bases de données NewSQL tentent de combiner les garanties ACID des bases relationnelles traditionnelles avec la scalabilité horizontale des systèmes NoSQL, offrant ainsi le meilleur des deux mondes."
+    },
+    {
+        "question": "Quelle méthode MongoDB permet de trier les résultats d'une agrégation?",
+        "options": [
+            "$order",
+            "$sort",
+            "$arrange",
+            "$orderBy"
+        ],
+        "answer": "$sort",
+        "explanation": "Dans le framework d'agrégation de MongoDB, l'opérateur $sort permet de trier les documents selon les critères spécifiés avant de passer à l'étape suivante du pipeline d'agrégation."
+    },
+    {
+        "question": "Qu'est-ce que le 'Time-To-Live' (TTL) dans le contexte des bases NoSQL?",
+        "options": [
+            "Le temps maximum d'exécution d'une requête",
+            "La durée pendant laquelle une donnée reste en cache",
+            "Un mécanisme qui supprime automatiquement les données après une période spécifiée",
+            "Le temps nécessaire pour répliquer une donnée à tous les nœuds"
+        ],
+        "answer": "Un mécanisme qui supprime automatiquement les données après une période spécifiée",
+        "explanation": "Dans les bases NoSQL, le TTL (Time-To-Live) est un mécanisme qui permet d'automatiser la suppression des documents ou entrées après une période spécifiée, utile pour les données temporaires ou à durée de vie limitée."
+    },
+    {
+        "question": "Dans Neo4j, quelle clause est utilisée pour retourner des résultats distincts?",
+        "options": [
+            "DISTINCT",
+            "UNIQUE",
+            "DIFFERENT",
+            "SEPARATE"
+        ],
+        "answer": "DISTINCT",
+        "explanation": "Dans Neo4j, la clause DISTINCT est utilisée dans les requêtes Cypher pour éliminer les doublons des résultats retournés, similairement à son utilisation en SQL."
+    },
+    {
+        "question": "Quelle technique MongoDB utilise pour optimiser les requêtes d'intervalle sur les champs numériques?",
+        "options": [
+            "B-tree index",
+            "Hash index",
+            "Bitmap index",
+            "R-tree index"
+        ],
+        "answer": "B-tree index",
+        "explanation": "MongoDB utilise principalement des index B-tree pour optimiser les requêtes d'intervalle sur les champs numériques, permettant une recherche efficace pour les opérations comme $gt, $lt, $gte, $lte."
+    },
+    {
+        "question": "Dans le contexte NoSQL, qu'est-ce que le 'Schema-on-Read'?",
+        "options": [
+            "Un schéma qui est créé automatiquement lors de la première lecture",
+            "Une approche où la structure des données est interprétée au moment de la lecture plutôt qu'à l'écriture",
+            "Une technique d'optimisation des requêtes de lecture",
+            "Un type spécial d'index pour accélérer les lectures"
+        ],
+        "answer": "Une approche où la structure des données est interprétée au moment de la lecture plutôt qu'à l'écriture",
+        "explanation": "Le 'Schema-on-Read' est une approche des bases NoSQL où, contrairement aux bases relationnelles qui imposent un schéma à l'écriture ('Schema-on-Write'), la structure des données est interprétée au moment où elles sont lues, offrant plus de flexibilité."
+    },
+    {
+        "question": "Quelle est la principale différence entre la réplication 'synchrone' et 'asynchrone' dans les bases de données NoSQL?",
+        "options": [
+            "La réplication synchrone attend la confirmation de tous les réplicas avant de confirmer l'écriture, l'asynchrone confirme immédiatement",
+            "La réplication synchrone n'est utilisée que dans un seul datacenter, l'asynchrone entre datacenters",
+            "La réplication synchrone utilise TCP, l'asynchrone utilise UDP",
+            "La réplication synchrone est plus rapide que l'asynchrone"
+        ],
+        "answer": "La réplication synchrone attend la confirmation de tous les réplicas avant de confirmer l'écriture, l'asynchrone confirme immédiatement",
+        "explanation": "Dans la réplication synchrone, une opération d'écriture n'est considérée comme réussie qu'après que tous les réplicas ont confirmé l'avoir appliquée, tandis que dans la réplication asynchrone, l'écriture est confirmée immédiatement et propagée aux réplicas ultérieurement."
+    },
+    {
+        "question": "Dans MongoDB, quelle est la fonction de l'opérateur d'agrégation $lookup?",
+        "options": [
+            "Joindre des documents de différentes collections",
+            "Rechercher des documents dans une collection",
+            "Transformer les valeurs des champs",
+            "Calculer des statistiques sur les documents"
+        ],
+        "answer": "Joindre des documents de différentes collections",
+        "explanation": "L'opérateur $lookup dans le framework d'agrégation de MongoDB permet d'effectuer une opération similaire à un LEFT OUTER JOIN SQL, en joignant des documents de différentes collections basés sur un champ commun."
+    },
+    {
+        "question": "Dans Neo4j, comment appelle-t-on un parcours complet du graphe à partir d'un nœud de départ?",
+        "options": [
+            "Full scan",
+            "Graph sweep",
+            "Traversal",
+            "Complete path finding"
+        ],
+        "answer": "Traversal",
+        "explanation": "Dans Neo4j, un 'traversal' désigne le processus de visite des nœuds et relations du graphe en commençant par un nœud de départ et en suivant les relations pour explorer la structure."
+    },
+    {
+        "question": "Quelle technique est utilisée pour améliorer la sécurité des données sensibles stockées dans une base NoSQL?",
+        "options": [
+            "Chiffrement au niveau du champ",
+            "Hachage des clés",
+            "Tokenisation",
+            "Toutes ces réponses sont correctes"
+        ],
+        "answer": "Toutes ces réponses sont correctes",
+        "explanation": "Plusieurs techniques peuvent être utilisées pour protéger les données sensibles dans les bases NoSQL: le chiffrement au niveau du champ pour protéger des valeurs spécifiques, le hachage des clés pour l'anonymisation, et la tokenisation pour remplacer les données sensibles par des jetons."
+    },
+    {
+        "question": "Dans MongoDB, quelle est la différence entre le Read Concern 'local' et 'majority'?",
+        "options": [
+            "'local' lit les données du nœud local, 'majority' attend la confirmation de la majorité des nœuds",
+            "'local' est plus rapide, 'majority' est plus cohérent",
+            "'local' retourne les données localement disponibles, 'majority' retourne les données confirmées par la majorité des réplicas",
+            "Toutes ces réponses sont correctes"
+        ],
+        "answer": "Toutes ces réponses sont correctes",
+        "explanation": "Toutes ces affirmations sur les Read Concerns MongoDB sont correctes: 'local' lit les données disponibles sur le nœud local et est plus rapide, tandis que 'majority' retourne les données confirmées par la majorité des réplicas, offrant une meilleure cohérence mais potentiellement plus lent."
+    },
+    {
+        "question": "Quelle fonctionnalité Neo4j est utilisée pour parcourir rapidement une hiérarchie ou une structure récursive?",
+        "options": [
+            "Path expansion",
+            "Recursive query",
+            "Variable length pattern matching",
+            "Hierarchical traversal"
+        ],
+        "answer": "Variable length pattern matching",
+        "explanation": "Neo4j offre la fonctionnalité de 'variable length pattern matching' dans Cypher (utilisant la syntaxe [:RELATION*minDepth..maxDepth]) pour parcourir efficacement des chemins de longueur variable dans une hiérarchie ou structure récursive."
+    },
+    {
+        "question": "Dans le contexte des bases de données NoSQL, qu'est-ce que le 'Quorum Write'?",
+        "options": [
+            "Une écriture qui nécessite l'approbation de tous les nœuds",
+            "Une écriture qui est confirmée dès qu'un seul nœud l'a reçue",
+            "Une écriture qui nécessite la confirmation d'un nombre spécifique de nœuds",
+            "Une écriture qui est mise en file d'attente pour traitement ultérieur"
+        ],
+        "answer": "Une écriture qui nécessite la confirmation d'un nombre spécifique de nœuds",
+        "explanation": "Un 'Quorum Write' est une opération d'écriture qui n'est considérée comme réussie qu'après avoir été confirmée par un nombre spécifié de nœuds (généralement une majorité) dans un système distribué, offrant un compromis entre cohérence et disponibilité."
     }
 ]
