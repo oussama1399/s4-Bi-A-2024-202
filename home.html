@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QCM - Accueil</title>
+    <style>
+        :root {
+            --primary-color: #00d8ff;
+            --primary-hover: #00b3cc;
+            --dark-bg: #1e1e2f;
+            --card-bg: #2a2a40;
+            --text-light: #ffffff;
+            --text-secondary: #cccccc;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--dark-bg);
+            color: var(--text-light);
+            min-height: 100vh;
+        }
+        
+        header {
+            background-color: var(--card-bg);
+            color: var(--primary-color);
+            padding: 1.5rem;
+            text-align: center;
+            box-shadow: 0 4px 15px rgba(0, 216, 255, 0.3);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        header h1 {
+            margin: 0;
+            font-size: 2.5rem;
+            position: relative;
+            z-index: 1;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+        
+        header::before {
+            content: "";
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: linear-gradient(135deg, transparent 0%, rgba(0, 216, 255, 0.1) 50%, transparent 100%);
+            animation: shine 8s infinite linear;
+        }
+        
+        @keyframes shine {
+            0% { transform: translateX(-50%) translateY(-50%) rotate(0deg); }
+            100% { transform: translateX(-50%) translateY(-50%) rotate(360deg); }
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 2rem;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 2rem;
+        }
+        
+        .card {
+            background: var(--card-bg);
+            border-radius: 12px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+            width: 300px;
+            text-align: center;
+            overflow: hidden;
+            color: var(--text-light);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            border: 2px solid transparent;
+        }
+        
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 216, 255, 0.4);
+            border-color: var(--primary-color);
+        }
+        
+        .card-icon {
+            font-size: 4rem;
+            color: var(--primary-color);
+            margin: 2rem 0 1rem;
+        }
+        
+        .card h3 {
+            margin: 0.5rem 0;
+            font-size: 1.8rem;
+            color: var(--primary-color);
+            padding: 0 1rem;
+        }
+        
+        .card p {
+            padding: 0 1.5rem;
+            color: var(--text-secondary);
+            font-size: 1rem;
+            line-height: 1.6;
+            flex-grow: 1;
+        }
+        
+        .card-action {
+            margin: 1.5rem 0;
+            padding: 0 1.5rem;
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: 0.8rem 1.5rem;
+            background-color: var(--primary-color);
+            color: #000;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            width: 100%;
+            box-sizing: border-box;
+        }
+        
+        .btn:hover {
+            background-color: var(--primary-hover);
+            box-shadow: 0 5px 15px rgba(0, 216, 255, 0.5);
+            transform: translateY(-2px);
+        }
+        
+        .courses-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 2rem;
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+        
+        footer {
+            text-align: center;
+            padding: 2rem;
+            margin-top: 3rem;
+            background-color: var(--card-bg);
+            color: var(--text-secondary);
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <h1>Mes QCM d'Apprentissage</h1>
+    </header>
+    
+    <div class="courses-grid">
+        <div class="card">
+            <div class="card-icon">
+                <i class="fas fa-shield-alt"></i>
+            </div>
+            <h3>Sécurité des Systèmes</h3>
+            <p>Évaluez vos connaissances sur les concepts fondamentaux de la sécurité informatique, la triade CIA, et les modèles de menaces.</p>
+            <div class="card-action">
+                <a href="securite.html" class="btn">Démarrer le QCM</a>
+            </div>
+        </div>
+        
+        <div class="card">
+            <div class="card-icon">
+                <i class="fas fa-database"></i>
+            </div>
+            <h3>Bases NoSQL</h3>
+            <p>Testez vos connaissances sur les différents types de bases de données NoSQL, leurs caractéristiques et cas d'usage.</p>
+            <div class="card-action">
+                <a href="nosql.html" class="btn">Démarrer le QCM</a>
+            </div>
+        </div>
+        
+        <div class="card">
+            <div class="card-icon">
+                <i class="fas fa-brain"></i>
+            </div>
+            <h3>Interprétabilité IA</h3>
+            <p>Évaluez votre compréhension des méthodes d'interprétabilité pour les modèles d'intelligence artificielle.</p>
+            <div class="card-action">
+                <a href="interpretabilite.html" class="btn">Démarrer le QCM</a>
+            </div>
+        </div>
+    </div>
+    
+    <footer>
+        <p>© 2025 QCM d'Apprentissage | Développé par Kaddouri Oussama  </p>
+    </footer>
+</body>
+</html>

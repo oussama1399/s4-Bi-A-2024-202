@@ -1,0 +1,482 @@
+[
+    {
+      "question": "Quel animal est surnommé 'Clever Hans' ?",
+      "options": ["Chat", "Chien", "Cheval", "Éléphant"],
+      "answer": "Cheval",
+      "explanation": "Hans était un cheval connu pour ses capacités apparentes en calcul, mais il lisait en réalité le langage corporel de son dresseur."
+    },
+    {
+      "question": "Quelle est la principale critique des modèles d'apprentissage automatique appelés 'boîtes noires' ?",
+      "options": ["Ils sont trop rapides", "Leur fonctionnement interne n'est pas compris", "Ils consomment trop de mémoire", "Ils ne donnent pas de résultats"],
+      "answer": "Leur fonctionnement interne n'est pas compris",
+      "explanation": "Les boîtes noires rendent difficile l’interprétation des décisions du modèle."
+    },
+    {
+      "question": "Quel outil est utilisé pour prédire la récidive des accusés dans le système judiciaire américain ?",
+      "options": ["HansML", "COMPAS", "SHAP", "LIME"],
+      "answer": "COMPAS",
+      "explanation": "COMPAS est utilisé pour évaluer le risque de récidive des accusés, mais a été critiqué pour ses biais."
+    },
+    {
+      "question": "Quel biais a été identifié dans COMPAS concernant les accusés noirs ?",
+      "options": ["Scores plus faibles", "Scores plus élevés", "Pas de biais", "Scores aléatoires"],
+      "answer": "Scores plus élevés",
+      "explanation": "Les accusés noirs recevaient systématiquement des scores plus élevés que les accusés blancs, même en l’absence de récidive."
+    },
+    {
+      "question": "Sur quelle base un algorithme hospitalier américain attribue-t-il des scores de risque injustes aux patients noirs ?",
+      "options": ["Historique médical", "Coûts des soins passés", "Âge", "Localisation géographique"],
+      "answer": "Coûts des soins passés",
+      "explanation": "L'algorithme se base sur les coûts des soins passés comme indicateur de la gravité ou du besoin, ce qui pénalise les patients noirs historiquement sous-traités."
+    },
+    {
+      "question": "Quelle définition correspond à l'interprétabilité selon Biran et Cotton (2017) ?",
+      "options": [
+        "Transformer un concept abstrait en une forme compréhensible",
+        "Le degré auquel un être humain peut comprendre la cause d'une décision",
+        "Fournir une explication détaillée d’une prédiction",
+        "Utiliser des modèles simples pour expliquer des modèles complexes"
+      ],
+      "answer": "Le degré auquel un être humain peut comprendre la cause d'une décision",
+      "explanation": "Biran et Cotton définissent l'interprétabilité comme la capacité à comprendre les causes derrière une décision du modèle."
+    },
+    {
+      "question": "Quelle est la différence entre interprétabilité et explicabilité selon Roscher et al. (2020) ?",
+      "options": [
+        "Il n'y a aucune différence",
+        "L'explicabilité nécessite une interprétabilité + contexte supplémentaire",
+        "L'interprétabilité concerne uniquement les modèles linéaires",
+        "L'explicabilité est réservée aux modèles simples"
+      ],
+      "answer": "L'explicabilité nécessite une interprétabilité + contexte supplémentaire",
+      "explanation": "L'explicabilité va au-delà de l'interprétabilité en fournissant des justifications détaillées et contextualisées."
+    },
+    {
+      "question": "Pourquoi l’interprétabilité est-elle importante dans les applications médicales ?",
+      "options": [
+        "Pour améliorer la vitesse du modèle",
+        "Pour garantir la sécurité, la fiabilité et l’équité des décisions",
+        "Pour réduire le nombre de données utilisées",
+        "Pour simplifier l’interface utilisateur"
+      ],
+      "answer": "Pour garantir la sécurité, la fiabilité et l’équité des décisions",
+      "explanation": "Dans des domaines critiques comme la santé, l’interprétabilité permet de vérifier que les décisions sont fiables et sans biais."
+    },
+    {
+      "question": "Quelle méthode est intrinsèquement interprétable ?",
+      "options": ["Forêts aléatoires", "Arbres de décision", "Réseaux neuronaux", "XGBoost"],
+      "answer": "Arbres de décision",
+      "explanation": "Les arbres de décision sont intrinsèquement interprétables car leur structure hiérarchique rend les décisions facilement compréhensibles."
+    },
+    {
+      "question": "Quel type de modèle est dit 'intrinsèquement interprétable' ?",
+      "options": ["Modèle complexe", "Modèle simple et compréhensible", "Modèle opaque", "Modèle agnostique"],
+      "answer": "Modèle simple et compréhensible",
+      "explanation": "Les modèles intrinsèquement interprétables sont conçus pour être transparents dès leur création."
+    },
+    {
+      "question": "Quel est l’avantage principal des méthodes post-hoc ?",
+      "options": [
+        "Elles sont toujours plus précises",
+        "Elles peuvent expliquer des modèles non interprétables",
+        "Elles sont plus rapides à entraîner",
+        "Elles sont faciles à visualiser"
+      ],
+      "answer": "Elles peuvent expliquer des modèles non interprétables",
+      "explanation": "Les méthodes post-hoc comme LIME ou SHAP permettent d’expliquer des modèles complexes après leur entraînement."
+    },
+    {
+      "question": "Quel est l’un des objectifs de l’interprétabilité selon Kim, Khanna et Koyejo (2016) ?",
+      "options": [
+        "Prédire efficacement les résultats",
+        "Créer des modèles plus rapides",
+        "Minimiser les erreurs de classification",
+        "Améliorer la précision brute"
+      ],
+      "answer": "Prédire efficacement les résultats",
+      "explanation": "Une méthode est interprétable si elle permet à un utilisateur de prédire correctement les résultats."
+    },
+    {
+      "question": "Quel est le principal inconvénient des modèles très performants mais opaques ?",
+      "options": [
+        "Ils sont difficiles à visualiser",
+        "On ne comprend pas comment ils prennent leurs décisions",
+        "Ils consomment beaucoup de ressources",
+        "Ils ne généralisent pas bien"
+      ],
+      "answer": "On ne comprend pas comment ils prennent leurs décisions",
+      "explanation": "Un bon score de performance ne garantit pas un modèle fiable si ses décisions ne sont pas compréhensibles."
+    },
+    {
+      "question": "Quelle méthode locale est utilisée pour expliquer une prédiction en remplaçant le modèle complexe par un modèle local interprétable ?",
+      "options": ["TreeSHAP", "LIME", "KNN", "PCA"],
+      "answer": "LIME",
+      "explanation": "LIME utilise un modèle simple autour d’une instance spécifique pour expliquer localement la prédiction du modèle complexe."
+    },
+    {
+      "question": "Quelle propriété est essentielle pour évaluer une explication ?",
+      "options": ["Vitesse d’exécution", "Fidélité", "Taille du modèle", "Simplicité du code"],
+      "answer": "Fidélité",
+      "explanation": "La fidélité mesure dans quelle mesure l’explication reflète fidèlement le comportement réel du modèle."
+    },
+    {
+      "question": "Quel outil est souvent utilisé pour visualiser les explications locales de SHAP ?",
+      "options": ["Matplotlib", "Seaborn", "Force Plot", "PCA"],
+      "answer": "Force Plot",
+      "explanation": "Le Force Plot montre comment chaque feature influence la prédiction pour une instance donnée."
+    },
+    {
+      "question": "Quel package Python est couramment utilisé pour implémenter SHAP ?",
+      "options": ["Scikit-learn", "TensorFlow", "shap", "pandas"],
+      "answer": "shap",
+      "explanation": "Le package `shap` fournit des outils pour calculer et visualiser les valeurs de Shapley."
+    },
+    {
+      "question": "Que signifie 'interprétabilité par conception' ?",
+      "options": [
+        "Utiliser des modèles complexes",
+        "Produire des modèles dont les décisions sont transparentes dès leur création",
+        "Interpréter après coup",
+        "Utiliser uniquement des modèles linéaires"
+      ],
+      "answer": "Produire des modèles dont les décisions sont transparentes dès leur création",
+      "explanation": "L’interprétabilité par conception repose sur l’utilisation de modèles dont les décisions sont claires dès le départ."
+    },
+    {
+      "question": "Quel modèle est considéré comme intrinsèquement interprétable ?",
+      "options": ["Modèle complexe", "Modèle simple et compréhensible", "Modèle opaque", "Modèle agnostique"],
+      "answer": "Modèle simple et compréhensible",
+      "explanation": "Les modèles simples comme les régressions linéaires sont facilement interprétables."
+    },
+    {
+      "question": "Quelle méthode post-hoc est agnostique au modèle ?",
+      "options": ["TreeSHAP", "LIME", "Random Forest", "KNN"],
+      "answer": "LIME",
+      "explanation": "LIME est une méthode agnostique au modèle, applicable à tout type de modèle ML."
+    },
+    {
+      "question": "Quel est le principal avantage de SHAP par rapport à LIME ?",
+      "options": [
+        "Plus rapide",
+        "Basé sur une théorie mathématique solide",
+        "Moins coûteux en mémoire",
+        "Facile à visualiser"
+      ],
+      "answer": "Basé sur une théorie mathématique solide",
+      "explanation": "SHAP utilise les valeurs de Shapley issues de la théorie des jeux coopératifs, ce qui lui confère une cohérence mathématique."
+    },
+    {
+      "question": "Quel est l’un des objectifs majeurs de l’interprétabilité selon le cours ?",
+      "options": [
+        "Améliorer l’esthétique",
+        "Comprendre la cause d’une décision",
+        "Accélérer le calcul",
+        "Simplifier l’interface utilisateur"
+      ],
+      "answer": "Comprendre la cause d’une décision",
+      "explanation": "L’un des objectifs de l’interprétabilité est de permettre de comprendre pourquoi une décision a été prise."
+    },
+    {
+      "question": "Quelle technique permet d’expliquer une prédiction en remplaçant le modèle complexe par un modèle local interprétable ?",
+      "options": ["TreeSHAP", "LIME", "KNN", "PCA"],
+      "answer": "LIME",
+      "explanation": "LIME construit un modèle interprétable localement autour d’une prédiction pour expliquer sa logique."
+    },
+    {
+      "question": "Quelle est la définition de l’interprétabilité selon Kim, Khanna et Koyejo (2016) ?",
+      "options": [
+        "Transformer un concept abstrait en une forme compréhensible",
+        "Une méthode est interprétable si un utilisateur peut prédire correctement les résultats",
+        "Fournir une explication détaillée d’une prédiction",
+        "Utiliser des modèles simples pour expliquer des modèles complexes"
+      ],
+      "answer": "Une méthode est interprétable si un utilisateur peut prédire correctement les résultats",
+      "explanation": "Cette définition souligne l’importance de la prévisibilité des résultats par un utilisateur."
+    },
+    {
+      "question": "Quel type d’évaluation implique des profanes ?",
+      "options": ["Niveau applicatif", "Niveau humain", "Niveau fonctionnel", "Niveau statistique"],
+      "answer": "Niveau humain",
+      "explanation": "Le niveau humain implique des tests avec des utilisateurs finaux ou des profanes pour juger de la qualité des explications."
+    },
+    {
+      "question": "Quelle propriété concerne la stabilité des explications ?",
+      "options": ["Précision", "Cohérence", "Stabilité", "Expressivité"],
+      "answer": "Stabilité",
+      "explanation": "La stabilité des explications signifie qu’une petite perturbation des données ne doit pas changer radicalement l’explication."
+    },
+    {
+      "question": "Quel type d’explication concerne une prédiction spécifique ?",
+      "options": ["Explication globale", "Explication locale", "Explication visuelle", "Explication aléatoire"],
+      "answer": "Explication locale",
+      "explanation": "Une explication locale se concentre sur une prédiction particulière et les caractéristiques influentes pour celle-ci."
+    },
+    {
+      "question": "Quel type d’explication concerne l’ensemble des prédictions du modèle ?",
+      "options": ["Explication globale", "Explication locale", "Explication visuelle", "Explication aléatoire"],
+      "answer": "Explication globale",
+      "explanation": "Une explication globale analyse l’impact moyen des variables sur l’ensemble des prédictions."
+    },
+    {
+      "question": "Quel critère qualitatif est utilisé pour mesurer la qualité d’une explication individuelle ?",
+      "options": ["Vitesse", "Fidélité", "Complexité", "Robustesse"],
+      "answer": "Fidélité",
+      "explanation": "La fidélité mesure à quel point l’explication reflète fidèlement la prédiction du modèle."
+    },
+    {
+      "question": "Quelle méthode utilise la théorie des jeux coopératifs ?",
+      "options": ["LIME", "SHAP", "PCA", "KNN"],
+      "answer": "SHAP",
+      "explanation": "SHAP utilise les valeurs de Shapley issues de la théorie des jeux coopératifs pour expliquer les décisions du modèle."
+    },
+    {
+      "question": "Quelle approche consiste à traiter le modèle comme une boîte noire ?",
+      "options": ["Méthode spécifique au modèle", "Méthode indépendante du modèle", "Méthode visuelle", "Méthode locale"],
+      "answer": "Méthode indépendante du modèle",
+      "explanation": "Les méthodes indépendantes du modèle (comme LIME ou SHAP) traitent le modèle comme une boîte noire."
+    },
+    {
+      "question": "Quel type de modèle est généralement interprétable par conception ?",
+      "options": ["Modèle complexe", "Modèle linéaire", "Modèle opaque", "Modèle agnostique"],
+      "answer": "Modèle linéaire",
+      "explanation": "Les modèles linéaires sont intrinsèquement interprétables grâce à leurs coefficients directement lisibles."
+    },
+    {
+      "question": "Quel est le rôle des graphiques de dépendance dans SHAP ?",
+      "options": [
+        "Comparer plusieurs modèles",
+        "Visualiser la relation entre une caractéristique et sa contribution",
+        "Mesurer la précision du modèle",
+        "Simplifier le modèle"
+      ],
+      "answer": "Visualiser la relation entre une caractéristique et sa contribution",
+      "explanation": "Les graphiques de dépendance montrent comment une variable infléchit la prédiction via ses variations."
+    },
+    {
+      "question": "Quel outil permet d’expliquer une prédiction en attribuant une valeur à chaque caractéristique ?",
+      "options": ["PCA", "SHAP", "KNN", "SVM"],
+      "answer": "SHAP",
+      "explanation": "SHAP attribue à chaque caractéristique une valeur représentant son impact sur la prédiction."
+    },
+    {
+      "question": "Quelle est la principale limite de LIME ?",
+      "options": [
+        "Trop de précision",
+        "Instabilité des explications",
+        "Trop de simplicité",
+        "Ne fonctionne qu’avec des modèles linéaires"
+      ],
+      "answer": "Instabilité des explications",
+      "explanation": "Les explications de LIME peuvent varier fortement avec de légères modifications des données d’entrée."
+    },
+    {
+      "question": "Quel outil permet de représenter une explication sous forme de force agissant sur une prédiction ?",
+      "options": ["PCA", "SHAP", "KNN", "Force Plot"],
+      "answer": "Force Plot",
+      "explanation": "Le Force Plot représente visuellement l’effet cumulatif des caractéristiques sur la prédiction."
+    },
+    {
+      "question": "Quelle est la propriété d’une explication qui garantit que les mêmes caractéristiques conduisent aux mêmes explications ?",
+      "options": ["Précision", "Cohérence", "Fidélité", "Expressivité"],
+      "answer": "Cohérence",
+      "explanation": "La cohérence assure que deux instances similaires reçoivent des explications similaires."
+    },
+    {
+      "question": "Quel type d’explication est utilisé pour décrire une prédiction individuelle ?",
+      "options": ["Explication globale", "Explication locale", "Explication visuelle", "Explication aléatoire"],
+      "answer": "Explication locale",
+      "explanation": "Les explications locales décrivent l’influence des caractéristiques sur une prédiction spécifique."
+    },
+    {
+      "question": "Quelle est la propriété d’une explication qui garantit qu’elle reste proche de la prédiction réelle ?",
+      "options": ["Précision", "Fidélité", "Cohérence", "Expressivité"],
+      "answer": "Fidélité",
+      "explanation": "La fidélité mesure à quel point l’explication reproduit fidèlement la prédiction du modèle."
+    },
+    {
+      "question": "Quel terme désigne l’explication d’un modèle basé sur une somme pondérée des caractéristiques ?",
+      "options": ["Régression linéaire", "Arbre de décision", "Forêt aléatoire", "Modèle neuronal"],
+      "answer": "Régression linéaire",
+      "explanation": "La régression linéaire est un exemple de modèle interprétable où les poids des caractéristiques sont explicites."
+    },
+    {
+      "question": "Quelle méthode est utilisée pour visualiser l’importance globale des caractéristiques dans SHAP ?",
+      "options": ["Force Plot", "Summary Plot", "PCA", "Graphique de dispersion"],
+      "answer": "Summary Plot",
+      "explanation": "Le Summary Plot montre l’importance moyenne de chaque caractéristique sur toutes les prédictions."
+    },
+    {
+      "question": "Quel type d’explication est utilisé pour justifier une décision face à un auditeur externe ?",
+      "options": ["Explication locale", "Explication globale", "Explication visuelle", "Explication simplifiée"],
+      "answer": "Explication globale",
+      "explanation": "Les explications globales sont utiles pour justifier les décisions devant des parties prenantes ou des auditeurs."
+    },
+    {
+      "question": "Quel est le principal inconvénient de la régression linéaire ?",
+      "options": ["Elle est trop rapide", "Elle ne capte que des relations linéaires", "Elle est trop précise", "Elle est trop lente"],
+      "answer": "Elle ne capte que des relations linéaires",
+      "explanation": "La régression linéaire suppose des relations proportionnelles et additives entre les variables."
+    },
+    {
+      "question": "Quel est l’un des objectifs de l’interprétabilité selon Biran et Cotton ?",
+      "options": ["Améliorer l’esthétique", "Comprendre la cause d’une décision", "Accélérer le calcul", "Simplifier l’interface utilisateur"],
+      "answer": "Comprendre la cause d’une décision",
+      "explanation": "L’objectif central est de rendre les décisions du modèle compréhensibles."
+    },
+    {
+      "question": "Quelle méthode post-hoc utilise des valeurs de Shapley ?",
+      "options": ["LIME", "SHAP", "KNN", "PCA"],
+      "answer": "SHAP",
+      "explanation": "SHAP repose sur les valeurs de Shapley pour attribuer équitablement les contributions des caractéristiques."
+    },
+    {
+      "question": "Quel type de modèle est le plus souvent utilisé dans l’interprétabilité par conception ?",
+      "options": ["Modèle de Deep Learning", "Modèle linéaire", "Modèle agnostique", "Modèle opaque"],
+      "answer": "Modèle linéaire",
+      "explanation": "Les modèles linéaires sont souvent utilisés pour leur transparence."
+    },
+    {
+      "question": "Quel est le principal avantage des modèles interprétables par conception ?",
+      "options": ["Ils sont plus précis", "Ils sont plus rapides", "Ils sont transparents", "Ils sont plus compacts"],
+      "answer": "Ils sont transparents",
+      "explanation": "Ils permettent une compréhension immédiate des décisions du modèle."
+    },
+    {
+      "question": "Quel outil permet de générer des règles SI-ALORS pour expliquer une prédiction ?",
+      "options": ["RuleFit", "SHAP", "LIME", "PCA"],
+      "answer": "RuleFit",
+      "explanation": "RuleFit combine des règles basées sur des arbres avec la régression Lasso pour produire des modèles explicables."
+    },
+    {
+      "question": "Quel critère mesure la facilité avec laquelle un humain comprend une explication ?",
+      "options": ["Précision", "Fidélité", "Compréhensibilité", "Expressivité"],
+      "answer": "Compréhensibilité",
+      "explanation": "La compréhensibilité est cruciale pour que les explications soient accessibles aux utilisateurs."
+    },
+    {
+      "question": "Quel type de graphique montre l’effet d’une caractéristique sur la prédiction ?",
+      "options": ["PCA", "Courbe ROC", "Graphique de dépendance SHAP", "Histogramme"],
+      "answer": "Graphique de dépendance SHAP",
+      "explanation": "Ce graphique montre comment une caractéristique influence la sortie du modèle."
+    },
+    {
+      "question": "Quel type d’interprétabilité permet d’expliquer une prédiction spécifique ?",
+      "options": ["Interprétabilité globale", "Interprétabilité locale", "Interprétabilité visuelle", "Interprétabilité temporelle"],
+      "answer": "Interprétabilité locale",
+      "explanation": "L’interprétabilité locale concerne l’analyse d’une prédiction unique."
+    },
+    {
+      "question": "Quel type d’interprétabilité donne une vue d’ensemble du fonctionnement du modèle ?",
+      "options": ["Interprétabilité globale", "Interprétabilité locale", "Interprétabilité visuelle", "Interprétabilité temporelle"],
+      "answer": "Interprétabilité globale",
+      "explanation": "L’interprétabilité globale examine l’impact moyen des caractéristiques sur toutes les prédictions."
+    },
+    {
+      "question": "Quel type de modèle est utilisé dans TreeSHAP ?",
+      "options": ["Modèle linéaire", "Modèle à base d’arbres", "Modèle neuronal", "Modèle bayésien"],
+      "answer": "Modèle à base d’arbres",
+      "explanation": "TreeSHAP est optimisé pour les modèles basés sur les arbres de décision."
+    },
+    {
+      "question": "Quel type d’interprétabilité est nécessaire pour détecter des biais dans les modèles ?",
+      "options": ["Interprétabilité locale", "Interprétabilité globale", "Interprétabilité visuelle", "Interprétabilité temporelle"],
+      "answer": "Interprétabilité globale",
+      "explanation": "Une vision globale permet de détecter des tendances et des biais dans l’ensemble du modèle."
+    },
+    {
+      "question": "Quel type de modèle est dit 'agnostique au modèle' ?",
+      "options": ["Modèle linéaire", "LIME", "Arbre de décision", "Modèle neuronal"],
+      "answer": "LIME",
+      "explanation": "LIME traite le modèle comme une boîte noire et fonctionne avec n’importe quel modèle."
+    },
+    {
+      "question": "Quel type de graphique montre l’impact global de chaque caractéristique sur les prédictions ?",
+      "options": ["PCA", "Courbe ROC", "Graphique de poids SHAP", "Histogramme"],
+      "answer": "Graphique de poids SHAP",
+      "explanation": "Le graphique de poids SHAP classe les caractéristiques par ordre d’importance globale."
+    },
+    {
+      "question": "Quel outil est utilisé pour visualiser les explications générées par SHAP ?",
+      "options": ["PCA", "Seaborn", "shap.initjs()", "Matplotlib"],
+      "answer": "shap.initjs()",
+      "explanation": "Cette commande permet d’initialiser les visualisations interactives dans SHAP."
+    },
+    {
+      "question": "Quel type de modèle est utilisé comme substitut dans LIME ?",
+      "options": ["Modèle linéaire", "Modèle neuronal", "Modèle bayésien", "Modèle à noyau"],
+      "answer": "Modèle linéaire",
+      "explanation": "LIME utilise un modèle linéaire local pour expliquer les prédictions d’un modèle complexe."
+    },
+    {
+      "question": "Quel est le principal avantage de l’interprétabilité dans les applications critiques comme la médecine ?",
+      "options": ["Rapidité", "Confiance", "Précision", "Efficacité"],
+      "answer": "Confiance",
+      "explanation": "L’interprétabilité renforce la confiance des utilisateurs dans les décisions du modèle."
+    },
+    {
+      "question": "Quel type d’interprétabilité est utile pour déboguer un modèle ?",
+      "options": ["Locale", "Globale", "Visuelle", "Temporelle"],
+      "answer": "Globale",
+      "explanation": "L’interprétabilité globale permet de comprendre les motifs généraux appris par le modèle."
+    },
+    {
+      "question": "Quel type de modèle est le plus adapté pour l’interprétabilité par conception ?",
+      "options": ["Modèle de Deep Learning", "Modèle linéaire", "Forêt aléatoire", "Modèle agnostique"],
+      "answer": "Modèle linéaire",
+      "explanation": "Les modèles linéaires sont intrinsèquement interprétables grâce à leurs coefficients."
+    },
+    {
+      "question": "Quel est le principal défi de l’évaluation des méthodes d’interprétabilité ?",
+      "options": ["Manque de données", "Absence de vérité terrain", "Coût élevé", "Manque de temps"],
+      "answer": "Absence de vérité terrain",
+      "explanation": "Il n’existe pas de référence objective pour valider les explications générées."
+    },
+    {
+      "question": "Quelle méthode attribue équitablement la prédiction à chaque caractéristique ?",
+      "options": ["LIME", "SHAP", "KNN", "PCA"],
+      "answer": "SHAP",
+      "explanation": "SHAP attribue équitablement la prédiction à chaque caractéristique en utilisant les valeurs de Shapley."
+    },
+    {
+      "question": "Quel type de modèle est le plus difficile à interpréter ?",
+      "options": ["Régression linéaire", "Arbre de décision", "Réseau de neurones", "Régression logistique"],
+      "answer": "Réseau de neurones",
+      "explanation": "Les réseaux de neurones sont des modèles opaques, souvent appelés boîtes noires."
+    },
+    {
+      "question": "Quel outil permet d’expliquer une prédiction en montrant l’effet de chaque caractéristique ?",
+      "options": ["PCA", "Force Plot", "Courbe ROC", "Matrice de confusion"],
+      "answer": "Force Plot",
+      "explanation": "Le Force Plot montre comment chaque caractéristique infléchit la prédiction par rapport à la moyenne."
+    },
+    {
+      "question": "Quel type d’explication est utilisé pour expliquer une décision à un utilisateur final ?",
+      "options": ["Explication locale", "Explication globale", "Explication technique", "Explication mathématique"],
+      "answer": "Explication locale",
+      "explanation": "Les explications locales sont adaptées pour justifier une décision spécifique à un utilisateur."
+    },
+    {
+      "question": "Quel type de modèle est dit 'extrinsèquement interprétable' ?",
+      "options": ["Modèle linéaire", "Arbre de décision", "Réseau de neurones", "Modèle de substitution"],
+      "answer": "Modèle de substitution",
+      "explanation": "Les modèles de substitution sont extrinsèquement interprétables car ils expliquent un modèle opaque."
+    },
+    {
+      "question": "Quel type de données est particulièrement sensible à l’interprétabilité ?",
+      "options": ["Données techniques", "Données financières", "Données sensibles", "Données publiques"],
+      "answer": "Données sensibles",
+      "explanation": "Les données sensibles (comme en justice ou santé) exigent une forte interprétabilité pour éviter les discriminations."
+    },
+    {
+      "question": "Quel type de modèle est le plus souvent utilisé dans les études de benchmarking d’explications ?",
+      "options": ["Modèle linéaire", "Modèle de substitution", "Modèle aléatoire", "Modèle caché"],
+      "answer": "Modèle de substitution",
+      "explanation": "Les modèles de substitution sont fréquemment utilisés pour expliquer des modèles opaques."
+    },
+    {
+      "question": "Quel type de graphique montre la distribution de l’effet de chaque caractéristique ?",
+      "options": ["Bar plot", "Box plot", "Waterfall plot", "Heatmap"],
+      "answer": "Waterfall plot",
+      "explanation": "Le Waterfall plot détaille étape par étape l’effet cumulatif des caractéristiques sur la prédiction."
+    }
+  ]

@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QCM - Interprétabilité des Modèles ML</title>
+    <style>
+        :root {
+            --primary-color: #00d8ff;
+            --primary-hover: #00b3cc;
+            --dark-bg: #1e1e2f;
+            --card-bg: #2a2a40;
+            --text-light: #ffffff;
+            --text-secondary: #cccccc;
+            --error-color: #ff4c4c;
+            --success-color: #4cff9e;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--dark-bg);
+            color: var(--text-light);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        header {
+            background-color: var(--card-bg);
+            color: var(--primary-color);
+            padding: 1.5rem;
+            text-align: center;
+            box-shadow: 0 4px 15px rgba(0, 216, 255, 0.3);
+            position: relative;
+            overflow: hidden;
+            width: 100%;
+            box-sizing: border-box;
+        }
+        
+        header h1 {
+            margin: 0;
+            font-size: 2.5rem;
+            position: relative;
+            z-index: 1;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+        
+        header::before {
+            content: "";
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: linear-gradient(135deg, transparent 0%, rgba(0, 216, 255, 0.1) 50%, transparent 100%);
+            animation: shine 8s infinite linear;
+        }
+        
+        @keyframes shine {
+            0% { transform: translateX(-50%) translateY(-50%) rotate(0deg); }
+            100% { transform: translateX(-50%) translateY(-50%) rotate(360deg); }
+        }
+        
+        .card {
+            background: var(--card-bg);
+            border-radius: 12px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+            width: 90%;
+            max-width: 700px;
+            padding: 2rem;
+            margin: 2rem 0;
+            overflow: hidden;
+            position: relative;
+            border: 2px solid var(--primary-color);
+        }
+        
+        .card::before {
+            content: "";
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: linear-gradient(135deg, transparent 0%, rgba(0, 216, 255, 0.05) 50%, transparent 100%);
+            animation: shine 8s infinite linear;
+        }
+        
+        .question {
+            font-size: 1.3rem;
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+            position: relative;
+            z-index: 2;
+            color: var(--primary-color);
+        }
+        
+        .question-number {
+            display: inline-block;
+            margin-right: 0.5rem;
+            font-weight: 700;
+        }
+        
+        label {
+            display: block;
+            margin-bottom: 1rem;
+            padding: 1rem;
+            background-color: rgba(255, 255, 255, 0.05);
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            position: relative;
+            z-index: 2;
+        }
+        
+        label:hover {
+            background-color: rgba(255, 255, 255, 0.1);
+            transform: translateX(5px);
+        }
+        
+        input[type="radio"] {
+            margin-right: 10px;
+        }
+        
+        .submit-button {
+            padding: 1rem 2rem;
+            font-size: 1.1rem;
+            background-color: var(--primary-color);
+            color: #000;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            width: 100%;
+            margin: 1.5rem 0;
+            position: relative;
+            z-index: 2;
+        }
+        
+        .submit-button:hover {
+            background-color: var(--primary-hover);
+            box-shadow: 0 5px 15px rgba(0, 216, 255, 0.5);
+            transform: translateY(-2px);
+        }
+        
+        .navigation-buttons {
+            display: flex;
+            justify-content: space-between;
+            margin: 1.5rem 0;
+            position: relative;
+            z-index: 2;
+        }
+        
+        .navigation-buttons button {
+            padding: 0.8rem 1.5rem;
+            font-size: 1rem;
+            background-color: var(--primary-color);
+            color: #000;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            min-width: 120px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+        }
+        
+        .navigation-buttons button:hover {
+            background-color: var(--primary-hover);
+            box-shadow: 0 5px 15px rgba(0, 216, 255, 0.5);
+            transform: translateY(-2px);
+        }
+        
+        .progress-bar {
+            width: 100%;
+            height: 10px;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 50px;
+            overflow: hidden;
+            margin: 1.5rem 0 0.5rem;
+            position: relative;
+            z-index: 2;
+        }
+        
+        .progress {
+            height: 100%;
+            background: linear-gradient(90deg, var(--primary-color), #4cddff);
+            width: 0%;
+            border-radius: 50px;
+            transition: width 0.5s ease;
+        }
+        
+        .current-question {
+            text-align: center;
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+            margin-bottom: 1rem;
+            position: relative;
+            z-index: 2;
+        }
+        
+        .resultat {
+            margin-top: 1.5rem;
+            font-weight: bold;
+            font-size: 1.2rem;
+            text-align: center;
+            padding: 1.5rem;
+            border-radius: 12px;
+            background-color: rgba(255, 255, 255, 0.05);
+            position: relative;
+            z-index: 2;
+            animation: fadeIn 0.5s ease;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .back-home {
+            display: none; /* Remplacé par le nouveau bouton */
+        }
+        
+        .home-btn {
+            display: inline-block;
+            width: 100%;
+            padding: 0.8rem 1.5rem;
+            font-size: 1rem;
+            background-color: rgba(255, 255, 255, 0.1);
+            color: var(--text-light);
+            border: 1px solid var(--primary-color);
+            border-radius: 50px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            text-align: center;
+            text-decoration: none;
+            margin-top: 1.5rem;
+            position: relative;
+            z-index: 2;
+            box-sizing: border-box;
+        }
+        
+        .home-btn:hover {
+            background-color: var(--primary-color);
+            color: #000;
+            box-shadow: 0 5px 15px rgba(0, 216, 255, 0.5);
+            transform: translateY(-2px);
+        }
+        
+        footer {
+            text-align: center;
+            padding: 1.5rem;
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+            width: 100%;
+            background-color: var(--card-bg);
+            margin-top: 2rem;
+            position: relative;
+            z-index: 2;
+        }
+
+        @media (max-width: 768px) {
+            .card {
+                width: 95%;
+                padding: 1.5rem;
+            }
+            
+            .question {
+                font-size: 1.1rem;
+            }
+            
+            .navigation-buttons button {
+                padding: 0.7rem 1.2rem;
+                font-size: 0.9rem;
+                min-width: 100px;
+            }
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <h1>QCM : Interprétabilité des Modèles ML</h1>
+    </header>
+
+    <div class="card">
+        <div id="quizContainer" class="question"></div>
+        
+        <button class="submit-button" onclick="checkAnswer()">
+            <i class="fas fa-check-circle"></i> Vérifier ma réponse
+        </button>
+        
+        <div class="navigation-buttons">
+            <button onclick="prevQuestion()">
+                <i class="fas fa-arrow-left"></i> Précédent
+            </button>
+            <button onclick="nextQuestion()">
+                Suivant <i class="fas fa-arrow-right"></i>
+            </button>
+        </div>
+        
+        <div class="progress-bar">
+            <div id="progressBar" class="progress" style="width: 0%;"></div>
+        </div>
+        
+        <div class="current-question" id="questionCounter">Question 1 sur 0</div>
+        
+        <div id="resultDiv" class="resultat" style="display: none;"></div>
+        
+        <a href="home.html" class="back-home">
+            <i class="fas fa-home"></i> Retour à l'accueil
+        </a>
+        
+        <a href="home.html" class="home-btn">
+            <i class="fas fa-home"></i> Retour à l'accueil
+        </a>
+    </div>
+
+    <footer>
+        <p>© 2025 QCM d'Apprentissage | Développé par NajibLab</p>
+    </footer>
+
+    <script>
+        // Charger les questions depuis le fichier JSON
+        let quizData = [];
+        let currentQuestionIndex = 0;
+        let score = 0;
+
+        // Utiliser fetch pour charger le fichier JSON localement
+        fetch('data/interpretabilite.json')
+            .then(response => response.json())
+            .then(data => {
+                quizData = data;
+                showQuestion();
+                updateProgress();
+            })
+            .catch(error => {
+                console.error("Erreur lors du chargement du fichier JSON:", error);
+                document.getElementById("quizContainer").innerText = "Impossible de charger les questions.";
+            });
+
+        function showQuestion() {
+            const container = document.getElementById("quizContainer");
+            container.innerHTML = "";
+
+            if (currentQuestionIndex >= quizData.length) return;
+
+            const q = quizData[currentQuestionIndex];
+
+            const questionDiv = document.createElement("div");
+
+            questionDiv.innerHTML = `
+                <p class="question"><span class="question-number">Q${currentQuestionIndex + 1}:</span> ${q.question}</p>
+                <ul style="list-style-type: none; padding: 0;">
+                ${q.options.map((option, i) =>
+                    `<li>
+                    <label>
+                        <input type="radio" id="opt${i}" name="answer" value="${option}">
+                        ${option}
+                    </label>
+                    </li>`
+                ).join("")}
+                </ul>
+            `;
+
+            container.appendChild(questionDiv);
+        }
+
+        function checkAnswer() {
+            const selected = document.querySelector('input[name="answer"]:checked');
+
+            if (!selected) {
+                alert("Veuillez sélectionner une réponse.");
+                return;
+            }
+
+            const userAnswer = selected.value;
+            const correctAnswer = quizData[currentQuestionIndex].answer;
+
+            if (userAnswer === correctAnswer) {
+                score++;
+                // Effet visuel pour une réponse correcte
+                const label = selected.parentElement;
+                label.style.backgroundColor = "rgba(76, 255, 158, 0.1)";
+                label.style.color = "var(--success-color)";
+                label.style.borderLeft = "4px solid var(--success-color)";
+                label.innerHTML += `<span style="float: right;"><i class="fas fa-check-circle"></i> Correct !</span>`;
+            } else {
+                // Effet visuel pour une réponse incorrecte
+                const label = selected.parentElement;
+                label.style.backgroundColor = "rgba(255, 76, 76, 0.1)";
+                label.style.color = "var(--error-color)";
+                label.style.borderLeft = "4px solid var(--error-color)";
+                label.innerHTML += `<span style="float: right;"><i class="fas fa-times-circle"></i> Incorrect</span>`;
+                
+                // Montrer la bonne réponse
+                document.querySelectorAll('label').forEach(lbl => {
+                    if (lbl.textContent.includes(correctAnswer)) {
+                        lbl.style.backgroundColor = "rgba(76, 255, 158, 0.1)";
+                        lbl.style.color = "var(--success-color)";
+                        lbl.style.borderLeft = "4px solid var(--success-color)";
+                    }
+                });
+            }
+            
+            // Désactiver les inputs après la vérification
+            document.querySelectorAll('input[name="answer"]').forEach(input => {
+                input.disabled = true;
+            });
+            
+            // Désactiver le bouton de vérification
+            document.querySelector('.submit-button').disabled = true;
+            document.querySelector('.submit-button').style.opacity = "0.5";
+        }
+
+        function prevQuestion() {
+            if (currentQuestionIndex > 0) {
+                currentQuestionIndex--;
+                showQuestion();
+                updateProgress();
+                // Réactiver le bouton de vérification
+                const submitButton = document.querySelector('.submit-button');
+                if (submitButton) {
+                    submitButton.disabled = false;
+                    submitButton.style.opacity = "1";
+                }
+            }
+        }
+
+        function nextQuestion() {
+            if (currentQuestionIndex < quizData.length - 1) {
+                currentQuestionIndex++;
+                showQuestion();
+                updateProgress();
+                // Réactiver le bouton de vérification
+                const submitButton = document.querySelector('.submit-button');
+                if (submitButton) {
+                    submitButton.disabled = false;
+                    submitButton.style.opacity = "1";
+                }
+            } else {
+                showResult();
+            }
+        }
+
+        function updateProgress() {
+            const progress = ((currentQuestionIndex + 1) / quizData.length) * 100;
+            document.getElementById("progressBar").style.width = `${progress}%`;
+            document.getElementById("questionCounter").textContent = `Question ${currentQuestionIndex + 1} sur ${quizData.length}`;
+        }
+
+        function showResult() {
+            document.getElementById("quizContainer").innerHTML = "";
+            document.querySelector(".submit-button").style.display = "none";
+            document.querySelector(".navigation-buttons").style.display = "none";
+            document.getElementById("resultDiv").style.display = "block";
+            
+            const percentage = Math.round((score / quizData.length) * 100);
+            let message, icon, color;
+            
+            if (percentage >= 80) {
+                message = "Excellent !";
+                icon = "trophy";
+                color = "var(--success-color)";
+            } else if (percentage >= 60) {
+                message = "Bien joué !";
+                icon = "thumbs-up";
+                color = "#4cddff";
+            } else {
+                message = "Continuez à apprendre !";
+                icon = "book";
+                color = "var(--primary-color)";
+            }
+            
+            document.getElementById("resultDiv").innerHTML = `
+                <div style="font-size: 3rem; color: ${color}; margin-bottom: 1rem;">
+                    <i class="fas fa-${icon}"></i>
+                </div>
+                <h2 style="color: ${color};">${message}</h2>
+                <p>Vous avez obtenu <strong>${score}/${quizData.length}</strong> bonnes réponses.</p>
+                <p>Soit ${percentage}% de réussite</p>
+                <div style="margin-top: 1.5rem;">
+                    <button onclick="location.reload()" class="submit-button" style="max-width: 250px; margin: 0 auto; display: block;">
+                        <i class="fas fa-redo"></i> Recommencer le quiz
+                    </button>
+                </div>
+            `;
+        }
+    </script>
+</body>
+</html>
