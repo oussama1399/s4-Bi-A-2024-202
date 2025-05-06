@@ -1,0 +1,1981 @@
+[
+    {
+      "question": "What is a data warehouse?",
+      "options": [
+        "A database optimized for transaction processing",
+        "A subject-oriented, integrated, time-variant, and nonvolatile collection of data to support decision-making",
+        "A temporary storage for raw data before transformation",
+        "A database used only for real-time analytics"
+      ],
+      "answer": "A subject-oriented, integrated, time-variant, and nonvolatile collection of data to support decision-making",
+      "explanation": "A data warehouse is designed to store historical and current data for analysis and decision-making."
+    },
+    {
+      "question": "Which characteristic of a data warehouse means it stores data that is not updated frequently?",
+      "options": [
+        "Subject-Oriented",
+        "Integrated",
+        "Time-Variant",
+        "Nonvolatile"
+      ],
+      "answer": "Nonvolatile",
+      "explanation": "Nonvolatility means that data is loaded and accessed but not updated in the general sense."
+    },
+    {
+      "question": "Which of the following best describes a data mart?",
+      "options": [
+        "A large, enterprise-wide data repository",
+        "A subset of data stored within the overall data warehouse for easier access by end consumers",
+        "A type of OLAP cube",
+        "A tool for ETL processes"
+      ],
+      "answer": "A subset of data stored within the overall data warehouse for easier access by end consumers",
+      "explanation": "A data mart isolates or partitions smaller sets of data from the data warehouse."
+    },
+    {
+      "question": "What is the main difference between a dependent and an independent data mart?",
+      "options": [
+        "Dependent data marts are physically separate while independent ones are virtual",
+        "Dependent data marts are created from the data warehouse, while independent ones are standalone",
+        "Independent data marts use more storage than dependent ones",
+        "Dependent data marts are faster to implement"
+      ],
+      "answer": "Dependent data marts are created from the data warehouse, while independent ones are standalone",
+      "explanation": "Dependent data marts derive from the data warehouse, while independent ones are built directly from source systems."
+    },
+    {
+      "question": "What is the primary purpose of a staging area in a data warehouse architecture?",
+      "options": [
+        "To store the final output of the ETL process",
+        "To clean, transform, and integrate data from various sources",
+        "To provide direct access to end users",
+        "To optimize query performance"
+      ],
+      "answer": "To clean, transform, and integrate data from various sources",
+      "explanation": "The staging area is where data is prepared before being loaded into the data warehouse."
+    },
+    {
+      "question": "What does ETL stand for?",
+      "options": [
+        "Extract, Transform, Load",
+        "Evaluate, Test, Launch",
+        "Explore, Transform, Log",
+        "Export, Translate, Load"
+      ],
+      "answer": "Extract, Transform, Load",
+      "explanation": "ETL is the process of extracting data from sources, transforming it, and loading it into a data warehouse."
+    },
+    {
+      "question": "Which ETL method extracts all data from the source system every time?",
+      "options": [
+        "Incremental Extraction",
+        "Full Extraction",
+        "Delta Extraction",
+        "Snapshot Extraction"
+      ],
+      "answer": "Full Extraction",
+      "explanation": "Full extraction retrieves the entire dataset each time it runs."
+    },
+    {
+      "question": "Which ETL method only extracts data that has changed since the last load?",
+      "options": [
+        "Full Extraction",
+        "Incremental Extraction",
+        "Batch Extraction",
+        "Real-Time Extraction"
+      ],
+      "answer": "Incremental Extraction",
+      "explanation": "Incremental extraction captures only the delta changes since the last load."
+    },
+    {
+      "question": "What is a fact table in dimensional modeling?",
+      "options": [
+        "A table containing descriptive attributes about business entities",
+        "A table storing numeric measures related to business events",
+        "A table representing hierarchical relationships",
+        "A table used for metadata management"
+      ],
+      "answer": "A table storing numeric measures related to business events",
+      "explanation": "Fact tables contain measurable data such as sales amounts or quantities."
+    },
+    {
+      "question": "What is the primary key of a fact table typically composed of?",
+      "options": [
+        "A single unique identifier",
+        "A combination of foreign keys pointing to dimension tables",
+        "Surrogate keys only",
+        "Natural keys from operational systems"
+      ],
+      "answer": "A combination of foreign keys pointing to dimension tables",
+      "explanation": "Fact tables are usually linked to dimensions via foreign keys."
+    },
+    {
+      "question": "What is a dimension in dimensional modeling?",
+      "options": [
+        "A numeric measure of a business event",
+        "A context or attribute describing facts",
+        "A snapshot of data at a specific point in time",
+        "A tool for data integration"
+      ],
+      "answer": "A context or attribute describing facts",
+      "explanation": "Dimensions provide context for facts, such as date, product, or customer information."
+    },
+    {
+      "question": "Which schema design is most commonly used in dimensional modeling?",
+      "options": [
+        "Snowflake Schema",
+        "Star Schema",
+        "Relational Schema",
+        "Hierarchical Schema"
+      ],
+      "answer": "Star Schema",
+      "explanation": "The star schema is the most common due to its simplicity and performance benefits."
+    },
+    {
+      "question": "What is a conformed dimension?",
+      "options": [
+        "A dimension that is shared across multiple fact tables or schemas",
+        "A dimension with normalized hierarchies",
+        "A dimension that is completely denormalized",
+        "A dimension with no time component"
+      ],
+      "answer": "A dimension that is shared across multiple fact tables or schemas",
+      "explanation": "Conformed dimensions ensure consistency across different parts of the data warehouse."
+    },
+    {
+      "question": "What is the main advantage of a star schema over a snowflake schema?",
+      "options": [
+        "Better storage efficiency",
+        "Easier to understand and maintain",
+        "More complex structure",
+        "Supports deeper drill-downs"
+      ],
+      "answer": "Easier to understand and maintain",
+      "explanation": "Star schemas are simpler because they have fewer joins and are denormalized."
+    },
+    {
+      "question": "What is the purpose of surrogate keys in dimensional modeling?",
+      "options": [
+        "To improve query performance",
+        "To uniquely identify rows in a dimension or fact table",
+        "To reduce storage requirements",
+        "To simplify user queries"
+      ],
+      "answer": "To uniquely identify rows in a dimension or fact table",
+      "explanation": "Surrogate keys are artificial identifiers used to ensure uniqueness and avoid conflicts from natural keys."
+    },
+    {
+      "question": "Which of the following is NOT a type of slowly changing dimension (SCD)?",
+      "options": [
+        "Type 0",
+        "Type 1",
+        "Type 2",
+        "Type 4"
+      ],
+      "answer": "Type 4",
+      "explanation": "There are three main types of SCD: Type 0, Type 1, and Type 2. Type 3 also exists but is less common."
+    },
+    {
+      "question": "What is the main purpose of a factless fact table?",
+      "options": [
+        "To track numerical metrics",
+        "To analyze events that did not happen",
+        "To store audit data",
+        "To reduce data redundancy"
+      ],
+      "answer": "To analyze events that did not happen",
+      "explanation": "Factless fact tables do not include numeric measures but record when certain combinations of dimensions occurred."
+    },
+    {
+      "question": "Which of the following is a benefit of using a snowflake schema?",
+      "options": [
+        "Faster query performance",
+        "Simpler schema design",
+        "Reduced data redundancy",
+        "Fewer join operations"
+      ],
+      "answer": "Reduced data redundancy",
+      "explanation": "Snowflake schemas normalize dimensions, reducing duplication."
+    },
+    {
+      "question": "What is the primary goal of the Kimball approach to dimensional modeling?",
+      "options": [
+        "To build a fully normalized data model",
+        "To create a bottom-up, process-focused data warehouse",
+        "To develop a top-down, enterprise-wide data model",
+        "To minimize the number of dimensions"
+      ],
+      "answer": "To create a bottom-up, process-focused data warehouse",
+      "explanation": "Kimball’s approach emphasizes building datamarts first and integrating them later."
+    },
+    {
+      "question": "Which OLAP model stores data in multidimensional cubes?",
+      "options": [
+        "MOLAP",
+        "ROLAP",
+        "HOLAP",
+        "DOLAP"
+      ],
+      "answer": "MOLAP",
+      "explanation": "MOLAP stands for Multidimensional OLAP and stores data in cubes for fast querying."
+    },
+    {
+      "question": "Which OLAP model uses relational databases and presents data as virtual cubes?",
+      "options": [
+        "MOLAP",
+        "ROLAP",
+        "HOLAP",
+        "DOLAP"
+      ],
+      "answer": "ROLAP",
+      "explanation": "ROLAP uses relational databases with a semantic layer to simulate multidimensional structures."
+    },
+    {
+      "question": "Which of the following is NOT a characteristic of a data warehouse?",
+      "options": [
+        "Time-variant",
+        "Nonvolatile",
+        "Transaction-oriented",
+        "Subject-oriented"
+      ],
+      "answer": "Transaction-oriented",
+      "explanation": "Data warehouses are analytical and not optimized for transaction processing."
+    },
+    {
+      "question": "What is the main goal of the 'Go Forward Plan' at Continental Airlines?",
+      "options": [
+        "To increase flight delays",
+        "To centralize and consolidate data for better decision-making",
+        "To reduce the number of flights",
+        "To replace all IT systems"
+      ],
+      "answer": "To centralize and consolidate data for better decision-making",
+      "explanation": "The Go Forward Plan aimed to improve performance through centralized data and real-time BI."
+    },
+    {
+      "question": "What is the ROI of the Go Forward Plan at Continental Airlines?",
+      "options": [
+        "Less than 10%",
+        "Over 100%",
+        "Over 1000%",
+        "Exactly 500%"
+      ],
+      "answer": "Over 1000%",
+      "explanation": "The ROI was over 1000% over six years, resulting in significant cost savings and revenue generation."
+    },
+    {
+      "question": "What is the main purpose of a data warehouse in decision-making?",
+      "options": [
+        "To speed up transaction processing",
+        "To provide a single version of the truth",
+        "To replace existing operational systems",
+        "To reduce the need for reporting"
+      ],
+      "answer": "To provide a single version of the truth",
+      "explanation": "Data warehouses help eliminate data silos and provide consistent information."
+    },
+    {
+      "question": "What is the main difference between MOLAP and ROLAP?",
+      "options": [
+        "MOLAP uses relational databases while ROLAP uses cubes",
+        "MOLAP stores data in cubes while ROLAP uses relational databases",
+        "MOLAP is slower than ROLAP",
+        "MOLAP is always larger than ROLAP"
+      ],
+      "answer": "MOLAP stores data in cubes while ROLAP uses relational databases",
+      "explanation": "MOLAP is optimized for speed, while ROLAP is more scalable."
+    },
+    {
+      "question": "What is the role of a data mart in a data warehouse environment?",
+      "options": [
+        "To replace the data warehouse",
+        "To isolate subsets of data for easier access by end users",
+        "To manage ETL processes",
+        "To perform data cleansing"
+      ],
+      "answer": "To isolate subsets of data for easier access by end users",
+      "explanation": "Data marts focus on specific subject areas for targeted analysis."
+    },
+    {
+      "question": "What is the primary function of the 'kitchen' in a data warehouse architecture?",
+      "options": [
+        "To deliver reports to end users",
+        "To transform raw data into a target model",
+        "To visualize data for analysts",
+        "To manage security and access controls"
+      ],
+      "answer": "To transform raw data into a target model",
+      "explanation": "The kitchen is responsible for data integration and preparation."
+    },
+    {
+      "question": "Which of the following is NOT a typical step in the ETL process?",
+      "options": [
+        "Extraction",
+        "Transformation",
+        "Loading",
+        "Visualization"
+      ],
+      "answer": "Visualization",
+      "explanation": "Visualization occurs after the data is loaded into the warehouse."
+    },
+    {
+      "question": "What is the main disadvantage of a snowflake schema?",
+      "options": [
+        "Higher storage usage",
+        "Increased complexity and join overhead",
+        "Slower data loading",
+        "Greater risk of data inconsistency"
+      ],
+      "answer": "Increased complexity and join overhead",
+      "explanation": "Snowflake schemas require more joins, which can impact performance."
+    },
+    {
+      "question": "Which of the following is a valid example of a semi-additive fact?",
+      "options": [
+        "Total sales amount",
+        "Inventory level",
+        "Unit price",
+        "Number of customers"
+      ],
+      "answer": "Inventory level",
+      "explanation": "Semi-additive facts can be summed across some dimensions but not others."
+    },
+    {
+      "question": "Which of the following is a valid example of a non-additive fact?",
+      "options": [
+        "Quantity sold",
+        "Bank account balance",
+        "Average temperature",
+        "Sales amount"
+      ],
+      "answer": "Average temperature",
+      "explanation": "Non-additive facts cannot be meaningfully aggregated."
+    },
+    {
+      "question": "What is the grain in a fact table?",
+      "options": [
+        "The number of rows in the table",
+        "The level of detail in the measurement of an event",
+        "The size of the table",
+        "The number of dimensions"
+      ],
+      "answer": "The level of detail in the measurement of an event",
+      "explanation": "Grain defines the lowest level of detail in the fact table."
+    },
+    {
+      "question": "What is the purpose of a surrogate key?",
+      "options": [
+        "To improve performance",
+        "To provide a unique identifier independent of source systems",
+        "To reduce data redundancy",
+        "To store timestamps"
+      ],
+      "answer": "To provide a unique identifier independent of source systems",
+      "explanation": "Surrogate keys ensure consistency and avoid issues with natural keys."
+    },
+    {
+      "question": "Which of the following is NOT a type of fact table?",
+      "options": [
+        "Transaction",
+        "Periodic",
+        "Accumulating",
+        "Summary"
+      ],
+      "answer": "Summary",
+      "explanation": "Valid types include transaction, periodic, accumulating, and factless fact tables."
+    },
+    {
+      "question": "What is the main purpose of a dimensional model?",
+      "options": [
+        "To optimize for transaction processing",
+        "To support business intelligence and analysis",
+        "To replace operational systems",
+        "To store unstructured data"
+      ],
+      "answer": "To support business intelligence and analysis",
+      "explanation": "Dimensional models are designed for querying and analysis."
+    },
+    {
+      "question": "Which of the following is NOT a part of the Kimball four-step process for dimensional modeling?",
+      "options": [
+        "Select the business process",
+        "Declare the grain",
+        "Identify the dimensions",
+        "Define the primary key"
+      ],
+      "answer": "Define the primary key",
+      "explanation": "Kimball's steps are selecting the business process, declaring the grain, identifying dimensions, and identifying facts."
+    },
+    {
+      "question": "What is the main benefit of using a star schema?",
+      "options": [
+        "Better storage efficiency",
+        "Fewer joins and better performance",
+        "Support for deep drill-downs",
+        "Normalization of dimensions"
+      ],
+      "answer": "Fewer joins and better performance",
+      "explanation": "Star schemas are denormalized, making them faster for queries."
+    },
+    {
+      "question": "Which of the following is NOT a common OLAP operation?",
+      "options": [
+        "Drill down",
+        "Slice",
+        "Join",
+        "Pivot"
+      ],
+      "answer": "Join",
+      "explanation": "Common OLAP operations include drill down, slice, dice, pivot, and roll up."
+    },
+    {
+      "question": "Which of the following is NOT a characteristic of a data warehouse?",
+      "options": [
+        "Subject-Oriented",
+        "Integrated",
+        "Time-Variant",
+        "Write-optimized"
+      ],
+      "answer": "Write-optimized",
+      "explanation": "Data warehouses are read-optimized for analytical queries."
+    },
+    {
+      "question": "Which of the following is a key feature of a hybrid data mart?",
+      "options": [
+        "It is always smaller than a dependent data mart",
+        "It combines data from the data warehouse and other source systems",
+        "It is faster than any other type of data mart",
+        "It never uses ETL"
+      ],
+      "answer": "It combines data from the data warehouse and other source systems",
+      "explanation": "Hybrid data marts combine data from the data warehouse and external sources."
+    },
+    {
+      "question": "What is the main advantage of using a star schema over a snowflake schema?",
+      "options": [
+        "Better normalization",
+        "Fewer joins and better performance",
+        "Lower storage usage",
+        "Support for complex hierarchies"
+      ],
+      "answer": "Fewer joins and better performance",
+      "explanation": "Star schemas are denormalized, leading to fewer joins and faster queries."
+    },
+    {
+      "question": "What is the primary function of the 'dining room' in the data warehouse architecture metaphor?",
+      "options": [
+        "To process raw data",
+        "To store intermediate data",
+        "To present data in a user-friendly way",
+        "To manage ETL processes"
+      ],
+      "answer": "To present data in a user-friendly way",
+      "explanation": "The dining room represents the presentation layer for end users."
+    },
+    {
+      "question": "What is the main difference between Inmon’s Corporate Information Factory and Kimball’s Enterprise Data Bus?",
+      "options": [
+        "Inmon focuses on datamarts first, while Kimball builds the data warehouse first",
+        "Inmon uses a bottom-up approach, while Kimball uses a top-down approach",
+        "Inmon builds the data warehouse first, while Kimball starts with datamarts",
+        "Inmon uses snowflake schemas, while Kimball uses star schemas"
+      ],
+      "answer": "Inmon builds the data warehouse first, while Kimball starts with datamarts",
+      "explanation": "Inmon advocates a top-down approach, while Kimball supports a bottom-up, incremental design."
+    },
+    {
+      "question": "What is the main purpose of a fact table?",
+      "options": [
+        "To store descriptive attributes",
+        "To store numeric measures and foreign keys",
+        "To define hierarchies",
+        "To manage user access"
+      ],
+      "answer": "To store numeric measures and foreign keys",
+      "explanation": "Fact tables contain measures and foreign keys linking to dimensions."
+    },
+    {
+      "question": "Which of the following is a valid example of a transaction fact table?",
+      "options": [
+        "Monthly sales summary",
+        "Customer demographics",
+        "Individual sales transactions",
+        "Product inventory levels"
+      ],
+      "answer": "Individual sales transactions",
+      "explanation": "Transaction fact tables capture detailed, atomic-level events."
+    },
+    {
+      "question": "What is the main benefit of using a star schema?",
+      "options": [
+        "Reduces storage usage",
+        "Improves query performance",
+        "Supports deep hierarchies",
+        "Eliminates the need for ETL"
+      ],
+      "answer": "Improves query performance",
+      "explanation": "Star schemas are optimized for query performance due to fewer joins."
+    },
+    {
+      "question": "What is the main disadvantage of a snowflake schema?",
+      "options": [
+        "Increased storage usage",
+        "More complex queries due to additional joins",
+        "Limited scalability",
+        "Poor data quality"
+      ],
+      "answer": "More complex queries due to additional joins",
+      "explanation": "Snowflake schemas introduce more joins, increasing query complexity."
+    },
+    {
+      "question": "Which of the following is a key characteristic of additive facts?",
+      "options": [
+        "Can be added across all dimensions",
+        "Cannot be aggregated",
+        "Only aggregated across some dimensions",
+        "Stored in snowflake schemas"
+      ],
+      "answer": "Can be added across all dimensions",
+      "explanation": "Additive facts can be summed across all dimensions."
+    },
+    {
+      "question": "Which of the following is a valid example of a semi-additive fact?",
+      "options": [
+        "Total sales amount",
+        "Inventory level",
+        "Unit price",
+        "Profit margin"
+      ],
+      "answer": "Inventory level",
+      "explanation": "Semi-additive facts can be summed across some dimensions but not others."
+    },
+    {
+      "question": "What is the main purpose of a degenerate dimension?",
+      "options": [
+        "To represent time-based data",
+        "To handle cases where foreign keys alone do not uniquely identify a row",
+        "To store audit data",
+        "To reduce data redundancy"
+      ],
+      "answer": "To handle cases where foreign keys alone do not uniquely identify a row",
+      "explanation": "Degenerate dimensions are used when foreign keys alone are not sufficient."
+    },
+    {
+      "question": "What is the main benefit of using surrogate keys in a data warehouse?",
+      "options": [
+        "Improved query performance",
+        "Consistent and unique identification across systems",
+        "Reduced storage usage",
+        "Simplified ETL processes"
+      ],
+      "answer": "Consistent and unique identification across systems",
+      "explanation": "Surrogate keys ensure uniqueness and consistency across source systems."
+    },
+    {
+      "question": "Which of the following is NOT a typical component of a data warehouse architecture?",
+      "options": [
+        "Staging area",
+        "ETL processes",
+        "End-user interfaces",
+        "Operational databases"
+      ],
+      "answer": "Operational databases",
+      "explanation": "Operational databases are part of source systems, not the data warehouse itself."
+    },
+    {
+      "question": "Which of the following is a valid example of a factless fact table?",
+      "options": [
+        "Sales by product",
+        "Customer purchases",
+        "Attendance records",
+        "Inventory levels"
+      ],
+      "answer": "Attendance records",
+      "explanation": "Factless fact tables track events without numeric measures."
+    },
+    {
+      "question": "Which of the following is a key advantage of a snowflake schema?",
+      "options": [
+        "Simpler queries",
+        "Better storage efficiency",
+        "Faster data loading",
+        "Easier to understand"
+      ],
+      "answer": "Better storage efficiency",
+      "explanation": "Snowflake schemas reduce data redundancy through normalization."
+    },
+    {
+      "question": "Which of the following is a valid example of a conformed dimension?",
+      "options": [
+        "Date",
+        "Product",
+        "Store",
+        "All of the above"
+      ],
+      "answer": "All of the above",
+      "explanation": "Conformed dimensions are shared across fact tables and datamarts."
+    },
+    {
+      "question": "Which of the following is NOT a common OLAP operation?",
+      "options": [
+        "Drill down",
+        "Slice",
+        "Join",
+        "Roll up"
+      ],
+      "answer": "Join",
+      "explanation": "Common OLAP operations include drill down, slice, dice, pivot, and roll up."
+    },
+    {
+      "question": "Which of the following is a valid example of a fact table grain?",
+      "options": [
+        "Daily sales per region",
+        "Monthly sales per product",
+        "Individual product on a POS transaction",
+        "Quarterly sales by department"
+      ],
+      "answer": "Individual product on a POS transaction",
+      "explanation": "Grain defines the level of detail in a fact table."
+    },
+    {
+      "question": "Which of the following is a valid example of a non-additive fact?",
+      "options": [
+        "Total sales",
+        "Average temperature",
+        "Inventory count",
+        "Number of units sold"
+      ],
+      "answer": "Average temperature",
+      "explanation": "Non-additive facts cannot be meaningfully aggregated."
+    },
+    {
+      "question": "Which of the following is NOT a typical step in the ETL process?",
+      "options": [
+        "Extraction",
+        "Transformation",
+        "Loading",
+        "Visualization"
+      ],
+      "answer": "Visualization",
+      "explanation": "Visualization is part of the BI layer, not ETL."
+    },
+    {
+      "question": "What is the main advantage of using a star schema?",
+      "options": [
+        "Fewer joins and better performance",
+        "Better storage efficiency",
+        "Support for complex hierarchies",
+        "Easier to normalize"
+      ],
+      "answer": "Fewer joins and better performance",
+      "explanation": "Star schemas are denormalized, making queries faster."
+    },
+    {
+      "question": "Which of the following is a valid example of a semi-additive fact?",
+      "options": [
+        "Total sales",
+        "Inventory level",
+        "Unit price",
+        "Profit margin"
+      ],
+      "answer": "Inventory level",
+      "explanation": "Semi-additive facts can be summed across some dimensions but not others."
+    },
+    {
+      "question": "What is the main purpose of a factless fact table?",
+      "options": [
+        "To store numeric measures",
+        "To track events that did not occur",
+        "To reduce data redundancy",
+        "To improve query performance"
+      ],
+      "answer": "To track events that did not occur",
+      "explanation": "Factless fact tables record events without numeric measures."
+    },
+    {
+      "question": "Which of the following is a key advantage of a snowflake schema?",
+      "options": [
+        "Fewer joins",
+        "Better storage efficiency",
+        "Easier to query",
+        "Improved performance"
+      ],
+      "answer": "Better storage efficiency",
+      "explanation": "Snowflake schemas reduce data duplication through normalization."
+    },
+    {
+      "question": "What is the main purpose of a data warehouse?",
+      "options": [
+        "To support transaction processing",
+        "To support decision-making through historical data",
+        "To replace operational systems",
+        "To manage ETL processes"
+      ],
+      "answer": "To support decision-making through historical data",
+      "explanation": "Data warehouses are designed for analytical and historical analysis."
+    },
+    {
+      "question": "Which of the following is a key characteristic of a data warehouse?",
+      "options": [
+        "High write frequency",
+        "Large volumes of historical data",
+        "Designed for real-time updates",
+        "Optimized for transactional workloads"
+      ],
+      "answer": "Large volumes of historical data",
+      "explanation": "Data warehouses store large historical datasets for analysis."
+    },
+    {
+      "question": "What is the main purpose of a staging area in a data warehouse?",
+      "options": [
+        "To store the final processed data",
+        "To clean and transform data before loading",
+        "To provide direct access to end users",
+        "To optimize query performance"
+      ],
+      "answer": "To clean and transform data before loading",
+      "explanation": "The staging area prepares data for loading into the warehouse."
+    },
+    {
+      "question": "Which of the following is a key benefit of using a star schema?",
+      "options": [
+        "Improved storage efficiency",
+        "Easier to understand and query",
+        "Support for deep drill-downs",
+        "Better data normalization"
+      ],
+      "answer": "Easier to understand and query",
+      "explanation": "Star schemas are simple and intuitive for end users."
+    },
+    {
+      "question": "Which of the following is a key advantage of using a snowflake schema?",
+      "options": [
+        "Fewer joins",
+        "Better query performance",
+        "Better storage efficiency",
+        "Simpler schema design"
+      ],
+      "answer": "Better storage efficiency",
+      "explanation": "Snowflake schemas reduce data duplication through normalization."
+    },
+    {
+      "question": "Which of the following is a valid example of a conformed dimension?",
+      "options": [
+        "Date",
+        "Customer",
+        "Product",
+        "All of the above"
+      ],
+      "answer": "All of the above",
+      "explanation": "Conformed dimensions are reused across fact tables."
+    },
+    {
+      "question": "Which of the following is a valid example of a slowly changing dimension (SCD) Type 2?",
+      "options": [
+        "Overwrite old values",
+        "Add new rows for changes",
+        "Track limited history in columns",
+        "Retain original values"
+      ],
+      "answer": "Add new rows for changes",
+      "explanation": "Type 2 SCD adds new rows to preserve historical data."
+    },
+    {
+      "question": "Which of the following is a valid example of a slowly changing dimension (SCD) Type 1?",
+      "options": [
+        "Add new rows for changes",
+        "Overwrite old values",
+        "Track limited history in columns",
+        "Retain original values"
+      ],
+      "answer": "Overwrite old values",
+      "explanation": "Type 1 SCD overwrites old values with new ones."
+    },
+    {
+      "question": "Which of the following is a valid example of a slowly changing dimension (SCD) Type 3?",
+      "options": [
+        "Add new rows for changes",
+        "Overwrite old values",
+        "Track limited history in columns",
+        "Retain original values"
+      ],
+      "answer": "Track limited history in columns",
+      "explanation": "Type 3 SCD tracks limited history using additional columns."
+    },
+    {
+      "question": "Which of the following is a key characteristic of a data warehouse?",
+      "options": [
+        "High update frequency",
+        "Large volumes of historical data",
+        "Designed for ad hoc queries",
+        "Both B and C"
+      ],
+      "answer": "Both B and C",
+      "explanation": "Data warehouses store historical data and support ad hoc queries."
+    },
+    {
+      "question": "What is the main purpose of a data mart?",
+      "options": [
+        "To replace the data warehouse",
+        "To provide a subset of data for specific departments or subjects",
+        "To store raw data",
+        "To manage ETL processes"
+      ],
+      "answer": "To provide a subset of data for specific departments or subjects",
+      "explanation": "Data marts are focused on specific business processes."
+    },
+    {
+      "question": "Which of the following is a key benefit of using a data warehouse?",
+      "options": [
+        "Faster transaction processing",
+        "Improved data integration and consistency",
+        "Reduced data volume",
+        "Better real-time data access"
+      ],
+      "answer": "Improved data integration and consistency",
+      "explanation": "Data warehouses integrate data from multiple sources."
+    },
+    {
+      "question": "What is the main purpose of a dimensional model?",
+      "options": [
+        "To support transaction processing",
+        "To support business intelligence and analysis",
+        "To replace operational systems",
+        "To manage ETL processes"
+      ],
+      "answer": "To support business intelligence and analysis",
+      "explanation": "Dimensional models are designed for analytical purposes."
+    },
+    {
+      "question": "Which of the following is a key characteristic of a data warehouse?",
+      "options": [
+        "High update frequency",
+        "Large volumes of historical data",
+        "Designed for ad hoc queries",
+        "All of the above"
+      ],
+      "answer": "All of the above",
+      "explanation": "Data warehouses store historical data and support ad hoc queries."
+    },
+    {
+      "question": "What is the main purpose of a fact table?",
+      "options": [
+        "To store descriptive attributes",
+        "To store numeric measures and foreign keys",
+        "To define hierarchies",
+        "To manage user access"
+      ],
+      "answer": "To store numeric measures and foreign keys",
+      "explanation": "Fact tables contain measures and foreign keys to dimensions."
+    },
+    {
+      "question": "Which of the following is a key advantage of a star schema?",
+      "options": [
+        "Better storage efficiency",
+        "Fewer joins and better performance",
+        "Support for complex hierarchies",
+        "Improved data normalization"
+      ],
+      "answer": "Fewer joins and better performance",
+      "explanation": "Star schemas are denormalized, reducing the number of joins."
+    },
+    {
+      "question": "What is the main purpose of a dimension table?",
+      "options": [
+        "To store numeric measures",
+        "To provide context for facts",
+        "To store ETL logs",
+        "To manage user access"
+      ],
+      "answer": "To provide context for facts",
+      "explanation": "Dimensions describe the who, what, when, and where of facts."
+    },
+    {
+      "question": "Which of the following is a key advantage of using a snowflake schema?",
+      "options": [
+        "Fewer joins",
+        "Better storage efficiency",
+        "Easier to understand",
+        "Improved query performance"
+      ],
+      "answer": "Better storage efficiency",
+      "explanation": "Snowflake schemas reduce redundancy through normalization."
+    },
+    {
+      "question": "Which of the following is a valid example of a fact table grain?",
+      "options": [
+        "Daily sales per region",
+        "Monthly sales per product",
+        "Individual product on a POS transaction",
+        "Quarterly sales by department"
+      ],
+      "answer": "Individual product on a POS transaction",
+      "explanation": "Grain defines the lowest level of detail in a fact table."
+    },
+    {
+      "question": "Which of the following is a valid example of a non-additive fact?",
+      "options": [
+        "Total sales",
+        "Inventory level",
+        "Unit price",
+        "Profit margin"
+      ],
+      "answer": "Unit price",
+      "explanation": "Non-additive facts cannot be meaningfully aggregated."
+    },
+    {
+      "question": "What is the main purpose of a data warehouse in decision-making?",
+      "options": [
+        "To speed up transaction processing",
+        "To provide a single version of the truth",
+        "To replace operational systems",
+        "To manage ETL processes"
+      ],
+      "answer": "To provide a single version of the truth",
+      "explanation": "Data warehouses consolidate data to support consistent decision-making."
+    },
+    {
+      "question": "Which of the following is a key benefit of using a data warehouse?",
+      "options": [
+        "Faster transaction processing",
+        "Improved data integration and consistency",
+        "Reduced data volume",
+        "Better real-time data access"
+      ],
+      "answer": "Improved data integration and consistency",
+      "explanation": "Data warehouses integrate data from multiple sources."
+    },
+    {
+      "question": "What is the main purpose of a dimensional model?",
+      "options": [
+        "To support transaction processing",
+        "To support business intelligence and analysis",
+        "To replace operational systems",
+        "To manage ETL processes"
+      ],
+      "answer": "To support business intelligence and analysis",
+      "explanation": "Dimensional models are designed for analytical purposes."
+    },
+    {
+      "question": "Which of the following is a key characteristic of a data warehouse?",
+      "options": [
+        "High update frequency",
+        "Large volumes of historical data",
+        "Designed for ad hoc queries",
+        "All of the above"
+      ],
+      "answer": "All of the above",
+      "explanation": "Data warehouses store historical data and support ad hoc queries."
+    },
+    {
+      "question": "What is the main purpose of a fact table?",
+      "options": [
+        "To store descriptive attributes",
+        "To store numeric measures and foreign keys",
+        "To define hierarchies",
+        "To manage user access"
+      ],
+      "answer": "To store numeric measures and foreign keys",
+      "explanation": "Fact tables contain measures and foreign keys to dimensions."
+    },
+  {
+    "question": "Which of the following is a key advantage of a star schema?",
+    "options": [
+      "Better storage efficiency",
+      "Fewer joins and better performance",
+      "Support for complex hierarchies",
+      "Improved data normalization"
+    ],
+    "answer": "Fewer joins and better performance",
+    "explanation": "Star schemas are denormalized, which reduces the number of joins needed during query execution, improving performance."
+  },
+  {
+    "question": "What is the primary purpose of a staging area in a data warehouse?",
+    "options": [
+      "To store the final processed data",
+      "To clean and transform data before loading into the data warehouse",
+      "To provide direct access to end users",
+      "To optimize query performance"
+    ],
+    "answer": "To clean and transform data before loading into the data warehouse",
+    "explanation": "The staging area is where raw data is prepared and transformed before it is loaded into the data warehouse."
+  },
+  {
+    "question": "Which type of data mart is created from an existing enterprise data warehouse?",
+    "options": [
+      "Independent Data Mart",
+      "Dependent Data Mart",
+      "Hybrid Data Mart",
+      "All of the above"
+    ],
+    "answer": "Dependent Data Mart",
+    "explanation": "A dependent data mart is built from an existing data warehouse and can be either a logical view or a physical subset."
+  },
+  {
+    "question": "What does ETL stand for?",
+    "options": [
+      "Extract, Transform, Load",
+      "Evaluate, Test, Launch",
+      "Explore, Transform, Log",
+      "Export, Translate, Load"
+    ],
+    "answer": "Extract, Transform, Load",
+    "explanation": "ETL refers to the process of extracting data from sources, transforming it, and loading it into a target system such as a data warehouse."
+  },
+  {
+    "question": "What is a fact table in dimensional modeling?",
+    "options": [
+      "A table containing descriptive attributes about business entities",
+      "A table storing numeric measures related to business events",
+      "A table representing hierarchical relationships",
+      "A table used for metadata management"
+    ],
+    "answer": "A table storing numeric measures related to business events",
+    "explanation": "Fact tables contain quantitative data that can be analyzed to understand business performance."
+  },
+  {
+    "question": "Which of the following is NOT a characteristic of a data warehouse?",
+    "options": [
+      "Subject-Oriented",
+      "Integrated",
+      "Time-Variant",
+      "Write-optimized"
+    ],
+    "answer": "Write-optimized",
+    "explanation": "Data warehouses are read-optimized for analytical queries rather than transactional writes."
+  },
+  {
+    "question": "Which OLAP model stores data in multidimensional cubes?",
+    "options": [
+      "MOLAP",
+      "ROLAP",
+      "HOLAP",
+      "DOLAP"
+    ],
+    "answer": "MOLAP",
+    "explanation": "MOLAP stands for Multidimensional OLAP and uses precomputed cubes for fast querying."
+  },
+  {
+    "question": "Which of the following is a valid example of a semi-additive fact?",
+    "options": [
+      "Total sales amount",
+      "Inventory level",
+      "Unit price",
+      "Number of customers"
+    ],
+    "answer": "Inventory level",
+    "explanation": "Semi-additive facts can be summed across some dimensions but not all."
+  },
+  {
+    "question": "Which of the following is a key benefit of using a snowflake schema?",
+    "options": [
+      "Fewer joins",
+      "Better storage efficiency",
+      "Easier to query",
+      "Improved data normalization"
+    ],
+    "answer": "Better storage efficiency",
+    "explanation": "Snowflake schemas reduce redundancy by normalizing dimension tables."
+  },
+  {
+    "question": "What is the main disadvantage of a snowflake schema compared to a star schema?",
+    "options": [
+      "Higher storage usage",
+      "More complex queries due to additional joins",
+      "Poorer data quality",
+      "Slower data extraction"
+    ],
+    "answer": "More complex queries due to additional joins",
+    "explanation": "Snowflake schemas require more joins, which increases query complexity and may impact performance."
+  },
+  {
+    "question": "Which of the following best describes a conformed dimension?",
+    "options": [
+      "A dimension that is shared across multiple fact tables or schemas",
+      "A dimension with normalized hierarchies",
+      "A dimension with no time component",
+      "A dimension that is completely denormalized"
+    ],
+    "answer": "A dimension that is shared across multiple fact tables or schemas",
+    "explanation": "Conformed dimensions ensure consistency across different parts of the data warehouse."
+  },
+  {
+    "question": "What is the grain in a fact table?",
+    "options": [
+      "The number of rows in the table",
+      "The level of detail in the measurement of an event",
+      "The size of the table",
+      "The number of dimensions"
+    ],
+    "answer": "The level of detail in the measurement of an event",
+    "explanation": "Grain defines the lowest level of detail at which data is captured in the fact table."
+  },
+  {
+    "question": "Which of the following is NOT a common OLAP operation?",
+    "options": [
+      "Drill down",
+      "Slice",
+      "Join",
+      "Pivot"
+    ],
+    "answer": "Join",
+    "explanation": "Common OLAP operations include drill down, slice, dice, pivot, and roll up."
+  },
+  {
+    "question": "What is the main purpose of a data warehouse?",
+    "options": [
+      "To support transaction processing",
+      "To support decision-making through historical data",
+      "To replace operational systems",
+      "To manage ETL processes"
+    ],
+    "answer": "To support decision-making through historical data",
+    "explanation": "Data warehouses are designed for analytical use and support strategic decisions."
+  },
+  {
+    "question": "Which of the following is a key characteristic of additive facts?",
+    "options": [
+      "Can be added across all dimensions",
+      "Cannot be aggregated",
+      "Only aggregated across some dimensions",
+      "Stored in snowflake schemas"
+    ],
+    "answer": "Can be added across all dimensions",
+    "explanation": "Additive facts can be summed across any dimension."
+  },
+  {
+    "question": "What is the main difference between Inmon’s Corporate Information Factory and Kimball’s Enterprise Data Bus?",
+    "options": [
+      "Inmon focuses on datamarts first, while Kimball builds the data warehouse first",
+      "Inmon uses a bottom-up approach, while Kimball uses a top-down approach",
+      "Inmon builds the data warehouse first, while Kimball starts with datamarts",
+      "Inmon uses snowflake schemas, while Kimball uses star schemas"
+    ],
+    "answer": "Inmon builds the data warehouse first, while Kimball starts with datamarts",
+    "explanation": "Inmon advocates for a top-down design starting with the enterprise data warehouse, whereas Kimball uses a bottom-up approach with datamarts."
+  },
+  {
+    "question": "What is the primary function of a surrogate key?",
+    "options": [
+      "To improve performance",
+      "To uniquely identify rows in a dimension or fact table",
+      "To reduce storage requirements",
+      "To simplify user queries"
+    ],
+    "answer": "To uniquely identify rows in a dimension or fact table",
+    "explanation": "Surrogate keys are artificial identifiers used to ensure uniqueness and avoid issues with natural keys."
+  },
+  {
+    "question": "Which of the following is a valid example of a non-additive fact?",
+    "options": [
+      "Total sales amount",
+      "Inventory level",
+      "Unit price",
+      "Profit margin"
+    ],
+    "answer": "Unit price",
+    "explanation": "Non-additive facts cannot be meaningfully aggregated."
+  },
+  {
+    "question": "Which of the following is NOT a part of the Kimball four-step process for dimensional modeling?",
+    "options": [
+      "Select the business process",
+      "Declare the grain",
+      "Identify the dimensions",
+      "Define the primary key"
+    ],
+    "answer": "Define the primary key",
+    "explanation": "Kimball's steps are selecting the business process, declaring the grain, identifying dimensions, and identifying facts."
+  },
+  {
+    "question": "Which of the following is a key feature of a data warehouse?",
+    "options": [
+      "High write frequency",
+      "Large volumes of historical data",
+      "Designed for ad hoc queries",
+      "Both B and C"
+    ],
+    "answer": "Both B and C",
+    "explanation": "Data warehouses store large historical datasets and support ad hoc analysis."
+  },
+  {
+    "question": "What is the main purpose of a factless fact table?",
+    "options": [
+      "To store numeric measures",
+      "To track events that did not occur",
+      "To reduce data redundancy",
+      "To improve query performance"
+    ],
+    "answer": "To track events that did not occur",
+    "explanation": "Factless fact tables record combinations of dimensions without numeric measures."
+  },
+  {
+    "question": "Which of the following is a key characteristic of a data warehouse?",
+    "options": [
+      "High update frequency",
+      "Large volumes of historical data",
+      "Designed for real-time updates",
+      "Optimized for transactional workloads"
+    ],
+    "answer": "Large volumes of historical data",
+    "explanation": "Data warehouses are built around historical data for analysis."
+  },
+  {
+    "question": "Which of the following is a valid example of a slowly changing dimension (SCD) Type 2?",
+    "options": [
+      "Overwrite old values",
+      "Add new rows for changes",
+      "Track limited history in columns",
+      "Retain original values"
+    ],
+    "answer": "Add new rows for changes",
+    "explanation": "Type 2 SCD adds new rows to preserve historical data when changes occur."
+  },
+  {
+    "question": "What is the main purpose of the 'kitchen' in a data warehouse architecture?",
+    "options": [
+      "To deliver reports to end users",
+      "To transform raw data into a target model",
+      "To visualize data for analysts",
+      "To manage security and access controls"
+    ],
+    "answer": "To transform raw data into a target model",
+    "explanation": "The kitchen is responsible for data integration and preparation before loading into the warehouse."
+  },
+  {
+    "question": "Which of the following is a valid example of a fact table grain?",
+    "options": [
+      "Daily sales per region",
+      "Monthly sales per product",
+      "Individual product on a POS transaction",
+      "Quarterly sales by department"
+    ],
+    "answer": "Individual product on a POS transaction",
+    "explanation": "Grain defines the level of detail in the fact table."
+  },
+  {
+    "question": "Which of the following is NOT a typical step in the ETL process?",
+    "options": [
+      "Extraction",
+      "Transformation",
+      "Loading",
+      "Visualization"
+    ],
+    "answer": "Visualization",
+    "explanation": "Visualization occurs after data is loaded into the warehouse."
+  },
+  {
+    "question": "Which of the following is a valid example of a slowly changing dimension (SCD) Type 1?",
+    "options": [
+      "Add new rows for changes",
+      "Overwrite old values",
+      "Track limited history in columns",
+      "Retain original values"
+    ],
+    "answer": "Overwrite old values",
+    "explanation": "Type 1 SCD overwrites old values with new ones."
+  },
+  {
+    "question": "Which of the following is a key benefit of using a data warehouse?",
+    "options": [
+      "Faster transaction processing",
+      "Improved data integration and consistency",
+      "Reduced data volume",
+      "Better real-time data access"
+    ],
+    "answer": "Improved data integration and consistency",
+    "explanation": "Data warehouses integrate data from multiple sources and ensure consistent views."
+  },
+  {
+    "question": "What is the main purpose of a dimensional model?",
+    "options": [
+      "To support transaction processing",
+      "To support business intelligence and analysis",
+      "To replace operational systems",
+      "To manage ETL processes"
+    ],
+    "answer": "To support business intelligence and analysis",
+    "explanation": "Dimensional models are designed for querying and analysis."
+  },
+  {
+    "question": "Which of the following is a key characteristic of a data warehouse?",
+    "options": [
+      "High update frequency",
+      "Large volumes of historical data",
+      "Designed for ad hoc queries",
+      "All of the above"
+    ],
+    "answer": "All of the above",
+    "explanation": "Data warehouses store historical data and support ad hoc queries."
+  },
+  {
+    "question": "What is the main purpose of a fact table?",
+    "options": [
+      "To store descriptive attributes",
+      "To store numeric measures and foreign keys",
+      "To define hierarchies",
+      "To manage user access"
+    ],
+    "answer": "To store numeric measures and foreign keys",
+    "explanation": "Fact tables contain measures and foreign keys linking to dimensions."
+  },
+  {
+    "question": "Which of the following is a key advantage of a star schema?",
+    "options": [
+      "Better storage efficiency",
+      "Fewer joins and better performance",
+      "Support for complex hierarchies",
+      "Improved data normalization"
+    ],
+    "answer": "Fewer joins and better performance",
+    "explanation": "Star schemas are denormalized, reducing the need for complex joins."
+  },
+  {
+    "question": "What is the main purpose of a dimension table?",
+    "options": [
+      "To store numeric measures",
+      "To provide context for facts",
+      "To store ETL logs",
+      "To manage user access"
+    ],
+    "answer": "To provide context for facts",
+    "explanation": "Dimensions describe the who, what, when, and where of facts."
+  },
+  {
+    "question": "Which of the following is a key advantage of using a snowflake schema?",
+    "options": [
+      "Fewer joins",
+      "Better storage efficiency",
+      "Easier to understand",
+      "Improved query performance"
+    ],
+    "answer": "Better storage efficiency",
+    "explanation": "Snowflake schemas reduce redundancy through normalization."
+  },
+  {
+    "question": "Which of the following is a valid example of a conformed dimension?",
+    "options": [
+      "Date",
+      "Product",
+      "Store",
+      "All of the above"
+    ],
+    "answer": "All of the above",
+    "explanation": "Conformed dimensions are reused across fact tables and datamarts."
+  },
+  {
+    "question": "Which of the following is a valid example of a factless fact table?",
+    "options": [
+      "Sales by product",
+      "Customer purchases",
+      "Attendance records",
+      "Inventory levels"
+    ],
+    "answer": "Attendance records",
+    "explanation": "Factless fact tables do not include numeric measures but record events."
+  },
+  {
+    "question": "What is the main purpose of a data warehouse in decision-making?",
+    "options": [
+      "To speed up transaction processing",
+      "To provide a single version of the truth",
+      "To replace operational systems",
+      "To manage ETL processes"
+    ],
+    "answer": "To provide a single version of the truth",
+    "explanation": "Data warehouses consolidate data to support consistent decision-making."
+  },
+  {
+    "question": "Which of the following is a key benefit of using a data warehouse?",
+    "options": [
+      "Faster transaction processing",
+      "Improved data integration and consistency",
+      "Reduced data volume",
+      "Better real-time data access"
+    ],
+    "answer": "Improved data integration and consistency",
+    "explanation": "Data warehouses integrate data from multiple sources."
+  },
+  {
+    "question": "What is the main purpose of a dimensional model?",
+    "options": [
+      "To support transaction processing",
+      "To support business intelligence and analysis",
+      "To replace operational systems",
+      "To manage ETL processes"
+    ],
+    "answer": "To support business intelligence and analysis",
+    "explanation": "Dimensional models are designed for analytical purposes."
+  },
+  {
+    "question": "Which of the following is a key characteristic of a data warehouse?",
+    "options": [
+      "High update frequency",
+      "Large volumes of historical data",
+      "Designed for ad hoc queries",
+      "All of the above"
+    ],
+    "answer": "All of the above",
+    "explanation": "Data warehouses store historical data and support ad hoc queries."
+  },
+  {
+    "question": "What is the main purpose of a fact table?",
+    "options": [
+      "To store descriptive attributes",
+      "To store numeric measures and foreign keys",
+      "To define hierarchies",
+      "To manage user access"
+    ],
+    "answer": "To store numeric measures and foreign keys",
+    "explanation": "Fact tables contain measures and foreign keys to dimensions."
+  },
+  {
+    "question": "Which of the following is a key advantage of a star schema?",
+    "options": [
+      "Better storage efficiency",
+      "Fewer joins and better performance",
+      "Support for complex hierarchies",
+      "Improved data normalization"
+    ],
+    "answer": "Fewer joins and better performance",
+    "explanation": "Star schemas are denormalized, making queries faster."
+  },
+  {
+    "question": "What is the main purpose of a data warehouse?",
+    "options": [
+      "To support transaction processing",
+      "To support decision-making through historical data",
+      "To replace operational systems",
+      "To manage ETL processes"
+    ],
+    "answer": "To support decision-making through historical data",
+    "explanation": "Data warehouses are designed for analytical and historical analysis."
+  },
+  {
+    "question": "Which of the following is a key characteristic of a data warehouse?",
+    "options": [
+      "High write frequency",
+      "Large volumes of historical data",
+      "Designed for real-time updates",
+      "Optimized for transactional workloads"
+    ],
+    "answer": "Large volumes of historical data",
+    "explanation": "Data warehouses store large historical datasets for analysis."
+  },
+  {
+    "question": "What is the main purpose of a staging area in a data warehouse?",
+    "options": [
+      "To store the final processed data",
+      "To clean and transform data before loading",
+      "To provide direct access to end users",
+      "To optimize query performance"
+    ],
+    "answer": "To clean and transform data before loading",
+    "explanation": "The staging area prepares data for loading into the warehouse."
+  },
+  {
+    "question": "Which of the following is a key benefit of using a star schema?",
+    "options": [
+      "Improved storage efficiency",
+      "Easier to understand and query",
+      "Support for deep drill-downs",
+      "Better data normalization"
+    ],
+    "answer": "Easier to understand and query",
+    "explanation": "Star schemas are simple and intuitive for end users."
+  },
+  {
+    "question": "Which of the following is a key advantage of using a snowflake schema?",
+    "options": [
+      "Fewer joins",
+      "Better storage efficiency",
+      "Easier to query",
+      "Simpler schema design"
+    ],
+    "answer": "Better storage efficiency",
+    "explanation": "Snowflake schemas reduce data duplication through normalization."
+  },
+  {
+    "question": "Which of the following is a valid example of a conformed dimension?",
+    "options": [
+      "Date",
+      "Customer",
+      "Product",
+      "All of the above"
+    ],
+    "answer": "All of the above",
+    "explanation": "Conformed dimensions are reused across fact tables."
+  },
+  {
+    "question": "Which of the following is a valid example of a slowly changing dimension (SCD) Type 2?",
+    "options": [
+      "Overwrite old values",
+      "Add new rows for changes",
+      "Track limited history in columns",
+      "Retain original values"
+    ],
+    "answer": "Add new rows for changes",
+    "explanation": "Type 2 SCD adds new rows to preserve historical data."
+  },
+  {
+    "question": "Which of the following is a valid example of a slowly changing dimension (SCD) Type 1?",
+    "options": [
+      "Add new rows for changes",
+      "Overwrite old values",
+      "Track limited history in columns",
+      "Retain original values"
+    ],
+    "answer": "Overwrite old values",
+    "explanation": "Type 1 SCD overwrites old values with new ones."
+  },
+  {
+    "question": "Which of the following is a valid example of a slowly changing dimension (SCD) Type 3?",
+    "options": [
+      "Add new rows for changes",
+      "Overwrite old values",
+      "Track limited history in columns",
+      "Retain original values"
+    ],
+    "answer": "Track limited history in columns",
+    "explanation": "Type 3 SCD tracks limited history using additional columns."
+  },
+  {
+    "question": "Which of the following is a key characteristic of a data warehouse?",
+    "options": [
+      "High update frequency",
+      "Large volumes of historical data",
+      "Designed for ad hoc queries",
+      "Both B and C"
+    ],
+    "answer": "Both B and C",
+    "explanation": "Data warehouses store historical data and support ad hoc queries."
+  },
+  {
+    "question": "What is the main purpose of a data mart?",
+    "options": [
+      "To replace the data warehouse",
+      "To provide a subset of data for specific departments or subjects",
+      "To store raw data",
+      "To manage ETL processes"
+    ],
+    "answer": "To provide a subset of data for specific departments or subjects",
+    "explanation": "Data marts are focused on specific business processes."
+  },
+  {
+    "question": "Which of the following is a key benefit of using a data warehouse?",
+    "options": [
+      "Faster transaction processing",
+      "Improved data integration and consistency",
+      "Reduced data volume",
+      "Better real-time data access"
+    ],
+    "answer": "Improved data integration and consistency",
+    "explanation": "Data warehouses integrate data from multiple sources."
+  },
+  {
+    "question": "What is the main purpose of a dimensional model?",
+    "options": [
+      "To support transaction processing",
+      "To support business intelligence and analysis",
+      "To replace operational systems",
+      "To manage ETL processes"
+    ],
+    "answer": "To support business intelligence and analysis",
+    "explanation": "Dimensional models are designed for analytical purposes."
+  },
+  {
+    "question": "Which of the following is a key characteristic of a data warehouse?",
+    "options": [
+      "High update frequency",
+      "Large volumes of historical data",
+      "Designed for ad hoc queries",
+      "All of the above"
+    ],
+    "answer": "All of the above",
+    "explanation": "Data warehouses store historical data and support ad hoc queries."
+  },
+  {
+    "question": "What is the main purpose of a fact table?",
+    "options": [
+      "To store descriptive attributes",
+      "To store numeric measures and foreign keys",
+      "To define hierarchies",
+      "To manage user access"
+    ],
+    "answer": "To store numeric measures and foreign keys",
+    "explanation": "Fact tables contain measures and foreign keys to dimensions."
+  },
+  {
+    "question": "Which of the following is a key advantage of a star schema?",
+    "options": [
+      "Better storage efficiency",
+      "Fewer joins and better performance",
+      "Support for complex hierarchies",
+      "Improved data normalization"
+    ],
+    "answer": "Fewer joins and better performance",
+    "explanation": "Star schemas are denormalized, reducing the number of joins."
+  },
+  {
+    "question": "What is the main purpose of a dimension table?",
+    "options": [
+      "To store numeric measures",
+      "To provide context for facts",
+      "To store ETL logs",
+      "To manage user access"
+    ],
+    "answer": "To provide context for facts",
+    "explanation": "Dimensions describe the who, what, when, and where of facts."
+  },
+  {
+    "question": "Which of the following is a key advantage of using a snowflake schema?",
+    "options": [
+      "Fewer joins",
+      "Better storage efficiency",
+      "Easier to understand",
+      "Improved query performance"
+    ],
+    "answer": "Better storage efficiency",
+    "explanation": "Snowflake schemas reduce redundancy through normalization."
+  },
+  {
+    "question": "Which of the following is a valid example of a fact table grain?",
+    "options": [
+      "Daily sales per region",
+      "Monthly sales per product",
+      "Individual product on a POS transaction",
+      "Quarterly sales by department"
+    ],
+    "answer": "Individual product on a POS transaction",
+    "explanation": "Grain defines the lowest level of detail in a fact table."
+  },
+  {
+    "question": "Which of the following is a valid example of a non-additive fact?",
+    "options": [
+      "Total sales",
+      "Inventory level",
+      "Unit price",
+      "Profit margin"
+    ],
+    "answer": "Unit price",
+    "explanation": "Non-additive facts cannot be meaningfully aggregated."
+  },
+  {
+    "question": "What is the main purpose of a data warehouse in decision-making?",
+    "options": [
+      "To speed up transaction processing",
+      "To provide a single version of the truth",
+      "To replace operational systems",
+      "To manage ETL processes"
+    ],
+    "answer": "To provide a single version of the truth",
+    "explanation": "Data warehouses consolidate data to support consistent decision-making."
+  },
+  {
+    "question": "Which of the following is a key benefit of using a data warehouse?",
+    "options": [
+      "Faster transaction processing",
+      "Improved data integration and consistency",
+      "Reduced data volume",
+      "Better real-time data access"
+    ],
+    "answer": "Improved data integration and consistency",
+    "explanation": "Data warehouses integrate data from multiple sources."
+  },
+  {
+    "question": "What is the main purpose of a dimensional model?",
+    "options": [
+      "To support transaction processing",
+      "To support business intelligence and analysis",
+      "To replace operational systems",
+      "To manage ETL processes"
+    ],
+    "answer": "To support business intelligence and analysis",
+    "explanation": "Dimensional models are designed for analytical purposes."
+  },
+  {
+    "question": "Which of the following is a key characteristic of a data warehouse?",
+    "options": [
+      "High update frequency",
+      "Large volumes of historical data",
+      "Designed for ad hoc queries",
+      "All of the above"
+    ],
+    "answer": "All of the above",
+    "explanation": "Data warehouses store historical data and support ad hoc queries."
+  },
+  {
+    "question": "What is the main purpose of a fact table?",
+    "options": [
+      "To store descriptive attributes",
+      "To store numeric measures and foreign keys",
+      "To define hierarchies",
+      "To manage user access"
+    ],
+    "answer": "To store numeric measures and foreign keys",
+    "explanation": "Fact tables contain measures and foreign keys to dimensions."
+  },
+  {
+    "question": "Which of the following is a key advantage of a star schema?",
+    "options": [
+      "Better storage efficiency",
+      "Fewer joins and better performance",
+      "Support for complex hierarchies",
+      "Improved data normalization"
+    ],
+    "answer": "Fewer joins and better performance",
+    "explanation": "Star schemas are denormalized, reducing the number of joins."
+  },
+  {
+    "question": "What is the main purpose of a dimension table?",
+    "options": [
+      "To store numeric measures",
+      "To provide context for facts",
+      "To store ETL logs",
+      "To manage user access"
+    ],
+    "answer": "To provide context for facts",
+    "explanation": "Dimensions describe the who, what, when, and where of facts."
+  },
+  {
+    "question": "Which of the following is a key advantage of using a snowflake schema?",
+    "options": [
+      "Fewer joins",
+      "Better storage efficiency",
+      "Easier to understand",
+      "Improved query performance"
+    ],
+    "answer": "Better storage efficiency",
+    "explanation": "Snowflake schemas reduce redundancy through normalization."
+  },
+  {
+    "question": "Which of the following is a valid example of a fact table grain?",
+    "options": [
+      "Daily sales per region",
+      "Monthly sales per product",
+      "Individual product on a POS transaction",
+      "Quarterly sales by department"
+    ],
+    "answer": "Individual product on a POS transaction",
+    "explanation": "Grain defines the lowest level of detail in a fact table."
+  },
+  {
+    "question": "Which of the following is a valid example of a non-additive fact?",
+    "options": [
+      "Total sales",
+      "Inventory level",
+      "Unit price",
+      "Profit margin"
+    ],
+    "answer": "Unit price",
+    "explanation": "Non-additive facts cannot be meaningfully aggregated."
+  },
+  {
+    "question": "What is the main purpose of a data warehouse in decision-making?",
+    "options": [
+      "To speed up transaction processing",
+      "To provide a single version of the truth",
+      "To replace operational systems",
+      "To manage ETL processes"
+    ],
+    "answer": "To provide a single version of the truth",
+    "explanation": "Data warehouses consolidate data to support consistent decision-making."
+  },
+  {
+    "question": "Which of the following is a key benefit of using a data warehouse?",
+    "options": [
+      "Faster transaction processing",
+      "Improved data integration and consistency",
+      "Reduced data volume",
+      "Better real-time data access"
+    ],
+    "answer": "Improved data integration and consistency",
+    "explanation": "Data warehouses integrate data from multiple sources."
+  },
+  {
+    "question": "What is the main purpose of a dimensional model?",
+    "options": [
+      "To support transaction processing",
+      "To support business intelligence and analysis",
+      "To replace operational systems",
+      "To manage ETL processes"
+    ],
+    "answer": "To support business intelligence and analysis",
+    "explanation": "Dimensional models are designed for analytical purposes."
+  },
+  {
+    "question": "Which of the following is a key characteristic of a data warehouse?",
+    "options": [
+      "High update frequency",
+      "Large volumes of historical data",
+      "Designed for ad hoc queries",
+      "All of the above"
+    ],
+    "answer": "All of the above",
+    "explanation": "Data warehouses store historical data and support ad hoc queries."
+  },
+  {
+    "question": "What is the main purpose of a fact table?",
+    "options": [
+      "To store descriptive attributes",
+      "To store numeric measures and foreign keys",
+      "To define hierarchies",
+      "To manage user access"
+    ],
+    "answer": "To store numeric measures and foreign keys",
+    "explanation": "Fact tables contain measures and foreign keys to dimensions."
+  },
+  {
+    "question": "Which of the following is a key advantage of a star schema?",
+    "options": [
+      "Better storage efficiency",
+      "Fewer joins and better performance",
+      "Support for complex hierarchies",
+      "Improved data normalization"
+    ],
+    "answer": "Fewer joins and better performance",
+    "explanation": "Star schemas are denormalized, reducing the number of joins."
+  },
+  {
+    "question": "What is the main purpose of a dimension table?",
+    "options": [
+      "To store numeric measures",
+      "To provide context for facts",
+      "To store ETL logs",
+      "To manage user access"
+    ],
+    "answer": "To provide context for facts",
+    "explanation": "Dimensions describe the who, what, when, and where of facts."
+  },
+  {
+    "question": "Which of the following is a key advantage of using a snowflake schema?",
+    "options": [
+      "Fewer joins",
+      "Better storage efficiency",
+      "Easier to understand",
+      "Improved query performance"
+    ],
+    "answer": "Better storage efficiency",
+    "explanation": "Snowflake schemas reduce redundancy through normalization."
+  },
+  {
+    "question": "Which of the following is a valid example of a fact table grain?",
+    "options": [
+      "Daily sales per region",
+      "Monthly sales per product",
+      "Individual product on a POS transaction",
+      "Quarterly sales by department"
+    ],
+    "answer": "Individual product on a POS transaction",
+    "explanation": "Grain defines the lowest level of detail in a fact table."
+  },
+  {
+    "question": "Which of the following is a valid example of a non-additive fact?",
+    "options": [
+      "Total sales",
+      "Inventory level",
+      "Unit price",
+      "Profit margin"
+    ],
+    "answer": "Unit price",
+    "explanation": "Non-additive facts cannot be meaningfully aggregated."
+  },
+  {
+    "question": "What is the main purpose of a data warehouse in decision-making?",
+    "options": [
+      "To speed up transaction processing",
+      "To provide a single version of the truth",
+      "To replace operational systems",
+      "To manage ETL processes"
+    ],
+    "answer": "To provide a single version of the truth",
+    "explanation": "Data warehouses consolidate data to support consistent decision-making."
+  },
+  {
+    "question": "Which of the following is a key benefit of using a data warehouse?",
+    "options": [
+      "Faster transaction processing",
+      "Improved data integration and consistency",
+      "Reduced data volume",
+      "Better real-time data access"
+    ],
+    "answer": "Improved data integration and consistency",
+    "explanation": "Data warehouses integrate data from multiple sources."
+  },
+  {
+    "question": "What is the main purpose of a dimensional model?",
+    "options": [
+      "To support transaction processing",
+      "To support business intelligence and analysis",
+      "To replace operational systems",
+      "To manage ETL processes"
+    ],
+    "answer": "To support business intelligence and analysis",
+    "explanation": "Dimensional models are designed for analytical purposes."
+  },
+  {
+    "question": "Which of the following is a key characteristic of a data warehouse?",
+    "options": [
+      "High update frequency",
+      "Large volumes of historical data",
+      "Designed for ad hoc queries",
+      "All of the above"
+    ],
+    "answer": "All of the above",
+    "explanation": "Data warehouses store historical data and support ad hoc queries."
+  },
+  {
+    "question": "What is the main purpose of a fact table?",
+    "options": [
+      "To store descriptive attributes",
+      "To store numeric measures and foreign keys",
+      "To define hierarchies",
+      "To manage user access"
+    ],
+    "answer": "To store numeric measures and foreign keys",
+    "explanation": "Fact tables contain measures and foreign keys to dimensions."
+  },
+  {
+    "question": "Which of the following is a key advantage of a star schema?",
+    "options": [
+      "Better storage efficiency",
+      "Fewer joins and better performance",
+      "Support for complex hierarchies",
+      "Improved data normalization"
+    ],
+    "answer": "Fewer joins and better performance",
+    "explanation": "Star schemas are denormalized, making queries faster."
+  },
+  {
+    "question": "What is the main purpose of a dimension table?",
+    "options": [
+      "To store numeric measures",
+      "To provide context for facts",
+      "To store ETL logs",
+      "To manage user access"
+    ],
+    "answer": "To provide context for facts",
+    "explanation": "Dimensions describe the who, what, when, and where of facts."
+  },
+  {
+    "question": "Which of the following is a key advantage of using a snowflake schema?",
+    "options": [
+      "Fewer joins",
+      "Better storage efficiency",
+      "Easier to understand",
+      "Improved query performance"
+    ],
+    "answer": "Better storage efficiency",
+    "explanation": "Snowflake schemas reduce data duplication through normalization."
+  },
+  {
+    "question": "Which of the following is a valid example of a fact table grain?",
+    "options": [
+      "Daily sales per region",
+      "Monthly sales per product",
+      "Individual product on a POS transaction",
+      "Quarterly sales by department"
+    ],
+    "answer": "Individual product on a POS transaction",
+    "explanation": "Grain defines the lowest level of detail in a fact table."
+  }]
