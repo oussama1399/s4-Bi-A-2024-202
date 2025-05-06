@@ -86,14 +86,41 @@ où X et Y sont des ensembles d’items (produits, services, etc.).
 
 ### 2. **Exemple & Complexité**
 #### 🔢 Calcul des mesures clés :
+Voici les mesures utilisées dans l'analyse des règles d'association, reformulées de manière claire et structurée :
 
-| Mesure | Définition | Formule |
-|--------|------------|---------|
-| **Support** | Fréquence d’un itemset | $ \text{Supp}(X) = \frac{\text{Nombre de transactions contenant } X}{\text{Nombre total de transactions}} $ |
-| **Confiance** | Probabilité qu’un item Y apparaisse si X est présent | $ \text{Conf}(X \rightarrow Y) = \frac{\text{Supp}(X \cup Y)}{\text{Supp}(X)} $ |
-| **Lift** | Indique si deux items sont indépendants, positivement ou négativement corrélés | $ \text{Lift}(X \rightarrow Y) = \frac{\text{Conf}(X \rightarrow Y)}{\text{Supp}(Y)} $ |
+---
 
-> 📌 Seules les règles avec **support ≥ minsupp** et **confiance ≥ minconf** sont retenues.
+### 📌 **Support**  
+> *Fréquence d’un itemset*  
+$$
+\text{Supp}(X) = \frac{\text{Nombre de transactions contenant } X}{\text{Nombre total de transactions}}
+$$
+
+---
+
+### 📌 **Confiance**  
+> *Probabilité qu’un item Y apparaisse si X est présent*  
+$$
+\text{Conf}(X \rightarrow Y) = \frac{\text{Supp}(X \cup Y)}{\text{Supp}(X)}
+$$
+
+---
+
+### 📌 **Lift**  
+> *Indique si deux items sont indépendants, positivement ou négativement corrélés*  
+$$
+\text{Lift}(X \rightarrow Y) = \frac{\text{Conf}(X \rightarrow Y)}{\text{Supp}(Y)}
+$$
+
+---
+
+### 🔒 **Filtrage des règles**  
+Seules les règles dont :
+- le **support** est supérieur ou égal à un seuil minimal (**minsupp**)  
+- et la **confiance** est supérieure ou égale à un seuil minimal (**minconf**)  
+
+sont **considérées comme pertinentes**.
+
 
 #### Exemple :
 Soit un supermarché avec les transactions suivantes :
@@ -333,15 +360,3 @@ Technique d’analyse de texte permettant de découvrir **automatiquement les th
 
 ---
 
-## ✅ Conclusion générale des trois chapitres
-
-Ces chapitres couvrent les aspects fondamentaux du **traitement des données textuelles et du Web** :
-- Le **Text Mining** transforme les textes en informations exploitables via des techniques de **vectorisation**, **classification** et **analyse des sentiments**.
-- Le **Web Mining** analyse les contenus, les structures et les comportements en ligne via trois axes : **Content**, **Structure** et **Usage Mining**.
-- Le **Topic Modeling** découvre automatiquement les sujets présents dans un corpus, notamment via **LSA** et **LDA**.
-
-Ces compétences sont essentielles pour exploiter pleinement les données textuelles et web dans des domaines comme le **marketing**, la **recherche d’information**, l’**intelligence artificielle** ou encore la **veille stratégique**.
-
----
-
-Souhaitez-vous que je développe davantage un chapitre particulier ?
