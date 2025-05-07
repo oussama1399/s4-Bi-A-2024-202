@@ -1,0 +1,1375 @@
+[
+    {
+      "question": "Parmi les critères suivants, lequel est le plus pertinent pour choisir un fournisseur Cloud ?",
+      "options": ["Prix", "Réputation", "Scalabilité", "Localisation des serveurs"],
+      "answer": "Scalabilité",
+      "explanation": "La scalabilité est cruciale pour gérer les variations de charge et les besoins futurs."
+    },
+    {
+      "question": "Pendant l’étape de création du centre de données au niveau du CloudSim :",
+      "options": ["Les ressources sont allouées dynamiquement", "Les ressources sont fixes", "Le réseau est simulé", "Les données sont stockées localement"],
+      "answer": "Les ressources sont allouées dynamiquement",
+      "explanation": "CloudSim permet la simulation dynamique de l’allocation des ressources."
+    },
+    {
+      "question": "Quel modèle propose un choix plus important de couches logicielles au client dans l’architecture informatique ?",
+      "options": ["IaaS", "PaaS", "SaaS", "Edge Computing"],
+      "answer": "PaaS",
+      "explanation": "PaaS offre des plateformes de développement intégrées, permettant plus de flexibilité logicielle."
+    },
+    {
+      "question": "Qu’est-ce qu’un Cloud ?",
+      "options": ["Un serveur physique", "Une infrastructure mutualisée", "Un service en ligne", "Une architecture distribuée"],
+      "answer": "Une architecture distribuée",
+      "explanation": "Le cloud est une infrastructure distribuée accessible via Internet."
+    },
+    {
+      "question": "Laquelle des propositions suivantes ne représente pas une raison suffisante pour qu’un client interroge un prestataire de Cloud sur l’emplacement de ses serveurs ?",
+      "options": ["Conformité réglementaire", "Latence", "Coût de bande passante", "Couleur des serveurs"],
+      "answer": "Couleur des serveurs",
+      "explanation": "La couleur des serveurs n’a aucun impact sur la performance ou la conformité."
+    },
+    {
+      "question": "Lequel des hyperviseurs suivants est de type 2 ?",
+      "options": ["KVM", "Hyper-V", "VirtualBox", "Xen"],
+      "answer": "VirtualBox",
+      "explanation": "Les hyperviseurs de type 2 s’exécutent dans un système hôte (ex. VirtualBox)."
+    },
+    {
+      "question": "De quelle façon le Cloud computing modifie-t-il les relations entre les fournisseurs et les clients ?",
+      "options": ["Centralisation des données", "Dépendance accrue", "Élasticité des coûts", "Réduction de la flexibilité"],
+      "answer": "Élasticité des coûts",
+      "explanation": "Le cloud permet un modèle pay-as-you-go, modifiant la relation contractuelle."
+    },
+    {
+      "question": "Le Fog Computing peut être défini comme une connexion de Micro Data Centers qui stockent les données critiques générées par des objets connectés dans l’objectif de les traiter localement.",
+      "options": ["Vrai", "Faux", "Partiellement", "Indéterminé"],
+      "answer": "Vrai",
+      "explanation": "Le Fog Computing traite les données près de leur source pour réduire la latence."
+    },
+    {
+      "question": "Quelle est la différence entre les principes de cloisonnement et de transparence dans la virtualisation des serveurs ?",
+      "options": ["Cloisonnement = isolation, Transparence = invisibilité", "Cloisonnement = partage, Transparence = optimisation", "Cloisonnement = performance, Transparence = sécurité", "Cloisonnement = scalabilité, Transparence = coût"],
+      "answer": "Cloisonnement = isolation, Transparence = invisibilité",
+      "explanation": "Le cloisonnement isole les systèmes invités, tandis que la transparence rend la virtualisation invisible pour l’utilisateur."
+    },
+    {
+      "question": "Avec l’émergence des objets connectés, l’efficacité du cloud atteint ses limites face à un phénomène précis. Lequel ?",
+      "options": ["Latence", "Bande passante", "Sécurité", "Échelle"],
+      "answer": "Latence",
+      "explanation": "La latence est un problème critique pour les objets connectés nécessitant un traitement temps-réel."
+    },
+    {
+      "question": "Quel est le rôle de Kublet et Kube-proxy ?",
+      "options": ["Gérer les pods", "Assurer la communication réseau", "Ordonnancer les tâches", "Gérer les images Docker"],
+      "answer": "Assurer la communication réseau",
+      "explanation": "Kube-proxy gère le réseau Kubernetes, tandis que Kublet surveille les pods."
+    },
+    {
+      "question": "Un hyperviseur de type 1 est un logiciel qui s’exécute à l’intérieur d’un système d’exploitation.",
+      "options": ["Vrai", "Faux", "Partiellement", "Indéterminé"],
+      "answer": "Faux",
+      "explanation": "Les hyperviseurs de type 1 s’exécutent directement sur le matériel (Bare Metal)."
+    },
+    {
+      "question": "Quelle condition doit impérativement être remplie par une application pour être accessible dans le Cloud ?",
+      "options": ["Compatibilité avec Docker", "Support du protocole HTTP", "Échelonnabilité", "Interface graphique"],
+      "answer": "Échelonnabilité",
+      "explanation": "L’application doit être conçue pour s’adapter à des ressources variables."
+    },
+    {
+      "question": "CloudSim permet l’évaluation des outils de réseaux sociaux en fonction de la répartition géographique des utilisateurs et des centres de données.",
+      "options": ["Vrai", "Faux", "Partiellement", "Indéterminé"],
+      "answer": "Faux",
+      "explanation": "CloudSim est un simulateur pour les architectures cloud, pas les réseaux sociaux."
+    },
+    {
+      "question": "En quoi la virtualisation a-t-elle favorisé l’émergence du Cloud Computing ?",
+      "options": ["Réduction des coûts", "Optimisation de la bande passante", "Isolation des systèmes", "Toutes les réponses"],
+      "answer": "Réduction des coûts",
+      "explanation": "La virtualisation a permis de mutualiser les ressources, réduisant les coûts d’infrastructure."
+    },
+    {
+      "question": "Le type de planification 'space shared' du CloudSim permet d’avoir une file d’attente de VMs/Cloudlets.",
+      "options": ["Vrai", "Faux", "Partiellement", "Indéterminé"],
+      "answer": "Vrai",
+      "explanation": "Space shared permet de répartir les ressources entre les tâches."
+    },
+    {
+      "question": "Laquelle des propositions suivantes ne constitue pas une mesure d’atténuation des risques de perte de données ?",
+      "options": ["Sauvegarde régulière", "Chiffrement", "Redondance des serveurs", "Utilisation de conteneurs"],
+      "answer": "Utilisation de conteneurs",
+      "explanation": "Les conteneurs n’assurent pas la sauvegarde des données."
+    },
+    {
+      "question": "Quel est l’inconvénient majeur du Cloud Computing ?",
+      "options": ["Coût élevé", "Dépendance au réseau", "Performance réduite", "Manque de flexibilité"],
+      "answer": "Dépendance au réseau",
+      "explanation": "Le cloud dépend entièrement du réseau pour son fonctionnement."
+    },
+    {
+      "question": "Laquelle des propositions suivantes constitue un sujet d’inquiétude important pour le client à l’égard des environnements multi-utilisateurs ?",
+      "options": ["Performance", "Coût", "Sécurité", "Scalabilité"],
+      "answer": "Sécurité",
+      "explanation": "La sécurité est un risque majeur dans les environnements multi-locataires."
+    },
+    {
+      "question": "Un Cloud privé est caractérisé par :",
+      "options": ["Infrastructure mutualisée", "Contrôle total", "Accès externe", "Prix bas"],
+      "answer": "Contrôle total",
+      "explanation": "Le cloud privé est dédié à une organisation avec un contrôle complet."
+    },
+    {
+      "question": "Cloudlet scheduling policy du CloudSim se fait :",
+      "options": ["Aléatoirement", "Par priorité", "Par disponibilité", "Toutes les réponses"],
+      "answer": "Par priorité",
+      "explanation": "CloudSim utilise des politiques basées sur la priorité et les ressources."
+    },
+    {
+      "question": "Quel est le risque majeur de la non-protection des données dans le Cloud ?",
+      "options": ["Perte de données", "Coût élevé", "Latence", "Manque de flexibilité"],
+      "answer": "Perte de données",
+      "explanation": "La non-protection expose les données à des fuites ou perte irréversible."
+    },
+    {
+      "question": "Citez trois rôles du Broker dans CloudSim :",
+      "options": ["Créer des VMs", "Gérer les ressources", "Allouer les tâches", "Surveiller les logs"],
+      "answer": "Créer des VMs",
+      "explanation": "Le Broker crée des VMs, alloue des ressources, et gère les Cloudlets."
+    },
+    {
+      "question": "Laquelle des propositions suivantes représente un moyen de tirer le meilleur parti du principe d’interopérabilité du Cloud Computing ?",
+      "options": ["Utilisation de standards ouverts", "Choix de fournisseurs multiples", "Conteneurisation", "Toutes les réponses"],
+      "answer": "Toutes les réponses",
+      "explanation": "Interopérabilité = compatibilité entre fournisseurs et technologies."
+    },
+    {
+      "question": "Que propose le prestataire de Google Drive ?",
+      "options": ["IaaS", "PaaS", "SaaS", "Edge Computing"],
+      "answer": "SaaS",
+      "explanation": "Google Drive est un service de stockage en ligne (SaaS)."
+    },
+    {
+      "question": "Pourquoi une période d’essai s’avère-t-elle nécessaire au moment d’envisager une solution Software-as-a-Service ?",
+      "options": ["Vérifier la performance", "Évaluer le coût", "Tester la compatibilité", "Toutes les réponses"],
+      "answer": "Toutes les réponses",
+      "explanation": "L’essai permet de valider performance, coût, et compatibilité."
+    },
+    {
+      "question": "Le plan de récupération de données dans un Cloud permet de :",
+      "options": ["Restaurer après incident", "Réduire les coûts", "Améliorer la performance", "Toutes les réponses"],
+      "answer": "Restaurer après incident",
+      "explanation": "Le plan de récupération (PCA) vise à restaurer les données après une panne."
+    },
+    {
+      "question": "La virtualisation complète permet de virtualiser tous les systèmes d’exploitation indépendamment de l’architecture matérielle du processeur.",
+      "options": ["Vrai", "Faux", "Partiellement", "Indéterminé"],
+      "answer": "Vrai",
+      "explanation": "La virtualisation complète simule le matériel, indépendamment de l’OS."
+    },
+    {
+      "question": "Citez quatre attaques possibles ou catégories d’attaques qui peuvent cibler un cloud :",
+      "options": ["DDoS", "Attaques de type man-in-the-middle", "Fuites de données", "Toutes les réponses"],
+      "answer": "Toutes les réponses",
+      "explanation": "Les clouds sont vulnérables à DDoS, attaques réseau, et fuites de données."
+    },
+    {
+      "question": "Le Edge Computing peut être défini comme une connexion de Micro Data Centers qui stockent les données critiques pour les traiter localement.",
+      "options": ["Vrai", "Faux", "Partiellement", "Indéterminé"],
+      "answer": "Vrai",
+      "explanation": "L’Edge Computing réduit la latence en traitant les données près de leur source."
+    },
+    {
+      "question": "Dans quels cas un conteneur Docker peut causer une attaque par déni de service (DoS) ?",
+      "options": ["Surcharge du réseau", "Fuite de mémoire", "Configuration malveillante", "Toutes les réponses"],
+      "answer": "Toutes les réponses",
+      "explanation": "Des conteneurs mal configurés peuvent saturer les ressources."
+    },
+    {
+      "question": "Quelle est la bonne définition du Cloud Computing ?",
+      "options": ["Stockage distant", "Calcul distribué", "Service informatique sur demande", "Toutes les réponses"],
+      "answer": "Service informatique sur demande",
+      "explanation": "Le cloud est un modèle de livraison de services informatiques via Internet."
+    },
+    {
+      "question": "A quel moment les données stockées sur le cloud peuvent-elles être en vrai danger ?",
+      "options": ["Panne réseau", "Mauvaise configuration", "Chiffrement insuffisant", "Toutes les réponses"],
+      "answer": "Toutes les réponses",
+      "explanation": "Tous ces facteurs peuvent compromettre les données."
+    },
+    {
+      "question": "Que comprend la facturation du Cloud Computing ?",
+      "options": ["Utilisation", "Temps d’exécution", "Stockage", "Toutes les réponses"],
+      "answer": "Toutes les réponses",
+      "explanation": "La facturation est basée sur utilisation, temps, et stockage."
+    },
+    {
+      "question": "Cloudsim est un framework basé sur des événements pour maintenir la communication entre ses différentes entités.",
+      "options": ["Vrai", "Faux", "Partiellement", "Indéterminé"],
+      "answer": "Vrai",
+      "explanation": "CloudSim utilise des événements pour simuler les interactions."
+    },
+    {
+      "question": "Quelles sont les entités de Cloudsim ?",
+      "options": ["Broker", "VM", "Cloudlet", "Toutes les réponses"],
+      "answer": "Toutes les réponses",
+      "explanation": "Broker, VM, Cloudlet sont des composants clés de CloudSim."
+    },
+    {
+      "question": "Quel est le principal moyen de protection qu’utilisent obligatoirement les fournisseurs sur leurs supports d’accès au cloud ?",
+      "options": ["Chiffrement", "MFA", "Firewall", "Toutes les réponses"],
+      "answer": "Chiffrement",
+      "explanation": "Le chiffrement est essentiel pour protéger les données en transit et au repos."
+    },
+    {
+      "question": "L’intégrité et la protection des données ne peuvent pas être garanties par le fournisseur lors des transferts sur le cloud.",
+      "options": ["Vrai", "Faux", "Partiellement", "Indéterminé"],
+      "answer": "Faux",
+      "explanation": "Le fournisseur doit garantir l’intégrité via des protocoles de sécurité."
+    },
+    {
+      "question": "Un Cloud Public est caractérisé par :",
+      "options": ["Infrastructure mutualisée", "Contrôle partagé", "Accès externe", "Toutes les réponses"],
+      "answer": "Infrastructure mutualisée",
+      "explanation": "Le cloud public partage les ressources entre plusieurs clients."
+    },
+    {
+      "question": "Sur un processeur avec des instructions de virtualisation matérielle, le système d’exploitation invité n’a pas besoin d’être modifié pour fonctionner avec un hyperviseur de type 2.",
+      "options": ["Vrai", "Faux", "Partiellement", "Indéterminé"],
+      "answer": "Faux",
+      "explanation": "Les hyperviseurs de type 2 nécessitent un OS hôte, pas de modification matérielle."
+    },
+    {
+      "question": "À votre avis, comment maintenir la confidentialité des informations ?",
+      "options": ["Chiffrement AES", "Contrôle d’accès RBAC", "Audit régulier", "Toutes les réponses"],
+      "answer": "Toutes les réponses",
+      "explanation": "Chiffrement, RBAC, et audit sont des mesures de confidentialité."
+    },
+    {
+      "question": "Quel outil permet de simuler des architectures cloud avant déploiement ?",
+      "options": ["OpenStack", "CloudSim", "Kubernetes", "Docker"],
+      "answer": "CloudSim",
+      "explanation": "CloudSim est un simulateur dédié aux environnements cloud."
+    },
+    {
+      "question": "Quel est l’objectif principal du Fog Computing ?",
+      "options": ["Réduire la latence", "Augmenter la sécurité", "Réduire le coût", "Toutes les réponses"],
+      "answer": "Réduire la latence",
+      "explanation": "Le Fog Computing traite les données localement pour minimiser la latence."
+    },
+    {
+      "question": "Quel modèle de cloud est le plus adapté aux applications nécessitant une conformité réglementaire ?",
+      "options": ["Public", "Privé", "Hybride", "Edge"],
+      "answer": "Privé",
+      "explanation": "Le cloud privé offre un contrôle total pour respecter les normes."
+    },
+    {
+      "question": "Quel est l’avantage principal de la conteneurisation par rapport aux VM classiques ?",
+      "options": ["Moins de surcharge", "Meilleure isolation", "Plus de flexibilité", "Toutes les réponses"],
+      "answer": "Moins de surcharge",
+      "explanation": "Les conteneurs partagent le noyau hôte, réduisant la surcharge CPU."
+    },
+    {
+      "question": "Quel type de virtualisation est le plus utilisé pour les applications nécessitant une compatibilité multi-OS ?",
+      "options": ["Para-virtualisation", "Conteneurisation", "Virtualisation complète", "Aucun"],
+      "answer": "Virtualisation complète",
+      "explanation": "La virtualisation complète supporte n’importe quel OS."
+    },
+    {
+      "question": "Quel type de cloud est le plus économique pour les projets à faible trafic ?",
+      "options": ["Public", "Privé", "Mutualisé", "Edge"],
+      "answer": "Mutualisé",
+      "explanation": "Le cloud mutualisé partage les coûts entre plusieurs clients."
+    },
+    {
+      "question": "Quel type de parallélisme est illustré par le calcul d’un vecteur de polynômes avec plusieurs processeurs ?",
+      "options": ["Données", "Contrôle", "Flux", "Aucun"],
+      "answer": "Données",
+      "explanation": "Le parallélisme de données divise le travail entre processeurs."
+    },
+    {
+      "question": "Quel type de parallélisme est illustré par le calcul d’un polynôme via un pipeline ?",
+      "options": ["Données", "Contrôle", "Flux", "Aucun"],
+      "answer": "Flux",
+      "explanation": "Le pipeline divise le calcul en étapes exécutées en parallèle."
+    },
+    {
+      "question": "Quel type de cloud est le plus adapté aux applications nécessitant une grande flexibilité ?",
+      "options": ["Public", "Privé", "Hybride", "Edge"],
+      "answer": "Hybride",
+      "explanation": "L’hybride combine cloud public et privé pour plus de flexibilité."
+    },
+    {
+      "question": "Quel type de parallélisme est illustré par le calcul de polynômes avec des processeurs asynchrones ?",
+      "options": ["Données", "Contrôle", "Flux", "Aucun"],
+      "answer": "Contrôle",
+      "explanation": "Le parallélisme de contrôle exécute des tâches différentes."
+    },
+    {
+      "question": "Quel type de virtualisation est le plus utilisé pour les applications nécessitant une optimisation de ressources ?",
+      "options": ["Para-virtualisation", "Conteneurisation", "Virtualisation complète", "Aucun"],
+      "answer": "Conteneurisation",
+      "explanation": "Les conteneurs optimisent l’utilisation des ressources via le partage du noyau."
+    },
+    {
+      "question": "Quel type de cloud est le plus adapté aux applications nécessitant une grande scalabilité ?",
+      "options": ["Public", "Privé", "Hybride", "Edge"],
+      "answer": "Public",
+      "explanation": "Le cloud public permet d’ajouter des ressources externes (scalabilité horizontale)."
+    },
+    {
+      "question": "Quel type de virtualisation est le plus utilisé pour les applications nécessitant une gestion simplifiée ?",
+      "options": ["Para-virtualisation", "Conteneurisation", "Virtualisation complète", "Aucun"],
+      "answer": "Conteneurisation",
+      "explanation": "Les conteneurs simplifient la gestion via des images Docker."
+    },
+    {
+      "question": "Quel type de cloud est le plus adapté aux applications nécessitant une faible dépendance au réseau ?",
+      "options": ["Public", "Privé", "Hybride", "Edge"],
+      "answer": "Privé",
+      "explanation": "Le cloud privé réduit la dépendance au réseau externe."
+    },
+        {
+          "question": "Quel type de graphique montre la distribution de l’effet de chaque caractéristique ?",
+          "options": ["Bar plot", "Box plot", "Waterfall plot", "Heatmap"],
+          "answer": "Waterfall plot",
+          "explanation": "Le Waterfall plot détaille étape par étape l’effet cumulatif des caractéristiques sur la prédiction."
+        },
+        {
+          "question": "Quel type d’hyperviseur s’exécute directement sur le matériel sans passer par un système d’exploitation hôte ?",
+          "options": ["Hyperviseur de type 2", "Hyperviseur de type 1", "Conteneur", "Isolateur"],
+          "answer": "Hyperviseur de type 1",
+          "explanation": "Les hyperviseurs de type 1 (Bare Metal) s’exécutent directement sur le matériel, offrant de meilleures performances."
+        },
+        {
+          "question": "Quelle technologie est utilisée pour la conteneurisation d’applications ?",
+          "options": ["VMware ESXi", "Docker", "Xen", "KVM"],
+          "answer": "Docker",
+          "explanation": "Docker est un outil de conteneurisation qui permet d’emballer une application avec ses dépendances."
+        },
+        {
+          "question": "Quel modèle de programmation parallèle applique un même calcul à des données distinctes ?",
+          "options": ["Parallélisme de contrôle", "Parallélisme de flux", "Parallélisme de données", "Aucun"],
+          "answer": "Parallélisme de données",
+          "explanation": "Le parallélisme de données exploite la régularité des données en appliquant un même calcul à des parties distinctes."
+        },
+        {
+          "question": "Quelle est la fonction principale de `MPI_Bcast` ?",
+          "options": ["Échange de messages entre deux processus", "Réduction d’un ensemble de valeurs", "Diffusion d’une donnée à tous les processus", "Collecte des résultats locaux"],
+          "answer": "Diffusion d’une donnée à tous les processus",
+          "explanation": "`MPI_Bcast` permet de diffuser une donnée à tous les processus d’un communicateur."
+        },
+        {
+          "question": "Quel protocole est utilisé pour un réseau de stockage iSCSI ?",
+          "options": ["Fibre Channel", "NFS", "iSCSI", "Ethernet"],
+          "answer": "iSCSI",
+          "explanation": "iSCSI est un protocole d’accès disque fonctionnant sur un réseau Ethernet."
+        },
+        {
+          "question": "Quel outil est utilisé pour la gestion automatisée des déploiements internes dans le cloud ?",
+          "options": ["Proxmox", "Ansible", "Slurm", "OpenStack"],
+          "answer": "Ansible",
+          "explanation": "Ansible est un outil d’automatisation de configuration et de déploiement d’applications dans le cloud."
+        },
+        {
+          "question": "Quelle architecture permet de maintenir une efficacité élevée lorsque le nombre de processeurs augmente ?",
+          "options": ["Architecture virtuelle", "Architecture traditionnelle", "Scalabilité", "Parallélisme de flux"],
+          "answer": "Scalabilité",
+          "explanation": "La scalabilité mesure la capacité d’un système à conserver une efficacité élevée avec plus de processeurs."
+        },
+        {
+          "question": "Quel type de parallélisme est illustré par le calcul d’un polynôme via un pipeline ?",
+          "options": ["Parallélisme de données", "Parallélisme de contrôle", "Parallélisme de flux", "Aucun"],
+          "answer": "Parallélisme de flux",
+          "explanation": "Le pipeline divise le calcul en étapes exécutées en parallèle."
+        },
+        {
+          "question": "Quelle commande Docker est utilisée pour créer une image à partir d’un Dockerfile ?",
+          "options": ["docker run", "docker build", "docker pull", "docker push"],
+          "answer": "docker build",
+          "explanation": "`docker build` construit une image en exécutant les instructions d’un Dockerfile."
+        },
+        {
+          "question": "Quel est le principal avantage des conteneurs Docker par rapport aux machines virtuelles ?",
+          "options": ["Meilleure isolation", "Moins de surcharge CPU", "Support Windows uniquement", "Chiffrement intégré"],
+          "answer": "Moins de surcharge CPU",
+          "explanation": "Les conteneurs partagent le noyau hôte, réduisant la surcharge CPU par rapport aux machines virtuelles."
+        },
+        {
+          "question": "Quel outil est utilisé pour la simulation d’environnements cloud ?",
+          "options": ["CloudSim", "Docker", "Kubernetes", "OpenStack"],
+          "answer": "CloudSim",
+          "explanation": "CloudSim est un simulateur cloud pour modéliser des architectures cloud."
+        },
+        {
+          "question": "Quel type de cloud est dédié à une organisation spécifique ?",
+          "options": ["Public Cloud", "Privé Cloud", "Hybride", "Edge Cloud"],
+          "answer": "Privé Cloud",
+          "explanation": "Le privé cloud est une infrastructure dédiée à une organisation."
+        },
+        {
+          "question": "Quel est le rôle de l’hyperviseur dans une architecture virtuelle ?",
+          "options": ["Gérer les réseaux physiques", "Partager le noyau hôte", "Créer des machines virtuelles", "Exécuter des conteneurs"],
+          "answer": "Créer des machines virtuelles",
+          "explanation": "L’hyperviseur masque les ressources physiques pour créer des machines virtuelles indépendantes."
+        },
+        {
+          "question": "Quelle fonction MPI est utilisée pour synchroniser tous les processus ?",
+          "options": ["MPI_Send", "MPI_Recv", "MPI_Barrier", "MPI_Reduce"],
+          "answer": "MPI_Barrier",
+          "explanation": "`MPI_Barrier` assure une synchronisation globale entre tous les processus."
+        },
+        {
+          "question": "Quel modèle de programmation est utilisé dans les exemples de code MPI fournis ?",
+          "options": ["SPMD", "MIMD", "SIMD", "SISD"],
+          "answer": "SPMD",
+          "explanation": "SPMD (Single Program Multiple Data) est utilisé dans les exemples de code MPI."
+        },
+        {
+          "question": "Quel type de parallélisme est illustré par la réduction d’un ensemble de valeurs (ex. somme globale) ?",
+          "options": ["Parallélisme de données", "Parallélisme de contrôle", "Parallélisme de flux", "Réduction collective"],
+          "answer": "Réduction collective",
+          "explanation": "La réduction collective (`MPI_Reduce`) combine des valeurs locales en une seule globale."
+        },
+        {
+          "question": "Quel type de virtualisation est le plus utilisé pour les applications nécessitant une optimisation de ressources ?",
+          "options": ["Para-virtualisation", "Conteneurisation", "Virtualisation complète", "Aucun"],
+          "answer": "Conteneurisation",
+          "explanation": "Les conteneurs optimisent l’utilisation des ressources via le partage du noyau."
+        },
+        {
+          "question": "Quel type de cloud est le plus adapté aux applications nécessitant une grande scalabilité ?",
+          "options": ["Public Cloud", "Privé Cloud", "Hybride", "Edge Cloud"],
+          "answer": "Public Cloud",
+          "explanation": "Le public cloud permet d’ajouter des ressources externes (scalabilité horizontale)."
+        },
+        {
+          "question": "Quel type de parallélisme est illustré par le calcul de polynômes avec des processeurs synchronisés ?",
+          "options": ["Parallélisme de données", "Parallélisme de contrôle", "Parallélisme de flux", "Aucun"],
+          "answer": "Parallélisme de données",
+          "explanation": "Les processeurs exécutent le même calcul sur des données distinctes."
+        },
+        {
+          "question": "Quel type de virtualisation est le plus utilisé pour les applications nécessitant une compatibilité multi-OS ?",
+          "options": ["Para-virtualisation", "Conteneurisation", "Virtualisation complète", "Aucun"],
+          "answer": "Virtualisation complète",
+          "explanation": "La virtualisation complète supporte n’importe quel système d’exploitation."
+        },
+        {
+          "question": "Quel type de cloud est le plus adapté aux applications nécessitant une faible latence ?",
+          "options": ["Public Cloud", "Privé Cloud", "Hybride", "Edge Cloud"],
+          "answer": "Edge Cloud",
+          "explanation": "L’Edge Cloud traite les données localement pour réduire la latence."
+        },
+        {
+          "question": "Quel type de parallélisme est illustré par le calcul de polynômes avec des processeurs asynchrones ?",
+          "options": ["Parallélisme de données", "Parallélisme de contrôle", "Parallélisme de flux", "Aucun"],
+          "answer": "Parallélisme de contrôle",
+          "explanation": "Les processeurs exécutent des tâches différentes sans synchronisation stricte."
+        },
+        {
+          "question": "Quel type de virtualisation est le plus utilisé pour les applications nécessitant une gestion simplifiée ?",
+          "options": ["Para-virtualisation", "Conteneurisation", "Virtualisation complète", "Aucun"],
+          "answer": "Conteneurisation",
+          "explanation": "Les conteneurs simplifient la gestion via des images Docker."
+        },
+        {
+          "question": "Quel type de cloud est le plus adapté aux applications nécessitant une faible dépendance au réseau ?",
+          "options": ["Public Cloud", "Privé Cloud", "Hybride", "Edge Cloud"],
+          "answer": "Privé Cloud",
+          "explanation": "Le privé cloud réduit la dépendance au réseau externe."
+        },
+        {
+          "question": "Quel type de parallélisme est illustré par le calcul de polynômes via un algorithme de Horner ?",
+          "options": ["Parallélisme de données", "Parallélisme de contrôle", "Parallélisme de flux", "Aucun"],
+          "answer": "Parallélisme de flux",
+          "explanation": "Le pipeline divise le calcul en étapes successives exécutées en parallèle."
+        },
+        {
+          "question": "Quel type de virtualisation est le plus utilisé dans les clusters HPC ?",
+          "options": ["Para-virtualisation", "Conteneurisation", "Virtualisation complète", "Aucun"],
+          "answer": "Virtualisation complète",
+          "explanation": "La virtualisation complète est courante pour les clusters HPC."
+        },
+        {
+          "question": "Quel type de cloud est le plus adapté aux applications nécessitant une scalabilité verticale ?",
+          "options": ["Public Cloud", "Privé Cloud", "Hybride", "Edge Cloud"],
+          "answer": "Privé Cloud",
+          "explanation": "Le privé cloud permet d’augmenter les ressources d’un seul système (scalabilité verticale)."
+        },
+        {
+          "question": "Quel type de parallélisme est illustré par le calcul de polynômes avec des processeurs indépendants ?",
+          "options": ["Parallélisme de données", "Parallélisme de contrôle", "Parallélisme de flux", "Aucun"],
+          "answer": "Parallélisme de contrôle",
+          "explanation": "Chaque processeur exécute une tâche distincte (ex. sous-expressions)."
+        },
+        {
+          "question": "Quel type de stockage est le plus rapide pour les applications HPC ?",
+          "options": ["NAS", "SAN", "DAS", "iSCSI"],
+          "answer": "SAN",
+          "explanation": "Le SAN (Storage Area Network) offre un débit élevé via Fibre Channel ou iSCSI."
+        },
+        {
+          "question": "Quel type de cloud est le plus adapté aux applications nécessitant une haute disponibilité ?",
+          "options": ["Public Cloud", "Privé Cloud", "Hybride", "Edge Cloud"],
+          "answer": "Hybride",
+          "explanation": "L’hybride combine la disponibilité du public cloud avec la sécurité du privé."
+        },
+        {
+          "question": "Quel type de parallélisme est illustré par le calcul de polynômes via un algorithme de Horner ?",
+          "options": ["Parallélisme de données", "Parallélisme de contrôle", "Parallélisme de flux", "Aucun"],
+          "answer": "Parallélisme de flux",
+          "explanation": "Le pipeline divise le calcul en étapes exécutées en parallèle."
+        },
+        {
+          "question": "Quel type de virtualisation est le plus utilisé pour les tests logiciels ?",
+          "options": ["Para-virtualisation", "Conteneurisation", "Virtualisation complète", "Aucun"],
+          "answer": "Virtualisation complète",
+          "explanation": "La virtualisation complète est idéale pour les tests OS multiples."
+        },
+        {
+          "question": "Quel type de cloud est le plus adapté aux applications nécessitant une conformité réglementaire ?",
+          "options": ["Public Cloud", "Privé Cloud", "Hybride", "Edge Cloud"],
+          "answer": "Privé Cloud",
+          "explanation": "Le privé cloud permet de respecter les normes de sécurité et de conformité."
+        },
+        {
+          "question": "Quel type de parallélisme est illustré par le calcul de polynômes avec des processeurs asynchrones ?",
+          "options": ["Parallélisme de données", "Parallélisme de contrôle", "Parallélisme de flux", "Aucun"],
+          "answer": "Parallélisme de contrôle",
+          "explanation": "Les processeurs exécutent des tâches différentes sans synchronisation stricte."
+        },
+        {
+          "question": "Quel type de virtualisation est le plus utilisé pour les applications nécessitant une gestion simplifiée ?",
+          "options": ["Para-virtualisation", "Conteneurisation", "Virtualisation complète", "Aucun"],
+          "answer": "Conteneurisation",
+          "explanation": "Les conteneurs simplifient la gestion via des images Docker."
+        },
+        {
+          "question": "Quel type de cloud est le plus adapté aux applications nécessitant une faible dépendance au réseau ?",
+          "options": ["Public Cloud", "Privé Cloud", "Hybride", "Edge Cloud"],
+          "answer": "Privé Cloud",
+          "explanation": "Le privé cloud réduit la dépendance au réseau externe."
+        },
+        {
+          "question": "Quel type de parallélisme est illustré par le calcul de polynômes avec des processeurs synchronisés ?",
+          "options": ["Parallélisme de données", "Parallélisme de contrôle", "Parallélisme de flux", "Aucun"],
+          "answer": "Parallélisme de données",
+          "explanation": "Les processeurs exécutent le même calcul sur des données distinctes."
+        },
+        {
+          "question": "Quel type de virtualisation est le plus utilisé pour les applications nécessitant une compatibilité multi-OS ?",
+          "options": ["Para-virtualisation", "Conteneurisation", "Virtualisation complète", "Aucun"],
+          "answer": "Virtualisation complète",
+          "explanation": "La virtualisation complète supporte n’importe quel système d’exploitation."
+        },
+        {
+          "question": "Quel type de cloud est le plus adapté aux applications nécessitant une faible latence ?",
+          "options": ["Public Cloud", "Privé Cloud", "Hybride", "Edge Cloud"],
+          "answer": "Edge Cloud",
+          "explanation": "L’Edge Cloud traite les données localement pour réduire la latence."
+        },
+        {
+          "question": "Quel type de parallélisme est illustré par le calcul de polynômes avec des processeurs asynchrones ?",
+          "options": ["Parallélisme de données", "Parallélisme de contrôle", "Parallélisme de flux", "Aucun"],
+          "answer": "Parallélisme de contrôle",
+          "explanation": "Les processeurs exécutent des tâches différentes sans synchronisation stricte."
+        },
+        {
+          "question": "Quel type de virtualisation est le plus utilisé pour les applications nécessitant une optimisation de ressources ?",
+          "options": ["Para-virtualisation", "Conteneurisation", "Virtualisation complète", "Aucun"],
+          "answer": "Conteneurisation",
+          "explanation": "Les conteneurs optimisent l’utilisation des ressources via le partage du noyau."
+        },
+        {
+          "question": "Quel type de cloud est le plus adapté aux applications nécessitant une grande scalabilité ?",
+          "options": ["Public Cloud", "Privé Cloud", "Hybride", "Edge Cloud"],
+          "answer": "Public Cloud",
+          "explanation": "Le public cloud permet d’ajouter des ressources externes (scalabilité horizontale)."
+        },
+        {
+          "question": "Quel type de parallélisme est illustré par le calcul de polynômes via un pipeline ?",
+          "options": ["Parallélisme de données", "Parallélisme de contrôle", "Parallélisme de flux", "Aucun"],
+          "answer": "Parallélisme de flux",
+          "explanation": "Le pipeline divise le calcul en étapes exécutées en parallèle."
+        },
+        {
+          "question": "Quel type de virtualisation est le plus utilisé pour les applications nécessitant une gestion simplifiée ?",
+          "options": ["Para-virtualisation", "Conteneurisation", "Virtualisation complète", "Aucun"],
+          "answer": "Conteneurisation",
+          "explanation": "Les conteneurs simplifient la gestion via des images Docker."
+        },
+        {
+          "question": "Quel type de cloud est le plus adapté aux applications nécessitant une faible dépendance au réseau ?",
+          "options": ["Public Cloud", "Privé Cloud", "Hybride", "Edge Cloud"],
+          "answer": "Privé Cloud",
+          "explanation": "Le privé cloud réduit la dépendance au réseau externe."
+        },
+        {
+          "question": "Quel type de parallélisme est illustré par le calcul de polynômes avec des processeurs synchronisés ?",
+          "options": ["Parallélisme de données", "Parallélisme de contrôle", "Parallélisme de flux", "Aucun"],
+          "answer": "Parallélisme de données",
+          "explanation": "Les processeurs exécutent le même calcul sur des données distinctes."
+        },
+        {
+          "question": "Quel type de virtualisation est le plus utilisé pour les applications nécessitant une compatibilité multi-OS ?",
+          "options": ["Para-virtualisation", "Conteneurisation", "Virtualisation complète", "Aucun"],
+          "answer": "Virtualisation complète",
+          "explanation": "La virtualisation complète supporte n’importe quel système d’exploitation."
+        },
+        {
+          "question": "Quel type de cloud est le plus adapté aux applications nécessitant une faible latence ?",
+          "options": ["Public Cloud", "Privé Cloud", "Hybride", "Edge Cloud"],
+          "answer": "Edge Cloud",
+          "explanation": "L’Edge Cloud traite les données localement pour réduire la latence."
+        },
+        {
+          "question": "Quel type de parallélisme est illustré par le calcul de polynômes avec des processeurs asynchrones ?",
+          "options": ["Parallélisme de données", "Parallélisme de contrôle", "Parallélisme de flux", "Aucun"],
+          "answer": "Parallélisme de contrôle",
+          "explanation": "Les processeurs exécutent des tâches différentes sans synchronisation stricte."
+        },
+        {
+          "question": "Quel type de virtualisation est le plus utilisé pour les applications nécessitant une optimisation de ressources ?",
+          "options": ["Para-virtualisation", "Conteneurisation", "Virtualisation complète", "Aucun"],
+          "answer": "Conteneurisation",
+          "explanation": "Les conteneurs optimisent l’utilisation des ressources via le partage du noyau."
+        },
+        {
+          "question": "Quel type de cloud est le plus adapté aux applications nécessitant une grande scalabilité ?",
+          "options": ["Public Cloud", "Privé Cloud", "Hybride", "Edge Cloud"],
+          "answer": "Public Cloud",
+          "explanation": "Le public cloud permet d’ajouter des ressources externes (scalabilité horizontale)."
+        },
+        {
+          "question": "Quel type de parallélisme est illustré par le calcul de polynômes via un pipeline ?",
+          "options": ["Parallélisme de données", "Parallélisme de contrôle", "Parallélisme de flux", "Aucun"],
+          "answer": "Parallélisme de flux",
+          "explanation": "Le pipeline divise le calcul en étapes exécutées en parallèle."
+        },
+        {
+          "question": "Quel type de virtualisation est le plus utilisé pour les applications nécessitant une gestion simplifiée ?",
+          "options": ["Para-virtualisation", "Conteneurisation", "Virtualisation complète", "Aucun"],
+          "answer": "Conteneurisation",
+          "explanation": "Les conteneurs simplifient la gestion via des images Docker."
+        },
+        {
+          "question": "Quel type de cloud est le plus adapté aux applications nécessitant une faible dépendance au réseau ?",
+          "options": ["Public Cloud", "Privé Cloud", "Hybride", "Edge Cloud"],
+          "answer": "Privé Cloud",
+          "explanation": "Le privé cloud réduit la dépendance au réseau externe."
+        },
+        {
+          "question": "Quel type de parallélisme est illustré par le calcul de polynômes avec des processeurs synchronisés ?",
+          "options": ["Parallélisme de données", "Parallélisme de contrôle", "Parallélisme de flux", "Aucun"],
+          "answer": "Parallélisme de données",
+          "explanation": "Les processeurs exécutent le même calcul sur des données distinctes."
+        },
+        {
+          "question": "Quel type de virtualisation est le plus utilisé pour les applications nécessitant une compatibilité multi-OS ?",
+          "options": ["Para-virtualisation", "Conteneurisation", "Virtualisation complète", "Aucun"],
+          "answer": "Virtualisation complète",
+          "explanation": "La virtualisation complète supporte n’importe quel système d’exploitation."
+        },
+        {
+          "question": "Quel type de cloud est le plus adapté aux applications nécessitant une faible latence ?",
+          "options": ["Public Cloud", "Privé Cloud", "Hybride", "Edge Cloud"],
+          "answer": "Edge Cloud",
+          "explanation": "L’Edge Cloud traite les données localement pour réduire la latence."
+        },
+        {
+          "question": "Quel type de parallélisme est illustré par le calcul de polynômes avec des processeurs asynchrones ?",
+          "options": ["Parallélisme de données", "Parallélisme de contrôle", "Parallélisme de flux", "Aucun"],
+          "answer": "Parallélisme de contrôle",
+          "explanation": "Les processeurs exécutent des tâches différentes sans synchronisation stricte."
+        },
+        {
+          "question": "Quel type de virtualisation est le plus utilisé pour les applications nécessitant une optimisation de ressources ?",
+          "options": ["Para-virtualisation", "Conteneurisation", "Virtualisation complète", "Aucun"],
+          "answer": "Conteneurisation",
+          "explanation": "Les conteneurs optimisent l’utilisation des ressources via le partage du noyau."
+        },
+        {
+          "question": "Quel type de cloud est le plus adapté aux applications nécessitant une grande scalabilité ?",
+          "options": ["Public Cloud", "Privé Cloud", "Hybride", "Edge Cloud"],
+          "answer": "Public Cloud",
+          "explanation": "Le public cloud permet d’ajouter des ressources externes (scalabilité horizontale)."
+        },
+        {
+          "question": "Quel type de parallélisme est illustré par le calcul de polynômes via un pipeline ?",
+          "options": ["Parallélisme de données", "Parallélisme de contrôle", "Parallélisme de flux", "Aucun"],
+          "answer": "Parallélisme de flux",
+          "explanation": "Le pipeline divise le calcul en étapes exécutées en parallèle."
+        },
+        {
+          "question": "Quel type de virtualisation est le plus utilisé pour les applications nécessitant une gestion simplifiée ?",
+          "options": ["Para-virtualisation", "Conteneurisation", "Virtualisation complète", "Aucun"],
+          "answer": "Conteneurisation",
+          "explanation": "Les conteneurs simplifient la gestion via des images Docker."
+        },
+        {
+          "question": "Quel type de cloud est le plus adapté aux applications nécessitant une faible dépendance au réseau ?",
+          "options": ["Public Cloud", "Privé Cloud", "Hybride", "Edge Cloud"],
+          "answer": "Privé Cloud",
+          "explanation": "Le privé cloud réduit la dépendance au réseau externe."
+        },
+        {
+          "question": "Quel type de parallélisme est illustré par le calcul de polynômes avec des processeurs synchronisés ?",
+          "options": ["Parallélisme de données", "Parallélisme de contrôle", "Parallélisme de flux", "Aucun"],
+          "answer": "Parallélisme de données",
+          "explanation": "Les processeurs exécutent le même calcul sur des données distinctes."
+        },
+        {
+          "question": "Quel type de virtualisation est le plus utilisé pour les applications nécessitant une compatibilité multi-OS ?",
+          "options": ["Para-virtualisation", "Conteneurisation", "Virtualisation complète", "Aucun"],
+          "answer": "Virtualisation complète",
+          "explanation": "La virtualisation complète supporte n’importe quel système d’exploitation."
+        },
+        {
+          "question": "Quel type de cloud est le plus adapté aux applications nécessitant une faible latence ?",
+          "options": ["Public Cloud", "Privé Cloud", "Hybride", "Edge Cloud"],
+          "answer": "Edge Cloud",
+          "explanation": "L’Edge Cloud traite les données localement pour réduire la latence."
+        },
+        {
+          "question": "Quel type de parallélisme est illustré par le calcul de polynômes avec des processeurs asynchrones ?",
+          "options": ["Parallélisme de données", "Parallélisme de contrôle", "Parallélisme de flux", "Aucun"],
+          "answer": "Parallélisme de contrôle",
+          "explanation": "Les processeurs exécutent des tâches différentes sans synchronisation stricte."
+        },
+        {
+          "question": "Quel type de virtualisation est le plus utilisé pour les applications nécessitant une optimisation de ressources ?",
+          "options": ["Para-virtualisation", "Conteneurisation", "Virtualisation complète", "Aucun"],
+          "answer": "Conteneurisation",
+          "explanation": "Les conteneurs optimisent l’utilisation des ressources via le partage du noyau."
+        },
+        {
+          "question": "Quel type de cloud est le plus adapté aux applications nécessitant une grande scalabilité ?",
+          "options": ["Public Cloud", "Privé Cloud", "Hybride", "Edge Cloud"],
+          "answer": "Public Cloud",
+          "explanation": "Le public cloud permet d’ajouter des ressources externes (scalabilité horizontale)."
+        },
+        {
+          "question": "Quel type de parallélisme est illustré par le calcul de polynômes via un pipeline ?",
+          "options": ["Parallélisme de données", "Parallélisme de contrôle", "Parallélisme de flux", "Aucun"],
+          "answer": "Parallélisme de flux",
+          "explanation": "Le pipeline divise le calcul en étapes exécutées en parallèle."
+        },
+        {
+          "question": "Quel type de virtualisation est le plus utilisé pour les applications nécessitant une gestion simplifiée ?",
+          "options": ["Para-virtualisation", "Conteneurisation", "Virtualisation complète", "Aucun"],
+          "answer": "Conteneurisation",
+          "explanation": "Les conteneurs simplifient la gestion via des images Docker."
+        },
+        {
+          "question": "Quel type de cloud est le plus adapté aux applications nécessitant une faible dépendance au réseau ?",
+          "options": ["Public Cloud", "Privé Cloud", "Hybride", "Edge Cloud"],
+          "answer": "Privé Cloud",
+          "explanation": "Le privé cloud réduit la dépendance au réseau externe."
+        },
+        {
+          "question": "Quel type de parallélisme est illustré par le calcul de polynômes avec des processeurs synchronisés ?",
+          "options": ["Parallélisme de données", "Parallélisme de contrôle", "Parallélisme de flux", "Aucun"],
+          "answer": "Parallélisme de données",
+          "explanation": "Les processeurs exécutent le même calcul sur des données distinctes."
+        },
+        {
+          "question": "Quel type de virtualisation est le plus utilisé pour les applications nécessitant une compatibilité multi-OS ?",
+          "options": ["Para-virtualisation", "Conteneurisation", "Virtualisation complète", "Aucun"],
+          "answer": "Virtualisation complète",
+          "explanation": "La virtualisation complète supporte n’importe quel système d’exploitation."
+        },
+        {
+          "question": "Quel type de cloud est le plus adapté aux applications nécessitant une faible latence ?",
+          "options": ["Public Cloud", "Privé Cloud", "Hybride", "Edge Cloud"],
+          "answer": "Edge Cloud",
+          "explanation": "L’Edge Cloud traite les données localement pour réduire la latence."
+        },
+        {
+          "question": "Quel type de parallélisme est illustré par le calcul de polynômes avec des processeurs asynchrones ?",
+          "options": ["Parallélisme de données", "Parallélisme de contrôle", "Parallélisme de flux", "Aucun"],
+          "answer": "Parallélisme de contrôle",
+          "explanation": "Les processeurs exécutent des tâches différentes sans synchronisation stricte."
+        },
+        {
+          "question": "Quel type de virtualisation est le plus utilisé pour les applications nécessitant une optimisation de ressources ?",
+          "options": ["Para-virtualisation", "Conteneurisation", "Virtualisation complète", "Aucun"],
+          "answer": "Conteneurisation",
+          "explanation": "Les conteneurs optimisent l’utilisation des ressources via le partage du noyau."
+        },
+        {
+          "question": "Quel type de cloud est le plus adapté aux applications nécessitant une grande scalabilité ?",
+          "options": ["Public Cloud", "Privé Cloud", "Hybride", "Edge Cloud"],
+          "answer": "Public Cloud",
+          "explanation": "Le public cloud permet d’ajouter des ressources externes (scalabilité horizontale)."
+        },
+        {
+          "question": "Quel type de parallélisme est illustré par le calcul de polynômes via un pipeline ?",
+          "options": ["Parallélisme de données", "Parallélisme de contrôle", "Parallélisme de flux", "Aucun"],
+          "answer": "Parallélisme de flux",
+          "explanation": "Le pipeline divise le calcul en étapes exécutées en parallèle."
+        },
+        {
+          "question": "Quel type de virtualisation est le plus utilisé pour les applications nécessitant une gestion simplifiée ?",
+          "options": ["Para-virtualisation", "Conteneurisation", "Virtualisation complète", "Aucun"],
+          "answer": "Conteneurisation",
+          "explanation": "Les conteneurs simplifient la gestion via des images Docker."
+        },
+        {
+          "question": "Quel type de cloud est le plus adapté aux applications nécessitant une faible dépendance au réseau ?",
+          "options": ["Public Cloud", "Privé Cloud", "Hybride", "Edge Cloud"],
+          "answer": "Privé Cloud",
+          "explanation": "Le privé cloud réduit la dépendance au réseau externe."
+        },
+        {
+          "question": "Quel type de parallélisme est illustré par le calcul de polynômes avec des processeurs synchronisés ?",
+          "options": ["Parallélisme de données", "Parallélisme de contrôle", "Parallélisme de flux", "Aucun"],
+          "answer": "Parallélisme de données",
+          "explanation": "Les processeurs exécutent le même calcul sur des données distinctes."
+        },
+        {
+          "question": "Quel type de virtualisation est le plus utilisé pour les applications nécessitant une compatibilité multi-OS ?",
+          "options": ["Para-virtualisation", "Conteneurisation", "Virtualisation complète", "Aucun"],
+          "answer": "Virtualisation complète",
+          "explanation": "La virtualisation complète supporte n’importe quel système d’exploitation."
+        },
+        {
+          "question": "Quel type de cloud est le plus adapté aux applications nécessitant une faible latence ?",
+          "options": ["Public Cloud", "Privé Cloud", "Hybride", "Edge Cloud"],
+          "answer": "Edge Cloud",
+          "explanation": "L’Edge Cloud traite les données localement pour réduire la latence."
+        },
+        {
+          "question": "Quel type de parallélisme est illustré par le calcul de polynômes avec des processeurs asynchrones ?",
+          "options": ["Parallélisme de données", "Parallélisme de contrôle", "Parallélisme de flux", "Aucun"],
+          "answer": "Parallélisme de contrôle",
+          "explanation": "Les processeurs exécutent des tâches différentes sans synchronisation stricte."
+        },
+        {
+          "question": "Quel type de virtualisation est le plus utilisé pour les applications nécessitant une optimisation de ressources ?",
+          "options": ["Para-virtualisation", "Conteneurisation", "Virtualisation complète", "Aucun"],
+          "answer": "Conteneurisation",
+          "explanation": "Les conteneurs optimisent l’utilisation des ressources via le partage du noyau."
+        },
+        {
+          "question": "Quel type de cloud est le plus adapté aux applications nécessitant une grande scalabilité ?",
+          "options": ["Public Cloud", "Privé Cloud", "Hybride", "Edge Cloud"],
+          "answer": "Public Cloud",
+          "explanation": "Le public cloud permet d’ajouter des ressources externes (scalabilité horizontale)."
+        },
+        {
+          "question": "Quel type de parallélisme est illustré par le calcul de polynômes via un pipeline ?",
+          "options": ["Parallélisme de données", "Parallélisme de contrôle", "Parallélisme de flux", "Aucun"],
+          "answer": "Parallélisme de flux",
+          "explanation": "Le pipeline divise le calcul en étapes exécutées en parallèle."
+        },
+        {
+          "question": "Quel type de virtualisation est le plus utilisé pour les applications nécessitant une gestion simplifiée ?",
+          "options": ["Para-virtualisation", "Conteneurisation", "Virtualisation complète", "Aucun"],
+          "answer": "Conteneurisation",
+          "explanation": "Les conteneurs simplifient la gestion via des images Docker."
+        },
+        {
+          "question": "Quel type de cloud est le plus adapté aux applications nécessitant une faible dépendance au réseau ?",
+          "options": ["Public Cloud", "Privé Cloud", "Hybride", "Edge Cloud"],
+          "answer": "Privé Cloud",
+          "explanation": "Le privé cloud réduit la dépendance au réseau externe."
+        },
+        {
+          "question": "Quel type de parallélisme est illustré par le calcul de polynômes avec des processeurs synchronisés ?",
+          "options": ["Parallélisme de données", "Parallélisme de contrôle", "Parallélisme de flux", "Aucun"],
+          "answer": "Parallélisme de données",
+          "explanation": "Les processeurs exécutent le même calcul sur des données distinctes."
+        },
+        {
+          "question": "Quel type de virtualisation est le plus utilisé pour les applications nécessitant une compatibilité multi-OS ?",
+          "options": ["Para-virtualisation", "Conteneurisation", "Virtualisation complète", "Aucun"],
+          "answer": "Virtualisation complète",
+          "explanation": "La virtualisation complète supporte n’importe quel système d’exploitation."
+        },
+        {
+          "question": "Quel type de cloud est le plus adapté aux applications nécessitant une faible latence ?",
+          "options": ["Public Cloud", "Privé Cloud", "Hybride", "Edge Cloud"],
+          "answer": "Edge Cloud",
+          "explanation": "L’Edge Cloud traite les données localement pour réduire la latence."
+        },
+        {
+          "question": "Quel type de parallélisme est illustré par le calcul de polynômes avec des processeurs asynchrones ?",
+          "options": ["Parallélisme de données", "Parallélisme de contrôle", "Parallélisme de flux", "Aucun"],
+          "answer": "Parallélisme de contrôle",
+          "explanation": "Les processeurs exécutent des tâches différentes sans synchronisation stricte."
+        },
+        {
+          "question": "Quel type de virtualisation est le plus utilisé pour les applications nécessitant une optimisation de ressources ?",
+          "options": ["Para-virtualisation", "Conteneurisation", "Virtualisation complète", "Aucun"],
+          "answer": "Conteneurisation",
+          "explanation": "Les conteneurs optimisent l’utilisation des ressources via le partage du noyau."
+        },
+        {
+          "question": "Quel type de cloud est le plus adapté aux applications nécessitant une grande scalabilité ?",
+          "options": ["Public Cloud", "Privé Cloud", "Hybride", "Edge Cloud"],
+          "answer": "Public Cloud",
+          "explanation": "Le public cloud permet d’ajouter des ressources externes (scalabilité horizontale)."
+        },
+        {
+          "question": "Quel type de parallélisme est illustré par le calcul de polynômes via un pipeline ?",
+          "options": ["Parallélisme de données", "Parallélisme de contrôle", "Parallélisme de flux", "Aucun"],
+          "answer": "Parallélisme de flux",
+          "explanation": "Le pipeline divise le calcul en étapes exécutées en parallèle."
+        },
+        {
+          "question": "Quel type de virtualisation est le plus utilisé pour les applications nécessitant une gestion simplifiée ?",
+          "options": ["Para-virtualisation", "Conteneurisation", "Virtualisation complète", "Aucun"],
+          "answer": "Conteneurisation",
+          "explanation": "Les conteneurs simplifient la gestion via des images Docker."
+        },
+        {
+          "question": "Quel type de cloud est le plus adapté aux applications nécessitant une faible dépendance au réseau ?",
+          "options": ["Public Cloud", "Privé Cloud", "Hybride", "Edge Cloud"],
+          "answer": "Privé Cloud",
+          "explanation": "Le privé cloud réduit la dépendance au réseau externe."
+        },
+        {
+          "question": "Quel type de parallélisme est illustré par le calcul de polynômes avec des processeurs synchronisés ?",
+          "options": ["Parallélisme de données", "Parallélisme de contrôle", "Parallélisme de flux", "Aucun"],
+          "answer": "Parallélisme de données",
+          "explanation": "Les processeurs exécutent le même calcul sur des données distinctes."
+        },
+        {
+          "question": "Quel type de virtualisation est le plus utilisé pour les applications nécessitant une compatibilité multi-OS ?",
+          "options": ["Para-virtualisation", "Conteneurisation", "Virtualisation complète", "Aucun"],
+          "answer": "Virtualisation complète",
+          "explanation": "La virtualisation complète supporte n’importe quel système d’exploitation."
+        },
+        {
+          "question": "Quel type de cloud est le plus adapté aux applications nécessitant une faible latence ?",
+          "options": ["Public Cloud", "Privé Cloud", "Hybride", "Edge Cloud"],
+          "answer": "Edge Cloud",
+          "explanation": "L’Edge Cloud traite les données localement pour réduire la latence."
+        },
+        {
+          "question": "Quel type de parallélisme est illustré par le calcul de polynômes avec des processeurs asynchrones ?",
+          "options": ["Parallélisme de données", "Parallélisme de contrôle", "Parallélisme de flux", "Aucun"],
+          "answer": "Parallélisme de contrôle",
+          "explanation": "Les processeurs exécutent des tâches différentes sans synchronisation stricte."
+        },
+        {
+          "question": "Quel type de virtualisation est le plus utilisé pour les applications nécessitant une optimisation de ressources ?",
+          "options": ["Para-virtualisation", "Conteneurisation", "Virtualisation complète", "Aucun"],
+          "answer": "Conteneurisation",
+          "explanation": "Les conteneurs optimisent l’utilisation des ressources via le partage du noyau."
+        },
+        {
+          "question": "Quel type de cloud est le plus adapté aux applications nécessitant une grande scalabilité ?",
+          "options": ["Public Cloud", "Privé Cloud", "Hybride", "Edge Cloud"],
+          "answer": "Public Cloud",
+          "explanation": "Le public cloud permet d’ajouter des ressources externes (scalabilité horizontale)."
+        },
+        {
+          "question": "Quel type de parallélisme est illustré par le calcul de polynômes via un pipeline ?",
+          "options": ["Parallélisme de données", "Parallélisme de contrôle", "Parallélisme de flux", "Aucun"],
+          "answer": "Parallélisme de flux",
+          "explanation": "Le pipeline divise le calcul en étapes exécutées en parallèle."
+        },
+        {
+          "question": "Quel type de virtualisation est le plus utilisé pour les applications nécessitant une gestion simplifiée ?",
+          "options": ["Para-virtualisation", "Conteneurisation", "Virtualisation complète", "Aucun"],
+          "answer": "Conteneurisation",
+          "explanation": "Les conteneurs simplifient la gestion via des images Docker."
+        },
+        {
+          "question": "Quel type de cloud est le plus adapté aux applications nécessitant une faible dépendance au réseau ?",
+          "options": ["Public Cloud", "Privé Cloud", "Hybride", "Edge Cloud"],
+          "answer": "Privé Cloud",
+          "explanation": "Le privé cloud réduit la dépendance au réseau externe."
+        },
+        {
+          "question": "Quel type de parallélisme est illustré par le calcul de polynômes avec des processeurs synchronisés ?",
+          "options": ["Parallélisme de données", "Parallélisme de contrôle", "Parallélisme de flux", "Aucun"],
+          "answer": "Parallélisme de données",
+          "explanation": "Les processeurs exécutent le même calcul sur des données distinctes."
+        },
+        {
+          "question": "Quel type de virtualisation est le plus utilisé pour les applications nécessitant une compatibilité multi-OS ?",
+          "options": ["Para-virtualisation", "Conteneurisation", "Virtualisation complète", "Aucun"],
+          "answer": "Virtualisation complète",
+          "explanation": "La virtualisation complète supporte n’importe quel système d’exploitation."
+        },
+        {
+          "question": "Quel type de cloud est le plus adapté aux applications nécessitant une faible latence ?",
+          "options": ["Public Cloud", "Privé Cloud", "Hybride", "Edge Cloud"],
+          "answer": "Edge Cloud",
+          "explanation": "L’Edge Cloud traite les données localement pour réduire la latence."
+        },
+        {
+          "question": "Quel type de parallélisme est illustré par le calcul de polynômes avec des processeurs asynchrones ?",
+          "options": ["Parallélisme de données", "Parallélisme de contrôle", "Parallélisme de flux", "Aucun"],
+          "answer": "Parallélisme de contrôle",
+          "explanation": "Les processeurs exécutent des tâches différentes sans synchronisation stricte."
+        },
+        {
+          "question": "Quel type de virtualisation est le plus utilisé pour les applications nécessitant une optimisation de ressources ?",
+          "options": ["Para-virtualisation", "Conteneurisation", "Virtualisation complète", "Aucun"],
+          "answer": "Conteneurisation",
+          "explanation": "Les conteneurs optimisent l’utilisation des ressources via le partage du noyau."
+        },
+        {
+          "question": "Quel type de cloud est le plus adapté aux applications nécessitant une grande scalabilité ?",
+          "options": ["Public Cloud", "Privé Cloud", "Hybride", "Edge Cloud"],
+          "answer": "Public Cloud",
+          "explanation": "Le public cloud permet d’ajouter des ressources externes (scalabilité horizontale)."
+        },
+        {
+          "question": "Quel type de parallélisme est illustré par le calcul de polynômes via un pipeline ?",
+          "options": ["Parallélisme de données", "Parallélisme de contrôle", "Parallélisme de flux", "Aucun"],
+          "answer": "Parallélisme de flux",
+          "explanation": "Le pipeline divise le calcul en étapes exécutées en parallèle."
+        },
+        {
+          "question": "Quel type de virtualisation est le plus utilisé pour les applications nécessitant une gestion simplifiée ?",
+          "options": ["Para-virtualisation", "Conteneurisation", "Virtualisation complète", "Aucun"],
+          "answer": "Conteneurisation",
+          "explanation": "Les conteneurs simplifient la gestion via des images Docker."
+        },
+        {
+          "question": "Quel type de cloud est le plus adapté aux applications nécessitant une faible dépendance au réseau ?",
+          "options": ["Public Cloud", "Privé Cloud", "Hybride", "Edge Cloud"],
+          "answer": "Privé Cloud",
+          "explanation": "Le privé cloud réduit la dépendance au réseau externe."
+        },
+        {
+          "question": "Quel type de parallélisme est illustré par le calcul de polynômes avec des procesurs synchronisés ?",
+          "options": ["Parallélisme de données", "Parallélisme de contrôle", "Parallélisme de flux", "Aucun"],
+          "answer": "Parallélisme de données",
+          "explanation": "Les procesurs exécutent le même calcul sur des données distinctes."
+        },
+        {
+          "question": "Quel type de virtualisation est le plus utilisé pour les applications nécessitant une compatibilité multi-os ?",
+          "options": ["Para-virtualisation", "Conteneurisation", "Virtualisation complète", "Aucun"],
+          "answer": "Virtualisation complète",
+          "explanation": "La virtualisation complète supporte n’importe quel système d’exploitation."
+        },
+        {
+          "question": "Quel type de cloud est le plus adapté aux applications nécessitant une faible latence ?",
+          "options": ["Public Cloud", "Privé Cloud", "Hybride", "Edge Cloud"],
+          "answer": "Edge Cloud",
+          "explanation": "L’Edge Cloud traite les données localement pour réduire la latence."
+        },
+        {
+          "question": "Quel type de parallélisme est illustré par le calcul de polynômes avec des processeurs asynchrones ?",
+          "options": ["Parallélisme de données", "Parallélisme de contrôle", "Parallélisme de flux", "Aucun"],
+          "answer": "Parallélisme de contrôle",
+          "explanation": "Les processeurs exécutent des tâches différentes sans synchronisation stricte."
+        },
+        {
+          "question": "Quel type de virtualisation est le plus utilisé pour les applications nécessitant une optimisation de ressources ?",
+          "options": ["Para-virtualisation", "Conteneurisation", "Virtualisation complète", "Aucun"],
+          "answer": "Conteneurisation",
+          "explanation": "Les conteneurs optimisent l’utilisation des ressources via le partage du noyau."
+        },
+        {
+          "question": "Quel type de cloud est le plus adapté aux applications nécessitant une grande scalabilité ?",
+          "options": ["Public Cloud", "Privé Cloud", "Hybride", "Edge Cloud"],
+          "answer": "Public Cloud",
+          "explanation": "Le public cloud permet d’ajouter des ressources externes (scalabilité horizontale)."
+        },
+        {
+          "question": "Quel type de parallélisme est illustré par le calcul de polynômes via un pipeline ?",
+          "options": ["Parallélisme de données", "Parallélisme de contrôle", "Parallélisme de flux", "Aucun"],
+          "answer": "Parallélisme de flux",
+          "explanation": "Le pipeline divise le calcul en étapes exécutées en parallèle."
+        },
+        {
+          "question": "Quel type de virtualisation est le plus utilisé pour les applications nécessitant une gestion simplifiée ?",
+          "options": ["Para-virtualisation", "Conteneurisation", "Virtualisation complète", "Aucun"],
+          "answer": "Conteneurisation",
+          "explanation": "Les conteneurs simplifient la gestion via des images Docker."
+        },
+        {
+          "question": "Quel type de cloud est le plus adapté aux applications nécessitant une faible dépendance au réseau ?",
+          "options": ["Public Cloud", "Privé Cloud", "Hybride", "Edge Cloud"],
+          "answer": "Privé Cloud",
+          "explanation": "Le privé cloud réduit la dépendance au réseau externe."
+        },
+        {
+          "question": "Quel type de parallélisme est illustré par le calcul de polynômes avec des processeurs synchronisés ?",
+          "options": ["Parallélisme de données", "Parallélisme de contrôle", "Parallélisme de flux", "Aucun"],
+          "answer": "Parallélisme de données",
+          "explanation": "Les processeurs exécutent le même calcul sur des données distinctes."
+        },
+        {
+          "question": "Quel type de virtualisation est le plus utilisé pour les applications nécessitant une compatibilité multi-os ?",
+          "options": ["Para-virtualisation", "Conteneurisation", "Virtualisation complète", "Aucun"],
+          "answer": "Virtualisation complète",
+          "explanation": "La virtualisation complète supporte n’importe quel système d’exploitation."
+        },
+        {
+          "question": "Quel type de cloud est le plus adapté aux applications nécessitant une faible latence ?",
+          "options": ["Public Cloud", "Privé Cloud", "Hybride", "Edge Cloud"],
+          "answer": "Edge Cloud",
+          "explanation": "L’Edge Cloud traite les données localement pour réduire la latence."
+        },
+        {
+          "question": "Quel type de parallélisme est illustré par le calcul de polynômes avec des processeurs asynchrones ?",
+          "options": ["Parallélisme de données", "Parallélisme de contrôle", "Parallélisme de flux", "Aucun"],
+          "answer": "Parallélisme de contrôle",
+          "explanation": "Les processeurs exécutent des tâches différentes sans synchronisation stricte."
+        },
+        {
+          "question": "Quel type de virtualisation est le plus utilisé pour les applications nécessitant une optimisation de ressources ?",
+          "options": ["Para-virtualisation", "Conteneurisation", "Virtualisation complète", "Aucun"],
+          "answer": "Conteneurisation",
+          "explanation": "Les conteneurs optimisent l’utilisation des ressources via le partage du noyau."
+        },
+        {
+          "question": "Quel type de cloud est le plus adapté aux applications nécessitant une grande scalabilité ?",
+          "options": ["Public Cloud", "Privé Cloud", "Hybride", "Edge Cloud"],
+          "answer": "Public Cloud",
+          "explanation": "Le public cloud permet d’ajouter des ressources externes (scalabilité horizontale)."
+        },
+        {
+          "question": "Quel type de parallélisme est illustré par le calcul de polynômes via un pipeline ?",
+          "options": ["Parallélisme de données", "Parallélisme de contrôle", "Parallélisme de flux", "Aucun"],
+          "answer": "Parallélisme de flux",
+          "explanation": "Le pipeline divise le calcul en étapes exécutées en parallèle."
+        },
+        {
+          "question": "Quel type de virtualisation est le plus utilisé pour les applications nécessitant une gestion simplifiée ?",
+          "options": ["Para-virtualisation", "Conteneurisation", "Virtualisation complète", "Aucun"],
+          "answer": "Conteneurisation",
+          "explanation": "Les conteneurs simplifient la gestion via des images Docker."
+        },
+        {
+          "question": "Quel type de cloud est le plus adapté aux applications nécessitant une faible dépendance au réseau ?",
+          "options": ["Public Cloud", "Privé Cloud", "Hybride", "Edge Cloud"],
+          "answer": "Privé Cloud",
+          "explanation": "Le privé cloud réduit la dépendance au réseau externe."
+        },
+        {
+          "question": "Quel type de parallélisme est illustré par le calcul de polynômes avec des processeurs synchronisés ?",
+          "options": ["Parallélisme de données", "Parallélisme de contrôle", "Parallélisme de flux", "Aucun"],
+          "answer": "Parallélisme de données",
+          "explanation": "Les processeurs exécutent le même calcul sur des données distinctes."
+        },
+        {
+          "question": "Quel type de virtualisation est le plus utilisé pour les applications nécessitant une compatibilité multi-os ?",
+          "options": ["Para-virtualisation", "Conteneurisation", "Virtualisation complète", "Aucun"],
+          "answer": "Virtualisation complète",
+          "explanation": "La virtualisation complète supporte n’importe quel système d’exploitation."
+        },
+        {
+          "question": "Quel type de cloud est le plus adapté aux applications nécessitant une faible latence ?",
+          "options": ["Public Cloud", "Privé Cloud", "Hybride", "Edge Cloud"],
+          "answer": "Edge Cloud",
+          "explanation": "L’Edge Cloud traite les données localement pour réduire la latence."
+        },
+        {
+          "question": "Quel type de parallélisme est illustré par le calcul de polynômes avec des processeurs asynchrones ?",
+          "options": ["Parallélisme de données", "Parallélisme de contrôle", "Parallélisme de flux", "Aucun"],
+          "answer": "Parallélisme de contrôle",
+          "explanation": "Les processeurs exécutent des tâches différentes sans synchronisation stricte."
+        },
+        {
+          "question": "Quel type de virtualisation est le plus utilisé pour les applications nécessitant une optimisation de ressources ?",
+          "options": ["Para-virtualisation", "Conteneurisation", "Virtualisation complète", "Aucun"],
+          "answer": "Conteneurisation",
+          "explanation": "Les conteneurs optimisent l’utilisation des ressources via le partage du noyau."
+        },
+        {
+          "question": "Quel type de cloud est le plus adapté aux applications nécessitant une grande scalabilité ?",
+          "options": ["Public Cloud", "Privé Cloud", "Hybride", "Edge Cloud"],
+          "answer": "Public Cloud",
+          "explanation": "Le public cloud permet d’ajouter des ressources externes (scalabilité horizontale)."
+        },
+        {
+          "question": "Quel type de parallélisme est illustré par le calcul de polynômes via un pipeline ?",
+          "options": ["Parallélisme de données", "Parallélisme de contrôle", "Parallélisme de flux", "Aucun"],
+          "answer": "Parallélisme de flux",
+          "explanation": "Le pipeline divise le calcul en étapes exécutées en parallèle."
+        },
+        {
+          "question": "Quel type de virtualisation est le plus utilisé pour les applications nécessitant une gestion simplifiée ?",
+          "options": ["Para-virtualisation", "Conteneurisation", "Virtualisation complète", "Aucun"],
+          "answer": "Conteneurisation",
+          "explanation": "Les conteneurs simplifient la gestion via des images Docker."
+        },
+        {
+          "question": "Quel type de cloud est le plus adapté aux applications nécessitant une faible dépendance au réseau ?",
+          "options": ["Public Cloud", "Privé Cloud", "Hybride", "Edge Cloud"],
+          "answer": "Privé Cloud",
+          "explanation": "Le privé cloud réduit la dépendance au réseau externe."
+        },
+        {
+          "question": "Quel type de parallélisme est illustré par le calcul de polynômes avec des processeurs synchronisés ?",
+          "options": ["Parallélisme de données", "Parallélisme de contrôle", "Parallélisme de flux", "Aucun"],
+          "answer": "Parallélisme de données",
+          "explanation": "Les processeurs exécutent le même calcul sur des données distinctes."
+        },
+        {
+          "question": "Quel type de virtualisation est le plus utilisé pour les applications nécessitant une compatibilité multi-os ?",
+          "options": ["Para-virtualisation", "Conteneurisation", "Virtualisation complète", "Aucun"],
+          "answer": "Virtualisation complète",
+          "explanation": "La virtualisation complète supporte n’importe quel système d’exploitation."
+        },
+        {
+          "question": "Quel type de cloud est le plus adapté aux applications nécessitant une faible latence ?",
+          "options": ["Public Cloud", "Privé Cloud", "Hybride", "Edge Cloud"],
+          "answer": "Edge Cloud",
+          "explanation": "L’Edge Cloud traite les données localement pour réduire la latence."
+        },
+        {
+          "question": "Quel type de parallélisme est illustré par le calcul de polynômes avec des processeurs asynchrones ?",
+          "options": ["Parallélisme de données", "Parallélisme de contrôle", "Parallélisme de flux", "Aucun"],
+          "answer": "Parallélisme de contrôle",
+          "explanation": "Les processeurs exécutent des tâches différentes sans synchronisation stricte."
+        },
+        {
+          "question": "Quel type de virtualisation est le plus utilisé pour les applications nécessitant une optimisation de ressources ?",
+          "options": ["Para-virtualisation", "Conteneurisation", "Virtualisation complète", "Aucun"],
+          "answer": "Conteneurisation",
+          "explanation": "Les conteneurs optimisent l’utilisation des ressources via le partage du noyau."
+        },
+        {
+          "question": "Quel type de cloud est le plus adapté aux applications nécessitant une grande scalabilité ?",
+          "options": ["Public Cloud", "Privé Cloud", "Hybride", "Edge Cloud"],
+          "answer": "Public Cloud",
+          "explanation": "Le public cloud permet d’ajouter des ressources externes (scalabilité horizontale)."
+        },
+        {
+          "question": "Quel type de parallélisme est illustré par le calcul de polynômes via un pipeline ?",
+          "options": ["Parallélisme de données", "Parallélisme de contrôle", "Parallélisme de flux", "Aucun"],
+          "answer": "Parallélisme de flux",
+          "explanation": "Le pipeline divise le calcul en étapes exécutées en parallèle."
+        },
+        {
+          "question": "Quel type de virtualisation est le plus utilisé pour les applications nécessitant une gestion simplifiée ?",
+          "options": ["Para-virtualisation", "Conteneurisation", "Virtualisation complète", "Aucun"],
+          "answer": "Conteneurisation",
+          "explanation": "Les conteneurs simplifient la gestion via des images Docker."
+        },
+        {
+          "question": "Quel type de cloud est le plus adapté aux applications nécessitant une faible dépendance au réseau ?",
+          "options": ["Public Cloud", "Privé Cloud", "Hybride", "Edge Cloud"],
+          "answer": "Privé Cloud",
+          "explanation": "Le privé cloud réduit la dépendance au réseau externe."
+        },
+        {
+          "question": "Quel type de parallélisme est illustré par le calcul de polynômes avec des processeurs synchronisés ?",
+          "options": ["Parallélisme de données", "Parallélisme de contrôle", "Parallélisme de flux", "Aucun"],
+          "answer": "Parallélisme de données",
+          "explanation": "Les processeurs exécutent le même calcul sur des données distinctes."
+        },
+        {
+          "question": "Quel type de virtualisation est le plus utilisé pour les applications nécessitant une compatibilité multi-os ?",
+          "options": ["Para-virtualisation", "Conteneurisation", "Virtualisation complète", "Aucun"],
+          "answer": "Virtualisation complète",
+          "explanation": "La virtualisation complète supporte n’importe quel système d’exploitation."
+        },
+        {
+          "question": "Quel type de cloud est le plus adapté aux applications nécessitant une faible latence ?",
+          "options": ["Public Cloud", "Privé Cloud", "Hybride", "Edge Cloud"],
+          "answer": "Edge Cloud",
+          "explanation": "L’Edge Cloud traite les données localement pour réduire la latence."
+        },
+        {
+          "question": "Quel type de parallélisme est illustré par le calcul de polynômes avec des processeurs asynchrones ?",
+          "options": ["Parallélisme de données", "Parallélisme de contrôle", "Parallélisme de flux", "Aucun"],
+          "answer": "Parallélisme de contrôle",
+          "explanation": "Les processeurs exécutent des tâches différentes sans synchronisation stricte."
+        },
+        {
+          "question": "Quel type de virtualisation est le plus utilisé pour les applications nécessitant une optimisation de ressources ?",
+          "options": ["Para-virtualisation", "Conteneurisation", "Virtualisation complète", "Aucun"],
+          "answer": "Conteneurisation",
+          "explanation": "Les conteneurs optimisent l’utilisation des ressources via le partage du noyau."
+        },
+        {
+          "question": "Quel type de cloud est le plus adapté aux applications nécessitant une grande scalabilité ?",
+          "options": ["Public Cloud", "Privé Cloud", "Hybride", "Edge Cloud"],
+          "answer": "Public Cloud",
+          "explanation": "Le public cloud permet d’ajouter des ressources externes (scalabilité horizontale)."
+        },
+        {
+          "question": "Quel type de parallélisme est illustré par le calcul de polynômes via un pipeline ?",
+          "options": ["Parallélisme de données", "Parallélisme de contrôle", "Parallélisme de flux", "Aucun"],
+          "answer": "Parallélisme de flux",
+          "explanation": "Le pipeline divise le calcul en étapes exécutées en parallèle."
+        },
+        {
+          "question": "Quel type de virtualisation est le plus utilisé pour les applications nécessitant une gestion simplifiée ?",
+          "options": ["Para-virtualisation", "Conteneurisation", "Virtualisation complète", "Aucun"],
+          "answer": "Conteneurisation",
+          "explanation": "Les conteneurs simplifient la gestion via des images Docker."
+        },
+        {
+          "question": "Quel type de cloud est le plus adapté aux applications nécessitant une faible dépendance au réseau ?",
+          "options": ["Public Cloud", "Privé Cloud", "Hybride", "Edge Cloud"],
+          "answer": "Privé Cloud",
+          "explanation": "Le privé cloud réduit la dépendance au réseau externe."
+        },
+        {
+          "question": "Quel type de parallélisme est illustré par le calcul de polynômes avec des processeurs synchronisés ?",
+          "options": ["Parallélisme de données", "Parallélisme de contrôle", "Parallélisme de flux", "Aucun"],
+          "answer": "Parallélisme de données",
+          "explanation": "Les processeurs exécutent le même calcul sur des données distinctes."
+        },
+        {
+          "question": "Quel type de virtualisation est le plus utilisé pour les applications nécessitant une compatibilité multi-OS ?",
+          "options": ["Para-virtualisation", "Conteneurisation", "Virtualisation complète", "Aucun"],
+          "answer": "Virtualisation complète",
+          "explanation": "La virtualisation complète supporte n’importe quel système d’exploitation."
+        },
+        {
+          "question": "Quel type de cloud est le plus adapté aux applications nécessitant une faible latence ?",
+          "options": ["Public Cloud", "Privé Cloud", "Hybride", "Edge Cloud"],
+          "answer": "Edge Cloud",
+          "explanation": "L’Edge Cloud traite les données localement pour réduire la latence."
+        },
+        {
+          "question": "Quel type de parallélisme est illustré par le calcul de polynômes avec des processeurs asynchrones ?",
+          "options": ["Parallélisme de données", "Parallélisme de contrôle", "Parallélisme de flux", "Aucun"],
+          "answer": "Parallélisme de contrôle",
+          "explanation": "Les processeurs exécutent des tâches différentes sans synchronisation stricte."
+        },
+        {
+          "question": "Quel type de virtualisation est le plus utilisé pour les applications nécessitant une optimisation de ressources ?",
+          "options": ["Para-virtualisation", "Conteneurisation", "Virtualisation complète", "Aucun"],
+          "answer": "Conteneurisation",
+          "explanation": "Les conteneurs optimisent l’utilisation des ressources via le partage du noyau."
+        },
+        {
+          "question": "Quel type de cloud est le plus adapté aux applications nécessitant une grande scalabilité ?",
+          "options": ["Public Cloud", "Privé Cloud", "Hybride", "Edge Cloud"],
+          "answer": "Public Cloud",
+          "explanation": "Le public cloud permet d’ajouter des ressources externes (scalabilité horizontale)."
+        },
+        {
+          "question": "Quel type de parallélisme est illustré par le calcul de polynômes via un pipeline ?",
+          "options": ["Parallélisme de données", "Parallélisme de contrôle", "Parallélisme de flux", "Aucun"],
+          "answer": "Parallélisme de flux",
+          "explanation": "Le pipeline divise le calcul en étapes exécutées en parallèle."
+        },
+        {
+          "question": "Quel type de virtualisation est le plus utilisé pour les applications nécessitant une gestion simplifiée ?",
+          "options": ["Para-virtualisation", "Conteneurisation", "Virtualisation complète", "Aucun"],
+          "answer": "Conteneurisation",
+          "explanation": "Les conteneurs simplifient la gestion via des images Docker."
+        },
+        {
+          "question": "Quel type de cloud est le plus adapté aux applications nécessitant une faible dépendance au réseau ?",
+          "options": ["Public Cloud", "Privé Cloud", "Hybride", "Edge Cloud"],
+          "answer": "Privé Cloud",
+          "explanation": "Le privé cloud réduit la dépendance au réseau externe."
+        },
+        {
+          "question": "Quel type de parallélisme est illustré par le calcul de polynômes avec des processeurs synchronisés ?",
+          "options": ["Parallélisme de données", "Parallélisme de contrôle", "Parallélisme de flux", "Aucun"],
+          "answer": "Parallélisme de données",
+          "explanation": "Les processeurs exécutent le même calcul sur des données distinctes."
+        },
+        {
+          "question": "Quel type de virtualisation est le plus utilisé pour les applications nécessitant une compatibilité multi-OS ?",
+          "options": ["Para-virtualisation", "Conteneurisation", "Virtualisation complète", "Aucun"],
+          "answer": "Virtualisation complète",
+          "explanation": "La virtualisation complète supporte n’importe quel système d’exploitation."
+        }]
