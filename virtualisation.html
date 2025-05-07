@@ -4,280 +4,32 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>QCM - Virtualisation</title>
-    <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <style>
-        .question {
-            font-size: 1.5rem;
-            font-weight: 600;
-            margin-bottom: 2rem;
-            color: var(--text-light);
-        }
-        
-        .option-label {
-            display: block;
-            position: relative;
-            padding: 0.8rem 1rem;
-            margin-bottom: 1rem;
-            cursor: pointer;
-            background-color: rgba(255, 255, 255, 0.05);
-            border-radius: 8px;
-            transition: all 0.3s ease;
-        }
-        
-        .option-label:hover {
-            background-color: rgba(255, 255, 255, 0.1);
-            transform: translateX(5px);
-        }
-        
-        .option-input {
-            margin-right: 10px;
-            width: 18px;
-            height: 18px;
-            vertical-align: middle;
-        }
-        
-        .verify-btn {
-            background-color: var(--dark-bg);
-            color: var(--text-light);
-            border: 1px solid var(--primary-color);
-            padding: 0.7rem 1.5rem;
-            border-radius: 5px;
-            font-size: 1rem;
-            cursor: pointer;
-            margin-right: 10px;
-            transition: all 0.3s ease;
-            display: inline-flex;
-            align-items: center;
-        }
-        
-        .verify-btn:hover {
-            background-color: var(--primary-color);
-            color: #000;
-        }
-        
-        .verify-btn i {
-            margin-right: 8px;
-        }
-        
-        .nav-button {
-            background-color: var(--dark-bg);
-            color: var(--text-light);
-            border: 1px solid var(--primary-color);
-            padding: 0.7rem 1.5rem;
-            border-radius: 5px;
-            font-size: 1rem;
-            cursor: pointer;
-            margin-right: 10px;
-            transition: all 0.3s ease;
-        }
-        
-        .nav-button:hover {
-            background-color: var(--primary-color);
-            color: #000;
-        }
-        
-        .question-counter {
-            font-size: 1.1rem;
-            margin-top: 1rem;
-            color: var(--text-light);
-        }
-        
-        .home-link {
-            color: var(--primary-color);
-            text-decoration: none;
-            display: inline-flex;
-            align-items: center;
-            margin-right: 15px;
-            margin-top: 1rem;
-        }
-        
-        .home-link i {
-            margin-right: 5px;
-        }
-        
-        .home-link:hover {
-            text-decoration: underline;
-        }
-        
-        .resume-link {
-            color: var(--primary-color);
-            text-decoration: none;
-            display: inline-flex;
-            align-items: center;
-            margin-top: 1rem;
-        }
-        
-        .resume-link i {
-            margin-right: 5px;
-        }
-        
-        .resume-link:hover {
-            text-decoration: underline;
-        }
-    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/quiz-style.css">
 </head>
 <body>
-    <header>
-        <h1>QCM : Virtualisation</h1>
+    <header class="quiz-header">
+        <h1><i class="fas fa-server"></i> QCM : Virtualisation</h1>
     </header>
 
-    <div class="card">
-        <div id="questionText" class="question"></div>
-        
-        <form id="optionsForm">
-            <!-- Options will be inserted here by JavaScript -->
-        </form>
-        
-        <div style="margin: 1.5rem 0;">
-            <button type="button" class="verify-btn" id="verifyBtn">
-                <i class="fas fa-check-circle"></i>Vérifier ma réponse
-            </button>
+    <div id="quiz-container" class="quiz-container">
+        <div class="loading">
+            <div class="spinner"></div>
+            <p>Chargement des questions...</p>
         </div>
-        
-        <div id="navigationButtons" style="margin: 1.5rem 0;">
-            <button type="button" class="nav-button" id="prevBtn">
-                <i class="fas fa-arrow-left"></i> Précédent
-            </button>
-            <button type="button" class="nav-button" id="nextBtn">
-                Suivant <i class="fas fa-arrow-right"></i>
-            </button>
-        </div>
-        
-        <div class="progress-bar">
-            <div id="progressBar" style="width: 0%;"></div>
-        </div>
-        
-        <div id="questionCounter" class="question-counter">Question 1 sur 0</div>
-        
-        <div id="explanationText" style="display: none; margin-top: 1.5rem;"></div>
-        
-        <div style="margin-top: 1rem;">
-            <a href="index.html" class="home-link">
-                <i class="fas fa-home"></i> Retour à l'accueil
-            </a>
-            <a href="resume-viewer.html?file=resume/virtualisation.md&subject=Virtualisation" class="resume-link">
-                <i class="fas fa-book"></i> Voir le résumé
-            </a>
-        </div>
+    </div>
+
+    <div class="nav-buttons">
+        <a href="index.html" class="btn btn-outline"><i class="fas fa-home"></i> Retour à l'accueil</a>
+        <a href="resume-viewer.html?file=resume/virtualisation.md&subject=Virtualisation" class="btn btn-outline"><i class="fas fa-book"></i> Voir le résumé</a>
     </div>
 
     <footer>
         <p>© 2025 QCM d'Apprentissage | Développé par Kaddouri Oussama</p>
     </footer>
 
-    <script>
-        let quizData = [];
-        let currentQuestionIndex = 0;
-        let score = 0;
-
-        // Charger les questions depuis le fichier JSON
-        fetch('qcm/virtualisation.json')
-            .then(response => response.json())
-            .then(data => {
-                quizData = data;
-                loadQuestion(currentQuestionIndex);
-                document.getElementById("questionCounter").textContent = `Question 1 sur ${quizData.length}`;
-            })
-            .catch(error => {
-                console.error("Erreur lors du chargement du fichier JSON:", error);
-                document.getElementById("questionText").textContent = "Impossible de charger les questions. Veuillez vérifier que le fichier JSON existe.";
-            });
-
-        function loadQuestion(index) {
-            if (quizData.length === 0) return;
-            
-            const questionData = quizData[index];
-            document.getElementById("questionText").textContent = `Q${index + 1}: ${questionData.question}`;
-            
-            const optionsForm = document.getElementById("optionsForm");
-            optionsForm.innerHTML = "";
-
-            questionData.options.forEach((option) => {
-                const label = document.createElement("label");
-                label.className = "option-label";
-                
-                const input = document.createElement("input");
-                input.type = "radio";
-                input.name = "quizOption";
-                input.value = option;
-                input.className = "option-input";
-                
-                label.appendChild(input);
-                label.appendChild(document.createTextNode(option));
-                optionsForm.appendChild(label);
-            });
-
-            // Réinitialiser l'explication
-            const explanationDiv = document.getElementById("explanationText");
-            explanationDiv.style.display = "none";
-            
-            // Mettre à jour la barre de progression
-            updateProgressBar(index);
-        }
-
-        function updateProgressBar(index) {
-            const totalQuestions = quizData.length;
-            const progressPercent = ((index + 1) / totalQuestions) * 100;
-            
-            document.getElementById("progressBar").style.width = `${progressPercent}%`;
-            document.getElementById("questionCounter").textContent = `Question ${index + 1} sur ${totalQuestions}`;
-        }
-
-        function verifyAnswer() {
-            const selectedOption = document.querySelector('input[name="quizOption"]:checked');
-            
-            if (!selectedOption) {
-                alert("Veuillez sélectionner une réponse.");
-                return;
-            }
-
-            const correctAnswer = quizData[currentQuestionIndex].answer;
-            const explanation = quizData[currentQuestionIndex].explanation;
-
-            const explanationDiv = document.getElementById("explanationText");
-            explanationDiv.style.display = "block";
-            
-            if (selectedOption.value === correctAnswer) {
-                score++;
-                explanationDiv.innerHTML = `<div style="background-color: rgba(76, 255, 158, 0.1); padding: 1rem; border-left: 4px solid var(--success-color); color: var(--success-color);">
-                    <i class="fas fa-check-circle"></i> Correct ! ${explanation}
-                </div>`;
-            } else {
-                explanationDiv.innerHTML = `<div style="background-color: rgba(255, 76, 76, 0.1); padding: 1rem; border-left: 4px solid var(--error-color); color: var(--error-color);">
-                    <i class="fas fa-times-circle"></i> Incorrect. La réponse correcte est : <strong>${correctAnswer}</strong>.<br><br>${explanation}
-                </div>`;
-            }
-            
-            // Désactiver les inputs
-            document.querySelectorAll('input[name="quizOption"]').forEach(input => {
-                input.disabled = true;
-            });
-            
-            // Désactiver le bouton de vérification
-            document.getElementById("verifyBtn").disabled = true;
-            document.getElementById("verifyBtn").style.opacity = "0.5";
-        }
-
-        document.getElementById("prevBtn").addEventListener("click", () => {
-            if (currentQuestionIndex > 0) {
-                currentQuestionIndex--;
-                loadQuestion(currentQuestionIndex);
-                document.getElementById("verifyBtn").disabled = false;
-                document.getElementById("verifyBtn").style.opacity = "1";
-            }
-        });
-
-        document.getElementById("nextBtn").addEventListener("click", () => {
-            if (currentQuestionIndex < quizData.length - 1) {
-                currentQuestionIndex++;
-                loadQuestion(currentQuestionIndex);
-                document.getElementById("verifyBtn").disabled = false;
-                document.getElementById("verifyBtn").style.opacity = "1";
-            }
-        });
-
-        document.getElementById("verifyBtn").addEventListener("click", verifyAnswer);
-    </script>
+    <script src="js/quiz-script.js"></script>
 </body>
 </html>

@@ -6,82 +6,108 @@
     <title>QCM - Accueil</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="css/styles.css">
+    <style>
+        .section-title {
+            width: 100%;
+            text-align: left;
+            margin: 30px 0 15px 0;
+            padding-left: 10px;
+            border-left: 4px solid #3498db;
+            color: #2c3e50;
+        }
+        
+        .section-container {
+            margin-bottom: 40px;
+        }
+    </style>
 </head>
 <body>
     <header>
         <h1>Mes QCM d'Apprentissage</h1>
     </header>
     
-    <div class="courses-grid">
-        <div class="card">
-            <div class="card-icon">
-                <i class="fas fa-shield-alt"></i>
+    <div class="courses-container">
+        <!-- Section Données et Analytics -->
+        <h2 class="section-title">Données et Analytics</h2>
+        <div class="courses-grid section-container">
+            <div class="card">
+                <div class="card-icon">
+                    <i class="fas fa-chart-line"></i>
+                </div>
+                <h3>Data Analytics</h3>
+                <p>Testez vos connaissances sur l'analyse de données, les techniques statistiques et les outils de visualisation.</p>
+                <div class="card-action">
+                    <a href="dataAnalytics.html" class="btn">Démarrer le QCM</a>
+                    <a href="resume-viewer.html?file=resume/dataAnalytics.md&subject=Data Analytics" class="btn btn-outline">Voir le Résumé</a>
+                </div>
             </div>
-            <h3>Sécurité des Systèmes</h3>
-            <p>Évaluez vos connaissances sur les concepts fondamentaux de la sécurité informatique, la triade CIA, et les modèles de menaces.</p>
-            <div class="card-action">
-                <a href="securite.html" class="btn">Démarrer le QCM</a>
-                <a href="resume-viewer.html?file=resume/securite.md&subject=Sécurité des Systèmes" class="btn btn-outline">Voir le Résumé</a>
-            </div>
-        </div>
-        
-        <div class="card">
-            <div class="card-icon">
-                <i class="fas fa-database"></i>
-            </div>
-            <h3>Bases NoSQL</h3>
-            <p>Testez vos connaissances sur les différents types de bases de données NoSQL, leurs caractéristiques et cas d'usage.</p>
-            <div class="card-action">
-                <a href="nosql.html" class="btn">Démarrer le QCM</a>
-                <a href="resume-viewer.html?file=resume/nosql.md&subject=Bases NoSQL" class="btn btn-outline">Voir le Résumé</a>
-            </div>
-        </div>
-        
-        <div class="card">
-            <div class="card-icon">
-                <i class="fas fa-brain"></i>
-            </div>
-            <h3>Interprétabilité IA</h3>
-            <p>Évaluez votre compréhension des méthodes d'interprétabilité pour les modèles d'intelligence artificielle.</p>
-            <div class="card-action">
-                <a href="interpretabilite.html" class="btn">Démarrer le QCM</a>
-                <a href="resume-viewer.html?file=resume/interpretabilite.md&subject=Interprétabilité IA" class="btn btn-outline">Voir le Résumé</a>
-            </div>
-        </div>
-        
-        <div class="card">
-            <div class="card-icon">
-                <i class="fas fa-chart-line"></i>
-            </div>
-            <h3>Data Analytics</h3>
-            <p>Testez vos connaissances sur l'analyse de données, les techniques statistiques et les outils de visualisation.</p>
-            <div class="card-action">
-                <a href="dataAnalytics.html" class="btn">Démarrer le QCM</a>
-                <a href="resume-viewer.html?file=resume/dataAnalytics.md&subject=Data Analytics" class="btn btn-outline">Voir le Résumé</a>
-            </div>
-        </div>
 
-        <div class="card">
-            <div class="card-icon">
-                <i class="fas fa-warehouse"></i>
+            <div class="card">
+                <div class="card-icon">
+                    <i class="fas fa-warehouse"></i>
+                </div>
+                <h3>Data Warehouse</h3>
+                <p>Testez vos connaissances sur les entrepôts de données, leur architecture, modélisation et les concepts ETL associés.</p>
+                <div class="card-action">
+                    <a href="dw.html" class="btn">Démarrer le QCM</a>
+                    <a href="resume-viewer.html?file=resume/dw.md&subject=Data Warehouse" class="btn btn-outline">Voir le Résumé</a>
+                </div>
             </div>
-            <h3>Data Warehouse</h3>
-            <p>Testez vos connaissances sur les entrepôts de données, leur architecture, modélisation et les concepts ETL associés.</p>
-            <div class="card-action">
-                <a href="dw.html" class="btn">Démarrer le QCM</a>
-                <a href="resume-viewer.html?file=resume/dw.md&subject=Data Warehouse" class="btn btn-outline">Voir le Résumé</a>
+            
+            <div class="card">
+                <div class="card-icon">
+                    <i class="fas fa-database"></i>
+                </div>
+                <h3>Bases NoSQL</h3>
+                <p>Testez vos connaissances sur les différents types de bases de données NoSQL, leurs caractéristiques et cas d'usage.</p>
+                <div class="card-action">
+                    <a href="nosql.html" class="btn">Démarrer le QCM</a>
+                    <a href="resume-viewer.html?file=resume/nosql.md&subject=Bases NoSQL" class="btn btn-outline">Voir le Résumé</a>
+                </div>
             </div>
         </div>
         
-        <div class="card">
-            <div class="card-icon">
-                <i class="fas fa-server"></i>
+        <!-- Section Intelligence Artificielle -->
+        <h2 class="section-title">Intelligence Artificielle</h2>
+        <div class="courses-grid section-container">
+            <div class="card">
+                <div class="card-icon">
+                    <i class="fas fa-brain"></i>
+                </div>
+                <h3>Interprétabilité IA</h3>
+                <p>Évaluez votre compréhension des méthodes d'interprétabilité pour les modèles d'intelligence artificielle.</p>
+                <div class="card-action">
+                    <a href="interpretabilite.html" class="btn">Démarrer le QCM</a>
+                    <a href="resume-viewer.html?file=resume/interpretabilite.md&subject=Interprétabilité IA" class="btn btn-outline">Voir le Résumé</a>
+                </div>
             </div>
-            <h3>Virtualisation</h3>
-            <p>Testez vos connaissances sur les technologies de virtualisation, l'infrastructure virtuelle et les conteneurs.</p>
-            <div class="card-action">
-                <a href="virtualisation.html" class="btn">Démarrer le QCM</a>
-                <a href="resume-viewer.html?file=resume/virtualisation.md&subject=Virtualisation" class="btn btn-outline">Voir le Résumé</a>
+        </div>
+        
+        <!-- Section Infrastructure et Sécurité -->
+        <h2 class="section-title">Infrastructure et Sécurité</h2>
+        <div class="courses-grid section-container">
+            <div class="card">
+                <div class="card-icon">
+                    <i class="fas fa-server"></i>
+                </div>
+                <h3>Virtualisation</h3>
+                <p>Testez vos connaissances sur les technologies de virtualisation, l'infrastructure virtuelle et les conteneurs.</p>
+                <div class="card-action">
+                    <a href="virtualisation.html" class="btn">Démarrer le QCM</a>
+                    <a href="resume-viewer.html?file=resume/virtualisation.md&subject=Virtualisation" class="btn btn-outline">Voir le Résumé</a>
+                </div>
+            </div>
+            
+            <div class="card">
+                <div class="card-icon">
+                    <i class="fas fa-shield-alt"></i>
+                </div>
+                <h3>Sécurité des Systèmes</h3>
+                <p>Évaluez vos connaissances sur les concepts fondamentaux de la sécurité informatique, la triade CIA, et les modèles de menaces.</p>
+                <div class="card-action">
+                    <a href="securite.html" class="btn">Démarrer le QCM</a>
+                    <a href="resume-viewer.html?file=resume/securite.md&subject=Sécurité des Systèmes" class="btn btn-outline">Voir le Résumé</a>
+                </div>
             </div>
         </div>
     </div>
