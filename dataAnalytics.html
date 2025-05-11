@@ -173,22 +173,8 @@
 
     <script>
         document.addEventListener('DOMContentLoaded', function() {
-            // Déterminer le chemin de base en fonction de l'environnement
-            function getBasePath() {
-                // Récupérer le chemin de base de l'URL actuelle
-                const path = window.location.pathname;
-                // Si le chemin contient un nom de dépôt GitHub, ajuster le chemin de base
-                const repoNameMatch = path.match(/\/([^\/]+)\/[^\/]+\.html$/);
-                if (repoNameMatch) {
-                    return '/' + repoNameMatch[1];
-                }
-                return '';
-            }
-            
-            const basePath = getBasePath();
-            
             // Charger les questions depuis le fichier JSON
-            fetch(`${basePath}/qcm/dataAnalytics.json`)
+            fetch('qcm/dataAnalytics.json')
                 .then(response => {
                     if (!response.ok) {
                         throw new Error('Erreur lors du chargement du fichier JSON');
