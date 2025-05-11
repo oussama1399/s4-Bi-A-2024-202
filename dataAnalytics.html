@@ -8,6 +8,148 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/quiz-style.css">
+    <style>
+        .hidden {
+            display: none;
+        }
+        .option-item {
+            cursor: pointer;
+            padding: 10px 15px;
+            margin: 8px 0;
+            border-radius: 8px;
+            background-color: #f7f7f9;
+            display: flex;
+            align-items: center;
+            transition: all 0.3s ease;
+        }
+        .option-item:hover {
+            background-color: #e9e9ef;
+        }
+        .option-item.selected {
+            background-color: #e3f2fd;
+            border: 1px solid #2196f3;
+        }
+        .option-item.correct {
+            background-color: #e8f5e9;
+            border: 1px solid #4caf50;
+        }
+        .option-item.incorrect {
+            background-color: #ffebee;
+            border: 1px solid #f44336;
+        }
+        .option-label {
+            font-weight: bold;
+            margin-right: 10px;
+            display: inline-block;
+            width: 25px;
+            height: 25px;
+            text-align: center;
+            line-height: 25px;
+            background-color: #2196f3;
+            color: white;
+            border-radius: 50%;
+        }
+        .explanation {
+            margin-top: 15px;
+            padding: 15px;
+            background-color: #f5f5f5;
+            border-radius: 8px;
+            border-left: 4px solid #2196f3;
+            display: none;
+        }
+        .explanation.show {
+            display: block;
+            animation: fadeIn 0.5s;
+        }
+        .question-container {
+            margin-bottom: 20px;
+            padding: 20px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+        }
+        .question {
+            display: flex;
+            margin-bottom: 15px;
+            font-size: 1.2rem;
+        }
+        .question-number {
+            flex: 0 0 30px;
+            height: 30px;
+            background-color: #2196f3;
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            margin-right: 10px;
+        }
+        .progress-container {
+            margin-bottom: 20px;
+        }
+        .progress-bar {
+            height: 8px;
+            background-color: #e0e0e0;
+            border-radius: 4px;
+            overflow: hidden;
+        }
+        .progress-fill {
+            height: 100%;
+            background-color: #2196f3;
+            transition: width 0.3s ease;
+        }
+        .progress-text {
+            font-size: 0.9rem;
+            color: #757575;
+            margin-top: 5px;
+            text-align: right;
+        }
+        .quiz-result {
+            padding: 30px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        .result-details {
+            display: flex;
+            justify-content: center;
+            margin: 20px 0;
+        }
+        .result-score {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: #2196f3;
+            margin-right: 20px;
+        }
+        .result-percentage {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: #4caf50;
+        }
+        .result-message {
+            font-size: 1.2rem;
+            color: #424242;
+            margin-bottom: 20px;
+        }
+        .chart-bar {
+            height: 20px;
+            background-color: #e0e0e0;
+            border-radius: 10px;
+            overflow: hidden;
+            margin: 20px 0;
+        }
+        .chart-fill {
+            height: 100%;
+            background-color: #4caf50;
+            transition: width 1s ease;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+    </style>
 </head>
 <body>
     <header class="quiz-header">
@@ -15,8 +157,7 @@
     </header>
 
     <div id="quiz-container" class="quiz-container">
-        <div class="loading">
-            <div class="spinner"></div>
+        <div class="loading-container">
             <p>Chargement des questions...</p>
         </div>
     </div>
@@ -30,6 +171,275 @@
         <p>© 2025 QCM d'Apprentissage | Développé par Kaddouri Oussama</p>
     </footer>
 
-    <script src="js/quiz-script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Charger les questions depuis le fichier JSON
+            fetch('qcm/dataAnalytics.json')
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error('Erreur lors du chargement du fichier JSON');
+                    }
+                    return response.json();
+                })
+                .then(questions => {
+                    // Utiliser toutes les questions du fichier
+                    initializeQuiz(questions);
+                })
+                .catch(error => {
+                    console.error('Erreur:', error);
+                    document.getElementById('quiz-container').innerHTML = `
+                        <div class="error-container">
+                            <p>Erreur lors du chargement des questions. Veuillez réessayer plus tard.</p>
+                            <p>Détail: ${error.message}</p>
+                        </div>
+                    `;
+                });
+            
+            // Initialiser le quiz avec les questions chargées
+            function initializeQuiz(questions) {
+                // Configuration du quiz
+                let currentQuestionIndex = 0;
+                let score = 0;
+                let userAnswers = Array(questions.length).fill(null);
+                let reviewMode = false;
+                
+                // Fonction pour afficher une question
+                function showQuestion(index) {
+                    const question = questions[index];
+                    const quizContainer = document.getElementById('quiz-container');
+                    
+                    // Créer HTML pour la question
+                    const questionHTML = `
+                        <div class="progress-container">
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: ${((index + 1) / questions.length) * 100}%"></div>
+                            </div>
+                            <div class="progress-text">Question ${index + 1} sur ${questions.length}</div>
+                        </div>
+                        
+                        <div class="question-container" id="question-${index}">
+                            <div class="question">
+                                <span class="question-number">${index + 1}</span>
+                                <div class="question-text">${question.question}</div>
+                            </div>
+                            <div class="options-container">
+                                ${question.options.map((option, i) => `
+                                    <div class="option-item" data-index="${i}">
+                                        <span class="option-label">${String.fromCharCode(65 + i)}</span>
+                                        <span class="option-text">${option}</span>
+                                    </div>
+                                `).join('')}
+                            </div>
+                            <div class="explanation" id="explanation-${index}">
+                                <strong>Explication:</strong> ${question.explanation}
+                            </div>
+                        </div>
+                        
+                        <div class="quiz-controls">
+                            <button id="btn-prev" class="btn btn-outline" ${index === 0 ? 'disabled' : ''}>Précédent</button>
+                            <button id="btn-check" class="btn btn-primary" disabled>Vérifier ma réponse</button>
+                            <button id="btn-next" class="btn btn-outline" ${index === questions.length - 1 ? 'disabled' : ''}>Suivant</button>
+                        </div>
+                    `;
+                    
+                    quizContainer.innerHTML = questionHTML;
+                    
+                    // Si en mode révision, montrer les explications et les réponses
+                    if (reviewMode) {
+                        showReviewState(index);
+                    } else {
+                        // Ajouter des écouteurs d'événements aux options
+                        document.querySelectorAll('.option-item').forEach(option => {
+                            option.addEventListener('click', selectOption);
+                        });
+                        
+                        // Activer le bouton "Vérifier" si une réponse est déjà sélectionnée
+                        if (userAnswers[index] !== null) {
+                            document.getElementById('btn-check').disabled = false;
+                            document.querySelectorAll('.option-item').forEach((opt, idx) => {
+                                if (idx === userAnswers[index]) opt.classList.add('selected');
+                            });
+                        }
+                    }
+                    
+                    // Ajouter des écouteurs d'événements aux boutons
+                    const checkButton = document.getElementById('btn-check');
+                    if (checkButton) {
+                        checkButton.addEventListener('click', checkAnswer);
+                    }
+                    
+                    const prevButton = document.getElementById('btn-prev');
+                    if (prevButton) {
+                        prevButton.addEventListener('click', () => {
+                            if (currentQuestionIndex > 0) {
+                                currentQuestionIndex--;
+                                showQuestion(currentQuestionIndex);
+                            }
+                        });
+                    }
+                    
+                    const nextButton = document.getElementById('btn-next');
+                    if (nextButton) {
+                        nextButton.addEventListener('click', () => {
+                            if (currentQuestionIndex < questions.length - 1) {
+                                currentQuestionIndex++;
+                                showQuestion(currentQuestionIndex);
+                            } else {
+                                showResults();
+                            }
+                        });
+                    }
+                }
+                
+                // Fonction pour gérer la sélection d'une option
+                function selectOption(event) {
+                    // Enlever la classe selected de toutes les options
+                    document.querySelectorAll('.option-item').forEach(opt => {
+                        opt.classList.remove('selected');
+                    });
+                    
+                    // Ajouter la classe selected à l'option cliquée
+                    const selectedOption = event.currentTarget;
+                    selectedOption.classList.add('selected');
+                    
+                    // Stocker la réponse sélectionnée
+                    userAnswers[currentQuestionIndex] = parseInt(selectedOption.getAttribute('data-index'));
+                    
+                    // Activer le bouton de vérification
+                    document.getElementById('btn-check').disabled = false;
+                }
+                
+                // Fonction pour vérifier la réponse
+                function checkAnswer() {
+                    const question = questions[currentQuestionIndex];
+                    const selectedIndex = userAnswers[currentQuestionIndex];
+                    const correctIndex = question.options.indexOf(question.answer);
+                    const correct = selectedIndex === correctIndex;
+                    const selectedOption = document.querySelector(`.option-item[data-index="${selectedIndex}"]`);
+                    
+                    // Marquer l'option sélectionnée comme correcte ou incorrecte
+                    selectedOption.classList.add(correct ? 'correct' : 'incorrect');
+                    
+                    // Si incorrecte, surligner la bonne réponse
+                    if (!correct) {
+                        const correctOption = document.querySelector(`.option-item[data-index="${correctIndex}"]`);
+                        correctOption.classList.add('correct');
+                    } else {
+                        // Mettre à jour le score si correct
+                        score++;
+                    }
+                    
+                    // Montrer l'explication
+                    document.getElementById(`explanation-${currentQuestionIndex}`).classList.add('show');
+                    
+                    // Désactiver le bouton de vérification
+                    document.getElementById('btn-check').disabled = true;
+                    
+                    // Désactiver le clic sur les options
+                    document.querySelectorAll('.option-item').forEach(option => {
+                        option.removeEventListener('click', selectOption);
+                        option.style.cursor = 'default';
+                    });
+                }
+                
+                // Fonction pour afficher l'état de révision pour une question
+                function showReviewState(index) {
+                    const selectedIndex = userAnswers[index];
+                    if (selectedIndex === null) return;
+                    
+                    const question = questions[index];
+                    const correctIndex = question.options.indexOf(question.answer);
+                    const correct = selectedIndex === correctIndex;
+                    
+                    const selectedOption = document.querySelector(`.option-item[data-index="${selectedIndex}"]`);
+                    if (selectedOption) {
+                        selectedOption.classList.add('selected');
+                        selectedOption.classList.add(correct ? 'correct' : 'incorrect');
+                    }
+                    
+                    // Si incorrecte, surligner la bonne réponse
+                    if (!correct) {
+                        const correctOption = document.querySelector(`.option-item[data-index="${correctIndex}"]`);
+                        if (correctOption) {
+                            correctOption.classList.add('correct');
+                        }
+                    }
+                    
+                    // Montrer l'explication
+                    document.getElementById(`explanation-${index}`).classList.add('show');
+                    
+                    // Désactiver le clic sur les options
+                    document.querySelectorAll('.option-item').forEach(option => {
+                        option.style.cursor = 'default';
+                    });
+                    
+                    // Masquer le bouton de vérification
+                    const checkButton = document.getElementById('btn-check');
+                    if (checkButton) {
+                        checkButton.style.display = 'none';
+                    }
+                }
+                
+                // Fonction pour afficher les résultats finaux
+                function showResults() {
+                    const percentage = Math.round((score / questions.length) * 100);
+                    let resultMessage;
+                    
+                    if (percentage >= 80) {
+                        resultMessage = "Excellent ! Vous maîtrisez parfaitement ce sujet.";
+                    } else if (percentage >= 60) {
+                        resultMessage = "Bien ! Vous avez une bonne compréhension du sujet.";
+                    } else if (percentage >= 40) {
+                        resultMessage = "Pas mal. Continuez à étudier pour améliorer vos connaissances.";
+                    } else {
+                        resultMessage = "Vous devriez approfondir ce sujet pour mieux le comprendre.";
+                    }
+                    
+                    const resultHTML = `
+                        <div class="quiz-result">
+                            <h2 class="result-header">Résultat du quiz</h2>
+                            <div class="result-details">
+                                <div class="result-score">${score}/${questions.length}</div>
+                                <div class="result-percentage">${percentage}%</div>
+                            </div>
+                            <p class="result-message">${resultMessage}</p>
+                            <div class="result-chart">
+                                <div class="chart-bar">
+                                    <div class="chart-fill" style="width: ${percentage}%"></div>
+                                </div>
+                            </div>
+                            <div class="nav-buttons">
+                                <button id="btn-review" class="btn btn-outline">Revoir mes réponses</button>
+                                <button id="btn-retry" class="btn btn-primary">Réessayer</button>
+                                <a href="resume-viewer.html?file=resume/dataAnalytics.md&subject=Data Analytics" class="btn btn-outline">Voir le résumé</a>
+                                <a href="index.html" class="btn btn-outline">Retour à l'accueil</a>
+                            </div>
+                        </div>
+                    `;
+                    
+                    document.getElementById('quiz-container').innerHTML = resultHTML;
+                    
+                    // Ajouter un écouteur d'événements au bouton "Réessayer"
+                    document.getElementById('btn-retry').addEventListener('click', () => {
+                        currentQuestionIndex = 0;
+                        score = 0;
+                        userAnswers = Array(questions.length).fill(null);
+                        reviewMode = false;
+                        showQuestion(currentQuestionIndex);
+                    });
+                    
+                    // Ajouter un écouteur d'événements au bouton "Revoir mes réponses"
+                    document.getElementById('btn-review').addEventListener('click', () => {
+                        reviewMode = true;
+                        currentQuestionIndex = 0;
+                        showQuestion(currentQuestionIndex);
+                    });
+                }
+                
+                // Démarrer le quiz
+                showQuestion(currentQuestionIndex);
+            }
+        });
+    </script>
 </body>
 </html>

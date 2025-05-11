@@ -11,6 +11,7 @@
   --neutral-color: #f2f3f4;
   --shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
   --border-radius: 8px;
+  --transition: all 0.3s ease;
 }
 
 body {
@@ -68,6 +69,15 @@ body {
   border-radius: var(--border-radius);
   box-shadow: var(--shadow);
   overflow: hidden;
+}
+
+.quiz-header-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: #f8f9fa;
+  border-bottom: 1px solid #eee;
 }
 
 .question-container {
@@ -189,7 +199,7 @@ body {
   display: flex;
   justify-content: space-between;
   padding: 1.5rem 2rem;
-  background-color: #f8f9fa;
+  background-color: white;
   border-top: 1px solid #eee;
 }
 
@@ -230,6 +240,10 @@ body {
   cursor: not-allowed;
 }
 
+.btn-highlight {
+  animation: pulse 1.5s infinite;
+}
+
 .navigation {
   margin-top: 2rem;
   display: flex;
@@ -239,6 +253,7 @@ body {
 }
 
 .progress-container {
+  flex: 1;
   padding: 1rem 2rem;
   background-color: white;
   border-bottom: 1px solid #eee;
@@ -258,6 +273,25 @@ body {
   transition: width 0.5s ease;
 }
 
+.progress-text {
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+  color: #777;
+}
+
+.timer-container {
+  display: flex;
+  align-items: center;
+  padding: 0 1rem;
+  color: var(--text-color);
+  font-weight: 500;
+}
+
+.timer-label {
+  margin-right: 0.5rem;
+  color: var(--primary-color);
+}
+
 .quiz-result {
   padding: 2rem;
   text-align: center;
@@ -270,17 +304,54 @@ body {
   margin-bottom: 1rem;
 }
 
+.result-details {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  margin-bottom: 1.5rem;
+}
+
 .result-score {
   font-size: 3rem;
   font-weight: bold;
-  margin: 1.5rem 0;
   color: var(--text-color);
+}
+
+.result-percentage {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: var(--primary-color);
 }
 
 .result-message {
   font-size: 1.2rem;
-  margin-bottom: 2rem;
+  margin-bottom: 1.5rem;
   color: var(--text-color);
+}
+
+.result-time {
+  font-size: 1.1rem;
+  margin-bottom: 1.5rem;
+  color: #777;
+}
+
+.result-chart {
+  width: 80%;
+  margin: 0 auto 2rem auto;
+}
+
+.chart-bar {
+  height: 12px;
+  background-color: #e0e0e0;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.chart-fill {
+  height: 100%;
+  background: linear-gradient(to right, #3498db, #27ae60);
+  transition: width 1s ease-out;
 }
 
 /* Navigation buttons */
@@ -289,6 +360,43 @@ body {
   justify-content: center;
   gap: 1rem;
   margin: 2rem 0;
+  flex-wrap: wrap;
+}
+
+/* Loading state */
+.loading {
+  padding: 3rem;
+  text-align: center;
+}
+
+.spinner {
+  width: 50px;
+  height: 50px;
+  border: 5px solid rgba(189, 189, 189, 0.25);
+  border-left-color: var(--primary-color);
+  border-radius: 50%;
+  margin: 0 auto 1rem;
+  animation: spin 1s linear infinite;
+}
+
+/* Error state */
+.error-message {
+  padding: 2rem;
+  text-align: center;
+  color: var(--wrong-color);
+}
+
+/* Restore progress state */
+.restore-progress {
+  padding: 2rem;
+  text-align: center;
+}
+
+.restore-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1.5rem;
 }
 
 /* Animations */
@@ -300,6 +408,16 @@ body {
 @keyframes slideDown {
   from { opacity: 0; max-height: 0; }
   to { opacity: 1; max-height: 500px; }
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.05); box-shadow: 0 0 10px rgba(52, 152, 219, 0.7); }
+  100% { transform: scale(1); }
 }
 
 /* Responsive design */
@@ -322,4 +440,60 @@ body {
     padding: 8px 16px;
     font-size: 0.9rem;
   }
+  
+  .quiz-controls {
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .quiz-controls button {
+    width: 100%;
+  }
+  
+  .result-details {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  .nav-buttons {
+    flex-direction: column;
+  }
+  
+  .nav-buttons .btn {
+    width: 100%;
+  }
+  
+  .quiz-header-info {
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .timer-container {
+    margin-top: 10px;
+  }
+}
+
+/* Accessibility enhancements */
+.option-item:focus {
+  outline: 3px solid var(--primary-color);
+  outline-offset: 2px;
+}
+
+/* Dark mode - prepare for future implementation */
+@media (prefers-color-scheme: dark) {
+  :root {
+    /* These will be used when dark mode is implemented */
+    --dm-background-color: #121212;
+    --dm-card-color: #1e1e1e;
+    --dm-text-color: #e0e0e0;
+  }
+}
+
+/* Class for review mode */
+.review-mode .option-item {
+  cursor: default;
+}
+
+.review-mode .explanation.show {
+  border-left-color: #f39c12;
 }

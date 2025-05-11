@@ -4,9 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Résumé</title>
+    <!-- Font Awesome pour les icônes -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Style général du site -->
     <link rel="stylesheet" href="css/styles.css">
+    <!-- Style spécifique au Markdown -->
+    <link rel="stylesheet" href="css/markdown-style.css">
+    <!-- Highlight.js pour la coloration syntaxique du code -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/github.min.css" id="code-theme">
+    <!-- KaTeX pour les formules mathématiques -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.4/dist/katex.min.css">
+    <!-- Police Poppins pour la typographie -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Scripts -->
     <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/katex@0.16.4/dist/katex.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/katex@0.16.4/dist/contrib/auto-render.min.js"></script>
 </head>
 <body>
     <header>
@@ -20,9 +34,24 @@
         <a href="#" id="backButton" class="btn">
             <i class="fas fa-arrow-left"></i> Retour
         </a>
+        <a href="#" id="qcmButton" class="btn" style="display: none;">
+            <i class="fas fa-question-circle"></i> Accéder au QCM
+        </a>
+        <button id="toggleDarkMode" class="btn">
+            <i class="fas fa-moon"></i> Mode sombre
+        </button>
+        <button id="toggleTOC" class="btn">
+            <i class="fas fa-list"></i> Table des matières
+        </button>
     </div>
 
     <div class="resume-container">
+        <!-- Table des matières générée automatiquement -->
+        <div id="toc-container" class="toc" style="display: none;">
+            <div class="toc-title">Table des matières</div>
+            <div id="toc-content"></div>
+        </div>
+
         <div id="content" class="markdown-body">
             <div class="loading">
                 <i class="fas fa-spinner fa-spin"></i> Chargement du résumé...
@@ -36,15 +65,65 @@
 
     <script>
         document.addEventListener('DOMContentLoaded', function() {
+            // Définir les options de Marked
+            marked.use({
+                renderer: new marked.Renderer(),
+                pedantic: false,
+                gfm: true, // GitHub Flavored Markdown
+                breaks: true, // Convertir les retours à la ligne en <br>
+                sanitize: false, // Ne pas nettoyer le HTML (dangereux si le contenu n'est pas de confiance)
+                smartLists: true,
+                smartypants: true, // Convertir les apostrophes et les guillemets
+                xhtml: false,
+                highlight: function(code, lang) {
+                    if (lang && hljs.getLanguage(lang)) {
+                        try {
+                            return hljs.highlight(code, { language: lang }).value;
+                        } catch (err) {}
+                    }
+                    return hljs.highlightAuto(code).value;
+                }
+            });
+
+            // Variables globales
+            let markdownContent = '';
+            let currentTheme = localStorage.getItem('theme') || 'light';
+            
             // Get the file path from the URL parameters
             const urlParams = new URLSearchParams(window.location.search);
             const filePath = urlParams.get('file');
             const subject = urlParams.get('subject');
             
+            // Appliquer le thème actuel
+            applyTheme(currentTheme);
+            
+            // Gestionnaire pour le bouton de bascule du mode sombre
+            document.getElementById('toggleDarkMode').addEventListener('click', function() {
+                currentTheme = currentTheme === 'light' ? 'dark' : 'light';
+                applyTheme(currentTheme);
+                localStorage.setItem('theme', currentTheme);
+            });
+            
+            // Gestionnaire pour le bouton de table des matières
+            document.getElementById('toggleTOC').addEventListener('click', function() {
+                const tocContainer = document.getElementById('toc-container');
+                if (tocContainer.style.display === 'none') {
+                    tocContainer.style.display = 'block';
+                } else {
+                    tocContainer.style.display = 'none';
+                }
+            });
+            
             // Update page title if subject is provided
             if (subject) {
                 document.getElementById('pageTitle').textContent = `Résumé : ${subject}`;
                 document.title = `Résumé - ${subject}`;
+
+                // Afficher et configurer le bouton QCM
+                const qcmButton = document.getElementById('qcmButton');
+                qcmButton.style.display = 'inline-block';
+                qcmButton.href = `${subject.toLowerCase().replace(/\s+/g, '')}.html`;
+                qcmButton.title = `Tester vos connaissances sur ${subject}`;
             }
             
             // Set back button to return to QCM page if a subject is specified
@@ -69,9 +148,32 @@
                     return response.text();
                 })
                 .then(markdown => {
+                    // Sauvegarder le contenu pour une utilisation ultérieure
+                    markdownContent = markdown;
+                    
+                    // Améliorer le rendu des emojis
+                    markdown = enhanceEmojis(markdown);
+                    
                     // Convert Markdown to HTML using the marked library
                     const html = marked.parse(markdown);
                     document.getElementById('content').innerHTML = html;
+                    
+                    // Générer la table des matières
+                    generateTableOfContents();
+                    
+                    // Appliquer la coloration syntaxique aux blocs de code
+                    document.querySelectorAll('pre code').forEach(block => {
+                        hljs.highlightElement(block);
+                    });
+                    
+                    // Rendre les formules mathématiques
+                    renderMathInElement(document.getElementById('content'), {
+                        delimiters: [
+                            {left: '$$', right: '$$', display: true},
+                            {left: '$', right: '$', display: false}
+                        ],
+                        throwOnError: false
+                    });
                 })
                 .catch(error => {
                     document.getElementById('content').innerHTML = `
@@ -80,8 +182,84 @@
                         </div>
                     `;
                 });
+            
+            // Fonction pour appliquer le thème
+            function applyTheme(theme) {
+                const toggleButton = document.getElementById('toggleDarkMode');
+                
+                if (theme === 'dark') {
+                    document.body.classList.add('dark-mode');
+                    toggleButton.innerHTML = '<i class="fas fa-sun"></i> Mode clair';
+                    // Changer le thème de highlight.js pour le mode sombre
+                    document.getElementById('code-theme').href = 'https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/atom-one-dark.min.css';
+                } else {
+                    document.body.classList.remove('dark-mode');
+                    toggleButton.innerHTML = '<i class="fas fa-moon"></i> Mode sombre';
+                    // Changer le thème de highlight.js pour le mode clair
+                    document.getElementById('code-theme').href = 'https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/github.min.css';
+                }
+            }
+            
+            // Fonction pour améliorer les emojis
+            function enhanceEmojis(text) {
+                // Définir des mappages emoji simples
+                const emojiMap = {
+                    ':smile:': '😊',
+                    ':thumbsup:': '👍',
+                    ':heart:': '❤️',
+                    ':check:': '✅',
+                    ':warning:': '⚠️',
+                    ':bulb:': '💡',
+                    ':books:': '📚',
+                    ':rocket:': '🚀',
+                    ':star:': '⭐',
+                    ':note:': '📝',
+                    ':info:': 'ℹ️',
+                    ':question:': '❓'
+                };
+                
+                // Remplacer les codes emoji par des emojis réels
+                for (const [code, emoji] of Object.entries(emojiMap)) {
+                    text = text.replace(new RegExp(code, 'g'), `<span class="emoji">${emoji}</span>`);
+                }
+                
+                return text;
+            }
+            
+            // Fonction pour générer la table des matières
+            function generateTableOfContents() {
+                const headings = document.querySelectorAll('.markdown-body h1, .markdown-body h2, .markdown-body h3');
+                const toc = document.getElementById('toc-content');
+                
+                if (headings.length === 0) {
+                    document.getElementById('toggleTOC').style.display = 'none';
+                    return;
+                }
+                
+                const tocList = document.createElement('ul');
+                
+                headings.forEach((heading, index) => {
+                    // Créer un ID unique si l'en-tête n'en a pas
+                    if (!heading.id) {
+                        heading.id = `heading-${index}`;
+                    }
+                    
+                    const listItem = document.createElement('li');
+                    const link = document.createElement('a');
+                    
+                    link.textContent = heading.textContent;
+                    link.href = `#${heading.id}`;
+                    
+                    // Ajouter une indentation en fonction du niveau de l'en-tête
+                    listItem.style.marginLeft = `${(parseInt(heading.tagName.substring(1)) - 1) * 1.0}rem`;
+                    
+                    listItem.appendChild(link);
+                    tocList.appendChild(listItem);
+                });
+                
+                toc.appendChild(tocList);
+            }
         });
     </script>
 </body>
 </html>
-``` 
