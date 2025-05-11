@@ -185,10 +185,10 @@
                 return '';
             }
             
-            const basePath = getBasePath();
+            
             
             // Charger les questions depuis le fichier JSON
-            fetch(`${basePath}/qcm/dataAnalytics.json`)
+            fetch(`'qcm/dataAnalytics.json`)
                 .then(response => {
                     if (!response.ok) {
                         throw new Error('Erreur lors du chargement du fichier JSON');
